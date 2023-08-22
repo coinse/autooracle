@@ -9,7 +9,7 @@ SEED=$5
 WORK_DIR=/root/workspace
 RESULT_DIR=$WORK_DIR/result/${PROJECT}-${VERSION}b
 BUGGY_TMP_DIR=/tmp/${PROJECT}-${VERSION}b
-
+FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
 
 METADATA_DIR=$RESULT_DIR/metadata
 FAILING_TESTS=$METADATA_DIR/tests.trigger
@@ -145,6 +145,19 @@ else
     done;
 fi
 
+if [ -d "$FIXED_TMP_DIR" ]; then
+    echo "$FIXED_TMP_DIR exists"
+else
+    defects4j checkout -p ${PROJECT} -v ${VERSION}f -w $FIXED_TMP_DIR
+    if [ -d "$FIXED_TMP_DIR" ]; then
+        echo "Checkout succeed!" 
+    else 
+        exit 1
+    fi
+fi
+
+cd $WORK_DIR
+python ground_truth.py $PROJECT $VERSION --id $ID
 
 
 #########################
