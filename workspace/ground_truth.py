@@ -6,9 +6,6 @@ import subprocess
 ####################
 ####ground truth####
 ####################
-
-
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('project', type=str)
@@ -26,7 +23,6 @@ if __name__ == "__main__":
     test_suite_zip=test_suite_dir + "{}-{}.tar.bz2".format(project, version)
 
     fixed_tmp_dir="/tmp/{}-{}f".format(project, version)
-    #fixed_tmp_dir="/tmp/{}-{}b".format(project, version)
 
     os.system("cd {} && tar -cjf {} *".format(
         test_suite_src_dir, test_suite_zip
