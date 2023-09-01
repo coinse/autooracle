@@ -13,6 +13,7 @@ FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
 
 METADATA_DIR=$RESULT_DIR/metadata
 FAILING_TESTS=$METADATA_DIR/tests.trigger
+FAILING_TESTS_BODY=$METADATA_DIR/failing_test_body
 RELEVANT_CLASSES=$METADATA_DIR/classes.relevant
 RELEVANT_METHODS_DIR=$METADATA_DIR/methods.relevant
 COV_DIR=$METADATA_DIR/coverage
@@ -20,7 +21,7 @@ COV_DIR=$METADATA_DIR/coverage
 EVOSUITE=$WORK_DIR/evosuite-master-1.0.7-SNAPSHOT.jar
 EVOSUITE_DEFAULT_CONFIG=$WORK_DIR/evosuite-config 
 
-EVOSUITE_ID=$RESULT_DIR/$ID
+EVOSUITE_ID=$RESULT_DIR/generated_test/$ID
 EVOSUITE_CONFIG=$EVOSUITE_ID/evosuite-config.$ID.$BUDGET.$SEED
 EVOSUITE_TEST=$EVOSUITE_ID/evosuite_test
 EVOSUITE_REPORT=$EVOSUITE_ID/evosuite_report
@@ -52,6 +53,7 @@ if [ -d "$METADATA_DIR" ]; then
     echo "$METADATA_DIR exists"
 else
     mkdir -p $METADATA_DIR
+    mkdir -p $FAILING_TESTS_BODY
 fi
 
 cd $BUGGY_TMP_DIR

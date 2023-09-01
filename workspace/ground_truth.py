@@ -1,5 +1,6 @@
 import os 
 import re 
+from env import EvoD4jEnv
 import shlex
 import argparse
 import subprocess
@@ -17,26 +18,19 @@ if __name__ == "__main__":
     version = args.version
     ts_id = args.id
 
+    env = EvoD4jEnv(project, version, ts_id)
     
-    test_suite_dir="/root/workspace/result/{}-{}b/{}/".format(project, version, ts_id)
-    test_suite_src_dir=test_suite_dir + "evosuite_test"
-    test_suite_zip=test_suite_dir + "{}-{}.tar.bz2".format(project, version)
-
-    fixed_tmp_dir="/tmp/{}-{}f".format(project, version)
+    test_suite_dir = env.evosuite_test_dir
+    test_suite_src_dir = env.evosuite_test_src_dir
+    test_suite_zip = test_suite_dir + "/{}-{}.tar.bz2".format(project, version)
+    fixed_tmp_dir = env.fixed_tmp_dir
 
     os.system("cd {} && tar -cjf {} *".format(
         test_suite_src_dir, test_suite_zip
     ))
     
-    gt = subprocess.run(
+    subprocess.run(
         shlex.split("defects4j test -w {} -s {}".format(fixed_tmp_dir, test_suite_zip)),
         universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-    failing_tests = re.findall(r'-\s+(.+)',gt.stdout)
-
-    if len(failing_tests) > 0 :
-        with open(test_suite_dir+"failng_test.txt",'w') as f:
-            for failing_test in failing_tests:
-                f.write(failing_test+"\n")
-    else :
-        print("no failing test")
+    
+    os.system("cd {} && cp failing_tests {}".format(fixed_tmp_dir, test_suite_dir))

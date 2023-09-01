@@ -13,6 +13,7 @@
 import os
 import openai
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 openai.organization="org-mSMx268bkMcTa5gXwsDGN8Af"
@@ -20,18 +21,19 @@ openai.api_key= os.environ["OPEN_API_KEY"]
 
 def query_chat_llm(user_query):
     messages=[]
-    while True:
-        if user_query == "quit":
-            return
-        else :
-            messages.append({"role":"user", "content":user_query})
-            chat = openai.ChatCompletion.create(
-                model="gpt-4",
-                messages=messages
-            )
-        chat_reply = chat["choices"][0]["message"]["content"]
-        print(f"ChatGPT: {chat_reply}")
-        messages.append({"role": "assistant", "content":chat_reply})
+    
+    if user_query == "quit":
+        return
+    else :
+        messages.append({"role":"user", "content":user_query})
+        chat = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo",
+            messages=messages
+        )
+    
+    chat_reply = chat["choices"][0]["message"]["content"]
+    print(f"ChatGPT: {chat_reply}")
+    messages.append({"role": "assistant", "content":chat_reply})
 
 def query_single_llm(query):
     message=[]
