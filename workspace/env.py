@@ -20,13 +20,14 @@ class EvoD4jEnv:
 
         self.metadata_dir = os.path.join(self.result_dir,"metadata")
         self.failing_test_body_dir = os.path.join(self.metadata_dir,"failing_tests_body/")
+        self.relevant_test_body_dir = os.path.join(self.metadata_dir,"relevant_tests_body/")
+        self.dev_written_test_analyze = os.path.join(self.metadata_dir,"dev_written_test_analyze/")
 
         self.failing_tests = os.path.join(self.metadata_dir, "tests.trigger")
         self.relevant_classes = os.path.join(self.metadata_dir, "classes.relevant")
         self.coverage_dir = os.path.join(self.metadata_dir,"coverage")
-        self.test_src_relpath = os.path.join(self.metadata_dir, "dir.src.tests")
+        self.relevant_tests_class = os.path.join(self.metadata_dir, "tests.relevant")
 
         self.evosuite_test_dir  = os.path.join(self.result_dir, "generated_test", self.ts_id)
         self.evosuite_test_src_dir = os.path.join(self.evosuite_test_dir, "evosuite_test")
-
-
+        self.evosuit_prompt_dir = os.path.join(self.evosuite_test_dir, "prompt")

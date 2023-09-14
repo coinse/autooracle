@@ -30,9 +30,3 @@ def query_single_llm(query):
         temperature=0.7
     )
     print(response)
-
-if __name__ == "__main__":
-    
-    for idx, row in evo_tests_df.iterrows():
-        with open('./{}_{}_answer'.format(test_path_to_class_name(row['dir']), row['evo_test_no']),'w') as f:
-            f.write(query_chat_llm(query, max_response_tokens))

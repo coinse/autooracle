@@ -13,10 +13,11 @@ FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
 
 METADATA_DIR=$RESULT_DIR/metadata
 FAILING_TESTS=$METADATA_DIR/tests.trigger
-FAILING_TESTS_BODY=$METADATA_DIR/failing_test_body
+FAILING_TESTS_BODY=$METADATA_DIR/failing_tests_body
 RELEVANT_CLASSES=$METADATA_DIR/classes.relevant
 RELEVANT_METHODS_DIR=$METADATA_DIR/methods.relevant
 COV_DIR=$METADATA_DIR/coverage
+DEV_WRITTEN_TEST_ANALYZE=$METADATA_DIR/dev_written_test_analyze
 
 EVOSUITE=$WORK_DIR/evosuite-master-1.0.7-SNAPSHOT.jar
 EVOSUITE_DEFAULT_CONFIG=$WORK_DIR/evosuite-config 
@@ -25,6 +26,7 @@ EVOSUITE_ID=$RESULT_DIR/generated_test/$ID
 EVOSUITE_CONFIG=$EVOSUITE_ID/evosuite-config.$ID.$BUDGET.$SEED
 EVOSUITE_TEST=$EVOSUITE_ID/evosuite_test
 EVOSUITE_REPORT=$EVOSUITE_ID/evosuite_report
+EVOSUITE_PROMPT=$EVOSUITE_ID/prompt
 
 
 
@@ -42,7 +44,7 @@ defects4j checkout -p ${PROJECT} -v ${VERSION}b -w $BUGGY_TMP_DIR
 if [ -d "$BUGGY_TMP_DIR" ]; then
     echo "Checkout succeed!"
 else 
-    echo "Checkout failed@@"
+    echo "Checkout failed"
     exit 1
 fi
 
@@ -53,7 +55,10 @@ if [ -d "$METADATA_DIR" ]; then
     echo "$METADATA_DIR exists"
 else
     mkdir -p $METADATA_DIR
+    mkdir -p $COV_DIR
+    mkdir -p $DEV_WRITTEN_TEST_ANALYZE
     mkdir -p $FAILING_TESTS_BODY
+    mkdir -p $RELEVANT_METHODS_DIR
 fi
 
 cd $BUGGY_TMP_DIR
@@ -64,24 +69,11 @@ defects4j export -p classes.relevant -o $RELEVANT_CLASSES
 
 echo "Failing tests"
 cat $FAILING_TESTS
-echo "\nRelevant classes"
+echo "Relevant classes"
 cat $RELEVANT_CLASSES
 
 echo "" >> $FAILING_TESTS
 echo "" >> $RELEVANT_CLASSES
-echo ""
-
-if [ -d "$RELEVANT_METHODS_DIR" ]; then
-    echo "$RELEVANT_METHODS_DIR exists"
-else
-    mkdir $RELEVANT_METHODS_DIR
-fi
-
-if [ -d "$COV_DIR" ]; then
-    echo "$COV_DIR exists"
-else 
-    mkdir $COV_DIR
-fi
 
 # measure covearage of each failing test case 
 while IFS= read -r tc
@@ -108,7 +100,7 @@ if [ -d "$EVOSUITE_TEST" ]; then
     echo "test suite $EVOSUITE_TEST exists"
 else
     project_cp=$(defects4j export -p cp.compile -w $BUGGY_TMP_DIR)
-    [ ! -d $EVOSUITE_ID ] && mkdir $EVOSUITE_ID
+    [ ! -d $EVOSUITE_ID ] && mkdir -p $EVOSUITE_ID
 
     if [ -f "$EVOSUITE_CONFIG" ]; then
         echo "config file exists"
@@ -124,7 +116,6 @@ else
             budget_ratio_file=$RELEVANT_METHODS_DIR/$class.budget
             echo $budget_ratio_file
             budget_ratio=$(cat $budget_ratio_file)
-            echo $budget_ratio_file
             echo $budget_ratio
             class_budget=$(python3.6 -c "from math import ceil; print(int(ceil($budget_ratio*$BUDGET)))")
             echo $class_budget
@@ -134,12 +125,12 @@ else
             cat $RELEVANT_METHODS_DIR/$class
             echo ""
             echo "----------------------------------------------------"
-            cat $RELEVANT_METHODS_DIR/$class
             echo "java -jar $EVOSUITE -class $class -projectCP $project_cp -Dsearch_budget=$class_budget -seed=$SEED -Dreport_dir=$EVOSUITE_REPORT -Dtest_dir=$EVOSUITE_TEST -Dtarget_method_list=$(cat $RELEVANT_METHODS_DIR/$class | tr '\n' ':' | sed 's/:$//') $(cat ${EVOSUITE_CONFIG})"
             java -jar $EVOSUITE -class $class -projectCP $project_cp -Dsearch_budget=$class_budget -seed=$SEED -Dreport_dir=$EVOSUITE_REPORT -Dtest_dir=$EVOSUITE_TEST -Dtarget_method_list=$(cat $RELEVANT_METHODS_DIR/$class | tr '\n' ':' | sed 's/:$//') $(cat ${EVOSUITE_CONFIG})
             [ ! -d $EVOSUITE_REPORT ] && mkdir $EVOSUITE_REPORT
             cat $EVOSUITE_REPORT/statistics.csv >> $EVOSUITE_REPORT/statistics.${PROJECT}-${VERSION}.csv
             rm $EVOSUITE_REPORT/statistics.csv
+            [ ! -d $EVOSUITE_PROMPT ] && mkdir $EVOSUITE_PROMPT
             
         else 
             echo "no methods info"
@@ -156,10 +147,13 @@ else
     else 
         exit 1
     fi
+    cd $EVOSUITE_TEST && tar -cjf $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2 *
+    echo "tar -cjf $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2 *" 
+    defects4j test -w $FIXED_TMP_DIR -s $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2
+    cd $FIXED_TMP_DIR && cp failing_tests $EVOSUITE_ID/failing_tests_on_fixed
 fi
 
-cd $WORK_DIR
-python ground_truth.py $PROJECT $VERSION --id $ID
+
 
 
 #########################

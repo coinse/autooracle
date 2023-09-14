@@ -1,4 +1,0 @@
-isAllZeros(Ljava/lang/String;)Z
-createFloat(Ljava/lang/String;)Ljava/lang/Float;
-<clinit>()V
-createNumber(Ljava/lang/String;)Ljava/lang/Number;
