@@ -27,7 +27,7 @@ EVOSUITE_CONFIG=$EVOSUITE_ID/evosuite-config.$ID.$BUDGET.$SEED
 EVOSUITE_TEST=$EVOSUITE_ID/evosuite_test
 EVOSUITE_REPORT=$EVOSUITE_ID/evosuite_report
 EVOSUITE_PROMPT=$EVOSUITE_ID/prompt
-
+EVOSUITE_CHAT_REPLY=$EVOSUITE_ID/chat_reply
 
 
 echo "\n************************************"
@@ -131,6 +131,7 @@ else
             cat $EVOSUITE_REPORT/statistics.csv >> $EVOSUITE_REPORT/statistics.${PROJECT}-${VERSION}.csv
             rm $EVOSUITE_REPORT/statistics.csv
             [ ! -d $EVOSUITE_PROMPT ] && mkdir $EVOSUITE_PROMPT
+            [ ! -d $EVOSUITE_CHAT_REPLY] && mkdir $EVOSUITE_CHAT_REPLY
             
         else 
             echo "no methods info"

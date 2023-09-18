@@ -12,22 +12,6 @@ import pandas as pd
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
-# prompt = """
-# You are responsible for assessing the accuracy of a specified test oracle. To guide your assessment, you will be given five tests that closely resemble the original test in question. Your task is to determine the correctness of the test oracle based solely on these five additional tests; you should not rely on your own background knowledge for this judgment.
-# For the test you are evaluating:
-# ```
-# {}
-# ```
-# And the five additional similar tests provided:
-# ```
-# {}
-# ```
-# Please evaluate the test oracle according to one of the following criteria, and include a brief commentary:
-# - If the test oracle is correct, say ‘Yes.’
-# - If the test oracle is incorrect, say ‘No.’
-# - If the test oracle’s accuracy cannot be determined from the information provided, say ‘Don’t Know.’
-# """
-
 system_message = {"role":"system", "content":"You are an assistant to help me assess the correctness of a new test. You will be given tests that are related to the new test."}
 prompt_new = """
 This is the new test you are going to evaluate:
@@ -155,8 +139,7 @@ if __name__ == "__main__":
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
 
     evo_tests_df, dev_tests_df = preprocess(env, evo_tests_df, dev_tests_df)
-    evo_tests_df.to_csv('./a.csv')
-    dev_tests_df.to_csv('./b.csv')
+
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir')
     for idx, row in evo_tests_df.iterrows():
         one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
