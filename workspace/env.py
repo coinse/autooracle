@@ -31,4 +31,5 @@ class EvoD4jEnv:
         self.evosuite_test_dir  = os.path.join(self.result_dir, "generated_test", self.ts_id)
         self.evosuite_test_src_dir = os.path.join(self.evosuite_test_dir, "evosuite_test")
         self.evosuit_prompt_dir = os.path.join(self.evosuite_test_dir, "prompt")
+        self.evosuit_prompt_mut_dir = os.path.join(self.evosuite_test_dir, "prompt_mut")
         self.evosuit_chat_reply_dir = os.path.join(self.evosuite_test_dir, "chat_reply")

@@ -49,4 +49,3 @@ if __name__ == "__main__":
         chat_reply = query_chat_llm(data)
         with open(os.path.join(chat_reply_dir, prompt.replace('query.pkl', 'reply')), 'w') as fw:
             fw.write(chat_reply)
-        break
