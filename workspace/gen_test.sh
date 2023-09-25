@@ -132,8 +132,8 @@ else
             cat $EVOSUITE_REPORT/statistics.csv >> $EVOSUITE_REPORT/statistics.${PROJECT}-${VERSION}.csv
             rm $EVOSUITE_REPORT/statistics.csv
             [ ! -d $EVOSUITE_PROMPT ] && mkdir $EVOSUITE_PROMPT
-            [ ! -d $EVOSUITE_CHAT_REPLY] && mkdir $EVOSUITE_CHAT_REPLY
-            [ ! -d $EVOSUITE_PROMPT_MUT] && mkdir $EVOSUITE_PROMPT_MUT
+            [ ! -d $EVOSUITE_CHAT_REPLY ] && mkdir $EVOSUITE_CHAT_REPLY
+            [ ! -d $EVOSUITE_PROMPT_MUT ] && mkdir $EVOSUITE_PROMPT_MUT
             
         else 
             echo "no methods info"

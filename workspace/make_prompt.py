@@ -23,7 +23,7 @@ And these are the related tests:
 {}
 ```
 
-Is the test `{}` correctly tests the behavior of the method? If yes, include <correct> in your answer, and <incorrect> otherwise. Explain why.
+Does the test `{}` correctly test the behavior of the method? If yes, include <correct> in your answer, and <incorrect> otherwise. Explain why.
 """
 max_response_tokens = 250
 token_limit = 4096
@@ -54,11 +54,11 @@ def num_tokens_from_messages(messages):
     num_tokens += 2  # every reply is primed with <im_start>assistant
     return num_tokens
 
-def make_prompt(df):
+def make_prompt_max(one_evo_dev_df):
     related_tests = ''
     conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
 
-    for idx, row in df.iterrows():    
+    for idx, row in one_evo_dev_df.iterrows():    
         related_tests += row['dev_test_src']
         to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], related_tests, row['evo_test_no'])}]
         if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
@@ -68,6 +68,25 @@ def make_prompt(df):
             conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens
         else :
             break
+    return conversation
+
+def make_prompt_num(one_evo_dev_df, num):
+    related_tests = ''
+    conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
+    count = 0
+
+    for idx, row in one_evo_dev_df.iterrows():   
+        if count < num :
+            related_tests += row['dev_test_src']
+            to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], related_tests, row['evo_test_no'])}]
+            if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
+                if len(conversation) == 2 :
+                    del conversation[1]
+                conversation.append(to_be_appended[0])
+                conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens
+                count += 1
+            else :
+                break
     return conversation
 
 def preprocess(env, evo_tests_df, dev_tests_df):
@@ -82,9 +101,9 @@ def preprocess(env, evo_tests_df, dev_tests_df):
                 for i in zip(parsed_test_src.items(), parsed_target_method.items()):
                     tmp_df = pd.DataFrame({'dir': [os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]],'evo_target_method':i[1][1]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
-    """
-    Load Developer written test
-    """
+    # """
+    # Load Developer written test
+    # """
     #get test source directory: dev_test_src_relpath
     dev_test_src_relpath = subprocess.run(
         shlex.split("defects4j export -p dir.src.tests -w {}".format(env.buggy_tmp_dir)),
@@ -127,11 +146,13 @@ if __name__ == "__main__":
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
     parser.add_argument('--id', '-i', type=str, default='1')
+    parser.add_argument('--num','-n', type=int, default= 1)
     args = parser.parse_args()
 
     project = args.project
     version = args.version
     ts_id = args.id
+    example_num = args.num
 
     env = EvoD4jEnv(project, version, ts_id)
     
@@ -139,15 +160,19 @@ if __name__ == "__main__":
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
 
     evo_tests_df, dev_tests_df = preprocess(env, evo_tests_df, dev_tests_df)
+    with open(os.path.join(env.evosuite_test_dir, "evo_test_df.pkl"), 'wb') as fevo:
+        pickle.dump(evo_tests_df,fevo)
 
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir')
     for idx, row in evo_tests_df.iterrows():
         one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
         one_evo_dev_df = cal_cosin_sim(one_evo_dev_df)
-        prompt = make_prompt(one_evo_dev_df)
-        prompt_dir = env.evosuit_prompt_dir
-        with open( prompt_dir + '/{}_{}_query.pkl'.format(test_path_to_class_name(row['dir']), row['evo_test_no']),'wb') as f:
+        prompt = make_prompt_num(one_evo_dev_df, example_num)
+        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'example{}'.format(example_num))
+        if not os.path.exists(prompt_dir):
+            os.mkdir(prompt_dir)
+        with open( prompt_dir + '/{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no']),'wb') as f:
             pickle.dump(prompt,f)
-        with open( prompt_dir + '/{}_{}_query.txt'.format(test_path_to_class_name(row['dir']), row['evo_test_no']),'w') as f:
+        with open( prompt_dir + '/{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no']),'w') as f:
             f.write(prompt[1]['content'])
  
