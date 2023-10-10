@@ -67,9 +67,6 @@ if __name__ == "__main__":
         with open(os.path.join(env.relevant_methods, class_name),'r') as f:
             wanna_find_method_list = f.read().split()
 
-        # wanna_find_method_list = [class_name + "." + wanna_find_method_list[i] for i in range(len(wanna_find_method_list))]
-        # wanna_find_method_list = [re.findall(r'^([^(\s]+)', m)[0] for m in wanna_find_method_list]
-
         with open(parse_output,'r') as f:
             parse_output = json.load(f)
 
@@ -77,7 +74,7 @@ if __name__ == "__main__":
             method_name_cut = re.findall(r'^([^(\s]+)', method_name)[0]
             print(method_name_cut)
             for node in parse_output["nodes"]:
-                if (node["type"] == "method" and node["signature"].find(method_name_cut) != -1) or (node["type"] == "constructor" and method_name_cut=='<clinit>'):
+                if (node["type"] == "method" and node["signature"].find(method_name_cut) != -1) or (node["type"] == "constructor" and (method_name_cut=='<clinit>' or method_name_cut=='<init>')):
                     begin_line = node["begin_line"]
                     end_line = node["end_line"]
                     with open(invoked_class_abs_path, 'r') as g:
@@ -91,9 +88,8 @@ if __name__ == "__main__":
                             method_name = method_name.replace('<clinit>', '<init>')
                         tmp_df = pd.DataFrame({'evo_target_method':[class_name+'.'+method_name], 'target_method_src': [source]})
                         invoked_df = pd.concat([invoked_df, tmp_df])
-    invoked_df.to_csv('./check3.csv')
+
     with open( env.metadata_dir + '/invoked_method_df.pkl','wb') as f:
         pickle.dump(invoked_df,f)
 
-
-    
+    invoked_df.to_csv('./a.csv')

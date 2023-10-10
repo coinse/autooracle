@@ -4,7 +4,7 @@ EVOSUITE_PATTERNS={
     "tc_no":r"//Test case number: (\d+)",
     "line_goal":r"\* Goal \d+\. ([^:]+): Line (\d+)",
     "cov_end": "*/",
-    "method":r"\[METHOD\]\s+([\w\.$<>();/]+)"
+    "method":r'\[METHOD\] (\S+)'
 }
 
 def parse(path):

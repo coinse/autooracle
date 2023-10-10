@@ -101,7 +101,7 @@ defects4j export -p dir.src.classes -o $METADATA_DIR/dir.src.classes -w $BUGGY_T
 defects4j export -p tests.all -o $METADATA_DIR/tests.all -w $BUGGY_TMP_DIR
 
 # get relevant methods from coverage data
-cd $WORK_DIR
+cd $WORK_DIR/src
 python save_relevant_methods.py $COV_DIR $RELEVANT_METHODS_DIR
 
 cd $BUGGY_TMP_DIR
@@ -159,8 +159,9 @@ else
     else 
         exit 1
     fi
-    cd $EVOSUITE_TEST && tar -cjf $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2 *
-    echo "tar -cjf $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2 *" 
-    defects4j test -w $FIXED_TMP_DIR -s $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2
-    cd $FIXED_TMP_DIR && cp failing_tests $EVOSUITE_ID/failing_tests_on_fixed
 fi
+cd $EVOSUITE_TEST && tar -cjf $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2 *
+echo "tar -cjf $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2 *" 
+defects4j test -w $FIXED_TMP_DIR -s $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2
+cd $FIXED_TMP_DIR && cp failing_tests $EVOSUITE_ID/failing_tests_on_fixed
+

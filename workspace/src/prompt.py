@@ -113,7 +113,7 @@ def get_evosuite_df(env,evo_tests_df):
                 relpath = os.path.relpath(os.path.join(dp, f), start = env.evosuite_test_src_dir)
                 _, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
                 for i in zip(parsed_test_src.items(), parsed_target_method.items()):
-                    tmp_df = pd.DataFrame({'dir': [os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]],'evo_target_method':i[1][1]})
+                    tmp_df = pd.DataFrame({'dir': [os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]],'evo_target_method':[i[1][1]]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
     return evo_tests_df
 
@@ -161,8 +161,6 @@ def preprocess(env, evo_tests_df, dev_tests_df):
     
     dev_tests_df = get_dev_tests_df(env, dev_tests_df, dev_test_classes_list, dev_test_src_dir_abspaths)
     
-    # with open(os.path.join(env.evosuite_test_dir, "evo_test_df.pkl"), 'wb') as fevo:
-    #     pickle.dump(evo_tests_df,fevo)
     return evo_tests_df, dev_tests_df
 
 if __name__ == "__main__":
@@ -189,6 +187,9 @@ if __name__ == "__main__":
 
     with open( env.metadata_dir + '/invoked_method_df.pkl','rb') as fr:
         invoked_method_df = pickle.load(fr)
+    
+    evo_dev_join.to_csv('./evo_dev_join.csv')
+    invoked_method_df.to_csv('./invoked_method_df.csv')
     evo_dev_join = pd.merge(evo_dev_join, invoked_method_df, how ='left', on = 'evo_target_method')
 
     # Run related_test.py and returns 
