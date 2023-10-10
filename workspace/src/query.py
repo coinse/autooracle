@@ -47,7 +47,7 @@ if __name__ == "__main__":
         
         chat_reply_dir = os.path.join(env.evosuite_chat_reply_dir, 'example{}'.format(example_num), 'try{}'.format(try_no))
         if not os.path.exists(chat_reply_dir):
-                os.makedirs(chat_reply_dir)
+            os.makedirs(chat_reply_dir)
 
         for prompt in prompt_list:
             with open(os.path.join(prompt_dir, prompt),'rb') as fr:

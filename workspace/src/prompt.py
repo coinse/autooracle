@@ -12,9 +12,13 @@ import pandas as pd
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
-system_message = {"role":"system", "content":"You are an assistant to help me assess the correctness of a new test. You will be given tests that are related to the new test."}
+system_message = {"role":"system", "content":"You are an assistant to help me assess the correctness of a new test. You will be given the called method that the test invokes, and tests that are related to the new test."}
 prompt_new = """
 This is the new test you are going to evaluate:
+```
+{}
+```
+And this is the method body that the new test invokes:
 ```
 {}
 ```
@@ -54,13 +58,27 @@ def num_tokens_from_messages(messages):
     num_tokens += 2  # every reply is primed with <im_start>assistant
     return num_tokens
 
-def make_prompt_max(one_evo_dev_df):
+def make_prompt(env, evo_tests_df, evo_dev_join):
+     for _, row in evo_tests_df.iterrows():
+        one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
+        one_evo_dev_df = cal_cosin_sim(one_evo_dev_df)
+        one_evo_dev_df.to_csv('./a.csv')
+        prompt = make_prompt_str_num(one_evo_dev_df, example_num)
+        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'example{}'.format(example_num))
+        if not os.path.exists(prompt_dir):
+            os.mkdir(prompt_dir)
+        with open( prompt_dir + '/{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no']),'wb') as f:
+            pickle.dump(prompt,f)
+        with open( prompt_dir + '/{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no']),'w') as f:
+            f.write(prompt[1]['content'])
+        
+def make_prompt_str_max(one_evo_dev_df):
     related_tests = ''
     conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
 
     for idx, row in one_evo_dev_df.iterrows():    
         related_tests += row['dev_test_src']
-        to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], related_tests, row['evo_test_no'])}]
+        to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], row['target_method_src'], related_tests, row['evo_test_no'])}]
         if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
             if len(conversation) == 2 :
                 del conversation[1]
@@ -70,15 +88,14 @@ def make_prompt_max(one_evo_dev_df):
             break
     return conversation
 
-def make_prompt_num(one_evo_dev_df, num):
+def make_prompt_str_num(one_evo_dev_df, num):
     related_tests = ''
     conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
     count = 0
-
     for idx, row in one_evo_dev_df.iterrows():   
         if count < num :
             related_tests += row['dev_test_src']
-            to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], related_tests, row['evo_test_no'])}]
+            to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], row['target_method_src'], related_tests, row['evo_test_no'])}]
             if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
                 if len(conversation) == 2 :
                     del conversation[1]
@@ -89,10 +106,7 @@ def make_prompt_num(one_evo_dev_df, num):
                 break
     return conversation
 
-def preprocess(env, evo_tests_df, dev_tests_df):
-    """
-    Collect EVO generated test's metadata
-    """
+def get_evosuite_df(env,evo_tests_df):
     for dp, dn, fn in os.walk(env.evosuite_test_src_dir):
         for f in fn:
             if f.endswith("ESTest.java"):
@@ -101,20 +115,9 @@ def preprocess(env, evo_tests_df, dev_tests_df):
                 for i in zip(parsed_test_src.items(), parsed_target_method.items()):
                     tmp_df = pd.DataFrame({'dir': [os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]],'evo_target_method':i[1][1]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
-    # """
-    # Load Developer written test
-    # """
-    #get test source directory: dev_test_src_relpath
-    dev_test_src_relpath = subprocess.run(
-        shlex.split("defects4j export -p dir.src.tests -w {}".format(env.buggy_tmp_dir)),
-        universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    dev_test_src_relpath = dev_test_src_relpath.stdout
-    # extract developer written test methods
-    dev_test_classes = subprocess.run(
-        shlex.split("defects4j export -p tests.all -w {}".format(env.buggy_tmp_dir)),
-        universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    dev_test_classes_list = dev_test_classes.stdout.split('\n')
-    dev_test_src_dir_abspaths = os.path.join(env.buggy_tmp_dir, dev_test_src_relpath)
+    return evo_tests_df
+
+def get_dev_tests_df(env, dev_tests_df, dev_test_classes_list, dev_test_src_dir_abspaths):
     for dev_test_class in dev_test_classes_list:
         dev_test_relpath = class_name_to_test_path(dev_test_class)
         dev_test_class_path = os.path.join(dev_test_src_dir_abspaths, dev_test_relpath)
@@ -138,7 +141,28 @@ def preprocess(env, evo_tests_df, dev_tests_df):
                                 source += l
                         tmp_df = pd.DataFrame({'dir':[os.path.dirname(dev_test_relpath)], 'dev_relpath': [dev_test_relpath], 'dev_method_signature':[node["signature"]], 'dev_test_src':[source]})
                         dev_tests_df = pd.concat([dev_tests_df, tmp_df])
-        
+    return dev_tests_df
+
+def preprocess(env, evo_tests_df, dev_tests_df):
+    """
+    Collect EVO generated test's metadata
+    """
+    evo_tests_df = get_evosuite_df(env,evo_tests_df)
+
+    """
+    Collect Developer written test's metatdata
+    """
+    #get test source directory: dev_test_src_relpath
+    dev_test_src_relpath = open(env.dev_test_relpath,'r').read()
+    dev_test_src_dir_abspaths = os.path.join(env.buggy_tmp_dir, dev_test_src_relpath)
+    # extract developer written test classes
+    dev_test_classes = open(env.dev_written_test_classes, 'r').read()
+    dev_test_classes_list = dev_test_classes.split('\n')
+    
+    dev_tests_df = get_dev_tests_df(env, dev_tests_df, dev_test_classes_list, dev_test_src_dir_abspaths)
+    
+    # with open(os.path.join(env.evosuite_test_dir, "evo_test_df.pkl"), 'wb') as fevo:
+    #     pickle.dump(evo_tests_df,fevo)
     return evo_tests_df, dev_tests_df
 
 if __name__ == "__main__":
@@ -160,19 +184,12 @@ if __name__ == "__main__":
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
 
     evo_tests_df, dev_tests_df = preprocess(env, evo_tests_df, dev_tests_df)
-    with open(os.path.join(env.evosuite_test_dir, "evo_test_df.pkl"), 'wb') as fevo:
-        pickle.dump(evo_tests_df,fevo)
 
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir')
-    for idx, row in evo_tests_df.iterrows():
-        one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
-        one_evo_dev_df = cal_cosin_sim(one_evo_dev_df)
-        prompt = make_prompt_num(one_evo_dev_df, example_num)
-        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'example{}'.format(example_num))
-        if not os.path.exists(prompt_dir):
-            os.mkdir(prompt_dir)
-        with open( prompt_dir + '/{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no']),'wb') as f:
-            pickle.dump(prompt,f)
-        with open( prompt_dir + '/{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no']),'w') as f:
-            f.write(prompt[1]['content'])
- 
+
+    with open( env.metadata_dir + '/invoked_method_df.pkl','rb') as fr:
+        invoked_method_df = pickle.load(fr)
+    evo_dev_join = pd.merge(evo_dev_join, invoked_method_df, how ='left', on = 'evo_target_method')
+
+    # Run related_test.py and returns 
+    make_prompt(env, evo_tests_df, evo_dev_join)

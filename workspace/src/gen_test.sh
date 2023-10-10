@@ -13,11 +13,11 @@ FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
 
 METADATA_DIR=$RESULT_DIR/metadata
 FAILING_TESTS=$METADATA_DIR/tests.trigger
-FAILING_TESTS_BODY=$METADATA_DIR/failing_tests_body
 RELEVANT_CLASSES=$METADATA_DIR/classes.relevant
-RELEVANT_METHODS_DIR=$METADATA_DIR/methods.relevant
 COV_DIR=$METADATA_DIR/coverage
 DEV_WRITTEN_TEST_ANALYZE=$METADATA_DIR/dev_written_test_analyze
+DEV_WRITTEN_SRC_ANALYZE=$METADATA_DIR/dev_written_src_analyze
+RELEVANT_METHODS_DIR=$METADATA_DIR/methods.relevant
 
 EVOSUITE=$WORK_DIR/evosuite-master-1.0.7-SNAPSHOT.jar
 EVOSUITE_DEFAULT_CONFIG=$WORK_DIR/evosuite-config 
@@ -58,7 +58,7 @@ else
     mkdir -p $METADATA_DIR
     mkdir -p $COV_DIR
     mkdir -p $DEV_WRITTEN_TEST_ANALYZE
-    mkdir -p $FAILING_TESTS_BODY
+    mkdir -p $DEV_WRITTEN_SRC_ANALYZE
     mkdir -p $RELEVANT_METHODS_DIR
 fi
 
@@ -69,12 +69,12 @@ defects4j export -p tests.trigger -o $FAILING_TESTS
 defects4j export -p classes.relevant -o $RELEVANT_CLASSES
 
 echo "Failing tests"
-cat $FAILING_TESTS
-echo "Relevant classes"
-cat $RELEVANT_CLASSES
-
 echo "" >> $FAILING_TESTS
+cat $FAILING_TESTS
+
+echo "\nRelevant classes"
 echo "" >> $RELEVANT_CLASSES
+cat $RELEVANT_CLASSES
 
 # measure covearage of each failing test case 
 while IFS= read -r tc
@@ -90,6 +90,15 @@ do
         mv coverage.xml "$COV_DIR/$tc.xml"
     fi 
 done < $FAILING_TESTS
+
+#dev_test_relpath
+defects4j export -p dir.src.tests -o $METADATA_DIR/dir.src.tests -w $BUGGY_TMP_DIR
+
+#dev_src_relptath
+defects4j export -p dir.src.classes -o $METADATA_DIR/dir.src.classes -w $BUGGY_TMP_DIR
+
+# extract developer written test classes
+defects4j export -p tests.all -o $METADATA_DIR/tests.all -w $BUGGY_TMP_DIR
 
 # get relevant methods from coverage data
 cd $WORK_DIR
@@ -155,8 +164,3 @@ else
     defects4j test -w $FIXED_TMP_DIR -s $EVOSUITE_ID/$PROJECT-$VERSION.tar.bz2
     cd $FIXED_TMP_DIR && cp failing_tests $EVOSUITE_ID/failing_tests_on_fixed
 fi
-
-
-
-
-#########################

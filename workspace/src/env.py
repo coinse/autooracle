@@ -17,14 +17,15 @@ class EvoD4jEnv:
         self.java_analyzer = os.path.join(cls.WORK_DIR,"java-analyzer-1.0-SNAPSHOT-shaded.jar")
        
         self.metadata_dir = os.path.join(self.result_dir,"metadata")
-        self.failing_test_body_dir = os.path.join(self.metadata_dir,"failing_tests_body/")
-        self.relevant_test_body_dir = os.path.join(self.metadata_dir,"relevant_tests_body/")
+        self.dev_test_relpath = os.path.join(self.metadata_dir,"dir.src.tests")
+        self.dev_src_relpath = os.path.join(self.metadata_dir,"dir.src.classes")
+        self.dev_written_test_classes = os.path.join(self.metadata_dir,"tests.all")
         self.dev_written_test_analyze = os.path.join(self.metadata_dir,"dev_written_test_analyze/")
-
+        self.dev_written_src_analyze = os.path.join(self.metadata_dir,"dev_written_src_analyze/")
         self.failing_tests = os.path.join(self.metadata_dir, "tests.trigger")
         self.relevant_classes = os.path.join(self.metadata_dir, "classes.relevant")
         self.coverage_dir = os.path.join(self.metadata_dir,"coverage")
-        self.relevant_tests_class = os.path.join(self.metadata_dir, "tests.relevant")
+        self.relevant_methods = os.path.join(self.metadata_dir, "methods.relevant")
 
         self.evosuite_test_dir  = os.path.join(self.result_dir, "generated_test", self.ts_id)
         self.evosuite_test_src_dir = os.path.join(self.evosuite_test_dir, "evosuite_test")
