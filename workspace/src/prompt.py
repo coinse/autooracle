@@ -113,7 +113,7 @@ def get_evosuite_df(env,evo_tests_df):
                 relpath = os.path.relpath(os.path.join(dp, f), start = env.evosuite_test_src_dir)
                 _, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
                 for i in zip(parsed_test_src.items(), parsed_target_method.items()):
-                    tmp_df = pd.DataFrame({'dir': [os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]],'evo_target_method':[i[1][1]]})
+                    tmp_df = pd.DataFrame({'dir':os.path.dirname(relpath), 'evo_relpath': relpath, 'evo_test_no':i[0][0], 'evo_test_src':i[0][1], 'evo_target_method':i[1][1]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
     return evo_tests_df
 
@@ -178,13 +178,17 @@ if __name__ == "__main__":
 
     env = EvoD4jEnv(project, version, ts_id)
     
+    # 1. Initialize 
     evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_target_method'])
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
 
+    # 2. Make two dataframes that contain (evosuite test suite / developer test suite)
     evo_tests_df, dev_tests_df = preprocess(env, evo_tests_df, dev_tests_df)
 
+    # 3. Merge to the two dataset on directroy
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir')
 
+    # 4. 
     with open( env.metadata_dir + '/invoked_method_df.pkl','rb') as fr:
         invoked_method_df = pickle.load(fr)
     
