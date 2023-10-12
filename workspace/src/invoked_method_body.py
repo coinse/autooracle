@@ -11,26 +11,41 @@ import shlex
 def class_name_to_test_path(class_name):
     return class_name.replace('.', '/')+'.java'
 
-def test_path_to_class_name(test_path):
-    return test_path[:-5].replace('/', '.')
+def invoked_method(env, target_methods):
 
+    src_root_relpath = open(env.dev_src_relpath, 'r').read()
+    src_root_abs_path = os.path.join(env.buggy_tmp_dir, src_root_relpath)
 
-def scrap_body(invoked_df, parse_output, invoked_class_abs_path, method_name):
-    lsd = []
-    for node in parse_output["nodes"]:
-            if (node["type"] == "method" and node["signature"] == method_name) or (node["type"] == "constructor" and method_name == 'constructor'):
-                begin_line = node["begin_line"]
-                end_line = node["end_line"]
-                with open(invoked_class_abs_path, 'r') as g:
-                    line = 0
-                    source = ""
-                    for l in g:
-                        line += 1 
-                        if line >= begin_line and line <= end_line:
-                            source += l
-                    lsd.append(source)
-    return lsd
+    invoked_method_str = ''
 
+    for target in target_methods:
+        pattern = r'(\S+)\.(\S+)\(([^)]*)\)[\S]*'
+        match = re.match(pattern, target)
+        if match:
+            class_name = match.group(1)
+            invoked_class_abs_path = os.path.join(src_root_abs_path, class_name_to_test_path(class_name))
+            parse_output = os.path.join(env.dev_written_src_analyze, "{}.json".format(class_name))
+
+            subprocess.run(
+                shlex.split("java -jar {} {} {}".format(env.java_analyzer, invoked_class_abs_path, parse_output))
+            )
+
+            with open(parse_output,'r') as f:
+                parse_output = json.load(f)
+            method_name_cut = re.findall(r'^([^(\s]+)', target)[0]
+            source = ""
+            for node in parse_output["nodes"]:
+                if (node["type"] == "method" and node["signature"].find(method_name_cut) != -1) or (node["type"] == "constructor" and (method_name_cut=='<clinit>' or method_name_cut=='<init>')):
+                    begin_line = node["begin_line"]
+                    end_line = node["end_line"]
+                    with open(invoked_class_abs_path, 'r') as g:
+                        line = 0
+                        for l in g:
+                            line += 1 
+                            if line >= begin_line and line <= end_line:
+                                source += l
+            invoked_method_str += source
+    return invoked_method_str       
 
 # shoudl make a data frame that the coulms are including the evo_target_method | tarege_method_src 
 # org.apache.commons.lang3.StringUtils.isBlank(Ljava/lang/CharSequence;)Z

@@ -10,6 +10,7 @@ from evosuite import parse as parse_evosuite
 import torch
 import pandas as pd
 import numpy as np
+from invoked_method_body import invoked_method
 from sentence_transformers import SentenceTransformer, util
 
 system_message = {"role":"system", "content":"You are an assistant to help me assess the correctness of a new test. You will be given the called method that the test invokes, and tests that are related to the new test."}
@@ -61,9 +62,13 @@ def num_tokens_from_messages(messages):
 def make_prompt(env, evo_tests_df, evo_dev_join):
      for _, row in evo_tests_df.iterrows():
         one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
-        one_evo_dev_df = cal_cosin_sim(one_evo_dev_df)
-        one_evo_dev_df.to_csv('./a.csv')
-        prompt = make_prompt_str_num(one_evo_dev_df, example_num)
+        #fone_evo_dev_df = cal_cosin_sim(one_evo_dev_df)
+        
+        #FIXME
+        #Give invoked method body to the function 'make_prompt_str_num'
+        invoked_method_body_str = invoked_method(env, row["evo_target_method"])
+
+        prompt = make_prompt_str_num(one_evo_dev_df, example_num, invoked_method_body_str)
         prompt_dir = os.path.join(env.evosuite_prompt_dir, 'example{}'.format(example_num))
         if not os.path.exists(prompt_dir):
             os.mkdir(prompt_dir)
@@ -72,30 +77,30 @@ def make_prompt(env, evo_tests_df, evo_dev_join):
         with open( prompt_dir + '/{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no']),'w') as f:
             f.write(prompt[1]['content'])
         
-def make_prompt_str_max(one_evo_dev_df):
-    related_tests = ''
-    conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
+# def make_prompt_str_max(one_evo_dev_df):
+#     related_tests = ''
+#     conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
 
-    for idx, row in one_evo_dev_df.iterrows():    
-        related_tests += row['dev_test_src']
-        to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], row['target_method_src'], related_tests, row['evo_test_no'])}]
-        if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
-            if len(conversation) == 2 :
-                del conversation[1]
-            conversation.append(to_be_appended[0])
-            conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens
-        else :
-            break
-    return conversation
+#     for idx, row in one_evo_dev_df.iterrows():    
+#         related_tests += row['dev_test_src']
+#         to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], row['target_method_src'], related_tests, row['evo_test_no'])}]
+#         if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
+#             if len(conversation) == 2 :
+#                 del conversation[1]
+#             conversation.append(to_be_appended[0])
+#             conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens
+#         else :
+#             break
+#     return conversation
 
-def make_prompt_str_num(one_evo_dev_df, num):
+def make_prompt_str_num(one_evo_dev_df, num, invoked_method_body_str):
     related_tests = ''
     conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
     count = 0
     for idx, row in one_evo_dev_df.iterrows():   
         if count < num :
             related_tests += row['dev_test_src']
-            to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], row['target_method_src'], related_tests, row['evo_test_no'])}]
+            to_be_appended = [{"role": "user", "content": prompt_new.format(row['evo_test_src'], invoked_method_body_str, related_tests, row['evo_test_no'])}]
             if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
                 if len(conversation) == 2 :
                     del conversation[1]
@@ -113,7 +118,7 @@ def get_evosuite_df(env,evo_tests_df):
                 relpath = os.path.relpath(os.path.join(dp, f), start = env.evosuite_test_src_dir)
                 _, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
                 for i in zip(parsed_test_src.items(), parsed_target_method.items()):
-                    tmp_df = pd.DataFrame({'dir':os.path.dirname(relpath), 'evo_relpath': relpath, 'evo_test_no':i[0][0], 'evo_test_src':i[0][1], 'evo_target_method':i[1][1]})
+                    tmp_df = pd.DataFrame({'dir':os.path.dirname(relpath), 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]], 'evo_target_method':[i[1][1]]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
     return evo_tests_df
 
@@ -188,13 +193,5 @@ if __name__ == "__main__":
     # 3. Merge to the two dataset on directroy
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir')
 
-    # 4. ff
-    with open( env.metadata_dir + '/invoked_method_df.pkl','rb') as fr:
-        invoked_method_df = pickle.load(fr)
-    
-    evo_dev_join.to_csv('./evo_dev_join.csv')
-    invoked_method_df.to_csv('./invoked_method_df.csv')
-    evo_dev_join = pd.merge(evo_dev_join, invoked_method_df, how ='left', on = 'evo_target_method')
-
-    # Run related_test.py and returns 
+    # 4. Make prompt
     make_prompt(env, evo_tests_df, evo_dev_join)
