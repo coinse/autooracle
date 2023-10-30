@@ -1,0 +1,4 @@
+put(ILjava/lang/Object;)Ljava/lang/Object;
+<init>()V
+rehash()V
+<init>(IF)V

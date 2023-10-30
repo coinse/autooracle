@@ -7,7 +7,7 @@ BUDGET=$4
 SEED=$5
 
 WORK_DIR=/root/workspace
-RESULT_DIR=$WORK_DIR/result/${PROJECT}-${VERSION}b
+RESULT_DIR=$WORK_DIR/result2/${PROJECT}-${VERSION}b
 BUGGY_TMP_DIR=/tmp/${PROJECT}-${VERSION}b
 FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
 
@@ -102,7 +102,7 @@ defects4j export -p tests.all -o $METADATA_DIR/tests.all -w $BUGGY_TMP_DIR
 
 # get relevant methods from coverage data
 cd $WORK_DIR/src
-python save_relevant_methods.py $COV_DIR $RELEVANT_METHODS_DIR
+python utils/save_relevant_methods.py $COV_DIR $RELEVANT_METHODS_DIR
 
 cd $BUGGY_TMP_DIR
 

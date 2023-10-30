@@ -1,0 +1,4 @@
+{
+    "system_message" : {"role":"system", "content":"You are an assistant to help me assess the correctness of a new test. You will be given the called method that the test invokes, and tests that are related to the new test."},
+    "user_message" : "This is the new test you are going to evaluate:\n```\n{}\n```\nAnd this is the method body that the new test invokes: \n``` \n{}\n```\nAnd these are the related tests: \n``` \n{}\n```\nDoes the test `{}` correctly test the behavior of the method? If yes, include <correct> in your answer, and <incorrect> otherwise. Explain why."   
+}

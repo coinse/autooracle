@@ -1,0 +1,7 @@
+getDenominator()I
+getFraction(II)Lorg/apache/commons/lang/math/Fraction;
+greatestCommonDivisor(II)I
+getNumerator()I
+reduce()Lorg/apache/commons/lang/math/Fraction;
+<clinit>()V
+<init>(II)V

@@ -1,0 +1,6 @@
+join([Ljava/lang/Object;Ljava/lang/String;II)Ljava/lang/String;
+join([Ljava/lang/Object;CII)Ljava/lang/String;
+join([Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/String;
+join([Ljava/lang/Object;)Ljava/lang/String;
+<clinit>()V
+join([Ljava/lang/Object;C)Ljava/lang/String;

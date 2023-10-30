@@ -1,0 +1,9 @@
+fillWithHtml40Entities(Lorg/apache/commons/lang/Entities;)V
+doUnescape(Ljava/io/Writer;Ljava/lang/String;I)V
+escape(Ljava/io/Writer;Ljava/lang/String;)V
+addEntities([[Ljava/lang/String;)V
+entityName(I)Ljava/lang/String;
+<init>()V
+<clinit>()V
+addEntity(Ljava/lang/String;I)V
+unescape(Ljava/io/Writer;Ljava/lang/String;)V

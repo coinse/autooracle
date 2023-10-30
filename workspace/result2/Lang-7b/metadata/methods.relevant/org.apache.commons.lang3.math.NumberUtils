@@ -1,0 +1,10 @@
+createBigInteger(Ljava/lang/String;)Ljava/math/BigInteger;
+createNumber(Ljava/lang/String;)Ljava/lang/Number;
+createBigDecimal(Ljava/lang/String;)Ljava/math/BigDecimal;
+isAllZeros(Ljava/lang/String;)Z
+createFloat(Ljava/lang/String;)Ljava/lang/Float;
+createLong(Ljava/lang/String;)Ljava/lang/Long;
+<clinit>()V
+isDigits(Ljava/lang/String;)Z
+createInteger(Ljava/lang/String;)Ljava/lang/Integer;
+createDouble(Ljava/lang/String;)Ljava/lang/Double;

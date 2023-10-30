@@ -1,0 +1,3 @@
+<init>(Ljava/lang/String;)V
+isNumber()Z
+addRegex(Lorg/apache/commons/lang3/time/FastDateParser;Ljava/lang/StringBuilder;)Z

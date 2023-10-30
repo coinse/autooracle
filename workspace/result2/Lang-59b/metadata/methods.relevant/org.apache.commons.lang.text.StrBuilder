@@ -1,0 +1,3 @@
+appendFixedWidthPadRight(Ljava/lang/Object;IC)Lorg/apache/commons/lang/text/StrBuilder;
+<init>(I)V
+ensureCapacity(I)Lorg/apache/commons/lang/text/StrBuilder;

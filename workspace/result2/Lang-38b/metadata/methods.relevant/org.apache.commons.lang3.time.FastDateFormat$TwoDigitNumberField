@@ -1,0 +1,4 @@
+appendTo(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V
+estimateLength()I
+<init>(I)V
+appendTo(Ljava/lang/StringBuffer;I)V

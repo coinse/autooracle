@@ -1,0 +1,3 @@
+translate(Ljava/lang/CharSequence;)Ljava/lang/String;
+translate(Ljava/lang/CharSequence;Ljava/io/Writer;)V
+<init>()V

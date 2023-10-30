@@ -1,0 +1,5 @@
+containsTokenWithValue([Lorg/apache/commons/lang/time/DurationFormatUtils$Token;Ljava/lang/Object;)Z
+increment()V
+getValue()Ljava/lang/Object;
+getCount()I
+<init>(Ljava/lang/Object;)V

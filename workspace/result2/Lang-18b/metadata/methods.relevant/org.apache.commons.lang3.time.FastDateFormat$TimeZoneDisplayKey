@@ -1,0 +1,3 @@
+equals(Ljava/lang/Object;)Z
+hashCode()I
+<init>(Ljava/util/TimeZone;ZILjava/util/Locale;)V

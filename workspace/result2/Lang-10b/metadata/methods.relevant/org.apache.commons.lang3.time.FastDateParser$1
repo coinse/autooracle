@@ -1,0 +1,2 @@
+compare(Ljava/lang/Object;Ljava/lang/Object;)I
+compare(Lorg/apache/commons/lang3/time/FastDateParser$KeyValue;Lorg/apache/commons/lang3/time/FastDateParser$KeyValue;)I

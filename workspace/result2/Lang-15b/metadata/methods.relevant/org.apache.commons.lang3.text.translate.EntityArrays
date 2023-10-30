@@ -1,0 +1,12 @@
+invert([[Ljava/lang/String;)[[Ljava/lang/String;
+BASIC_ESCAPE()[[Ljava/lang/String;
+HTML40_EXTENDED_ESCAPE()[[Ljava/lang/String;
+JAVA_CTRL_CHARS_ESCAPE()[[Ljava/lang/String;
+JAVA_CTRL_CHARS_UNESCAPE()[[Ljava/lang/String;
+APOS_ESCAPE()[[Ljava/lang/String;
+ISO8859_1_UNESCAPE()[[Ljava/lang/String;
+ISO8859_1_ESCAPE()[[Ljava/lang/String;
+BASIC_UNESCAPE()[[Ljava/lang/String;
+APOS_UNESCAPE()[[Ljava/lang/String;
+<clinit>()V
+HTML40_EXTENDED_UNESCAPE()[[Ljava/lang/String;

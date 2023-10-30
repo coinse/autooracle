@@ -1,0 +1,9 @@
+indexOf(Ljava/lang/String;)I
+append(Ljava/lang/String;)Lorg/apache/commons/lang/text/StrBuilder;
+length()I
+deleteAll(Ljava/lang/String;)Lorg/apache/commons/lang/text/StrBuilder;
+<init>(Ljava/lang/String;)V
+indexOf(Ljava/lang/String;I)I
+ensureCapacity(I)Lorg/apache/commons/lang/text/StrBuilder;
+deleteImpl(III)V
+deleteFirst(Ljava/lang/String;)Lorg/apache/commons/lang/text/StrBuilder;

@@ -1,0 +1,2 @@
+createNumber(Ljava/lang/String;)Ljava/lang/Number;
+isAllZeros(Ljava/lang/String;)Z

@@ -1,0 +1,2 @@
+defaultString(Ljava/lang/String;)Ljava/lang/String;
+indexOf(Ljava/lang/String;Ljava/lang/String;I)I

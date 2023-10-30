@@ -1,0 +1,8 @@
+ensureCapacity(I)Lorg/apache/commons/lang/text/StrBuilder;
+length()I
+append(Ljava/lang/String;)Lorg/apache/commons/lang/text/StrBuilder;
+deleteFirst(Ljava/lang/String;)Lorg/apache/commons/lang/text/StrBuilder;
+deleteImpl(III)V
+contains(C)Z
+<init>(Ljava/lang/String;)V
+indexOf(Ljava/lang/String;I)I

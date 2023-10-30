@@ -1,0 +1,9 @@
+getOSMatches(Ljava/lang/String;Ljava/lang/String;)Z
+getJavaVersionMatches(Ljava/lang/String;)Z
+isOSNameMatch(Ljava/lang/String;Ljava/lang/String;)Z
+isJavaVersionMatch(Ljava/lang/String;Ljava/lang/String;)Z
+getOSMatchesName(Ljava/lang/String;)Z
+getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
+<clinit>()V
+isOSMatch(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+isJavaVersionAtLeast(Lorg/apache/commons/lang3/JavaVersion;)Z

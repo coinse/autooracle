@@ -1,0 +1,3 @@
+appendTo(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V
+estimateLength()I
+<init>(Ljava/util/TimeZone;Ljava/util/Locale;I)V

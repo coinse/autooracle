@@ -1,0 +1,3 @@
+<init>(Ljava/lang/Object;Ljava/lang/Object;)V
+hashCode()I
+equals(Ljava/lang/Object;)Z
