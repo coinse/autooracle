@@ -1,9 +1,0 @@
-containsAny(Ljava/lang/CharSequence;Ljava/lang/String;)Z
-indexOfAny(Ljava/lang/CharSequence;[C)I
-containsNone(Ljava/lang/CharSequence;[C)Z
-indexOfAnyBut(Ljava/lang/CharSequence;[C)I
-containsNone(Ljava/lang/CharSequence;Ljava/lang/String;)Z
-indexOfAnyBut(Ljava/lang/String;Ljava/lang/String;)I
-containsAny(Ljava/lang/CharSequence;[C)Z
-isEmpty(Ljava/lang/CharSequence;)Z
-indexOfAny(Ljava/lang/CharSequence;Ljava/lang/String;)I

@@ -1,2 +1,0 @@
-contains(Ljava/lang/String;Ljava/lang/String;)Z
-containsIgnoreCase(Ljava/lang/String;Ljava/lang/String;)Z

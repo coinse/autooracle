@@ -1,4 +1,0 @@
-translate(Ljava/lang/CharSequence;)Ljava/lang/String;
-with([Lorg/apache/commons/lang3/text/translate/CharSequenceTranslator;)Lorg/apache/commons/lang3/text/translate/CharSequenceTranslator;
-<init>()V
-translate(Ljava/lang/CharSequence;Ljava/io/Writer;)V

@@ -1,9 +1,0 @@
-getSystemProperty(Ljava/lang/String;)Ljava/lang/String;
-getJavaVersionTrimmed()Ljava/lang/String;
-getOSMatches(Ljava/lang/String;Ljava/lang/String;)Z
-getOSMatches(Ljava/lang/String;)Z
-<clinit>()V
-getJavaVersionMatches(Ljava/lang/String;)Z
-isJavaVersionAtLeast(F)Z
-getJavaVersionAsFloat()F
-getJavaVersionAsInt()I

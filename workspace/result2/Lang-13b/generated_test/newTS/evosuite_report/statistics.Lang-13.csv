@@ -1,4 +1,0 @@
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang3.SerializationException,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,1.0,12,12
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang3.SerializationUtils,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,0.7880769230769231,105,73

@@ -1,5 +1,0 @@
-addAbbreviation(Ljava/lang/String;Ljava/lang/String;)V
-isAssignable(Ljava/lang/Class;Ljava/lang/Class;Z)Z
-primitiveToWrapper(Ljava/lang/Class;)Ljava/lang/Class;
-isAssignable(Ljava/lang/Class;Ljava/lang/Class;)Z
-<clinit>()V

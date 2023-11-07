@@ -1,4 +1,0 @@
-format(Ljava/util/Calendar;)Ljava/lang/String;
-getInstance(Ljava/lang/String;)Lorg/apache/commons/lang3/time/FastDateFormat;
-<init>(Ljava/lang/String;Ljava/util/TimeZone;Ljava/util/Locale;)V
-<clinit>()V

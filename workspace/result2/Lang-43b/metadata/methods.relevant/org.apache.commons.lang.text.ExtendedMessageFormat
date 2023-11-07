@@ -1,5 +1,0 @@
-next(Ljava/text/ParsePosition;)Ljava/text/ParsePosition;
-applyPattern(Ljava/lang/String;)V
-<init>(Ljava/lang/String;Ljava/util/Locale;Ljava/util/Map;)V
-<init>(Ljava/lang/String;Ljava/util/Map;)V
-appendQuotedString(Ljava/lang/String;Ljava/text/ParsePosition;Ljava/lang/StringBuffer;Z)Ljava/lang/StringBuffer;

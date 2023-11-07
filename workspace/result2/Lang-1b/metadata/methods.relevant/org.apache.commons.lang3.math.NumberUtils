@@ -1,3 +1,0 @@
-createInteger(Ljava/lang/String;)Ljava/lang/Integer;
-<clinit>()V
-createNumber(Ljava/lang/String;)Ljava/lang/Number;

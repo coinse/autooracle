@@ -1,4 +1,0 @@
-toLocale(Ljava/lang/String;)Ljava/util/Locale;
-availableLocaleList()Ljava/util/List;
-<clinit>()V
-isAvailableLocale(Ljava/util/Locale;)Z

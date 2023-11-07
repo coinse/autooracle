@@ -29,6 +29,16 @@ def mut_prompt(conversation):
                 break
 
     prompt_str = "\n".join(prompt_list)
+    '''
+    This is for dealing with the unit test that has a tyr-catch type 
+    '''
+    # Regular expression pattern to find the fail statement outside the catch block
+    pattern2 = r'try {([\s\S]*?)fail\("[^"]+"\);([\s\S]*?)} catch\(([^)]+)\) {([\s\S]*?)}'
+
+    # Find and replace the fail statement
+    if re.search(pattern2, prompt_str):
+        prompt_str = re.sub(pattern2, r'try {\1} catch(\3) {\2\tfail("Expecting No exception");}', prompt_str, count=1)
+        mutated = True
     conversation[1]['content'] = prompt_str
 
     return conversation, mutated

@@ -1,2 +1,0 @@
-<init>(Ljava/io/InputStream;Ljava/lang/ClassLoader;)V
-resolveClass(Ljava/io/ObjectStreamClass;)Ljava/lang/Class;

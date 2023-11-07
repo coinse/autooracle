@@ -1,3 +1,0 @@
-isBlank(Ljava/lang/CharSequence;)Z
-<clinit>()V
-isEmpty(Ljava/lang/CharSequence;)Z

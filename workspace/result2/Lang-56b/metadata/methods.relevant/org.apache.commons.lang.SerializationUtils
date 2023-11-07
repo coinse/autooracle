@@ -1,2 +1,0 @@
-serialize(Ljava/io/Serializable;Ljava/io/OutputStream;)V
-serialize(Ljava/io/Serializable;)[B

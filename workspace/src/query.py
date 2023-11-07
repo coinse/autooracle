@@ -14,7 +14,7 @@ def query_chat_llm(messages=[], system_message=None, max_response_tokens=250):
     if system_message is not None:
         messages.append({"role":"system", "content": system_message})    
     chat = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4",
         messages=messages,
         max_tokens=max_response_tokens
     )
@@ -78,5 +78,5 @@ if __name__ == "__main__":
                 reply_file = os.path.join(chat_reply_mut_dir, prompt_mut.replace('query_mut.pkl', 'reply_mut'))
             if not os.path.exists(reply_file):              
                 chat_reply_mut = query_chat_llm(data)
-                with open(os.path.join(chat_reply_mut_dir, prompt_mut.replace('query_mut.pkl', 'reply_mut')), 'w') as fw:
+                with open(reply_file, 'w') as fw:
                     fw.write(chat_reply_mut)

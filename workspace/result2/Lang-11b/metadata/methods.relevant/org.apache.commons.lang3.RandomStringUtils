@@ -1,3 +1,0 @@
-random(IIIZZ)Ljava/lang/String;
-random(IIIZZ[CLjava/util/Random;)Ljava/lang/String;
-<clinit>()V

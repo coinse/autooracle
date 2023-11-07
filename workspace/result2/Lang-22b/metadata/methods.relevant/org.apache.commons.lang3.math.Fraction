@@ -1,9 +1,0 @@
-getReducedFraction(II)Lorg/apache/commons/lang3/math/Fraction;
-<clinit>()V
-greatestCommonDivisor(II)I
-<init>(II)V
-reduce()Lorg/apache/commons/lang3/math/Fraction;
-getNumerator()I
-getFraction(II)Lorg/apache/commons/lang3/math/Fraction;
-equals(Ljava/lang/Object;)Z
-getDenominator()I

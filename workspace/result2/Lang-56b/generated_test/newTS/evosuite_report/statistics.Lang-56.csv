@@ -1,8 +1,0 @@
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang.exception.NestableRuntimeException,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,0.8888888888888888,80,64
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang.SerializationException,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,1.0,12,12
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang.SerializationUtils,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,0.8309523809523809,59,47
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang.time.FastDateFormat,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,0.7900563700961579,1537,769

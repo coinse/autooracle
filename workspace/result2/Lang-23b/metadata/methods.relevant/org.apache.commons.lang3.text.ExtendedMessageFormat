@@ -1,9 +1,0 @@
-applyPattern(Ljava/lang/String;)V
-parseFormatDescription(Ljava/lang/String;Ljava/text/ParsePosition;)Ljava/lang/String;
-readArgumentIndex(Ljava/lang/String;Ljava/text/ParsePosition;)I
-containsElements(Ljava/util/Collection;)Z
-<init>(Ljava/lang/String;Ljava/util/Locale;Ljava/util/Map;)V
-seekNonWs(Ljava/lang/String;Ljava/text/ParsePosition;)V
-next(Ljava/text/ParsePosition;)Ljava/text/ParsePosition;
-getFormat(Ljava/lang/String;)Ljava/text/Format;
-insertFormats(Ljava/lang/String;Ljava/util/ArrayList;)Ljava/lang/String;

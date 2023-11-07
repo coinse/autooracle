@@ -1,3 +1,0 @@
-<clinit>()V
-getInstance(Ljava/lang/String;Ljava/util/TimeZone;Ljava/util/Locale;)Ljava/text/Format;
-<init>()V

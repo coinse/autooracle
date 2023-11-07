@@ -1,4 +1,0 @@
-splitMatcher()Lorg/apache/commons/lang3/text/StrMatcher;
-<clinit>()V
-<init>()V
-isMatch([CI)I

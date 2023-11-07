@@ -1,5 +1,0 @@
-unescapeHtml(Ljava/io/Writer;Ljava/lang/String;)V
-escapeHtml(Ljava/io/Writer;Ljava/lang/String;)V
-unescapeHtml(Ljava/lang/String;)Ljava/lang/String;
-escapeHtml(Ljava/lang/String;)Ljava/lang/String;
-<clinit>()V

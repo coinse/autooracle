@@ -1,3 +1,0 @@
-<init>(ILjava/util/Calendar;Ljava/util/Locale;)V
-isNumber()Z
-addRegex(Lorg/apache/commons/lang3/time/FastDateParser;Ljava/lang/StringBuilder;)Z

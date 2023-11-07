@@ -1,4 +1,0 @@
-get(Ljava/lang/String;)Lorg/apache/commons/lang3/JavaVersion;
-atLeast(Lorg/apache/commons/lang3/JavaVersion;)Z
-<init>(Ljava/lang/String;IFLjava/lang/String;)V
-<clinit>()V

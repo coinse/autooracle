@@ -1,3 +1,0 @@
-appendTo(Ljava/lang/StringBuffer;Ljava/util/Calendar;)V
-estimateLength()I
-<init>(Lorg/apache/commons/lang3/time/FastDatePrinter$NumberRule;)V

@@ -1,4 +1,0 @@
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang3.text.translate.CharSequenceTranslator,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,0.9727369921596578,190,172
-TARGET_CLASS,criterion,Coverage,Total_Goals,Covered_Goals
-org.apache.commons.lang3.text.translate.NumericEntityUnescaper,LINE;BRANCH;EXCEPTION;WEAKMUTATION;OUTPUT;METHOD;METHODNOEXCEPTION;CBRANCH,0.7813921377517868,237,194

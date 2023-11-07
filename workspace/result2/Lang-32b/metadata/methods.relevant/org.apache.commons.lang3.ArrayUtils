@@ -1,4 +1,0 @@
-indexOf([Ljava/lang/Object;Ljava/lang/Object;)I
-indexOf([Ljava/lang/Object;Ljava/lang/Object;I)I
-<clinit>()V
-contains([Ljava/lang/Object;Ljava/lang/Object;)Z

@@ -1,5 +1,0 @@
-<clinit>()V
-createLong(Ljava/lang/String;)Ljava/lang/Long;
-isAllZeros(Ljava/lang/String;)Z
-isDigits(Ljava/lang/String;)Z
-createNumber(Ljava/lang/String;)Ljava/lang/Number;

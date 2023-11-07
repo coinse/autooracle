@@ -1,3 +1,0 @@
-isEmpty(Ljava/lang/CharSequence;)Z
-containsAny(Ljava/lang/CharSequence;Ljava/lang/String;)Z
-containsAny(Ljava/lang/CharSequence;[C)Z

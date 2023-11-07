@@ -1,4 +1,0 @@
-escapeJavaStyleString(Ljava/lang/String;Z)Ljava/lang/String;
-escapeJavaStyleString(Ljava/io/Writer;Ljava/lang/String;Z)V
-<clinit>()V
-escapeJava(Ljava/lang/String;)Ljava/lang/String;
