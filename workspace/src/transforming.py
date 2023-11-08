@@ -4,7 +4,7 @@ import pickle
 import argparse
 from utils.env import EvoD4jEnv
 
-def mut_prompt(conversation):
+def assert_transform_prompt(conversation):
     prompt_str = conversation[1]['content']
     prompt_list = prompt_str.split('\n')
     mutated = False
@@ -27,8 +27,13 @@ def mut_prompt(conversation):
                 prompt_list[idx] = re.sub(old_pattern, new_pattern, l)
                 mutated = True
                 break
+    prompt_str = "\n".join(prompt_list)    
+    conversation[1]['content'] = prompt_str
+    return conversation, mutated
 
-    prompt_str = "\n".join(prompt_list)
+def trycatch_transform_prompt(conversation):
+    prompt_str = conversation[1]['content']
+    mutated = False
     '''
     This is for dealing with the unit test that has a tyr-catch type 
     '''
@@ -42,6 +47,7 @@ def mut_prompt(conversation):
     conversation[1]['content'] = prompt_str
 
     return conversation, mutated
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -63,6 +69,7 @@ if __name__ == "__main__":
     prompt_list = list(filter(lambda x: x.endswith('.pkl'), os.listdir(prompt_dir)))
 
     prompt_mut_dir = os.path.join(env.evosuite_prompt_mut_dir, 'prompt{}/example{}'.format(prompt_no, example_num))
+    
     if not os.path.exists(prompt_mut_dir):
             os.makedirs(prompt_mut_dir)
 
@@ -70,9 +77,35 @@ if __name__ == "__main__":
         with open(os.path.join(prompt_dir, prompt),'rb') as fr:
             conversation = pickle.load(fr)
         
-        converstation_mut, mutated = mut_prompt(conversation)
+        converstation_mut, mutated = assert_transform_prompt(conversation)
         if mutated:
-            with open(os.path.join(prompt_mut_dir, prompt.replace('query.pkl', 'query_mut.pkl')), 'wb') as fwp:
-                pickle.dump(converstation_mut,fwp)
-            with open(os.path.join(prompt_mut_dir, prompt.replace('query.pkl', 'query_mut.txt')), 'w') as fwt:
-                fwt.write(converstation_mut[0]['content'] + converstation_mut[1]['content'])
+            old_file = os.path.join(prompt_dir, prompt.replace('query.pkl','query.txt'))
+            new_file = os.path.join(prompt_dir, old_file.replace('query.txt','query_assert.txt'))
+            os.rename(old_file, new_file)
+            old_file = os.path.join(prompt_dir, prompt)
+            
+            new_file = os.path.join(prompt_dir, prompt.replace('query.pkl','query_assert.pkl'))
+            os.rename(old_file, new_file)
+
+            if prompt.find('query.pkl') != -1:
+                with open(os.path.join(prompt_mut_dir, prompt.replace('query.pkl', 'query_mut_assert.pkl')), 'wb') as fwp:
+                    pickle.dump(converstation_mut,fwp)
+                with open(os.path.join(prompt_mut_dir, prompt.replace('query.pkl', 'query_mut_assert.txt')), 'w') as fwt:
+                    fwt.write(converstation_mut[0]['content'] + '\n' + converstation_mut[1]['content'])
+            continue    
+        
+        mutated = False 
+        converstation_mut, mutated = trycatch_transform_prompt(conversation)
+        if mutated:
+            old_file = os.path.join(prompt_dir, prompt.replace('query.pkl','query.txt'))
+            new_file = os.path.join(prompt_dir, old_file.replace('query.txt','query_trycatch.txt'))
+            os.rename(old_file, new_file)
+            old_file = os.path.join(prompt_dir, prompt)
+            new_file = os.path.join(prompt_dir, prompt.replace('query.pkl','query_trycatch.pkl'))
+            os.rename(old_file, new_file)
+
+            if prompt.find('query.pkl') != -1:
+                with open(os.path.join(prompt_mut_dir, prompt.replace('query.pkl', 'query_mut_trycatch.pkl')), 'wb') as fwp:
+                    pickle.dump(converstation_mut,fwp)
+                with open(os.path.join(prompt_mut_dir, prompt.replace('query.pkl', 'query_mut_trycatch.txt')), 'w') as fwt:
+                    fwt.write(converstation_mut[0]['content'] + '\n' + converstation_mut[1]['content'])

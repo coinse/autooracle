@@ -1,5 +1,5 @@
 import os
-import openai
+from openai import OpenAI
 import argparse
 import pickle
 from dotenv import load_dotenv
@@ -7,18 +7,21 @@ import time
 from utils.env import EvoD4jEnv
 
 load_dotenv()
-openai.organization="org-mSMx268bkMcTa5gXwsDGN8Af"
-openai.api_key= os.environ["OPEN_API_KEY"]
+
+client = OpenAI(
+    organization="org-mSMx268bkMcTa5gXwsDGN8Af", api_key= os.environ["OPEN_API_KEY"])
 
 def query_chat_llm(messages=[], system_message=None, max_response_tokens=250):   
     if system_message is not None:
         messages.append({"role":"system", "content": system_message})    
-    chat = openai.ChatCompletion.create(
-        model="gpt-4",
+    chat = client.chat.completions.create(
+        model="gpt-3.5-turbo",
         messages=messages,
         max_tokens=max_response_tokens
     )
-    chat_reply = chat["choices"][0]["message"]["content"]
+    chat_reply = chat.choices[0].message.content
+    print(chat_reply)
+    print('************************************************************************************************************************************')
     # messages.append({"role": "assistant", "content":chat_reply})
     return chat_reply
 
@@ -56,13 +59,14 @@ if __name__ == "__main__":
             os.makedirs(chat_reply_dir)
 
         for prompt in prompt_list:
-            with open(os.path.join(prompt_dir, prompt),'rb') as fr:
-                data = pickle.load(fr)
-                reply_file = os.path.join(chat_reply_dir, prompt.replace('query.pkl', 'reply'))
-            if not os.path.exists(reply_file):              
-                chat_reply = query_chat_llm(data)
-                with open(reply_file, 'w') as fw:
-                    fw.write(chat_reply)
+            if prompt.endswith('assert.pkl') or prompt.endswith('trycatch.pkl'):
+                with open(os.path.join(prompt_dir, prompt),'rb') as fr:
+                    data = pickle.load(fr)
+                    reply_file = os.path.join(chat_reply_dir, prompt.replace('query', 'reply').replace('.pkl', '.txt'))
+                if not os.path.exists(reply_file):              
+                    chat_reply = query_chat_llm(data)
+                    with open(reply_file, 'w') as fw:
+                        fw.write(chat_reply)
     # Mut 
     else:
         prompt_mut_dir = os.path.join(env.evosuite_prompt_mut_dir, 'prompt{}/example{}'.format(prompt_no,example_num))
@@ -73,10 +77,12 @@ if __name__ == "__main__":
             os.makedirs(chat_reply_mut_dir)
 
         for prompt_mut in prompt_mut_list:
-            with open(os.path.join(prompt_mut_dir, prompt_mut),'rb') as fr:
-                data = pickle.load(fr)
-                reply_file = os.path.join(chat_reply_mut_dir, prompt_mut.replace('query_mut.pkl', 'reply_mut'))
-            if not os.path.exists(reply_file):              
-                chat_reply_mut = query_chat_llm(data)
-                with open(reply_file, 'w') as fw:
-                    fw.write(chat_reply_mut)
+            if prompt_mut.endswith('assert.pkl') or prompt_mut.endswith('trycatch.pkl'):
+                with open(os.path.join(prompt_mut_dir, prompt_mut),'rb') as fr:
+                    data = pickle.load(fr)
+                    reply_file = os.path.join(chat_reply_mut_dir, prompt_mut.replace('query', 'reply').replace('.pkl', '.txt'))
+                if not os.path.exists(reply_file):              
+                    chat_reply_mut = query_chat_llm(data)
+                    with open(reply_file, 'w') as fw:
+                        fw.write(chat_reply_mut)
+
