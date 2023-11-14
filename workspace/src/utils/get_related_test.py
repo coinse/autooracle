@@ -13,7 +13,10 @@ def cal_dev_embedding(env, dev_tests_df):
     return dev_tests_df
 
 def get_related(one_evo_dev_df): 
-    one_evo_dev_df.to_csv('./a.csv')
     evo_embedding = one_evo_dev_df['evo_embedding'].reset_index(drop=True)[0]
-    one_evo_dev_df['cosin_sim_score'] = one_evo_dev_df['dev_embedding'].apply(lambda x: util.cos_sim(evo_embedding, x)) 
-    return one_evo_dev_df.sort_values(by='cosin_sim_score', ascending = False)
+    if one_evo_dev_df['dev_embedding'].isna().sum():
+        one_evo_dev_df['dev_test_src'] = 'no related test'
+        return one_evo_dev_df
+    else :
+        one_evo_dev_df['cosin_sim_score'] = one_evo_dev_df['dev_embedding'].apply(lambda x: util.cos_sim(evo_embedding, x)) 
+        return one_evo_dev_df.sort_values(by='cosin_sim_score', ascending = False)

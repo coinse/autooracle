@@ -11,7 +11,7 @@ import shlex
 def class_name_to_test_path(class_name):
     return class_name.replace('.', '/')+'.java'
 
-def get_javadoc(env, target_methods):
+def get_javadoc(env, target_methods, lines):
 
     src_root_relpath = open(env.dev_src_relpath, 'r').read()
     src_root_abs_path = os.path.join(env.buggy_tmp_dir, src_root_relpath)
@@ -20,6 +20,9 @@ def get_javadoc(env, target_methods):
 
     for target in target_methods:
         pattern = r'(\S+)\.(\S+)\(([^)]*)\)[\S]*'
+        if len(lines) == 0:
+            continue
+        line = int(lines[0][1])
         match = re.match(pattern, target)
         if match:
             class_name = match.group(1)
@@ -34,7 +37,8 @@ def get_javadoc(env, target_methods):
                 parse_output = json.load(f)
             method_name_cut = re.findall(r'^([^(\s]+)', target)[0]
             for node in parse_output["nodes"]:
-                if (node["type"] == "method" and node["signature"].find(method_name_cut) != -1) or (node["type"] == "constructor" and (method_name_cut=='<clinit>' or method_name_cut=='<init>')):
-                    comment_str += node["comment"]
-                    break
+                if (node["type"] == "method" and node["signature"].find(method_name_cut) != -1):
+                    if (node["begin_line"] <= line and node["end_line"] >= line):
+                        comment_str += node["comment"]
+                        break
     return comment_str        

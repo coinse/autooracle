@@ -15,14 +15,14 @@ def get_evo_df(env):
     print('*'*30)
     print('make evo_tests_df')
     print('*'*30+'\n')
-    evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_target_method'])
+    evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_target_method','line'])
     for dp, dn, fn in os.walk(env.evosuite_test_src_dir):
         for f in fn:
             if f.endswith("ESTest.java"):
                 relpath = os.path.relpath(os.path.join(dp, f), start = env.evosuite_test_src_dir)
-                _, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
-                for i in zip(parsed_test_src.items(), parsed_target_method.items()):
-                    tmp_df = pd.DataFrame({'dir':os.path.dirname(relpath), 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]], 'evo_target_method':[i[1][1]]})
+                coverages, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
+                for i in zip(coverages.items(), parsed_test_src.items(), parsed_target_method.items()):
+                    tmp_df = pd.DataFrame({'dir':[os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[1][1]], 'evo_target_method':[i[2][1]], 'line':[i[0][1]]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
     return evo_tests_df
 

@@ -12,6 +12,8 @@ class EvoD4jEnv:
         self.ts_id = str(ts_id)
 
         self.result_dir = os.path.join(cls.WORK_DIR,"result",self.d4j_id + "b")
+        self.selected_result_dir = os.path.join(cls.WORK_DIR,"result","1_selected",self.d4j_id + "b")
+
         self.buggy_tmp_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "b")
         self.fixed_tmp_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "f")
         self.java_analyzer = os.path.join(cls.WORK_DIR,"java-analyzer-1.0-SNAPSHOT-shaded.jar")
@@ -34,3 +36,9 @@ class EvoD4jEnv:
         self.evosuite_prompt_mut_dir = os.path.join(self.evosuite_test_dir, "prompt_mut")
         self.evosuite_chat_reply_dir = os.path.join(self.evosuite_test_dir, "chat_reply")
         self.evosuite_chat_reply_mut_dir = os.path.join(self.evosuite_test_dir, "chat_reply_mut")
+
+        self.selected_evosuite_test_dir  = os.path.join(self.selected_result_dir, "generated_test", self.ts_id)
+        self.selected_evosuite_prompt_dir = os.path.join(self.selected_evosuite_test_dir, "prompt")
+        self.selected_evosuite_prompt_mut_dir = os.path.join(self.selected_evosuite_test_dir, "prompt_mut")
+        self.selected_evosuite_chat_reply_dir = os.path.join(self.selected_evosuite_test_dir, "chat_reply")
+        self.selected_evosuite_chat_reply_mut_dir = os.path.join(self.selected_evosuite_test_dir, "chat_reply_mut")

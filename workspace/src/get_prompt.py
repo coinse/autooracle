@@ -13,11 +13,13 @@ from utils.get_dataframe import get_evo_df, get_dev_tests_df
 
 def make_prompt_file(prompt_dir, prompt, row):
     if not os.path.exists(prompt_dir):
-            os.makedirs(prompt_dir)
-    with open( prompt_dir + '/{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no']),'wb') as f:
-        pickle.dump(prompt,f)
-    with open( prompt_dir + '/{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no']),'w') as f:
-        f.write(prompt[0]['content'] + '\n' +  prompt[1]['content'])
+        os.makedirs(prompt_dir)
+    if not os.path.exists(prompt_dir + '/{}_{}_query_assert.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no'])):
+        if not os.path.exists(prompt_dir + '/{}_{}_query_trycatch.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no'])):
+            with open( prompt_dir + '/{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no']),'wb') as f:
+                pickle.dump(prompt,f)
+            with open( prompt_dir + '/{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no']),'w') as f:
+                f.write(prompt[0]['content'] + '\n' +  prompt[1]['content'])
 
 def num_tokens_from_messages(messages):
     encoding= tiktoken.get_encoding("cl100k_base") 
@@ -32,6 +34,7 @@ def num_tokens_from_messages(messages):
     return num_tokens
 
 def make_prompt(env, evo_tests_df, evo_dev_join, conversation, prompt_format):
+    
     for _, row in evo_tests_df.iterrows():
         one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
         
@@ -40,17 +43,17 @@ def make_prompt(env, evo_tests_df, evo_dev_join, conversation, prompt_format):
         #2. invoked method
         #invoked_method_body_str = invoked_method(env, row["evo_target_method"])
         #3. java doc
-        comment = get_javadoc(env, row["evo_target_method"])
+        comment = get_javadoc(env, row["evo_target_method"], row["line"])
         if comment == '':
             continue
         prompt = count_str_num(one_evo_dev_df, example_num, comment, conversation, prompt_format)
-        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'prompt4/example{}'.format(example_num))
+        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'prompt5/example{}'.format(example_num))
 
         make_prompt_file(prompt_dir, prompt, row)  
 
 def count_str_num(one_evo_dev_df, num, comment, conversation, prompt_format):
     related_tests = ''
-    conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens # 
+    conv_history_tokens = num_tokens_from_messages(conversation) + max_response_tokens #
     count = 0
     for idx, row in one_evo_dev_df.iterrows():   
         if count < num :
@@ -85,11 +88,11 @@ if __name__ == "__main__":
 
     env = EvoD4jEnv(project, version, ts_id)
 
-   # 1. Make two dataframes that contain (evosuite test suite / developer test suite)
+    # 1. Make two dataframes that contain (evosuite test suite / developer test suite)
     evo_tests_df = get_evo_df(env)
     dev_tests_df = get_dev_tests_df(env)
 
-    #2. Calculate model embedding
+    # #2. Calculate model embedding
     evo_tests_df = cal_evo_embedding(env, evo_tests_df)
     with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'wb') as f:
         pickle.dump(evo_tests_df,f)
@@ -97,20 +100,23 @@ if __name__ == "__main__":
     dev_tests_df = cal_dev_embedding(env, dev_tests_df)
     with open(os.path.join(env.evosuite_test_dir, 'dev_tests_df.pkl'),'wb') as f:
         pickle.dump(dev_tests_df,f)
-    
+
+    with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'rb') as f:
+        evo_tests_df = pickle.load(f)
+
+    with open(os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl'),'rb') as f:
+        dev_tests_df = pickle.load(f)
+     
     #3. Merge to the two dataset on directroy
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir', how = 'left')
 
     #4. Initialize conversation 
     max_response_tokens = 250
-    token_limit = 4096
+    token_limit = 4000
     conversation = []
-    with open(os.path.join(env.src_dir, 'prompt', "prompt4.json"),'rb') as f:
+    with open(os.path.join(env.src_dir, 'prompt', "prompt5.json"),'rb') as f:
         prompt_format = json.load(f)
     conversation.append(prompt_format["system_message"])
     
     # 4. Make prompt
     make_prompt(env, evo_tests_df, evo_dev_join, conversation, prompt_format)
-
-
-
