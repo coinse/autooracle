@@ -7,9 +7,8 @@ from utils.env import EvoD4jEnv
 import pandas as pd
 from utils.get_javadoc import get_javadoc
 from utils.get_invoked_method_body import invoked_method
-from utils.get_related_test import get_related, cal_evo_embedding, cal_dev_embedding
+from utils.get_related_test import get_related
 from utils.get_dataframe import get_evo_df, get_dev_tests_df
-# from utils.get_bug_report import get_evo_df, get_dev_tests_df
 
 def make_prompt_file(prompt_dir, prompt, row):
     if not os.path.exists(prompt_dir):
@@ -83,6 +82,7 @@ if __name__ == "__main__":
     example_num = args.examplenum
 
     print('*'*30)
+    print("MAKING PROMPT")
     print(project+'-'+version)
     print('*'*30)
 
@@ -93,11 +93,9 @@ if __name__ == "__main__":
     dev_tests_df = get_dev_tests_df(env)
 
     # #2. Calculate model embedding
-    evo_tests_df = cal_evo_embedding(env, evo_tests_df)
     with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'wb') as f:
         pickle.dump(evo_tests_df,f)
 
-    dev_tests_df = cal_dev_embedding(env, dev_tests_df)
     with open(os.path.join(env.evosuite_test_dir, 'dev_tests_df.pkl'),'wb') as f:
         pickle.dump(dev_tests_df,f)
 

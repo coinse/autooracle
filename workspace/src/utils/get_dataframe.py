@@ -1,5 +1,6 @@
 import os
 from utils.evosuite import parse as parse_evosuite
+from utils.get_related_test import get_related, cal_evo_embedding, cal_dev_embedding
 import pandas as pd 
 import subprocess 
 import shlex
@@ -12,9 +13,7 @@ def class_name_to_test_path(class_name):
     return class_name.replace('.', '/')+'.java'
 
 def get_evo_df(env):
-    print('*'*30)
-    print('make evo_tests_df')
-    print('*'*30+'\n')
+    print('Making evo_tests_df')
     evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_target_method','line'])
     for dp, dn, fn in os.walk(env.evosuite_test_src_dir):
         for f in fn:
@@ -24,15 +23,12 @@ def get_evo_df(env):
                 for i in zip(coverages.items(), parsed_test_src.items(), parsed_target_method.items()):
                     tmp_df = pd.DataFrame({'dir':[os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[1][1]], 'evo_target_method':[i[2][1]], 'line':[i[0][1]]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
+    evo_tests_df = cal_evo_embedding(env, evo_tests_df)
     return evo_tests_df
 
 def get_dev_tests_df(env):
-    print('*'*30)
-    print('make dev_tests_df')
-    print('*'*30+'\n')
-   
+    print('Making dev_tests_df')
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
-
     #get test source directory: dev_test_src_relpath
     dev_test_src_relpath = open(env.dev_test_relpath,'r').read()
     dev_test_src_dir_abspaths = os.path.join(env.buggy_tmp_dir, dev_test_src_relpath)
@@ -70,26 +66,6 @@ def get_dev_tests_df(env):
                                     source += l
                             tmp_df = pd.DataFrame({'dir':[os.path.dirname(dev_test_relpath)], 'dev_relpath': [dev_test_relpath], 'dev_method_signature':[node["signature"]], 'dev_test_src':[source]})
                             dev_tests_df = pd.concat([dev_tests_df, tmp_df])
+                            
+    dev_tests_df = cal_dev_embedding(env, dev_tests_df)
     return dev_tests_df
-
-
-
-# def get_evo_df(env):
-#     print('*'*30)
-#     print('make evo_tests_df')
-#     print('*'*30+'\n')
-#     evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_target_method', 'evo_test_embedding'])
-#     for dp, dn, fn in os.walk(env.evosuite_test_src_dir):
-#         for f in fn:
-#             if f.endswith("ESTest.java"):
-#                 print(f)
-#                 relpath = os.path.relpath(os.path.join(dp, f), start = env.evosuite_test_src_dir)
-#                 _, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
-#                 for i in zip(parsed_test_src.items(), parsed_target_method.items()):
-#                     evo_embedding = model.encode(i[0][1], convert_to_tensor=True)
-#                     tmp_df = pd.DataFrame({'dir':os.path.dirname(relpath), 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[0][1]], 'evo_target_method':[i[1][1]], 'evo_test_embedding':[evo_embedding]})
-#                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
-#     evo_tests_df.to_csv(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'))
-#     with open( os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'wb') as f:
-#             pickle.dump(evo_tests_df,f)
-#     return evo_tests_df
