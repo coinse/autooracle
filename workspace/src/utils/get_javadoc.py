@@ -39,6 +39,7 @@ def get_javadoc(env, target_methods, lines):
             for node in parse_output["nodes"]:
                 if (node["type"] == "method" and node["signature"].find(method_name_cut) != -1):
                     if (node["begin_line"] <= line and node["end_line"] >= line):
+                        comment_str += "signature: " + node["signature"] + "\n"
                         comment_str += node["comment"]
                         break
     return comment_str        

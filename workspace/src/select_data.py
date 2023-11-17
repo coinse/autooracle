@@ -8,7 +8,7 @@ def get_prompt_list(project, version, ts_id, prompt_no, example_no):
     prompt_path = os.path.join(env.evosuite_prompt_dir,f'prompt{prompt_no}',f'example{example_no}')
     prompt_files = os.listdir(prompt_path)
     prompt_files = list(filter(lambda f: f.endswith("assert.txt") or f.endswith("trycatch.txt"), prompt_files))
-        
+    
     for prompt_file in prompt_files:
         prompt = os.path.join(prompt_path, prompt_file)
         with open(prompt,'r') as f:
@@ -23,21 +23,25 @@ def get_prompt_list(project, version, ts_id, prompt_no, example_no):
                 count +=1
                 continue
             if count == 1:
-                test_str += l
-            elif count == 3:
                 doc_str += l
-            elif count == 5:
+            elif count == 3:
                 relateTest_str += l
+            elif count == 5:
+                test_str+= l
         okey = True
+        
+
         if not ( re.search("@param", doc_str) and re.search("@return", doc_str)):
             okey = False
+            
         if re.search("non-Javadoc", doc_str):
             okey = False
         if re.search("no related test", relateTest_str):
             okey = False
-    
+        
         if okey:
-            #copy prompt
+            #copy promp
+            print(okey)
             dst_prompt_path =os.path.join(env.selected_evosuite_prompt_dir, f'prompt{prompt_no}',f'example{example_no}')
             if not os.path.exists(dst_prompt_path):
                 os.makedirs(dst_prompt_path)
@@ -78,9 +82,9 @@ if __name__ == "__main__":
     #1. get prompt list
     # get_prompt_list("Lang","1","newTS_600", 5, 2)
 
-    for project in ["Lang", "Chart", "Time"]:
+    for project in ["Lang", "Time"]:
         if project == "Lang":
-            versions = list(range(1,2)) + list(range(3,66))
+            versions = list(range(1,2)) + list(range(3,4)) + list(range(5,19)) + list(range(20,26)) + list(range(27,28)) + list(range(29,43)) + list(range(44,48)) + list(range(49,55))+list(range(56,66))
         elif project == "Chart":
             versions = list(range(1,27))
         elif project == "Time":
@@ -88,7 +92,7 @@ if __name__ == "__main__":
         
         
         for version in versions:
-            get_prompt_list(project, str(version), "newTS_600", 5, 2)
+            get_prompt_list(project, str(version), "newTS_600", 8, 2)
 
 
     

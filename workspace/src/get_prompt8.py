@@ -11,8 +11,10 @@ from utils.get_related_test import get_related
 from utils.get_dataframe import get_evo_df, get_dev_tests_df
 
 def make_prompt_file(prompt_dir, prompt, row):
+    
     if not os.path.exists(prompt_dir):
         os.makedirs(prompt_dir)
+        
     if not os.path.exists(prompt_dir + '/{}_{}_query_assert.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no'])):
         if not os.path.exists(prompt_dir + '/{}_{}_query_trycatch.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no'])):
             with open( prompt_dir + '/{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no']),'wb') as f:
@@ -57,7 +59,7 @@ def count_str_num(one_evo_dev_df, num, comment, conversation, prompt_format):
     for idx, row in one_evo_dev_df.iterrows():   
         if count < num :
             related_tests += row['dev_test_src']
-            to_be_appended = [{"role": "user", "content": prompt_format["user_message"].format(row['evo_test_src'], comment, related_tests, row['evo_test_no'])}]
+            to_be_appended = [{"role": "user", "content": prompt_format["user_message"].format(comment, related_tests, row['evo_test_src'], row['evo_test_no'])}]
             if num_tokens_from_messages(to_be_appended) + conv_history_tokens < token_limit:
                 if len(conversation) == 2 :
                     del conversation[1]

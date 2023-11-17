@@ -12,7 +12,7 @@ class EvoD4jEnv:
         self.ts_id = str(ts_id)
 
         self.result_dir = os.path.join(cls.WORK_DIR,"result",self.d4j_id + "b")
-        self.selected_result_dir = os.path.join(cls.WORK_DIR,"result","1_selected",self.d4j_id + "b")
+        self.selected_result_dir = os.path.join(cls.WORK_DIR,"result","4_selected",self.d4j_id + "b")
 
         self.buggy_tmp_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "b")
         self.fixed_tmp_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "f")
