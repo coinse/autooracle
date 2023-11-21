@@ -1,6 +1,5 @@
 from sentence_transformers import SentenceTransformer, util
 import pandas as pd 
-import numpy
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 

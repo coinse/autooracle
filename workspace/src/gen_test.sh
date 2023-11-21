@@ -1,13 +1,14 @@
 #!/bin/bash
 
-PROJECT=$1
-VERSION=$2
-ID=$3
-BUDGET=$4
-SEED=$5
+NAME=$1
+PROJECT=$2
+VERSION=$3
+ID=$4
+BUDGET=$5
+SEED=$6
 
 WORK_DIR=/root/workspace
-RESULT_DIR=$WORK_DIR/result/${PROJECT}-${VERSION}b
+RESULT_DIR=$WORK_DIR/result/${NAME}/${PROJECT}-${VERSION}b
 BUGGY_TMP_DIR=/tmp/${PROJECT}-${VERSION}b
 FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
 
@@ -72,7 +73,7 @@ echo "Failing tests"
 echo "" >> $FAILING_TESTS
 cat $FAILING_TESTS
 
-echo "\nRelevant classes"
+echo "Relevant classes"
 echo "" >> $RELEVANT_CLASSES
 cat $RELEVANT_CLASSES
 

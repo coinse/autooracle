@@ -31,7 +31,7 @@ def get_json_from_url(url, **kwargs):
 def get_json_from_file(path):
     with open(path, 'r') as f:
         return json.load(f)
-
+f
 def save_json_to_file(data, path):
     with open(path, 'w') as f:
         json.dump(data, f, indent=4)

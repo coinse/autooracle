@@ -1,6 +1,6 @@
 import os
 
-class EvoD4jEnv:
+class EvoD4jEnvMut:
     WORK_DIR = '/root/workspace/'
     TMP_ROOT = '/tmp'
     
