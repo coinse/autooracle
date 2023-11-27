@@ -21,8 +21,6 @@ def query_chat_llm(messages=[], system_message=None, max_response_tokens=250):
     )
     chat_reply = chat.choices[0].message.content
     print(chat_reply)
-    print('************************************************************************************************************************************')
-    # messages.append({"role": "assistant", "content":chat_reply})
     return chat_reply
 
 if __name__ == "__main__":
@@ -31,18 +29,18 @@ if __name__ == "__main__":
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
     parser.add_argument('--id', '-i', type=str, default='1')
-    parser.add_argument('--promptno', '-pn', type=int, default='1')
-    parser.add_argument('--examplenum','-en', type=int, default= 1)
+    parser.add_argument('--prompt_no', '-pr', type=int, default='1')
+    parser.add_argument('--example','-ex', type=int, default= 1)
     parser.add_argument('--try_no','-t', type=int, default= 1)
     parser.add_argument('--mut','-m', action='store_true', default=False)
     args = parser.parse_args()
 
     name = args.name
-    project=args.project
-    version=args.version
-    ts_id=args.id
-    prompt_no=args.promptno
-    example_num=args.examplenum
+    project = args.project
+    version = args.version
+    ts_id = args.id
+    prompt_no=args.prompt_no
+    example = args.example
     try_no=args.try_no
     mut=args.mut
   
@@ -55,33 +53,33 @@ if __name__ == "__main__":
     
     # Original
     if not mut:
-        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'prompt{}/example{}'.format(prompt_no,example_num))
+        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'prompt{}/example{}'.format(prompt_no,example))
         prompt_list = list(filter(lambda x: x.endswith('.pkl'), os.listdir(prompt_dir)))
         
-        chat_reply_dir = os.path.join(env.evosuite_chat_reply_dir, 'prompt{}/example{}'.format(prompt_no, example_num), 'try{}'.format(try_no))
+        chat_reply_dir = os.path.join(env.evosuite_chat_reply_dir, 'prompt{}/example{}'.format(prompt_no, example), 'try{}'.format(try_no))
         if not os.path.exists(chat_reply_dir):
             os.makedirs(chat_reply_dir)
 
         for prompt in prompt_list:
-            if prompt.endswith('assert.pkl') or prompt.endswith('trycatch.pkl'):
+            if prompt.endswith('assert_query.pkl') or prompt.endswith('trycatch_query.pkl'):
                 with open(os.path.join(prompt_dir, prompt),'rb') as fr:
                     data = pickle.load(fr)
                     reply_file = os.path.join(chat_reply_dir, prompt.replace('query', 'reply').replace('.pkl', '.txt'))
-                if not os.path.exists(reply_file):              
+                if not os.path.exists(reply_file): 
                     chat_reply = query_chat_llm(data)
                     with open(reply_file, 'w') as fw:
                         fw.write(chat_reply)
     # Mut 
     else:
-        prompt_mut_dir = os.path.join(env.evosuite_prompt_mut_dir, 'prompt{}/example{}'.format(prompt_no,example_num))
+        prompt_mut_dir = os.path.join(env.evosuite_prompt_mut_dir, 'prompt{}/example{}'.format(prompt_no,example))
         prompt_mut_list = list(filter(lambda x: x.endswith('.pkl'), os.listdir(prompt_mut_dir)))
 
-        chat_reply_mut_dir = os.path.join(env.evosuite_chat_reply_mut_dir, 'prompt{}/example{}'.format(prompt_no,example_num), 'try{}'.format(try_no))
+        chat_reply_mut_dir = os.path.join(env.evosuite_chat_reply_mut_dir, 'prompt{}/example{}'.format(prompt_no,example), 'try{}'.format(try_no))
         if not os.path.exists(chat_reply_mut_dir):
             os.makedirs(chat_reply_mut_dir)
 
         for prompt_mut in prompt_mut_list:
-            if prompt_mut.endswith('assert.pkl') or prompt_mut.endswith('trycatch.pkl'):
+            if prompt_mut.endswith('assert_query.pkl') or prompt_mut.endswith('trycatch_query.pkl'):
                 with open(os.path.join(prompt_mut_dir, prompt_mut),'rb') as fr:
                     data = pickle.load(fr)
                     reply_file = os.path.join(chat_reply_mut_dir, prompt_mut.replace('query', 'reply').replace('.pkl', '.txt'))

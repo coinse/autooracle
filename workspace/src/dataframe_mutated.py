@@ -1,15 +1,18 @@
 import os
 import argparse
-from evosuite import parse as parse_evosuite
-from relatedTest import cal_evo_embedding, cal_dev_embedding
-from transforming import transform
-from env import EvoD4jEnv
+from utils.evosuite import parse as parse_evosuite
+from utils.relatedTest import cal_evo_embedding, cal_dev_embedding
+from utils.transforming import transform
+from utils.env import EvoD4jEnv
 import pandas as pd 
 import subprocess 
 import shlex
 import pickle
 import json
 import pandas as pd 
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def class_name_to_test_path(class_name):
     return class_name.replace('.', '/')+'.java'
@@ -34,7 +37,7 @@ def get_dev_tests_df():
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
     #get test source directory: dev_test_src_relpath
     dev_test_src_relpath = open(env.dev_test_relpath,'r').read()
-    dev_test_src_dir_abspaths = os.path.join(env.buggy_tmp_dir, dev_test_src_relpath)
+    dev_test_src_dir_abspaths = os.path.join(env.original_dir, dev_test_src_relpath)
     # extract developer written test classes
     dev_test_classes = open(env.dev_written_test_classes, 'r').read()
     dev_test_classes_list = dev_test_classes.split('\n')
@@ -92,7 +95,7 @@ if __name__ == "__main__":
     example = args.example
 
     print('*'*30)
-    print("MAKING PROMPT")
+    print("Dataframe")
     print(project+'-'+version)
     print('*'*30)
 
@@ -102,8 +105,6 @@ if __name__ == "__main__":
     evo_tests_df = get_evo_df()
     dev_tests_df = get_dev_tests_df()
 
-    evo_tests_df.to_csv('./a.csv')
-    # #2. Calculate model embedding
     with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'wb') as f:
         pickle.dump(evo_tests_df,f)
 
