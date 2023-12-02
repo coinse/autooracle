@@ -1,27 +1,21 @@
 #!/bin/bash
-
 PROJECT=$1
 VERSION=$2
 
-FIXED_TMP_DIR=/tmp/${PROJECT}-${VERSION}f
-METADATA_DIR=$FIXED_TMP_DIR/metadata
-
+FIXED_DIR=/tmp/${PROJECT}-${VERSION}f
+METADATA_DIR=$FIXED_DIR/metadata
+MUTANTS_LOGS=/tmp/${PROJECT}-${VERSION}f/mutants_logs
 
 #########################
 # checkout fixed version
 #########################
-if [ -d "$FIXED_TMP_DIR" ]; then
+if [ -d "$FIXED_DIR" ]; then
     echo "Checkout succeed!"
 else 
-    defects4j checkout -p ${PROJECT} -v ${VERSION}f -w $FIXED_TMP_DIR
+    defects4j checkout -p ${PROJECT} -v ${VERSION}f -w $FIXED_DIR
+    defects4j compile -w $FIXED_DIR
 fi
 
-cd $FIXED_TMP_DIR
-if [ ! -f "mutants.log" ]; then
-    defects4j mutation
-else 
-    echo "mutants.log exists"
-fi 
 
 if [ -d "$METADATA_DIR" ]; then
     echo "$METADATA_DIR exists"
@@ -29,9 +23,25 @@ else
     mkdir -p $METADATA_DIR
 fi
 
-defects4j export -p classes.modified -o $METADATA_DIR/classes.modified
+python utils/getAllClassList.py ${PROJECT} ${VERSION} 
+
+[ ! -d "$MUTANTS_LOGS" ] && mkdir "$MUTANTS_LOGS"
+while IFS= read -r cl
+do 
+    [ -f "$FIXED_DIR/metadata/tmp" ] && rm $FIXED_DIR/metadata/tmp
+    echo "$cl" 
+    echo "$cl" > $FIXED_DIR/metadata/tmp
+    defects4j mutation -w $FIXED_DIR -i $FIXED_DIR/metadata/tmp
+    if [ -s "$FIXED_DIR/mutants.log" ]; then
+        cp $FIXED_DIR/mutants.log $MUTANTS_LOGS/$cl.log
+    fi 
+done < $METADATA_DIR/all.classes
+
 defects4j export -p dir.src.classes -o $METADATA_DIR/dir.src.classes
 defects4j export -p dir.bin.classes -o $METADATA_DIR/dir.bin.classes
 
-cd ~/workspace/src
+# Mutation
+echo "********************************"
+echo "Mutation!"
+echo "********************************"
 python mutation.py ${PROJECT} ${VERSION}
