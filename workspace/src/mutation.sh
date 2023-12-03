@@ -25,6 +25,9 @@ fi
 
 python utils/getAllClassList.py ${PROJECT} ${VERSION} 
 
+# Export mutated files
+export MAJOR_OPT="-J-Dmajor.export.mutants=true"
+
 [ ! -d "$MUTANTS_LOGS" ] && mkdir "$MUTANTS_LOGS"
 while IFS= read -r cl
 do 
@@ -40,8 +43,8 @@ done < $METADATA_DIR/all.classes
 defects4j export -p dir.src.classes -o $METADATA_DIR/dir.src.classes
 defects4j export -p dir.bin.classes -o $METADATA_DIR/dir.bin.classes
 
-# Mutation
-echo "********************************"
-echo "Mutation!"
-echo "********************************"
-python mutation.py ${PROJECT} ${VERSION}
+# # Mutation
+# echo "********************************"
+# echo "Mutation!"
+# echo "********************************"
+# python mutation.py ${PROJECT} ${VERSION}

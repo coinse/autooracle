@@ -1,3 +1,0 @@
-Checkout succeed!
-/tmp/Lang-1f/metadata exists
-python utils/getAllClassList.py Lang 1

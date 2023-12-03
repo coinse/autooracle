@@ -1,29 +1,37 @@
-import re
 
-if __name__ =="__main__":
-    # Regular expression pattern to find the fail statement outside the catch block
-    pattern2 = r'try {([\s\S]*?)fail\("[^"]+"\);([\s\S]*?)} catch\(([^)]+)\) {([\s\S]*?)}'
-    prompt_str ='''
-```
-@Test(timeout = 4000)
-  public void test01()  throws Throwable  {
-      // Undeclared exception!
-      try { 
-        LocaleUtils.toLocale("||ox|}~XITFze[P9Ew");
-        fail("Expecting exception: IllegalArgumentException");
-      
-      } catch(IllegalArgumentException e) {
-         //
-         // Invalid locale format: ||ox|}~XITFze[P9Ew
-         //
-         verifyException("org.apache.commons.lang.LocaleUtils", e);
-      }
-  }
-``` 
-    '''
-    # Find and replace the fail statement
-    if re.search(pattern2, prompt_str):
-        prompt_str = re.sub(pattern2, r'try {\1} catch(\3) {\n\t    fail("Unexpected exception was thorwn!");\n\t}', prompt_str, count=1)
-    cprompt_str = prompt_str
+s = '''public boolean equals(final Object obj) {
+        if (! (obj instanceof FastDateParser) ) {
+            return false;
+        }
+        final FastDateParser other = (FastDateParser) obj;
+        return pattern.equals(other.pattern)
+            && timeZone.equals(other.timeZone)
+            && locale.equals(other.locale);
+    }
+'''
 
-    print(cprompt_str)
+a = 'pattern.equals(other.pattern) && timeZone.equals(other.timeZone)'
+b = 'false'
+f = s.split('\n')
+f.insert(0,'<start>')
+
+lines = []
+line_number = 1
+
+while line_number < len(f):
+  if line_number == 6:
+    before_stmt = f[line_number]
+    while(before_stmt.find(a) == -1):
+      print(before_stmt)  
+      line_number = line_number+1
+      before_stmt += ' '+ f[line_number].strip()
+      print(before_stmt)
+    print(before_stmt)
+    after_stmt = before_stmt.replace(a,b)
+    print(after_stmt)
+    lines.append(after_stmt)
+  else:
+    lines.append(f[line_number])
+  line_number = line_number+1
+
+print(lines)
