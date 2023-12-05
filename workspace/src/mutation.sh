@@ -5,6 +5,7 @@ VERSION=$2
 FIXED_DIR=/tmp/${PROJECT}-${VERSION}f
 METADATA_DIR=$FIXED_DIR/metadata
 MUTANTS_LOGS=/tmp/${PROJECT}-${VERSION}f/mutants_logs
+MUTANTS_FILES=/tmp/${PROJECT}-${VERSION}f/mutants_files
 
 #########################
 # checkout fixed version
@@ -29,6 +30,7 @@ python utils/getAllClassList.py ${PROJECT} ${VERSION}
 export MAJOR_OPT="-J-Dmajor.export.mutants=true"
 
 [ ! -d "$MUTANTS_LOGS" ] && mkdir "$MUTANTS_LOGS"
+[ ! -d "$MUTANTS_FILES" ] && mkdir "$MUTANTS_FILES"
 while IFS= read -r cl
 do 
     [ -f "$FIXED_DIR/metadata/tmp" ] && rm $FIXED_DIR/metadata/tmp
@@ -37,14 +39,16 @@ do
     defects4j mutation -w $FIXED_DIR -i $FIXED_DIR/metadata/tmp
     if [ -s "$FIXED_DIR/mutants.log" ]; then
         cp $FIXED_DIR/mutants.log $MUTANTS_LOGS/$cl.log
+        cp -r $FIXED_DIR/mutants/. $MUTANTS_FILES/$cl
+        rm $FIXED_DIR/mutants.log && rm -r $FIXED_DIR/mutants
     fi 
 done < $METADATA_DIR/all.classes
 
-defects4j export -p dir.src.classes -o $METADATA_DIR/dir.src.classes
-defects4j export -p dir.bin.classes -o $METADATA_DIR/dir.bin.classes
+defects4j export -p dir.src.classes -o $METADATA_DIR/dir.src.classes -w $FIXED_DIR
+defects4j export -p dir.bin.classes -o $METADATA_DIR/dir.bin.classes -w $FIXED_DIR
 
-# # Mutation
-# echo "********************************"
-# echo "Mutation!"
-# echo "********************************"
-# python mutation.py ${PROJECT} ${VERSION}
+# Mutation
+echo "********************************"
+echo "Mutation!"
+echo "********************************"
+python mutation.py ${PROJECT} ${VERSION}

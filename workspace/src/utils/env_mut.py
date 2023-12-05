@@ -12,9 +12,11 @@ class EvoD4jEnvMut:
         self.ts_id = str(ts_id)
 
         self.original_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "f")
-        self.mutated_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "f_mutated")
+        self.before_mutated_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "f_before_mutated")
+        self.after_mutated_dir = os.path.join(cls.TMP_ROOT, self.d4j_id + "f_after_mutated")
         self.metadata_dir = os.path.join(self.original_dir, "metadata")
         self.mutants_logs = os.path.join(self.original_dir, "mutants_logs")
+        self.mutants_files = os.path.join(self.original_dir, "mutants_files")
         self.dev_src_relpath = os.path.join(self.metadata_dir, "dir.src.classes")
         self.dev_test_relpath = os.path.join(self.metadata_dir,"dir.src.tests")
         self.dev_written_test_classes = os.path.join(self.metadata_dir,"tests.all")

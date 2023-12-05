@@ -6,7 +6,7 @@ param5=300
 param6=0
 
 ###1. Generate test and metadata
-for i in {140..300}; do
+for i in {501..701}; do
     echo "****************************************************"
     echo "Generating test suite for class [$i] "
     echo "****************************************************"
