@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..1223e0a4 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -295,7 +295,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+         if (i == 25) {
+             throw new ArithmeticException("Unable to convert double to fraction");
+         }
+-        return getReducedFraction((numer0 + wholeNumber * denom0) * sign, denom0);
++        return getReducedFraction((numer0 + wholeNumber - denom0) * sign, denom0);
+     }
+ 
+     /**

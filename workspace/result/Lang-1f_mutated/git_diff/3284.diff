@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..efb4317d 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1356,7 +1356,7 @@ public class NumberUtils {
+                     return false;
+                 }
+             }
+-            return true;
++            return false;
+         }
+         sz--; // don't want to loop to the last char, check it afterwords
+               // for type qualifiers

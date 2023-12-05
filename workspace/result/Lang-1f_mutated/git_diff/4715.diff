@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+index b86ea282..702210f5 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MethodUtils.java
+@@ -384,8 +384,7 @@ public class MethodUtils {
+ 
+         // Check the superclass chain
+         if (method == null) {
+-            method = getAccessibleMethodFromSuperclass(cls, methodName,
+-                    parameterTypes);
++            ;
+         }
+         return method;
+     }

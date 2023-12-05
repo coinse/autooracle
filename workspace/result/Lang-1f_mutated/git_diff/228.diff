@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableInt.java b/src/main/java/org/apache/commons/lang3/mutable/MutableInt.java
+index 088f6694..200271b4 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableInt.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableInt.java
+@@ -234,7 +234,7 @@ public class MutableInt extends Number implements Comparable<MutableInt>, Mutabl
+     @Override
+     public boolean equals(final Object obj) {
+         if (obj instanceof MutableInt) {
+-            return value == ((MutableInt) obj).intValue();
++            return value <= ((MutableInt)obj).intValue();
+         }
+         return false;
+     }

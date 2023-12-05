@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Conversion.java b/src/main/java/org/apache/commons/lang3/Conversion.java
+index 91131ad8..88199a8a 100644
+--- a/src/main/java/org/apache/commons/lang3/Conversion.java
++++ b/src/main/java/org/apache/commons/lang3/Conversion.java
+@@ -133,7 +133,7 @@ public class Conversion {
+             return 0xB;
+         case 'e':// fall through
+         case 'E':
+-            return 0x7;
++            return -7;
+         case 'f':// fall through
+         case 'F':
+             return 0xF;

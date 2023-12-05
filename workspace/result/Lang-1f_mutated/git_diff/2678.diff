@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..c5426db0 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -464,7 +464,7 @@ public class NumberUtils {
+             }
+         }
+         if (pfxLen > 0) { // we have a hex number
+-            char firstSigDigit = 0; // strip leading zeroes
++            char firstSigDigit = -1; // strip leading zeroes
+             for(int i = pfxLen; i < str.length(); i++) {
+                 firstSigDigit = str.charAt(i);
+                 if (firstSigDigit == '0') { // count leading zeroes

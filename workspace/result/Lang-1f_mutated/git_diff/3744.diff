@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..e26a7751 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -2876,7 +2876,7 @@ public class ArrayUtils {
+         }
+         final Integer[] result = new Integer[array.length];
+         for (int i = 0; i < array.length; i++) {
+-            result[i] = Integer.valueOf(array[i]);
++            ;
+         }
+         return result;
+     }

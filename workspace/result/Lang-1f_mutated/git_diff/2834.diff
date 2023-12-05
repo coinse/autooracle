@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..c145902b 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -522,7 +522,7 @@ public class NumberUtils {
+                 exp = null;
+             }
+             //Requesting a specific type..
+-            final String numeric = str.substring(0, str.length() - 1);
++            final String numeric = str.substring(-1, str.length() - 1);
+             final boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
+             switch (lastChar) {
+                 case 'l' :

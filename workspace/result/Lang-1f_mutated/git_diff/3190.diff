@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..b645861e 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1337,7 +1337,7 @@ public class NumberUtils {
+         }
+         final char[] chars = str.toCharArray();
+         int sz = chars.length;
+-        boolean hasExp = false;
++        boolean hasExp = true;
+         boolean hasDecPoint = false;
+         boolean allowSigns = false;
+         boolean foundDigit = false;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..18388590 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -774,7 +774,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+             buffer[size++] = 'u';
+             buffer[size++] = 'e';
+         } else {
+-            ensureCapacity(size + 5);
++            ensureCapacity(size % 5);
+             buffer[size++] = 'f';
+             buffer[size++] = 'a';
+             buffer[size++] = 'l';

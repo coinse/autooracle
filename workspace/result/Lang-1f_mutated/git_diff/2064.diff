@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..73b60903 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -391,7 +391,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      */
+     public char[] getChars(char[] destination) {
+         final int len = length();
+-        if (destination == null || destination.length < len) {
++        if (destination == null != destination.length < len) {
+             destination = new char[len];
+         }
+         System.arraycopy(buffer, 0, destination, 0, len);

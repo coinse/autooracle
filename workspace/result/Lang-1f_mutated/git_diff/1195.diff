@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ObjectUtils.java b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+index ab31d6f8..169bec04 100644
+--- a/src/main/java/org/apache/commons/lang3/ObjectUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+@@ -375,7 +375,7 @@ public class ObjectUtils {
+      * @since 2.0
+      */
+     public static String toString(final Object obj) {
+-        return obj == null ? "" : obj.toString();
++        return false ? "" : obj.toString();
+     }
+ 
+     /**

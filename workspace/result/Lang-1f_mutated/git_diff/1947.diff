@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Range.java b/src/main/java/org/apache/commons/lang3/Range.java
+index 7a865589..e5599288 100644
+--- a/src/main/java/org/apache/commons/lang3/Range.java
++++ b/src/main/java/org/apache/commons/lang3/Range.java
+@@ -348,7 +348,7 @@ public final class Range<T> implements Serializable {
+      */
+     public boolean isOverlappedBy(final Range<T> otherRange) {
+         if (otherRange == null) {
+-            return false;
++            return true;
+         }
+         return otherRange.contains(minimum)
+             || otherRange.contains(maximum)

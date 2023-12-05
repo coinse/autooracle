@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..71c7346d 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -364,7 +364,7 @@ public class StringUtils {
+      * @since 2.0
+      */
+     public static String trimToEmpty(final String str) {
+-        return str == null ? EMPTY : str.trim();
++        return false ? EMPTY : str.trim();
+     }
+ 
+     // Stripping

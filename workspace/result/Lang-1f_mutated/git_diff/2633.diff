@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/LocaleUtils.java b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+index 7be87308..91317522 100644
+--- a/src/main/java/org/apache/commons/lang3/LocaleUtils.java
++++ b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+@@ -291,7 +291,7 @@ public class LocaleUtils {
+         if (countries == null) {
+             countries = new ArrayList<Locale>();
+             final List<Locale> locales = availableLocaleList();
+-            for (int i = 0; i < locales.size(); i++) {
++            for (int i = 0; i <= locales.size(); i++) {
+                 final Locale locale = locales.get(i);
+                 if (languageCode.equals(locale.getLanguage()) &&
+                         locale.getCountry().length() != 0 &&

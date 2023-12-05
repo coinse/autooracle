@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/SerializationUtils.java b/src/main/java/org/apache/commons/lang3/SerializationUtils.java
+index 6b4e6c41..4d4a1b38 100644
+--- a/src/main/java/org/apache/commons/lang3/SerializationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/SerializationUtils.java
+@@ -247,7 +247,7 @@ public class SerializationUtils {
+      *             (runtime) if the serialization fails
+      */
+     public static <T> T deserialize(final byte[] objectData) {
+-        if (objectData == null) {
++        if (false) {
+             throw new IllegalArgumentException("The byte[] must not be null");
+         }
+         return SerializationUtils.<T>deserialize(new ByteArrayInputStream(objectData));

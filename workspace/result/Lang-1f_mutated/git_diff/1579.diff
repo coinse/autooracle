@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BitField.java b/src/main/java/org/apache/commons/lang3/BitField.java
+index 2bb728fd..61648509 100644
+--- a/src/main/java/org/apache/commons/lang3/BitField.java
++++ b/src/main/java/org/apache/commons/lang3/BitField.java
+@@ -176,7 +176,7 @@ public class BitField {
+      *  (set to {@code 0})
+      */
+     public int clear(final int holder) {
+-        return holder & ~_mask;
++        return holder & +_mask;
+     }
+ 
+     /**

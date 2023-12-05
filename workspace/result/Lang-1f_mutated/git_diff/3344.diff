@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..3fada722 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1376,7 +1376,7 @@ public class NumberUtils {
+                 hasDecPoint = true;
+             } else if (chars[i] == 'e' || chars[i] == 'E') {
+                 // we've already taken care of hex.
+-                if (hasExp) {
++                if (false) {
+                     // two E's
+                     return false;
+                 }

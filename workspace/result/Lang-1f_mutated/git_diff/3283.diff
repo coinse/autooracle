@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..8e356494 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1353,7 +1353,7 @@ public class NumberUtils {
+                 if ((chars[i] < '0' || chars[i] > '9')
+                     && (chars[i] < 'a' || chars[i] > 'f')
+                     && (chars[i] < 'A' || chars[i] > 'F')) {
+-                    return false;
++                    return true;
+                 }
+             }
+             return true;

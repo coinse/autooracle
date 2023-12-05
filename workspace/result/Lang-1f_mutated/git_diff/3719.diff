@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..7a79257e 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -2807,7 +2807,7 @@ public class ArrayUtils {
+             return EMPTY_LONG_OBJECT_ARRAY;
+         }
+         final Long[] result = new Long[array.length];
+-        for (int i = 0; i < array.length; i++) {
++        for (int i = 0; false; i++) {
+             result[i] = Long.valueOf(array[i]);
+         }
+         return result;

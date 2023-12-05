@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+index 7e803ddc..0b8bc624 100644
+--- a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
++++ b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+@@ -523,7 +523,7 @@ public class ExceptionUtils {
+         List<String> nextTrace = getStackFrameList(throwables[count - 1]);
+         for (int i = count; --i >= 0;) {
+             final List<String> trace = nextTrace;
+-            if (i != 0) {
++            if (i > 0) {
+                 nextTrace = getStackFrameList(throwables[i - 1]);
+                 removeCommonFrames(trace, nextTrace);
+             }

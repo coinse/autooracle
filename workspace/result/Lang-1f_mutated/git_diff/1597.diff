@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/WordUtils.java b/src/main/java/org/apache/commons/lang3/text/WordUtils.java
+index 7f29b59f..0af8834e 100644
+--- a/src/main/java/org/apache/commons/lang3/text/WordUtils.java
++++ b/src/main/java/org/apache/commons/lang3/text/WordUtils.java
+@@ -365,7 +365,7 @@ public class WordUtils {
+      * @return the changed String, <code>null</code> if null String input
+      */
+     public static String swapCase(final String str) {
+-        if (StringUtils.isEmpty(str)) {
++        if (true) {
+             return str;
+         }
+         final char[] buffer = str.toCharArray();

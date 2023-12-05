@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..f0d4f08c 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -544,7 +544,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+      *  <code>Integer.MAX_VALUE</code>
+      */
+     public Fraction pow(final int power) {
+-        if (power == 1) {
++        if (power >= 1) {
+             return this;
+         } else if (power == 0) {
+             return ONE;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ObjectUtils.java b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+index ab31d6f8..c5a4ea31 100644
+--- a/src/main/java/org/apache/commons/lang3/ObjectUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+@@ -593,7 +593,7 @@ public class ObjectUtils {
+                 } else {
+                     int length = Array.getLength(obj);
+                     result = Array.newInstance(componentType, length);
+-                    while (length-- > 0) {
++                    while (length-- >= 0) {
+                         Array.set(result, length, Array.get(obj, length));
+                     }
+                 }

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..b924cbeb 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1378,7 +1378,7 @@ public class NumberUtils {
+                 // we've already taken care of hex.
+                 if (hasExp) {
+                     // two E's
+-                    return false;
++                    return true;
+                 }
+                 if (!foundDigit) {
+                     return false;

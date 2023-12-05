@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+index 58eef3c7..463e40a9 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -885,7 +885,7 @@ public class TypeUtils {
+ 
+             for (final Type type2 : bounds) {
+                 if (type1 != type2 && isAssignable(type2, type1, null)) {
+-                    subtypeFound = true;
++                    subtypeFound = false;
+                     break;
+                 }
+             }

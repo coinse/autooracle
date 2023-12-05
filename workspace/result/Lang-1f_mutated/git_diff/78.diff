@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Conversion.java b/src/main/java/org/apache/commons/lang3/Conversion.java
+index 91131ad8..bb20c847 100644
+--- a/src/main/java/org/apache/commons/lang3/Conversion.java
++++ b/src/main/java/org/apache/commons/lang3/Conversion.java
+@@ -166,7 +166,7 @@ public class Conversion {
+         case '2':
+             return new boolean[]{false, true, false, false};
+         case '3':
+-            return new boolean[]{true, true, false, false};
++            return new boolean[]{true, true, true, false};
+         case '4':
+             return new boolean[]{false, false, true, false};
+         case '5':

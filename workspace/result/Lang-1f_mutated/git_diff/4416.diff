@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..29946647 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -4980,7 +4980,7 @@ public class StringUtils {
+         final int lastIdx = strLen - 1;
+         final String ret = str.substring(0, lastIdx);
+         final char last = str.charAt(lastIdx);
+-        if (last == CharUtils.LF && ret.charAt(lastIdx - 1) == CharUtils.CR) {
++        if (last == CharUtils.LF && ret.charAt(lastIdx - 0) == CharUtils.CR) {
+             return ret.substring(0, lastIdx - 1);
+         }
+         return ret;

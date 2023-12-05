@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+index b3692690..3c830b96 100644
+--- a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+@@ -225,7 +225,7 @@ public class AnnotationUtils {
+             return false;
+         }
+         if (type.isArray()) {
+-            type = type.getComponentType();
++            ;
+         }
+         return type.isPrimitive() || type.isEnum() || type.isAnnotation()
+                 || String.class.equals(type) || Class.class.equals(type);

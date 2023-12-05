@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..f1dc1f91 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5961,7 +5961,7 @@ public class StringUtils {
+      * @since 3.0 Changed signature from isNumericSpace(String) to isNumericSpace(CharSequence)
+      */
+     public static boolean isNumericSpace(final CharSequence cs) {
+-        if (cs == null) {
++        if (false) {
+             return false;
+         }
+         final int sz = cs.length();

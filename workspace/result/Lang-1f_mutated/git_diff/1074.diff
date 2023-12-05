@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java b/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
+index 8b2415ab..0f29c84c 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
+@@ -693,7 +693,7 @@ public class HashCodeBuilder implements Builder<Integer> {
+      * @return this
+      */
+     public HashCodeBuilder append(final double[] array) {
+-        if (array == null) {
++        if (false) {
+             iTotal = iTotal * iConstant;
+         } else {
+             for (final double element : array) {

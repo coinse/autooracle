@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Conversion.java b/src/main/java/org/apache/commons/lang3/Conversion.java
+index 91131ad8..43dc84f8 100644
+--- a/src/main/java/org/apache/commons/lang3/Conversion.java
++++ b/src/main/java/org/apache/commons/lang3/Conversion.java
+@@ -220,7 +220,7 @@ public class Conversion {
+     public static boolean[] hexDigitMsb0ToBinary(final char hexDigit) {
+         switch (hexDigit) {
+         case '0':
+-            return new boolean[]{false, false, false, false};
++            return new boolean[]{true, false, false, false};
+         case '1':
+             return new boolean[]{false, false, false, true};
+         case '2':

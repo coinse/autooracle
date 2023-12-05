@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityEscaper.java b/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityEscaper.java
+index 0e2e033d..a574435a 100644
+--- a/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityEscaper.java
++++ b/src/main/java/org/apache/commons/lang3/text/translate/NumericEntityEscaper.java
+@@ -71,7 +71,7 @@ public class NumericEntityEscaper extends CodePointTranslator {
+      * @return the newly created {@code NumericEntityEscaper} instance
+      */
+     public static NumericEntityEscaper above(final int codepoint) {
+-        return outsideOf(0, codepoint);
++        return outsideOf(-1, codepoint);
+     }
+ 
+     /**

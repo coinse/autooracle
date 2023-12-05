@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableShort.java b/src/main/java/org/apache/commons/lang3/mutable/MutableShort.java
+index 5a2b3e2d..ed33e92c 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableShort.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableShort.java
+@@ -244,7 +244,7 @@ public class MutableShort extends Number implements Comparable<MutableShort>, Mu
+     @Override
+     public boolean equals(final Object obj) {
+         if (obj instanceof MutableShort) {
+-            return value == ((MutableShort) obj).shortValue();
++            return value <= ((MutableShort)obj).shortValue();
+         }
+         return false;
+     }

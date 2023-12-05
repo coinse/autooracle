@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharUtils.java b/src/main/java/org/apache/commons/lang3/CharUtils.java
+index d603cfa5..2a5238e0 100644
+--- a/src/main/java/org/apache/commons/lang3/CharUtils.java
++++ b/src/main/java/org/apache/commons/lang3/CharUtils.java
+@@ -305,7 +305,7 @@ public class CharUtils {
+      * @return a String containing the one specified character
+      */
+     public static String toString(final char ch) {
+-        if (ch < 128) {
++        if (ch <= 128) {
+             return CHAR_STRING_ARRAY[ch];
+         }
+         return new String(new char[] {ch});

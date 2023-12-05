@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharUtils.java b/src/main/java/org/apache/commons/lang3/CharUtils.java
+index d603cfa5..e4f18386 100644
+--- a/src/main/java/org/apache/commons/lang3/CharUtils.java
++++ b/src/main/java/org/apache/commons/lang3/CharUtils.java
+@@ -218,7 +218,7 @@ public class CharUtils {
+         if (isAsciiNumeric(ch) == false) {
+             throw new IllegalArgumentException("The character " + ch + " is not in the range '0' - '9'");
+         }
+-        return ch - 48;
++        return ch / 48;
+     }
+     
+     /**

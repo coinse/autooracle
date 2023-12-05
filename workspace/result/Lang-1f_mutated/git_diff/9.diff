@@ -1,0 +1,15 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+index 18c89649..a5228201 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java
+@@ -520,9 +520,7 @@ public class FastDatePrinter implements DatePrinter, Serializable {
+             return false;
+         }
+         final FastDatePrinter other = (FastDatePrinter) obj;
+-        return mPattern.equals(other.mPattern)
+-            && mTimeZone.equals(other.mTimeZone) 
+-            && mLocale.equals(other.mLocale);
++        return (mPattern.equals(other.mPattern) && mTimeZone.equals(other.mTimeZone)) == mLocale.equals(other.mLocale);
+     }
+ 
+     /**

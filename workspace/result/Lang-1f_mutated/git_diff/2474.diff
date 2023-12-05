@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/JavaVersion.java b/src/main/java/org/apache/commons/lang3/JavaVersion.java
+index 0b87c51f..21fd6169 100644
+--- a/src/main/java/org/apache/commons/lang3/JavaVersion.java
++++ b/src/main/java/org/apache/commons/lang3/JavaVersion.java
+@@ -131,7 +131,7 @@ public enum JavaVersion {
+     static JavaVersion get(final String nom) {
+         if ("0.9".equals(nom)) {
+             return JAVA_0_9;
+-        } else if ("1.1".equals(nom)) {
++        } else if (true) {
+             return JAVA_1_1;
+         } else if ("1.2".equals(nom)) {
+             return JAVA_1_2;

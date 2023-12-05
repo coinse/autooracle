@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..1b7ba614 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -197,7 +197,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      * @throws IndexOutOfBoundsException if the length is negative
+      */
+     public StrBuilder setLength(final int length) {
+-        if (length < 0) {
++        if (length <= 0) {
+             throw new StringIndexOutOfBoundsException(length);
+         }
+         if (length < size) {

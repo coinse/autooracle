@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..4e95d4ce 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -3419,7 +3419,7 @@ public class ArrayUtils {
+      * @since 2.5
+      */
+     public static boolean isNotEmpty(final boolean[] array) {
+-        return (array != null && array.length != 0);
++        return (array != null);
+     }
+ 
+     /**

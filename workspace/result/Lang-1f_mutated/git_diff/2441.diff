@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+index b3692690..4db43925 100644
+--- a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+@@ -195,7 +195,7 @@ public class AnnotationUtils {
+     public static String toString(final Annotation a) {
+         final ToStringBuilder builder = new ToStringBuilder(a, TO_STRING_STYLE);
+         for (final Method m : a.annotationType().getDeclaredMethods()) {
+-            if (m.getParameterTypes().length > 0) {
++            if (m.getParameterTypes().length > 1) {
+                 continue; //wtf?
+             }
+             try {

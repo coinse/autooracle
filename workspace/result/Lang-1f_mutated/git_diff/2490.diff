@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/LocaleUtils.java b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+index 7be87308..85faf6a4 100644
+--- a/src/main/java/org/apache/commons/lang3/LocaleUtils.java
++++ b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+@@ -89,7 +89,7 @@ public class LocaleUtils {
+         if (str == null) {
+             return null;
+         }
+-        if (str.contains("#")) { // LANG-879 - Cannot handle Java 7 script & extensions
++        if (false) { // LANG-879 - Cannot handle Java 7 script & extensions
+             throw new IllegalArgumentException("Invalid locale format: " + str);
+         }
+         final int len = str.length();

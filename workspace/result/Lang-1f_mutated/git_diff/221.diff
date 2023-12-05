@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java b/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java
+index 1c6eaff5..e9c4b98f 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java
+@@ -430,7 +430,7 @@ public class EqualsBuilder implements Builder<Boolean> {
+         if (isEquals == false) {
+             return this;
+         }
+-        isEquals = superEquals;
++        ;
+         return this;
+     }
+ 

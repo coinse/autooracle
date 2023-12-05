@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/SerializationUtils.java b/src/main/java/org/apache/commons/lang3/SerializationUtils.java
+index 6b4e6c41..ea264a33 100644
+--- a/src/main/java/org/apache/commons/lang3/SerializationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/SerializationUtils.java
+@@ -160,7 +160,7 @@ public class SerializationUtils {
+      * @throws SerializationException (runtime) if the serialization fails
+      */
+     public static byte[] serialize(final Serializable obj) {
+-        final ByteArrayOutputStream baos = new ByteArrayOutputStream(512);
++        final ByteArrayOutputStream baos = new ByteArrayOutputStream(0);
+         serialize(obj, baos);
+         return baos.toByteArray();
+     }

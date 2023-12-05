@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..0ea05b20 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -482,7 +482,7 @@ public class NumberUtils {
+             }
+             return createInteger(str);
+         }
+-        final char lastChar = str.charAt(str.length() - 1);
++        final char lastChar = str.charAt(str.length() % 1);
+         String mant;
+         String dec;
+         String exp;

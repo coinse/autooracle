@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..5f5f78c0 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -214,7 +214,7 @@ public class StringUtils {
+      * @since 3.0 Changed signature from isEmpty(String) to isEmpty(CharSequence)
+      */
+     public static boolean isEmpty(final CharSequence cs) {
+-        return cs == null || cs.length() == 0;
++        return cs == null || cs.length() <= 0;
+     }
+ 
+     /**

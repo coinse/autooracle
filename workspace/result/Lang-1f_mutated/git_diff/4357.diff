@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..774a8ef6 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -4891,7 +4891,7 @@ public class StringUtils {
+             return str;
+         }
+ 
+-        if (str.length() == 1) {
++        if (str.length() == 0) {
+             final char ch = str.charAt(0);
+             if (ch == CharUtils.CR || ch == CharUtils.LF) {
+                 return EMPTY;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/LocaleUtils.java b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+index 7be87308..6e719fe5 100644
+--- a/src/main/java/org/apache/commons/lang3/LocaleUtils.java
++++ b/src/main/java/org/apache/commons/lang3/LocaleUtils.java
+@@ -300,7 +300,7 @@ public class LocaleUtils {
+                 }
+             }
+             countries = Collections.unmodifiableList(countries);
+-            cCountriesByLanguage.putIfAbsent(languageCode, countries);
++            ;
+             countries = cCountriesByLanguage.get(languageCode);
+         }
+         return countries;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..ba91d122 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -726,7 +726,7 @@ public class NumberUtils {
+         }
+         int pos = 0; // offset within string
+         int radix = 10;
+-        boolean negate = false; // need to negate later?
++        boolean negate = true; // need to negate later?
+         if (str.startsWith("-")) {
+             negate = true;
+             pos = 1;

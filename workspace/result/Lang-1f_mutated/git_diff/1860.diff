@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharRange.java b/src/main/java/org/apache/commons/lang3/CharRange.java
+index 39b26f9f..670205cc 100644
+--- a/src/main/java/org/apache/commons/lang3/CharRange.java
++++ b/src/main/java/org/apache/commons/lang3/CharRange.java
+@@ -210,7 +210,7 @@ final class CharRange implements Iterable<Character>, Serializable {
+             return true;
+         }
+         if (obj instanceof CharRange == false) {
+-            return false;
++            return true;
+         }
+         final CharRange other = (CharRange) obj;
+         return start == other.start && end == other.end && negated == other.negated;

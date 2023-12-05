@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java
+index f869cc96..ee6d60dd 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/FieldUtils.java
+@@ -219,7 +219,7 @@ public class FieldUtils {
+             for (Field field : declaredFields) {
+                 allFields.add(field);
+             }
+-            currentClass = currentClass.getSuperclass();
++            ;
+         }
+         return allFields;
+     }

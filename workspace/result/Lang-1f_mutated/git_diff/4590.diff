@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..de38f945 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5924,7 +5924,7 @@ public class StringUtils {
+      * @since 3.0 Changed "" to return false and not true
+      */
+     public static boolean isNumeric(final CharSequence cs) {
+-        if (cs == null || cs.length() == 0) {
++        if (true) {
+             return false;
+         }
+         final int sz = cs.length();

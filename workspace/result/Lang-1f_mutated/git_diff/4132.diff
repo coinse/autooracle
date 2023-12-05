@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableBoolean.java b/src/main/java/org/apache/commons/lang3/mutable/MutableBoolean.java
+index a07a055d..b3415732 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableBoolean.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableBoolean.java
+@@ -179,7 +179,7 @@ public class MutableBoolean implements Mutable<Boolean>, Serializable, Comparabl
+     @Override
+     public int compareTo(final MutableBoolean other) {
+         final boolean anotherVal = other.value;
+-        return value == anotherVal ? 0 : (value ? 1 : -1);
++        return value == anotherVal ? 0 : (value ? 1 : 0);
+     }
+ 
+     //-----------------------------------------------------------------------

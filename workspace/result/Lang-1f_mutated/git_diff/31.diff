@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Conversion.java b/src/main/java/org/apache/commons/lang3/Conversion.java
+index 91131ad8..7f6f78a5 100644
+--- a/src/main/java/org/apache/commons/lang3/Conversion.java
++++ b/src/main/java/org/apache/commons/lang3/Conversion.java
+@@ -77,7 +77,7 @@ public class Conversion {
+      */
+     public static int hexDigitToInt(final char hexDigit) {
+         final int digit = Character.digit(hexDigit, 16);
+-        if (digit < 0) {
++        if (false) {
+             throw new IllegalArgumentException("Cannot interpret '"
+                 + hexDigit
+                 + "' as a hexadecimal digit");

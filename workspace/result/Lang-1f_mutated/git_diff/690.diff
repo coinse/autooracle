@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+index 45dd74d4..426ac1dc 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+@@ -381,7 +381,7 @@ public class StrSubstitutor {
+      * @return the result of the replace operation
+      */
+     public String replace(final StringBuffer source) {
+-        if (source == null) {
++        if (false) {
+             return null;
+         }
+         final StrBuilder buf = new StrBuilder(source.length()).append(source);

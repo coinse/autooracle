@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharRange.java b/src/main/java/org/apache/commons/lang3/CharRange.java
+index 39b26f9f..b60a074a 100644
+--- a/src/main/java/org/apache/commons/lang3/CharRange.java
++++ b/src/main/java/org/apache/commons/lang3/CharRange.java
+@@ -183,7 +183,7 @@ final class CharRange implements Iterable<Character>, Serializable {
+         if (range == null) {
+             throw new IllegalArgumentException("The Range must not be null");
+         }
+-        if (negated) {
++        if (false) {
+             if (range.negated) {
+                 return start >= range.start && end <= range.end;
+             }

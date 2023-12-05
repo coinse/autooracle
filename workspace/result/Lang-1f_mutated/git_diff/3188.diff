@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..de1ade72 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1332,7 +1332,7 @@ public class NumberUtils {
+      * @return <code>true</code> if the string is a correctly formatted number
+      */
+     public static boolean isNumber(final String str) {
+-        if (StringUtils.isEmpty(str)) {
++        if (true) {
+             return false;
+         }
+         final char[] chars = str.toCharArray();

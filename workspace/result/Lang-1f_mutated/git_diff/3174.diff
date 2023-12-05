@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..117f5d04 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1062,7 +1062,7 @@ public class NumberUtils {
+                 return Float.NaN;
+             }
+             if (array[j] > max) {
+-                max = array[j];
++                ;
+             }
+         }
+ 

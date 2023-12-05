@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..a0e9c49a 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -333,7 +333,7 @@ public class ArrayUtils {
+      * @return the cloned array, {@code null} if {@code null} input
+      */
+     public static long[] clone(final long[] array) {
+-        if (array == null) {
++        if (false) {
+             return null;
+         }
+         return array.clone();

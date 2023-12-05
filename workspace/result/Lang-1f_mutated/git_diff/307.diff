@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..1c3f0c3a 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -61,7 +61,7 @@ public class BooleanUtils {
+      * @return the negated Boolean, or {@code null} if {@code null} input
+      */
+     public static Boolean negate(final Boolean bool) {
+-        if (bool == null) {
++        if (false) {
+             return null;
+         }
+         return bool.booleanValue() ? Boolean.FALSE : Boolean.TRUE;

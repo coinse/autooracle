@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java b/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
+index 8b2415ab..462ea8fc 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/HashCodeBuilder.java
+@@ -831,7 +831,7 @@ public class HashCodeBuilder implements Builder<Integer> {
+                 } else if (object instanceof int[]) {
+                     append((int[]) object);
+                 } else if (object instanceof short[]) {
+-                    append((short[]) object);
++                    ;
+                 } else if (object instanceof char[]) {
+                     append((char[]) object);
+                 } else if (object instanceof byte[]) {

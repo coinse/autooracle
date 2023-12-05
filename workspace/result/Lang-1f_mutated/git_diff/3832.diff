@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..8d8a2b43 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -3143,7 +3143,7 @@ public class ArrayUtils {
+     public static Float[] toObject(final float[] array) {
+         if (array == null) {
+             return null;
+-        } else if (array.length == 0) {
++        } else if (array.length <= 0) {
+             return EMPTY_FLOAT_OBJECT_ARRAY;
+         }
+         final Float[] result = new Float[array.length];

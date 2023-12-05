@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..f5ced4c7 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1401,7 +1401,7 @@ public class NumberUtils {
+                 // no type qualifier, OK
+                 return true;
+             }
+-            if (chars[i] == 'e' || chars[i] == 'E') {
++            if (chars[i] == 'e' || false) {
+                 // can't have an E at the last byte
+                 return false;
+             }

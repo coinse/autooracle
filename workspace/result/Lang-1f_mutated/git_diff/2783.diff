@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..17b70f39 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -502,7 +502,7 @@ public class NumberUtils {
+             } else {
+                 dec = str.substring(decPos + 1);
+             }
+-            mant = str.substring(0, decPos);
++            mant = str.substring(1, decPos);
+             numDecimals = dec.length(); // gets number of digits past the decimal to ensure no loss of precision for floating point numbers.
+         } else {
+             if (expPos > -1) {

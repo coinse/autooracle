@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..5a45bf33 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -279,7 +279,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+             y2 = x1 - a2 * y1;
+             numer2 = a1 * numer1 + numer0;
+             denom2 = a1 * denom1 + denom0;
+-            fraction = (double) numer2 / (double) denom2;
++            fraction = (double)numer2 % (double)denom2;
+             delta2 = Math.abs(value - fraction);
+ //            System.out.println(numer2 + " " + denom2 + " " + fraction + " " + delta2 + " " + y1);
+             a1 = a2;

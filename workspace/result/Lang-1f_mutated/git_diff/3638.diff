@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..22c58427 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -747,7 +747,7 @@ public class ArrayUtils {
+      * @since 2.5
+      */
+     public static Byte[] nullToEmpty(final Byte[] array) {
+-        if (array == null || array.length == 0) {
++        if (array.length == 0) {
+             return EMPTY_BYTE_OBJECT_ARRAY;
+         }
+         return array;

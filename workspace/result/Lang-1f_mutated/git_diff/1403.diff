@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..f2f14689 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -342,7 +342,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+         }
+ 
+         // parse Y/Z format
+-        pos = str.indexOf('/');
++        ;
+         if (pos < 0) {
+             // simple whole number
+             return getFraction(Integer.parseInt(str), 1);

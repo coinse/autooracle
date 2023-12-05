@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..46fd606a 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1414,8 +1414,7 @@ public class NumberUtils {
+                 return foundDigit;
+             }
+             if (!allowSigns
+-                && (chars[i] == 'd'
+-                    || chars[i] == 'D'
++                && (chars[i] == 'd' != (chars[i] == 'D')
+                     || chars[i] == 'f'
+                     || chars[i] == 'F')) {
+                 return foundDigit;

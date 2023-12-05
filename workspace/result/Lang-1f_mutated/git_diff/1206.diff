@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ObjectUtils.java b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+index ab31d6f8..824f89dc 100644
+--- a/src/main/java/org/apache/commons/lang3/ObjectUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+@@ -639,7 +639,7 @@ public class ObjectUtils {
+      */
+     public static <T> T cloneIfPossible(final T obj) {
+         final T clone = clone(obj);
+-        return clone == null ? obj : clone;
++        return false ? obj : clone;
+     }
+ 
+     // Null

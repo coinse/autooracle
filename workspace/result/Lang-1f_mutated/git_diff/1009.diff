@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharSet.java b/src/main/java/org/apache/commons/lang3/CharSet.java
+index 82f0b9a8..d7eb13c0 100644
+--- a/src/main/java/org/apache/commons/lang3/CharSet.java
++++ b/src/main/java/org/apache/commons/lang3/CharSet.java
+@@ -245,7 +245,7 @@ public class CharSet implements Serializable {
+     @Override
+     public boolean equals(final Object obj) {
+         if (obj == this) {
+-            return true;
++            return false;
+         }
+         if (obj instanceof CharSet == false) {
+             return false;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..f502c5e1 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1026,7 +1026,7 @@ public class NumberUtils {
+      */
+     public static double max(final double[] array) {
+         // Validates input
+-        validateArray(array);
++        ;
+ 
+         // Finds and returns max
+         double max = array[0];

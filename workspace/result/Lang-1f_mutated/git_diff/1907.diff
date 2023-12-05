@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Range.java b/src/main/java/org/apache/commons/lang3/Range.java
+index 7a865589..ad56998e 100644
+--- a/src/main/java/org/apache/commons/lang3/Range.java
++++ b/src/main/java/org/apache/commons/lang3/Range.java
+@@ -243,7 +243,7 @@ public final class Range<T> implements Serializable {
+      */
+     public boolean isStartedBy(final T element) {
+         if (element == null) {
+-            return false;
++            return true;
+         }
+         return comparator.compare(element, minimum) == 0;
+     }

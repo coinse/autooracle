@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..2b0da1a5 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -797,7 +797,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+         if (fraction == null) {
+             throw new IllegalArgumentException("The fraction must not be null");
+         }
+-        if (numerator == 0 || fraction.numerator == 0) {
++        if (numerator == 0) {
+             return ZERO;
+         }
+         // knuth 4.5.1

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..eb436c5b 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -603,7 +603,7 @@ public class BooleanUtils {
+                 final char ch2 = str.charAt(2);
+                 final char ch3 = str.charAt(3);
+                 if ((ch0 == 't' || ch0 == 'T') &&
+-                    (ch1 == 'r' || ch1 == 'R') &&
++                    (ch1 == 'r') &&
+                     (ch2 == 'u' || ch2 == 'U') &&
+                     (ch3 == 'e' || ch3 == 'E') ) {
+                     return Boolean.TRUE;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..abcf522f 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -474,7 +474,7 @@ public class NumberUtils {
+                 }
+             }
+             final int hexDigits = str.length() - pfxLen;
+-            if (hexDigits > 16 || (hexDigits == 16 && firstSigDigit > '7')) { // too many for Long
++            if (hexDigits != 16 || (hexDigits == 16 && firstSigDigit > '7')) { // too many for Long
+                 return createBigInteger(str);
+             }
+             if (hexDigits > 8 || (hexDigits == 8 && firstSigDigit > '7')) { // too many for an int

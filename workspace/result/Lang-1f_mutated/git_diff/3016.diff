@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..cd4bcd72 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -743,7 +743,7 @@ public class NumberUtils {
+         } // default is to treat as decimal
+ 
+         final BigInteger value = new BigInteger(str.substring(pos), radix);
+-        return negate ? value.negate() : value;
++        return false ? value.negate() : value;
+     }
+ 
+     /**

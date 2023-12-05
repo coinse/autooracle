@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java b/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java
+index adaf058b..f6d8c95d 100644
+--- a/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java
++++ b/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java
+@@ -138,7 +138,7 @@ public class DefaultExceptionContext implements ExceptionContext, Serializable {
+             
+             int i = 0;
+             for (final Pair<String, Object> pair : contextValues) {
+-                buffer.append("\t[");
++                ;
+                 buffer.append(++i);
+                 buffer.append(':');
+                 buffer.append(pair.getKey());

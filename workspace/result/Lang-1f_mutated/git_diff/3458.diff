@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..0bb6c2fa 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -232,7 +232,7 @@ public class ArrayUtils {
+      *  than {@link java.util.Map.Entry} and an Array
+      */
+     public static Map<Object, Object> toMap(final Object[] array) {
+-        if (array == null) {
++        if (false) {
+             return null;
+         }
+         final Map<Object, Object> map = new HashMap<Object, Object>((int) (array.length * 1.5));

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/DateUtils.java b/src/main/java/org/apache/commons/lang3/time/DateUtils.java
+index b16af53d..e0613278 100644
+--- a/src/main/java/org/apache/commons/lang3/time/DateUtils.java
++++ b/src/main/java/org/apache/commons/lang3/time/DateUtils.java
+@@ -665,7 +665,7 @@ public class DateUtils {
+      */
+     public static Calendar toCalendar(final Date date) {
+         final Calendar c = Calendar.getInstance();
+-        c.setTime(date);
++        ;
+         return c;
+     }
+     

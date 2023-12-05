@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java b/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java
+index 879b27ce..36cbfb2a 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/ToStringBuilder.java
+@@ -343,7 +343,7 @@ public class ToStringBuilder implements Builder<String> {
+      * @return this
+      */
+     public ToStringBuilder append(final char[] array) {
+-        style.append(buffer, null, array, null);
++        ;
+         return this;
+     }
+ 

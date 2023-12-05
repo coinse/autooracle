@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..e051ee31 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -620,7 +620,7 @@ public class BooleanUtils {
+                     (ch1 == 'a' || ch1 == 'A') &&
+                     (ch2 == 'l' || ch2 == 'L') &&
+                     (ch3 == 's' || ch3 == 'S') &&
+-                    (ch4 == 'e' || ch4 == 'E') ) {
++                    (ch4 == 'e' || false) ) {
+                     return Boolean.FALSE;
+                 }
+                 break;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableByte.java b/src/main/java/org/apache/commons/lang3/mutable/MutableByte.java
+index 3700597f..31ab55fb 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableByte.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableByte.java
+@@ -269,7 +269,7 @@ public class MutableByte extends Number implements Comparable<MutableByte>, Muta
+     @Override
+     public int compareTo(final MutableByte other) {
+         final byte anotherVal = other.value;
+-        return value < anotherVal ? -1 : (value == anotherVal ? 0 : 1);
++        return value <= anotherVal ? -1 : (value == anotherVal ? 0 : 1);
+     }
+ 
+     //-----------------------------------------------------------------------

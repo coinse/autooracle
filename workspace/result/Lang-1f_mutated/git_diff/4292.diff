@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableDouble.java b/src/main/java/org/apache/commons/lang3/mutable/MutableDouble.java
+index fe35a013..d6a08977 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableDouble.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableDouble.java
+@@ -273,8 +273,7 @@ public class MutableDouble extends Number implements Comparable<MutableDouble>,
+      */
+     @Override
+     public boolean equals(final Object obj) {
+-        return obj instanceof MutableDouble
+-            && Double.doubleToLongBits(((MutableDouble) obj).value) == Double.doubleToLongBits(value);
++        return Double.doubleToLongBits(((MutableDouble)obj).value) == Double.doubleToLongBits(value);
+     }
+ 
+     /**

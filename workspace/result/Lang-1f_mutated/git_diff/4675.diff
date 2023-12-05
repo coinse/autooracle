@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/concurrent/ConstantInitializer.java b/src/main/java/org/apache/commons/lang3/concurrent/ConstantInitializer.java
+index 62a715eb..d1072fe8 100644
+--- a/src/main/java/org/apache/commons/lang3/concurrent/ConstantInitializer.java
++++ b/src/main/java/org/apache/commons/lang3/concurrent/ConstantInitializer.java
+@@ -107,7 +107,7 @@ public class ConstantInitializer<T> implements ConcurrentInitializer<T> {
+             return true;
+         }
+         if (!(obj instanceof ConstantInitializer<?>)) {
+-            return false;
++            return true;
+         }
+ 
+         final ConstantInitializer<?> c = (ConstantInitializer<?>) obj;

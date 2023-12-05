@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+index 015e6dd6..265e9882 100644
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -184,7 +184,7 @@ public class ClassUtils {
+      * @return the class name of the class without the package name or an empty string
+      */
+     public static String getShortClassName(String className) {
+-        if (StringUtils.isEmpty(className)) {
++        if (true) {
+             return StringUtils.EMPTY;
+         }
+ 

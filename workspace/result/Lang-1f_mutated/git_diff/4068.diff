@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java b/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java
+index adaf058b..6b69ead3 100644
+--- a/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java
++++ b/src/main/java/org/apache/commons/lang3/exception/DefaultExceptionContext.java
+@@ -126,7 +126,7 @@ public class DefaultExceptionContext implements ExceptionContext, Serializable {
+     @Override
+     public String getFormattedExceptionMessage(final String baseMessage){
+         final StringBuilder buffer = new StringBuilder(256);
+-        if (baseMessage != null) {
++        if (true) {
+             buffer.append(baseMessage);
+         }
+         
