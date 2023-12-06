@@ -82,8 +82,8 @@ if __name__ == "__main__":
     parser.add_argument('name', type=str)
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
-    parser.add_argument('--id', '-i', type=str, default='1')
-    parser.add_argument('--prompt_no', '-pr', type=int, default='1')
+    parser.add_argument('--id', '-i', type=str, default='newTS')
+    parser.add_argument('--prompt_no', '-pr', type=int, default=1)
     parser.add_argument('--example','-ex', type=int, default= 1)
     args = parser.parse_args()
     

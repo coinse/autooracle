@@ -14,7 +14,7 @@ def class_name_to_test_path(class_name):
 def get_javadoc(env, target_methods, lines):
 
     src_root_relpath = open(env.dev_src_relpath, 'r').read()
-    src_root_abs_path = os.path.join(env.buggy_tmp_dir, src_root_relpath)
+    src_root_abs_path = os.path.join(env.fixed_tmp_dir, src_root_relpath)
 
     comment_str = ''
 
@@ -28,9 +28,10 @@ def get_javadoc(env, target_methods, lines):
             class_name = match.group(1)
             invoked_class_abs_path = os.path.join(src_root_abs_path, class_name_to_test_path(class_name))
             parse_output = os.path.join(env.dev_written_src_analyze, "{}.json".format(class_name))
-            p = subprocess.run(
-                    shlex.split("java -jar {} {} {}".format(env.java_analyzer, invoked_class_abs_path, parse_output))
-                )
+            if not os.path.exists(parse_output):
+                p = subprocess.run(
+                        shlex.split("java -jar {} {} {}".format(env.java_analyzer, invoked_class_abs_path, parse_output))
+                    )
             if p.returncode != 0:
                 continue
             with open(parse_output,'r') as f:

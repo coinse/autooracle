@@ -3,7 +3,7 @@ import argparse
 from utils.evosuite import parse as parse_evosuite
 from utils.relatedTest import cal_evo_embedding, cal_dev_embedding
 from utils.transforming import transform
-from utils.env import EvoD4jEnv
+from utils.env_mut import EvoD4jEnvMut
 import pandas as pd 
 import subprocess 
 import shlex
@@ -79,34 +79,32 @@ def get_dev_tests_df():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', type=str)
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
-    parser.add_argument('--id', '-i', type=str, default='1')
-    parser.add_argument('--prompt_no', '-pr', type=int, default='1')
-    parser.add_argument('--example','-ex', type=int, default= 1)
+    parser.add_argument('--index', '-idx', type=str, default= '1')
+    parser.add_argument('--id', '-i', type=str, default='newTS')
     args = parser.parse_args()
     
-    name = args.name
     project = args.project
     version = args.version
+    idx = args.index
     ts_id = args.id
-    prompt_no=args.prompt_no
-    example = args.example
 
     print('*'*30)
     print("Dataframe")
     print(project+'-'+version)
     print('*'*30)
 
-    env = EvoD4jEnv(name, project, version, ts_id)
+    env = EvoD4jEnvMut(project, version, idx, ts_id)
 
     # 1. Make two dataframes that contain (evosuite test suite / developer test suite)
-    evo_tests_df = get_evo_df()
-    dev_tests_df = get_dev_tests_df()
+    if not os.path.exists(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl')):
+        evo_tests_df = get_evo_df()
+    if not os.path.exists(env.dev_tests_df_path):  
+        dev_tests_df = get_dev_tests_df()
 
     with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'wb') as f:
         pickle.dump(evo_tests_df,f)
 
-    with open(os.path.join(env.evosuite_test_dir, 'dev_tests_df.pkl'),'wb') as f:
+    with open(env.dev_tests_df_path,'wb') as f:
         pickle.dump(dev_tests_df,f)

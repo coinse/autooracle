@@ -4,9 +4,8 @@ class EvoD4jEnv:
     WORK_DIR = '/root/workspace/'
     TMP_ROOT = '/tmp'
     
-    def __init__(self, name, project, version, ts_id="no_name_specified"):
+    def __init__(self, project, version, ts_id="no_name_specified"):
         cls = self.__class__
-        self.name = name
         self.project = project
         self.version = version
         self.d4j_id = "{}-{}".format(self.project, self.version)

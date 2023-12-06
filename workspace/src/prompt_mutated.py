@@ -4,7 +4,7 @@ import argparse
 import json
 import tiktoken 
 import pickle
-from utils.env import EvoD4jEnv
+from utils.env_mut import EvoD4jEnvMut
 import pandas as pd
 from utils.javadoc import get_javadoc
 from utils.relatedTest import get_related
@@ -86,17 +86,17 @@ def make_prompt():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', type=str)
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
+    parser.add_argument('--index', '-idx', type=str, default= '1')
     parser.add_argument('--id', '-i', type=str, default='1')
     parser.add_argument('--prompt_no', '-pr', type=int, default='1')
     parser.add_argument('--example','-ex', type=int, default= 1)
     args = parser.parse_args()
     
-    name = args.name
     project = args.project
     version = args.version
+    idx = args.index
     ts_id = args.id
     prompt_no=args.prompt_no
     example = args.example
@@ -106,12 +106,12 @@ if __name__ == "__main__":
     print(project+'-'+version)
     print('*'*30)
 
-    env = EvoD4jEnv(name, project, version, ts_id)
+    env = EvoD4jEnvMut(project, version, idx, ts_id)
 
     with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'rb') as f:
         evo_tests_df = pickle.load(f)
 
-    with open(os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl'),'rb') as f:
+    with open(os.path.join(env.dev_tests_df_path),'rb') as f:
         dev_tests_df = pickle.load(f)
      
     #1. Merge to the two dataset on directroy
