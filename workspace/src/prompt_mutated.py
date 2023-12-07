@@ -4,7 +4,7 @@ import argparse
 import json
 import tiktoken 
 import pickle
-from utils.env_mut import EvoD4jEnvMut
+from utils.env import EvoD4jEnv
 import pandas as pd
 from utils.javadoc import get_javadoc
 from utils.relatedTest import get_related
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     print(project+'-'+version)
     print('*'*30)
 
-    env = EvoD4jEnvMut(project, version, idx, ts_id)
+    env = EvoD4jEnv(project, version, idx, ts_id, mut = True)
 
     with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'rb') as f:
         evo_tests_df = pickle.load(f)

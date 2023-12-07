@@ -1,4 +1,4 @@
-from utils.env_mut import EvoD4jEnvMut
+from utils.env import EvoD4jEnv
 import argparse
 import subprocess 
 import shlex
@@ -22,7 +22,7 @@ def get_descriptor(target):
 
     if not os.path.exists(os.path.join(env.metadata_dir,f'{target_class}_{target_method}')):
         p = subprocess.run(
-            shlex.split(f"javap -s {os.path.join(env.original_dir, target_path, class_name_to_class_path(target_class))}"), stdout = subprocess.PIPE,
+            shlex.split(f"javap -s {os.path.join(env.fixed_tmp_dir, target_path, class_name_to_class_path(target_class))}"), stdout = subprocess.PIPE,
             universal_newlines = True
         )
         with open(os.path.join(env.metadata_dir,f'{target_class}_{target_method}'), 'w') as f:
@@ -71,11 +71,11 @@ if __name__ == "__main__":
     project = args.project
     version = args.version
 
-    env = EvoD4jEnvMut(project, version)
+    env = EvoD4jEnv(project, version, mut = True)
    
     # Source directory of classes
     src_root_relpath = open(env.dev_src_relpath, 'r').read()
-    src_root_abs_path = os.path.join(env.original_dir, src_root_relpath)
+    src_root_abs_path = os.path.join(env.fixed_tmp_dir, src_root_relpath)
     
     # Mutated class list
     mutated_classes = os.listdir(env.mutants_files) ##.log 로 끝남

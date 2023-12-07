@@ -37,7 +37,8 @@ def get_dev_tests_df():
     dev_tests_df = pd.DataFrame(columns=['dir', 'dev_relpath', 'dev_method_signature', 'dev_test_src'])
     #get test source directory: dev_test_src_relpath
     dev_test_src_relpath = open(env.dev_test_relpath,'r').read()
-    dev_test_src_dir_abspaths = os.path.join(env.buggy_tmp_dir, dev_test_src_relpath)
+    dev_test_src_dir_abspaths = os.path.join(env.fixed_tmp_dir, dev_test_src_relpath)
+
     # extract developer written test classes
     dev_test_classes = open(env.dev_written_test_classes, 'r').read()
     dev_test_classes_list = dev_test_classes.split('\n')
@@ -79,35 +80,38 @@ def get_dev_tests_df():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', type=str)
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
+    parser.add_argument('--index', '-idx', type=str, default= '1')
     parser.add_argument('--id', '-i', type=str, default='newTS')
-    parser.add_argument('--prompt_no', '-pr', type=int, default=1)
-    parser.add_argument('--example','-ex', type=int, default= 1)
+    parser.add_argument('--mutation', '-mut', action='store_true')
     args = parser.parse_args()
     
-    name = args.name
     project = args.project
     version = args.version
+    idx = args.index
     ts_id = args.id
-    prompt_no=args.prompt_no
-    example = args.example
+    mut = args.mutation
 
     print('*'*30)
     print("Dataframe")
     print(project+'-'+version)
     print('*'*30)
 
-    env = EvoD4jEnv(name, project, version, ts_id)
+    env = EvoD4jEnv(project, version, idx, ts_id, mut)
 
     # 1. Make two dataframes that contain (evosuite test suite / developer test suite)
-    evo_tests_df = get_evo_df()
-    dev_tests_df = get_dev_tests_df()
+    evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl')
+    if not os.path.exists(evo_tests_df_path):
+        evo_tests_df = get_evo_df()
+        with open(evo_tests_df_path,'wb') as f:
+            pickle.dump(evo_tests_df,f)
 
-    # #2. Calculate model embedding
-    with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'wb') as f:
-        pickle.dump(evo_tests_df,f)
-
-    with open(os.path.join(env.evosuite_test_dir, 'dev_tests_df.pkl'),'wb') as f:
-        pickle.dump(dev_tests_df,f)
+    if not mut:
+        dev_tests_df_path = os.path.join(env.evosuite_test_dir, 'dev_tests_df.pkl')
+    else:
+        dev_tests_df_path = env.dev_tests_df_path
+    if not os.path.exists(dev_tests_df_path):
+        dev_tests_df = get_dev_tests_df()
+        with open(dev_tests_df_path,'wb') as f:
+            pickle.dump(dev_tests_df,f)

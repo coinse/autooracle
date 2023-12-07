@@ -86,32 +86,39 @@ def make_prompt():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', type=str)
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
+    parser.add_argument('--index', '-idx', type=str, default= '1')
     parser.add_argument('--id', '-i', type=str, default='1')
     parser.add_argument('--prompt_no', '-pr', type=int, default='1')
     parser.add_argument('--example','-ex', type=int, default= 1)
+    parser.add_argument('--mutation', '-mut', action='store_true')
     args = parser.parse_args()
     
-    name = args.name
     project = args.project
     version = args.version
+    idx = args.index
     ts_id = args.id
     prompt_no=args.prompt_no
     example = args.example
+    mut = args.mutation
 
     print('*'*30)
     print("MAKING PROMPT")
     print(project+'-'+version)
     print('*'*30)
 
-    env = EvoD4jEnv(name, project, version, ts_id)
+    env = EvoD4jEnv(project, version, ts_id)
 
-    with open(os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl'),'rb') as f:
+    evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl')
+    with open(evo_tests_df_path,'rb') as f:
         evo_tests_df = pickle.load(f)
 
-    with open(os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl'),'rb') as f:
+    if not mut:
+        dev_test_df_path = os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl')
+    else :
+        dev_test_df_path = env.dev_tests_df_path
+    with open(dev_test_df_path,'rb') as f:
         dev_tests_df = pickle.load(f)
      
     #1. Merge to the two dataset on directroy

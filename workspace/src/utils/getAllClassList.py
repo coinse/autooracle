@@ -1,4 +1,4 @@
-from env_mut import EvoD4jEnvMut
+from env import EvoD4jEnv
 import argparse
 import subprocess
 import shlex
@@ -17,18 +17,18 @@ if __name__ == "__main__":
     project = args.project
     version = args.version
 
-    env = EvoD4jEnvMut(project, version)
+    env = EvoD4jEnv(project, version, mut = True)
 
     p = subprocess.run(
-        shlex.split(f'defects4j export -p dir.bin.classes -w {env.original_dir}'), stdout = subprocess.PIPE,
+        shlex.split(f'defects4j export -p dir.bin.classes -w {env.fixed_tmp_dir}'), stdout = subprocess.PIPE,
         universal_newlines = True
     )
 
     class_list = []
-    for dp, dn, fn in os.walk(os.path.join(env.original_dir, p.stdout)):
+    for dp, dn, fn in os.walk(os.path.join(env.fixed_tmp_dir, p.stdout)):
         for f in fn:
             if f.endswith('.class'):
-                relpath = os.path.relpath(os.path.join(dp,f), start=os.path.join(env.original_dir, p.stdout))
+                relpath = os.path.relpath(os.path.join(dp,f), start=os.path.join(env.fixed_tmp_dir, p.stdout))
                 class_list.append(class_path_to_class_name(relpath)[:-6])
     
     with open(os.path.join(env.metadata_dir, 'all.classes'),'w') as f:
