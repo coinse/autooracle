@@ -19,15 +19,15 @@ def class_name_to_test_path(class_name):
 
 def get_evo_df():
     print('Making evo_tests_df')
-    evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_test_src_mut', 'mutated', 'evo_target_method','line'])
+    evo_tests_df = pd.DataFrame(columns=['dir', 'evo_relpath', 'evo_test_no', 'evo_test_src', 'evo_test_src_trs', 'transformed', 'evo_target_method','line'])
     for dp, dn, fn in os.walk(env.evosuite_test_src_dir):
         for f in fn:
             if f.endswith("ESTest.java"):
                 relpath = os.path.relpath(os.path.join(dp, f), start = env.evosuite_test_src_dir)
                 coverages, parsed_test_src, parsed_target_method = parse_evosuite(os.path.join(dp, f))
                 for i in zip(coverages.items(), parsed_test_src.items(), parsed_target_method.items()):
-                    mutated, evo_test_src_mut = transform(i[1][1])
-                    tmp_df = pd.DataFrame({'dir':[os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[1][1]], 'evo_test_src_mut':[evo_test_src_mut],'mutated':[mutated], 'evo_target_method':[i[2][1]], 'line':[i[0][1]]})
+                    transformed, evo_test_src_trs = transform(i[1][1])
+                    tmp_df = pd.DataFrame({'dir':[os.path.dirname(relpath)], 'evo_relpath': [relpath], 'evo_test_no':[i[0][0]], 'evo_test_src':[i[1][1]], 'evo_test_src_trs':[evo_test_src_trs],'transformed':[transformed], 'evo_target_method':[i[2][1]], 'line':[i[0][1]]})
                     evo_tests_df = pd.concat([evo_tests_df, tmp_df])
     evo_tests_df = cal_evo_embedding(env, evo_tests_df)
     return evo_tests_df
@@ -73,7 +73,6 @@ def get_dev_tests_df():
                                     source += l
                             tmp_df = pd.DataFrame({'dir':[os.path.dirname(dev_test_relpath)], 'dev_relpath': [dev_test_relpath], 'dev_method_signature':[node["signature"]], 'dev_test_src':[source]})
                             dev_tests_df = pd.concat([dev_tests_df, tmp_df])
-                            
     dev_tests_df = cal_dev_embedding(env, dev_tests_df)
     return dev_tests_df
 
@@ -95,7 +94,7 @@ if __name__ == "__main__":
 
     print('*'*30)
     print("Dataframe")
-    print(project+'-'+version)
+    print(project+'-'+version, idx)
     print('*'*30)
 
     env = EvoD4jEnv(project, version, idx, ts_id, mut)
@@ -112,6 +111,7 @@ if __name__ == "__main__":
     else:
         dev_tests_df_path = env.dev_tests_df_path
     if not os.path.exists(dev_tests_df_path):
+        os.makedirs(env.dev_written_test_analyze)
         dev_tests_df = get_dev_tests_df()
         with open(dev_tests_df_path,'wb') as f:
             pickle.dump(dev_tests_df,f)

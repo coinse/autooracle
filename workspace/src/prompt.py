@@ -9,9 +9,9 @@ import pandas as pd
 from utils.javadoc import get_javadoc
 from utils.relatedTest import get_related
 
-def make_prompt_file(conversation, row, mutated= False):
-    if mutated:
-        prompt_dir = os.path.join(env.evosuite_prompt_mut_dir, f'prompt{prompt_no}/example{example}')
+def make_prompt_file(conversation, row, trnasformed = False):
+    if trnasformed:
+        prompt_dir = os.path.join(env.evosuite_prompt_transform_dir, f'prompt{prompt_no}/example{example}')
     else:
         prompt_dir = os.path.join(env.evosuite_prompt_dir, f'prompt{prompt_no}/example{example}')
 
@@ -40,24 +40,29 @@ def make_prompt():
         prompt_format = json.load(f)
 
     for _, row in evo_tests_df.iterrows():
-        if row['mutated'] == 'No':
+        if row['transformed'] == 'No':
+            print('no_transformed:',row['evo_test_no'])
             continue
-
         conversation = []
         conversation.append(prompt_format["system_message"])
 
         one_evo_dev_df = evo_dev_join.loc[(evo_dev_join['evo_relpath'] == row['evo_relpath']) & (evo_dev_join['evo_test_no'] == row['evo_test_no']), :]
         #1. related test 
         one_evo_dev_df = get_related(one_evo_dev_df)
+        print(row['evo_relpath'])
         if one_evo_dev_df['dev_test_src'].reset_index(drop=True)[0] == 'no related test':
+            print('no related test:',row['evo_test_no'])
             continue
         #2. java doc
         comment = get_javadoc(env, row["evo_target_method"], row["line"])
         if comment == '':
+            print('no_Comment:',row['evo_test_no'])
             continue
         elif re.search("non-Javadoc", comment):
+            print('nonJavadoc:',row['evo_test_no'])
             continue
         elif not(re.search("@param", comment) and re.search("@return", comment)):
+            print("@param",row['evo_test_no'])
             continue
         
         related_tests = ''
@@ -75,7 +80,7 @@ def make_prompt():
 
         # Trasnformed
         del conversation[-1]
-        to_be_appended = [{"role": "user", "content": prompt_format["user_message"].format(comment, related_tests, row['evo_test_src_mut'], row['evo_test_no'])}]
+        to_be_appended = [{"role": "user", "content": prompt_format["user_message"].format(comment, related_tests, row['evo_test_src_trs'], row['evo_test_no'])}]
         conversation.append(to_be_appended[0])
         
         total_tokens = num_tokens_from_messages(conversation) + max_response_tokens
@@ -83,44 +88,45 @@ def make_prompt():
             continue
         make_prompt_file(conversation, row, True) 
 
-
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
     parser.add_argument('--index', '-idx', type=str, default= '1')
     parser.add_argument('--id', '-i', type=str, default='1')
-    parser.add_argument('--prompt_no', '-pr', type=int, default='1')
-    parser.add_argument('--example','-ex', type=int, default= 1)
     parser.add_argument('--mutation', '-mut', action='store_true')
+    parser.add_argument('--prompt_no', '-pr', type=int, default=1)
+    parser.add_argument('--example','-ex', type=int, default= 1)
+    parser.add_argument('--transform','-trs', action='store_true')
     args = parser.parse_args()
     
     project = args.project
     version = args.version
     idx = args.index
     ts_id = args.id
+    mut = args.mutation
     prompt_no=args.prompt_no
     example = args.example
-    mut = args.mutation
+    transform = args.transform
 
     print('*'*30)
     print("MAKING PROMPT")
-    print(project+'-'+version)
+    print(project+'-'+version, idx)
     print('*'*30)
 
-    env = EvoD4jEnv(project, version, ts_id)
+    env = EvoD4jEnv(project, version, idx, ts_id, mut)
 
     evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl')
     with open(evo_tests_df_path,'rb') as f:
         evo_tests_df = pickle.load(f)
 
     if not mut:
-        dev_test_df_path = os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl')
+       dev_test_df_path = os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl')
     else :
-        dev_test_df_path = env.dev_tests_df_path
+       dev_test_df_path = env.dev_tests_df_path
+   
     with open(dev_test_df_path,'rb') as f:
-        dev_tests_df = pickle.load(f)
-     
+       dev_tests_df = pickle.load(f)
     #1. Merge to the two dataset on directroy
     evo_dev_join = pd.merge(evo_tests_df, dev_tests_df, on = 'dir', how = 'left')
 

@@ -16,6 +16,7 @@ DIFF_DIR=$RESULT_DIR/git_diff
 METADATA_DIR=$RESULT_DIR/${IDX}/metadata
 RELEVANT_CLASSES=$METADATA_DIR/classes.relevant
 RELEVANT_METHODS_DIR=$METADATA_DIR/methods.relevant
+DEV_WRITTEN_INFO=$RESULT_DIR/dev_written_info
 
 EVOSUITE=$WORK_DIR/evosuite-master-1.0.7-SNAPSHOT.jar
 EVOSUITE_DEFAULT_CONFIG=$WORK_DIR/evosuite-config 
@@ -30,7 +31,7 @@ EVOSUITE_CHAT_REPLY=$EVOSUITE_ID/chat_reply
 EVOSUITE_CHAT_REPLY_MUT=$EVOSUITE_ID/chat_reply_mut
 
 
-## SETUP
+# SETUP
 [ ! -d "$METADATA_DIR" ] && mkdir -p $METADATA_DIR 
 [ ! -d "$RELEVANT_METHODS_DIR" ] && mkdir -p $RELEVANT_METHODS_DIR 
 [ ! -d "$EVOSUITE_ID" ] && mkdir -p $EVOSUITE_ID 
@@ -40,7 +41,7 @@ EVOSUITE_CHAT_REPLY_MUT=$EVOSUITE_ID/chat_reply_mut
 [ ! -d "$EVOSUITE_PROMPT_MUT" ] && mkdir -p $EVOSUITE_PROMPT_MUT 
 [ ! -d "$EVOSUITE_CHAT_REPLY" ] && mkdir -p $EVOSUITE_CHAT_REPLY 
 [ ! -d "$EVOSUITE_CHAT_REPLY_MUT" ] && mkdir -p $EVOSUITE_CHAT_REPLY_MUT 
-
+[ ! -d "$DEV_WRITTEN_INFO" ] && mkdir -p $DEV_WRITTEN_INFO
 python utils/save_relevant_metadata.py $DIFF_DIR/${IDX}_info $METADATA_DIR
 # Checkout for mutation and mutate, compile
 [ -d "$MUTAED_TMP_DIR" ] && rm -rf $MUTAED_TMP_DIR
@@ -91,7 +92,16 @@ for class in $(cat $RELEVANT_CLASSES); do
         echo "no methods info"
     fi
 done;
-    
+   
+
+#dev_test_relpath
+[ ! -f "$DEV_WRITTEN_INFO/dir.src.tests" ] && defects4j export -p dir.src.tests -o $DEV_WRITTEN_INFO/dir.src.tests -w $FIXED_TMP_DIR
+
+# #dev_src_relptath
+[ ! -f "$DEV_WRITTEN_INFO/dir.src.classes" ] && defects4j export -p dir.src.classes -o $DEV_WRITTEN_INFO/dir.src.classes -w $FIXED_TMP_DIR
+
+# # extract developer written test classes
+[ ! -f "$DEV_WRITTEN_INFO/tests.all" ] && defects4j export -p tests.all -o $DEV_WRITTEN_INFO/tests.all -w $FIXED_TMP_DIR
 
 
 if [ -d "$FIXED_TMP_DIR" ]; then
