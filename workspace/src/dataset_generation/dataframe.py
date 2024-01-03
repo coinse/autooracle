@@ -1,3 +1,5 @@
+import sys 
+sys.path.append('../')
 import os
 import argparse
 from utils.evosuite import parse as parse_evosuite
@@ -83,33 +85,30 @@ if __name__ == "__main__":
     parser.add_argument('version', type=str)
     parser.add_argument('--index', '-idx', type=str, default= '1')
     parser.add_argument('--id', '-i', type=str, default='newTS')
-    parser.add_argument('--mutation', '-mut', action='store_true')
     args = parser.parse_args()
     
     project = args.project
     version = args.version
     idx = args.index
     ts_id = args.id
-    mut = args.mutation
 
     print('*'*30)
     print("Dataframe")
     print(project+'-'+version, idx)
     print('*'*30)
 
-    env = EvoD4jEnv(project, version, idx, ts_id, mut)
+    env = EvoD4jEnv(project, version, idx, ts_id)
 
     # 1. Make two dataframes that contain (evosuite test suite / developer test suite)
     evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl')
+   
     if not os.path.exists(evo_tests_df_path):
         evo_tests_df = get_evo_df()
         with open(evo_tests_df_path,'wb') as f:
             pickle.dump(evo_tests_df,f)
 
-    if not mut:
-        dev_tests_df_path = os.path.join(env.evosuite_test_dir, 'dev_tests_df.pkl')
-    else:
-        dev_tests_df_path = env.dev_tests_df_path
+    dev_tests_df_path = env.dev_tests_df_path
+    
     if not os.path.exists(dev_tests_df_path):
         os.makedirs(env.dev_written_test_analyze)
         dev_tests_df = get_dev_tests_df()

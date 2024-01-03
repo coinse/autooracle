@@ -32,7 +32,6 @@ if __name__ == "__main__":
     parser.add_argument('--prompt_no', '-pr', type=int, default='1')
     parser.add_argument('--example','-ex', type=int, default= 1)
     parser.add_argument('--try_no','-t', type=int, default= 1)
-    parser.add_argument('--mutation', '-mut', action='store_true')
     parser.add_argument('--transform','-trs', action='store_true')
     args = parser.parse_args()
 
@@ -43,7 +42,6 @@ if __name__ == "__main__":
     prompt_no=args.prompt_no
     example = args.example
     try_no=args.try_no
-    mut = args.mutation
     transform=args.transform
   
     print('*'*30)
@@ -51,7 +49,7 @@ if __name__ == "__main__":
     print(project+'-'+version," ",idx,transform)
     print('*'*30)
 
-    env = EvoD4jEnv(project, version, idx, ts_id, mut)
+    env = EvoD4jEnv(project, version, idx, ts_id)
     
     # Original
     if not transform:

@@ -35,20 +35,22 @@ EVOSUITE_CHAT_REPLY_MUT=$EVOSUITE_ID/chat_reply_mut
 [ ! -d "$METADATA_DIR" ] && mkdir -p $METADATA_DIR 
 [ ! -d "$RELEVANT_METHODS_DIR" ] && mkdir -p $RELEVANT_METHODS_DIR 
 [ ! -d "$EVOSUITE_ID" ] && mkdir -p $EVOSUITE_ID 
-[ ! -d "$EVOSUITE_TEST" ] && mkdir -p $EVOSUITE_TEST 
 [ ! -d "$EVOSUITE_REPORT" ] && mkdir -p $EVOSUITE_REPORT 
 [ ! -d "$EVOSUITE_PROMPT" ] && mkdir -p $EVOSUITE_PROMPT 
 [ ! -d "$EVOSUITE_PROMPT_MUT" ] && mkdir -p $EVOSUITE_PROMPT_MUT 
 [ ! -d "$EVOSUITE_CHAT_REPLY" ] && mkdir -p $EVOSUITE_CHAT_REPLY 
 [ ! -d "$EVOSUITE_CHAT_REPLY_MUT" ] && mkdir -p $EVOSUITE_CHAT_REPLY_MUT 
 [ ! -d "$DEV_WRITTEN_INFO" ] && mkdir -p $DEV_WRITTEN_INFO
-python utils/save_relevant_metadata.py $DIFF_DIR/${IDX}_info $METADATA_DIR
+
+cwd=$(pwd)
+python ../utils/save_relevant_metadata.py $DIFF_DIR/${IDX}_info $METADATA_DIR
 # Checkout for mutation and mutate, compile
 [ -d "$MUTAED_TMP_DIR" ] && rm -rf $MUTAED_TMP_DIR
 defects4j checkout -p $PROJECT -v ${VERSION}f -w $MUTAED_TMP_DIR
 cd $MUTAED_TMP_DIR
 git apply $DIFF_DIR/${IDX}.diff
 defects4j compile
+
 
 cp $DIFF_DIR/${IDX}.diff $METADATA_DIR
 cp $DIFF_DIR/${IDX}_info $METADATA_DIR
@@ -62,43 +64,42 @@ fi
 
 echo "Evosuite Config: $EVOSUITE_CONFIG"
 
-project_cp=$(defects4j export -p cp.compile -w $MUTAED_TMP_DIR)
-for class in $(cat $RELEVANT_CLASSES); do
-    echo $class
-    if [ -f "$RELEVANT_METHODS_DIR/$class" ]; then
-        budget_ratio_file=$RELEVANT_METHODS_DIR/$class.budget
-        echo $budget_ratio_file
-        budget_ratio=$(cat $budget_ratio_file)
-        echo $budget_ratio
-        class_budget=$(python3.6 -c "from math import ceil; print(int(ceil($budget_ratio*$BUDGET)))")
-        echo $class_budget
-        echo "----------------------------------------------------"
-        echo "Generating test suite for class [$class] (w/ budget: ${class_budget}s)"
-        echo "- Target methods:"
-        cat $RELEVANT_METHODS_DIR/$class
-        echo ""
-        echo "----------------------------------------------------"
-        
-        echo "java -jar $EVOSUITE -class $class -projectCP $project_cp -Dsearch_budget=$class_budget -seed=$SEED -Dreport_dir=$EVOSUITE_REPORT -Dtest_dir=$EVOSUITE_TEST -Dtarget_method_list=$(cat $RELEVANT_METHODS_DIR/$class | tr '\n' ':' | sed 's/:$//') $(cat ${EVOSUITE_CONFIG})"
-        java -jar $EVOSUITE -class $class -projectCP $project_cp -Dsearch_budget=$class_budget -seed=$SEED -Dreport_dir=$EVOSUITE_REPORT -Dtest_dir=$EVOSUITE_TEST -Dtarget_method_list=$(cat $RELEVANT_METHODS_DIR/$class | tr '\n' ':' | sed 's/:$//') $(cat ${EVOSUITE_CONFIG})
-        [ ! -d $EVOSUITE_REPORT ] && mkdir $EVOSUITE_REPORT
-        cat $EVOSUITE_REPORT/statistics.csv >> $EVOSUITE_REPORT/statistics.${PROJECT}-${VERSION}.csv
-        rm $EVOSUITE_REPORT/statistics.csv
-        [ ! -d $EVOSUITE_PROMPT ] && mkdir $EVOSUITE_PROMPT
-        [ ! -d $EVOSUITE_CHAT_REPLY ] && mkdir $EVOSUITE_CHAT_REPLY
-        [ ! -d $EVOSUITE_PROMPT_MUT ] && mkdir $EVOSUITE_PROMPT_MUT
-        [ ! -d $EVOSUITE_CHAT_REPLY_MUT ] && mkdir $EVOSUITE_CHAT_REPLY_MUT
-    else 
-        echo "no methods info"
-    fi
-done;
-   
+if [ -d "$EVOSUITE_TEST" ]; then
+    echo "test suite $EVOSUITE_TEST exists"
+else
+    project_cp=$(defects4j export -p cp.compile -w $MUTAED_TMP_DIR)
+    for class in $(cat $RELEVANT_CLASSES); do
+        echo $class
+        if [ -f "$RELEVANT_METHODS_DIR/$class" ]; then
+            budget_ratio_file=$RELEVANT_METHODS_DIR/$class.budget
+            echo $budget_ratio_file
+            budget_ratio=$(cat $budget_ratio_file)
+            echo $budget_ratio
+            class_budget=$(python3.6 -c "from math import ceil; print(int(ceil($budget_ratio*$BUDGET)))")
+            echo $class_budget
+            echo "----------------------------------------------------"
+            echo "Generating test suite for class [$class] (w/ budget: ${class_budget}s)"
+            echo "- Target methods:"
+            cat $RELEVANT_METHODS_DIR/$class
+            echo ""
+            echo "----------------------------------------------------"
+            
+            echo "java -jar $EVOSUITE -class $class -projectCP $project_cp -Dsearch_budget=$class_budget -seed=$SEED -Dreport_dir=$EVOSUITE_REPORT -Dtest_dir=$EVOSUITE_TEST -Dtarget_method_list=$(cat $RELEVANT_METHODS_DIR/$class | tr '\n' ':' | sed 's/:$//') $(cat ${EVOSUITE_CONFIG})"
+            java -jar $EVOSUITE -class $class -projectCP $project_cp -Dsearch_budget=$class_budget -seed=$SEED -Dreport_dir=$EVOSUITE_REPORT -Dtest_dir=$EVOSUITE_TEST -Dtarget_method_list=$(cat $RELEVANT_METHODS_DIR/$class | tr '\n' ':' | sed 's/:$//') $(cat ${EVOSUITE_CONFIG})
+            [ ! -d $EVOSUITE_REPORT ] && mkdir $EVOSUITE_REPORT
+            cat $EVOSUITE_REPORT/statistics.csv >> $EVOSUITE_REPORT/statistics.${PROJECT}-${VERSION}.csv
+            rm $EVOSUITE_REPORT/statistics.csv
+        else 
+            echo "no methods info"
+        fi
+    done;
+fi
+
+cd $cwd
+python split_tests.py --evo_dir $EVOSUITE_TEST
 
 #dev_test_relpath
 [ ! -f "$DEV_WRITTEN_INFO/dir.src.tests" ] && defects4j export -p dir.src.tests -o $DEV_WRITTEN_INFO/dir.src.tests -w $FIXED_TMP_DIR
-
-# #dev_src_relptath
-[ ! -f "$DEV_WRITTEN_INFO/dir.src.classes" ] && defects4j export -p dir.src.classes -o $DEV_WRITTEN_INFO/dir.src.classes -w $FIXED_TMP_DIR
 
 # # extract developer written test classes
 [ ! -f "$DEV_WRITTEN_INFO/tests.all" ] && defects4j export -p tests.all -o $DEV_WRITTEN_INFO/tests.all -w $FIXED_TMP_DIR

@@ -1,3 +1,5 @@
+import sys 
+sys.path.append('../')
 import os 
 import re
 import argparse
@@ -18,9 +20,9 @@ def make_prompt_file(conversation, row, trnasformed = False):
     if not os.path.exists(prompt_dir):
         os.makedirs(prompt_dir)
     
-    with open( prompt_dir + '/{}_{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no'], row['mutated']),'wb') as f:
+    with open( prompt_dir + '/{}_{}_{}_query.pkl'.format(row['dir'].replace('/','.'), row['evo_test_no'], row['transformed']),'wb') as f:
         pickle.dump(conversation,f)
-    with open( prompt_dir + '/{}_{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no'], row['mutated']),'w') as f:
+    with open( prompt_dir + '/{}_{}_{}_query.txt'.format(row['dir'].replace('/','.'), row['evo_test_no'], row['transformed']),'w') as f:
         f.write(conversation[0]['content'] + '\n' +  conversation[1]['content'])
 
 def num_tokens_from_messages(messages):
@@ -94,36 +96,32 @@ if __name__ == "__main__":
     parser.add_argument('version', type=str)
     parser.add_argument('--index', '-idx', type=str, default= '1')
     parser.add_argument('--id', '-i', type=str, default='1')
-    parser.add_argument('--mutation', '-mut', action='store_true')
     parser.add_argument('--prompt_no', '-pr', type=int, default=1)
     parser.add_argument('--example','-ex', type=int, default= 1)
-    parser.add_argument('--transform','-trs', action='store_true')
+    #parser.add_argument('--transform','-trs', action='store_true')
     args = parser.parse_args()
     
     project = args.project
     version = args.version
     idx = args.index
     ts_id = args.id
-    mut = args.mutation
     prompt_no=args.prompt_no
     example = args.example
-    transform = args.transform
+    #transform = args.transform
 
     print('*'*30)
     print("MAKING PROMPT")
     print(project+'-'+version, idx)
     print('*'*30)
 
-    env = EvoD4jEnv(project, version, idx, ts_id, mut)
+    env = EvoD4jEnv(project, version, idx, ts_id)
 
     evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df.pkl')
     with open(evo_tests_df_path,'rb') as f:
         evo_tests_df = pickle.load(f)
 
-    if not mut:
-       dev_test_df_path = os.path.join(env.evosuite_test_dir,'dev_tests_df.pkl')
-    else :
-       dev_test_df_path = env.dev_tests_df_path
+    
+    dev_test_df_path = env.dev_tests_df_path
    
     with open(dev_test_df_path,'rb') as f:
        dev_tests_df = pickle.load(f)

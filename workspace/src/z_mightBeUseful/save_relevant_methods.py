@@ -1,5 +1,5 @@
 import argparse, os
-from cobertura import *
+from workspace.src.mightBeUseful.cobertura import *
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()

@@ -71,7 +71,7 @@ if __name__ == "__main__":
     project = args.project
     version = args.version
 
-    env = EvoD4jEnv(project, version, mut = True)
+    env = EvoD4jEnv(project, version)
    
     # Source directory of classes
     src_root_relpath = open(env.dev_src_relpath, 'r').read()
@@ -138,15 +138,18 @@ if __name__ == "__main__":
     idx = 0
     for key, values in mutants_dic.items():
         print(key)
+        #print(values)
         for value in values:
-            p = subprocess.run(
-                shlex.split(f'cp -r {env.before_mutated_dir}/. {env.after_mutated_dir}')
-            )
-            after_mutated_src_root_path = os.path.join(env.after_mutated_dir, src_root_relpath)
             for dp, dn, fn in os.walk(os.path.join(env.mutants_files, key, value[0])):
                 for f in fn:
                     if f.endswith('.java'):
+                        p = subprocess.run(
+                            shlex.split(f'cp -r {env.before_mutated_dir}/. {env.after_mutated_dir}')
+                        )
+                        after_mutated_src_root_path = os.path.join(env.after_mutated_dir, src_root_relpath)
+
                         relpath = os.path.relpath(os.path.join(dp,f), start = os.path.join(env.mutants_files, key, value[0]))
+                        #print(f'cp {os.path.join(dp,f)} {os.path.join(after_mutated_src_root_path,relpath)}')
                         run_mut_cp = subprocess.run(
                             shlex.split(f'cp {os.path.join(dp,f)} {os.path.join(after_mutated_src_root_path,relpath)}')
                         )
@@ -165,4 +168,3 @@ if __name__ == "__main__":
                             shlex.split(f'rm -r {env.after_mutated_dir}')
                         )
                         idx += 1
-        

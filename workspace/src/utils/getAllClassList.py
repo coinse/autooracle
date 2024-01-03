@@ -12,16 +12,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
-    parser.add_argument('--mutation', '-mut', action='store_true')
     args = parser.parse_args()
 
     project = args.project
     version = args.version
-    mut = args.mutation
-    if mut:
-        env = EvoD4jEnv(project, version, mut=mut)
-    else:
-        env = EvoD4jEnv(project, version)
+    env = EvoD4jEnv(project, version)
 
     p = subprocess.run(
         shlex.split(f'defects4j export -p dir.bin.classes -w {env.fixed_tmp_dir}'), stdout = subprocess.PIPE,
