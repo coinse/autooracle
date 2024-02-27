@@ -1,5 +1,4 @@
 #!/bin/bash
-
 PROJECT=$1
 VERSION=$2
 IDX=$3

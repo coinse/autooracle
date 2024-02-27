@@ -17,6 +17,7 @@ def get_javadoc(env, target_methods, lines):
     src_root_abs_path = os.path.join(env.fixed_tmp_dir, src_root_relpath)
 
     comment_str = ''
+    signature = ''
 
     for target in target_methods:
         pattern = r'(\S+)\.(\S+)\(([^)]*)\)[\S]*'
@@ -44,5 +45,6 @@ def get_javadoc(env, target_methods, lines):
                     if (node["begin_line"] <= line and node["end_line"] >= line):
                         comment_str += "signature: " + node["signature"] + "\n"
                         comment_str += node["comment"]
+                        signature = node["signature"]
                         break
-    return comment_str        
+    return comment_str, signature        

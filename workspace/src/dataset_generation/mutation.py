@@ -1,3 +1,5 @@
+import sys 
+sys.path.append('../')
 from utils.env import EvoD4jEnv
 import argparse
 import subprocess 

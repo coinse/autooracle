@@ -1,4 +1,4 @@
 workspace/__pycache__
 workspace/result
-workspace/.openai_key
 .env
+.vscode

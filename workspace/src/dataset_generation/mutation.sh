@@ -23,7 +23,7 @@ else
     mkdir -p $METADATA_DIR
 fi
 
-python utils/getAllClassList.py ${PROJECT} ${VERSION}
+python ../utils/getAllClassList.py ${PROJECT} ${VERSION}
 
 # Export mutated files
 export MAJOR_OPT="-J-Dmajor.export.mutants=true"

@@ -1,3 +1,5 @@
+import sys
+sys.path.append('../')
 import os
 from openai import OpenAI
 import argparse
@@ -11,80 +13,99 @@ load_dotenv()
 client = OpenAI(
     organization="org-mSMx268bkMcTa5gXwsDGN8Af", api_key= os.environ["OPEN_API_KEY"])
 
-def query_chat_llm(messages=[], system_message=None, max_response_tokens=250):   
-    if system_message is not None:
-        messages.append({"role":"system", "content": system_message})    
+def query_chat_llm(messages=[], max_response_tokens=1300):   
     chat = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0613",
         messages=messages,
         max_tokens=max_response_tokens
     )
-    chat_reply = chat.choices[0].message.content
-    print(chat_reply)
-    return chat_reply
+    return chat.choices[0].message.content
+
+def process_prompt(prompt_dir, chat_reply_dir, test_no):
+    if not os.path.exists(chat_reply_dir):
+        os.makedirs(chat_reply_dir)
+    for prompt_file in os.listdir(prompt_dir):
+        if test_no != 'none' and prompt_file.split('_')[1] != test_no:
+            continue 
+        if prompt_file.endswith('.pkl'):
+            with open(os.path.join(prompt_dir, prompt_file), 'rb') as fr:
+                data = pickle.load(fr)
+            reply_file = os.path.join(chat_reply_dir, prompt_file.replace('query', 'reply').replace('.pkl', '.txt'))
+            if not os.path.exists(reply_file): 
+                chat_reply = query_chat_llm(data)
+                with open(reply_file, 'w') as fw:
+                    fw.write(chat_reply)
+
+def process_prompt_conversation(prompt_dir, chat_reply_dir, test_no):
+    if not os.path.exists(chat_reply_dir):
+        os.makedirs(chat_reply_dir)
+    for prompt_file in os.listdir(prompt_dir):
+        if test_no != 'none' and prompt_file.split('_')[1] != test_no:
+            continue 
+        if prompt_file.endswith('.pkl'):
+            with open(os.path.join(prompt_dir, prompt_file),'rb') as fr:
+                data = pickle.load(fr)
+            reply_file_1 = os.path.join(chat_reply_dir, prompt_file.replace('query', 'reply').replace('.pkl', '.txt')+"_1")
+            reply_file_2 = os.path.join(chat_reply_dir, prompt_file.replace('query', 'reply').replace('.pkl', '.txt')+"_2")
+            initial_prompt = data[0:2]
+            if not os.path.exists(reply_file_1):
+                print("*******Initial Query*******")
+                chat_reply = query_chat_llm(initial_prompt)
+                with open(reply_file_1, 'w') as fw:
+                    fw.write(chat_reply)
+            if os.path.exists(reply_file_1):
+                chat_reply = open(reply_file_1).read()
+                initial_answer = [{"role": "assistant", "content": chat_reply}]
+            second_prompt = initial_prompt + initial_answer + [data[2]]
+            if not os.path.exists(reply_file_2):
+                print("*******Second Query*******")
+                chat_reply = query_chat_llm(second_prompt)
+                with open(reply_file_2, 'w') as fw:
+                    fw.write(chat_reply)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
-    parser.add_argument('--index', '-idx', type=str, default= '1')
+    parser.add_argument('--index', '-idx', type=str, default='1')
     parser.add_argument('--id', '-i', type=str, default='newTS')
-    parser.add_argument('--prompt_no', '-pr', type=int, default='1')
-    parser.add_argument('--example','-ex', type=int, default= 1)
-    parser.add_argument('--try_no','-t', type=int, default= 1)
-    parser.add_argument('--transform','-trs', action='store_true')
+    parser.add_argument('--prompt_no', '-pr', type=int, default=1)
+    parser.add_argument('--example', '-ex', type=int, default=1)
+    parser.add_argument('--try_no', '-t', type=int, default=1)
+    parser.add_argument('--transform', '-trs', action='store_true')
+    parser.add_argument('--test_no', '-tno', type=str, default='none')
+    parser.add_argument('--conversational', '-conv', action='store_true')
     args = parser.parse_args()
 
     project = args.project
     version = args.version
     idx = args.index
     ts_id = args.id
-    prompt_no=args.prompt_no
+    prompt_no = args.prompt_no
     example = args.example
-    try_no=args.try_no
-    transform=args.transform
-  
+    try_no = args.try_no
+    transform = args.transform
+    test_no = args.test_no
+    is_conversational = args.conversational
+
     print('*'*30)
     print("Query")
-    print(project+'-'+version," ",idx,transform)
+    print(f"{project}-{version} idx:{idx} try_no:{try_no} test_no:{test_no} {transform}")
     print('*'*30)
 
     env = EvoD4jEnv(project, version, idx, ts_id)
     
-    # Original
     if not transform:
-        prompt_dir = os.path.join(env.evosuite_prompt_dir, 'prompt{}/example{}'.format(prompt_no,example))
-        prompt_list = list(filter(lambda x: x.endswith('.pkl'), os.listdir(prompt_dir)))
-        
-        chat_reply_dir = os.path.join(env.evosuite_chat_reply_dir, 'prompt{}/example{}'.format(prompt_no, example), 'try{}'.format(try_no))
-        if not os.path.exists(chat_reply_dir):
-            os.makedirs(chat_reply_dir)
-
-        for prompt in prompt_list:
-            if prompt.endswith('assert_query.pkl') or prompt.endswith('trycatch_query.pkl'):
-                with open(os.path.join(prompt_dir, prompt),'rb') as fr:
-                    data = pickle.load(fr)
-                    reply_file = os.path.join(chat_reply_dir, prompt.replace('query', 'reply').replace('.pkl', '.txt'))
-                if not os.path.exists(reply_file): 
-                    chat_reply = query_chat_llm(data)
-                    with open(reply_file, 'w') as fw:
-                        fw.write(chat_reply)
-    # Transform
+        prompt_dir = os.path.join(env.evosuite_prompt_dir, f'prompt{prompt_no}/example{example}')
+        chat_reply_dir = os.path.join(env.evosuite_chat_reply_dir, f'prompt{prompt_no}/example{example}/try{try_no}')
+        if is_conversational:
+            process_prompt_conversation(prompt_dir, chat_reply_dir, test_no)
+        else:
+            process_prompt(prompt_dir, chat_reply_dir, test_no)
     else:
-        prompt_transform_dir = os.path.join(env.evosuite_prompt_transform_dir, 'prompt{}/example{}'.format(prompt_no,example))
-        prompt_transform_list = list(filter(lambda x: x.endswith('.pkl'), os.listdir(prompt_transform_dir)))
-
-        chat_reply_transform_dir = os.path.join(env.evosuite_chat_reply_transform_dir, 'prompt{}/example{}'.format(prompt_no,example), 'try{}'.format(try_no))
-        if not os.path.exists(chat_reply_transform_dir):
-            os.makedirs(chat_reply_transform_dir)
-
-        for prompt_tranform in prompt_transform_list:
-            if prompt_tranform.endswith('assert_query.pkl') or prompt_tranform.endswith('trycatch_query.pkl'):
-                with open(os.path.join(prompt_transform_dir, prompt_tranform),'rb') as fr:
-                    data = pickle.load(fr)
-                    reply_file = os.path.join(chat_reply_transform_dir, prompt_tranform.replace('query', 'reply').replace('.pkl', '.txt'))
-                if not os.path.exists(reply_file):              
-                    chat_reply_transform = query_chat_llm(data)
-                    with open(reply_file, 'w') as fw:
-                        fw.write(chat_reply_transform)
-
+        prompt_transform_dir = os.path.join(env.evosuite_prompt_transform_dir, f'prompt{prompt_no}/example{example}')
+        chat_reply_transform_dir = os.path.join(env.evosuite_chat_reply_transform_dir, f'prompt{prompt_no}/example{example}/try{try_no}')
+        if is_conversational:
+            process_prompt_conversation(prompt_transform_dir, chat_reply_transform_dir, test_no)
+        else:
+            process_prompt(prompt_transform_dir, chat_reply_transform_dir, test_no)
