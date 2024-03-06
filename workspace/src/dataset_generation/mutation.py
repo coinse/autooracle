@@ -116,7 +116,7 @@ if __name__ == "__main__":
         for single_mutant in mutants:
             single_mutant_dic = parse_log(single_mutant)
             target = single_mutant_dic["target"]
-            # 1. 함수를 뮤테이션한게 아니면 pass
+            # 1. method를 뮤테이션한게 아니면 pass
             if '@' not in target:
                 continue
             # 2. 좋은 커멘트가 아니면 pass
