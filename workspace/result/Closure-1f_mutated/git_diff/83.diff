@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/graph/Graph.java b/src/com/google/javascript/jscomp/graph/Graph.java
+index b7c47c03..55a0bdd8 100644
+--- a/src/com/google/javascript/jscomp/graph/Graph.java
++++ b/src/com/google/javascript/jscomp/graph/Graph.java
+@@ -189,7 +189,7 @@ public abstract class Graph<N, E> implements AdjacencyGraph<N, E> {
+    * @return <code>true</code> if it exist.
+    */
+   public final boolean hasNode(N n) {
+-    return getNode(n) != null;
++    return true;
+   }
+ 
+   /**

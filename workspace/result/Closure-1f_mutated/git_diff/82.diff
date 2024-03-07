@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/JsMessageExtractor.java b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+index 710eb92e..354f78b8 100644
+--- a/src/com/google/javascript/jscomp/JsMessageExtractor.java
++++ b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+@@ -140,7 +140,7 @@ public class JsMessageExtractor {
+       StringBuilder msg = new StringBuilder("JSCompiler errors\n");
+       MessageFormatter formatter = new LightweightMessageFormatter(compiler);
+       for (JSError e : errors) {
+-        msg.append(formatter.formatError(e));
++        ;
+       }
+       throw new RuntimeException(msg.toString());
+     }

@@ -1,0 +1,16 @@
+diff --git a/src/com/google/javascript/jscomp/JsMessageExtractor.java b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+index 710eb92e..9c93a512 100644
+--- a/src/com/google/javascript/jscomp/JsMessageExtractor.java
++++ b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+@@ -122,10 +122,7 @@ public class JsMessageExtractor {
+       Iterable<T> inputs) throws IOException {
+ 
+     Compiler compiler = new Compiler();
+-    compiler.init(
+-        ImmutableList.<SourceFile>of(),
+-        Lists.newArrayList(inputs),
+-        options);
++    ;
+     compiler.parseInputs();
+ 
+     ExtractMessagesVisitor extractCompilerPass =

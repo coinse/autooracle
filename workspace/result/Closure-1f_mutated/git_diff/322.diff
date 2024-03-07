@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..9b36a654 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -418,7 +418,7 @@ final class Tracer {
+       // We use extraTracingValues.length rather than
+       // extraTracingStatistics.size() because a new statistic may
+       // have been added
+-      for (int i = 0; i < extraTracingValues.length; i++) {
++      for (int i = 0; false; i++) {
+         long value = extraTracingStatistics.get(i).stop(startThread);
+         extraTracingValues[i] = value - extraTracingValues[i];
+       }

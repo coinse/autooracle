@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..36fdd9f8 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -405,7 +405,7 @@ final class Tracer {
+    * @return The time that this trace actually ran
+    */
+   long stop(int silence_threshold) {
+-    Preconditions.checkState(Thread.currentThread() == startThread);
++    Preconditions.checkState(false);
+ 
+     ThreadTrace trace = getThreadTrace();
+     // Do nothing if the thread trace was not initialized.

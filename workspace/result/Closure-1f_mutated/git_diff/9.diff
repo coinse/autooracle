@@ -1,0 +1,14 @@
+diff --git a/src/com/google/javascript/rhino/Node.java b/src/com/google/javascript/rhino/Node.java
+index 55aefbe1..6e1ed3ac 100644
+--- a/src/com/google/javascript/rhino/Node.java
++++ b/src/com/google/javascript/rhino/Node.java
+@@ -763,8 +763,7 @@ public class Node implements Cloneable, Serializable {
+    * @return this node.
+    */
+   public Node clonePropsFrom(Node other) {
+-    Preconditions.checkState(this.propListHead == null,
+-        "Node has existing properties.");
++    ;
+     this.propListHead = other.propListHead;
+     return this;
+   }

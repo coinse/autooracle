@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/JsMessageExtractor.java b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+index 710eb92e..49a37e16 100644
+--- a/src/com/google/javascript/jscomp/JsMessageExtractor.java
++++ b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+@@ -126,7 +126,7 @@ public class JsMessageExtractor {
+         ImmutableList.<SourceFile>of(),
+         Lists.newArrayList(inputs),
+         options);
+-    compiler.parseInputs();
++    ;
+ 
+     ExtractMessagesVisitor extractCompilerPass =
+         new ExtractMessagesVisitor(compiler);

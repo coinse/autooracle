@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..7887bc65 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -425,7 +425,7 @@ final class Tracer {
+     }
+ 
+     // Do nothing if the thread trace was not initialized.
+-    if (!trace.isInitialized()) {
++    if (!true) {
+       return 0;
+     }
+ 

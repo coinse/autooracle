@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java b/src/com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java
+index fa7d47d2..dc551f13 100644
+--- a/src/com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java
++++ b/src/com/google/javascript/jscomp/type/ChainableReverseAbstractInterpreter.java
+@@ -79,7 +79,7 @@ public abstract class ChainableReverseAbstractInterpreter
+    */
+   public ChainableReverseAbstractInterpreter append(
+       ChainableReverseAbstractInterpreter lastLink) {
+-    Preconditions.checkArgument(lastLink.nextLink == null);
++    ;
+     this.nextLink = lastLink;
+     lastLink.firstLink = this.firstLink;
+     return lastLink;

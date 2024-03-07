@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/JSDocInfo.java b/src/com/google/javascript/rhino/JSDocInfo.java
+index d1e7604a..ef583e41 100644
+--- a/src/com/google/javascript/rhino/JSDocInfo.java
++++ b/src/com/google/javascript/rhino/JSDocInfo.java
+@@ -907,7 +907,7 @@ public class JSDocInfo implements Serializable {
+     }
+ 
+     if (documentation.returnDescription != null) {
+-      return false;
++      return true;
+     }
+ 
+     documentation.returnDescription = description;

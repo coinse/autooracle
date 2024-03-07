@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/JSDocInfo.java b/src/com/google/javascript/rhino/JSDocInfo.java
+index d1e7604a..75616d10 100644
+--- a/src/com/google/javascript/rhino/JSDocInfo.java
++++ b/src/com/google/javascript/rhino/JSDocInfo.java
+@@ -984,7 +984,7 @@ public class JSDocInfo implements Serializable {
+    *     defined or has a {@code null} type
+    */
+   public JSTypeExpression getParameterType(String parameter) {
+-    if (info == null || info.parameters == null) {
++    if (info.parameters == null) {
+       return null;
+     }
+     return info.parameters.get(parameter);

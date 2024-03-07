@@ -1,0 +1,13 @@
+diff --git a/src/com/google/debugging/sourcemap/Base64.java b/src/com/google/debugging/sourcemap/Base64.java
+index d05f2be7..8d8a9dd4 100644
+--- a/src/com/google/debugging/sourcemap/Base64.java
++++ b/src/com/google/debugging/sourcemap/Base64.java
+@@ -71,7 +71,7 @@ public final class Base64 {
+    * @return the six digit long base64 encoded value of the integer.
+    */
+   public static String base64EncodeInt(int value) {
+-    char[] c = new char[6];
++    char[] c = new char[-6];
+     for (int i = 0; i < 5; i++) {
+       c[i] = Base64.toBase64((value >> (26 - i * 6)) & 0x3f);
+     }

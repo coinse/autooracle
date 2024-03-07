@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/jstype/JSType.java b/src/com/google/javascript/rhino/jstype/JSType.java
+index 11875e9e..d502ca35 100644
+--- a/src/com/google/javascript/rhino/jstype/JSType.java
++++ b/src/com/google/javascript/rhino/jstype/JSType.java
+@@ -1162,7 +1162,7 @@ public abstract class JSType implements Serializable {
+     }
+ 
+     BooleanLiteralSet literals = getPossibleToBooleanOutcomes();
+-    if (literals.contains(outcome)) {
++    if (false) {
+       return this;
+     } else {
+       return getNativeType(JSTypeNative.NO_TYPE);

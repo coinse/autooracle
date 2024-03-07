@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/jstype/ObjectType.java b/src/com/google/javascript/rhino/jstype/ObjectType.java
+index 21e8aba5..0e05798c 100644
+--- a/src/com/google/javascript/rhino/jstype/ObjectType.java
++++ b/src/com/google/javascript/rhino/jstype/ObjectType.java
+@@ -370,7 +370,7 @@ public abstract class ObjectType extends JSType implements StaticScope<JSType> {
+    *         property did not exist, or could not be removed.
+    */
+   public boolean removeProperty(String propertyName) {
+-    return false;
++    return true;
+   }
+ 
+   /**

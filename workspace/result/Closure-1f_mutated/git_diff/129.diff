@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/SourceFile.java b/src/com/google/javascript/jscomp/SourceFile.java
+index 2fd501ae..1c255f86 100644
+--- a/src/com/google/javascript/jscomp/SourceFile.java
++++ b/src/com/google/javascript/jscomp/SourceFile.java
+@@ -218,7 +218,7 @@ public class SourceFile implements StaticSourceFile, Serializable {
+       return null;
+     }
+ 
+-    if (lineNumber < 1) {
++    if (lineNumber != 1) {
+       lineNumber = 1;
+     }
+ 

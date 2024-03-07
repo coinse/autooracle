@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/jstype/JSTypeRegistry.java b/src/com/google/javascript/rhino/jstype/JSTypeRegistry.java
+index c8fbac8c..b8a58be6 100644
+--- a/src/com/google/javascript/rhino/jstype/JSTypeRegistry.java
++++ b/src/com/google/javascript/rhino/jstype/JSTypeRegistry.java
+@@ -881,7 +881,7 @@ public class JSTypeRegistry implements Serializable {
+     // TODO(user): Push every local type name out of namesToTypes so that
+     // NamedType#resolve is correct.
+     TemplateType templateType = templateTypes.get(jsTypeName);
+-    if (templateType != null) {
++    if (true) {
+       return templateType;
+     }
+     return namesToTypes.get(jsTypeName);

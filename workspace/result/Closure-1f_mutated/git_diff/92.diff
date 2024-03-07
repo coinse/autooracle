@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/NodeUtil.java b/src/com/google/javascript/jscomp/NodeUtil.java
+index e36d1fec..477c8102 100644
+--- a/src/com/google/javascript/jscomp/NodeUtil.java
++++ b/src/com/google/javascript/jscomp/NodeUtil.java
+@@ -2429,7 +2429,7 @@ public final class NodeUtil {
+     int len = s.length();
+     for (int index = 0; index < len; index++) {
+       char c = s.charAt(index);
+-      if (c > LARGEST_BASIC_LATIN) {
++      if (false) {
+         return false;
+       }
+     }

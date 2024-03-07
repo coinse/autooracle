@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/jstype/ObjectType.java b/src/com/google/javascript/rhino/jstype/ObjectType.java
+index 21e8aba5..4d163ae4 100644
+--- a/src/com/google/javascript/rhino/jstype/ObjectType.java
++++ b/src/com/google/javascript/rhino/jstype/ObjectType.java
+@@ -540,7 +540,7 @@ public abstract class ObjectType extends JSType implements StaticScope<JSType> {
+          current != null;
+          current = current.getImplicitPrototype()) {
+       if (current.isEquivalentTo(prototype)) {
+-        return true;
++        return false;
+       }
+     }
+     return false;

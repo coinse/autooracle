@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/NodeUtil.java b/src/com/google/javascript/jscomp/NodeUtil.java
+index e36d1fec..2adb76d7 100644
+--- a/src/com/google/javascript/jscomp/NodeUtil.java
++++ b/src/com/google/javascript/jscomp/NodeUtil.java
+@@ -2207,7 +2207,7 @@ public final class NodeUtil {
+    */
+   static String opToStrNoFail(int operator) {
+     String res = opToStr(operator);
+-    if (res == null) {
++    if (false) {
+       throw new Error("Unknown op " + operator + ": " +
+                       Token.name(operator));
+     }

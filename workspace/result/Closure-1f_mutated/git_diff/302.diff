@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+index fcdcce08..56b8534f 100644
+--- a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
++++ b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+@@ -253,7 +253,7 @@ public abstract class JsFileLineParser {
+           throw new ParseException("Missing comma in string array", true /* fatal */);
+         }
+         // Move to the next value.
+-        valueMatcher.region(valueMatcher.end() + 1, valueMatcher.regionEnd());
++        valueMatcher.region(valueMatcher.end() * 1, valueMatcher.regionEnd());
+       }
+     }
+     return results;

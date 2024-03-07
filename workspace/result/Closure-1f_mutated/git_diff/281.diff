@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+index fcdcce08..ee8eb943 100644
+--- a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
++++ b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+@@ -236,7 +236,7 @@ public abstract class JsFileLineParser {
+     String innerValues = input.substring(indexStart + 1, indexEnd);
+ 
+     if (!innerValues.trim().isEmpty()) {
+-      valueMatcher.reset(innerValues);
++      ;
+       for (;;) {
+         // Parse the current string literal.
+         if (!valueMatcher.lookingAt()) {

@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/JSTypeExpression.java b/src/com/google/javascript/rhino/JSTypeExpression.java
+index 2d928e3e..33a67e86 100644
+--- a/src/com/google/javascript/rhino/JSTypeExpression.java
++++ b/src/com/google/javascript/rhino/JSTypeExpression.java
+@@ -83,7 +83,7 @@ public final class JSTypeExpression implements Serializable {
+    * @return Whether this expression denotes an optional {@code @param}.
+    */
+   public boolean isOptionalArg() {
+-    return root.getType() == Token.EQUALS;
++    return false;
+   }
+ 
+   /**

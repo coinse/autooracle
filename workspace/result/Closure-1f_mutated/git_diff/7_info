@@ -1,0 +1,1 @@
+com.google.javascript.rhino.jstype.JSTypeRegistry : getType(Ljava/lang/String;)Lcom/google/javascript/rhino/jstype/JSType;

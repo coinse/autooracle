@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..b0cba60e 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -429,7 +429,7 @@ final class Tracer {
+       return 0;
+     }
+ 
+-    trace.endEvent(this, silence_threshold);
++    ;
+     return stopTimeMs - startTimeMs;
+   }
+ 

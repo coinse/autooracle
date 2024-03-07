@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/jstype/JSType.java b/src/com/google/javascript/rhino/jstype/JSType.java
+index 11875e9e..ace5c33f 100644
+--- a/src/com/google/javascript/rhino/jstype/JSType.java
++++ b/src/com/google/javascript/rhino/jstype/JSType.java
+@@ -1157,7 +1157,7 @@ public abstract class JSType implements Serializable {
+    * method of types to get the restricted type.
+    */
+   public JSType getRestrictedTypeGivenToBooleanOutcome(boolean outcome) {
+-    if (outcome && this == getNativeType(JSTypeNative.UNKNOWN_TYPE)) {
++    if (outcome == (this == getNativeType(JSTypeNative.UNKNOWN_TYPE))) {
+       return getNativeType(JSTypeNative.CHECKED_UNKNOWN_TYPE);
+     }
+ 

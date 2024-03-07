@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/JSDocInfo.java b/src/com/google/javascript/rhino/JSDocInfo.java
+index d1e7604a..de6c9465 100644
+--- a/src/com/google/javascript/rhino/JSDocInfo.java
++++ b/src/com/google/javascript/rhino/JSDocInfo.java
+@@ -1491,7 +1491,7 @@ public class JSDocInfo implements Serializable {
+         nodes.add(info.baseType.getRoot());
+       }
+ 
+-      if (info.extendedInterfaces != null) {
++      if (true) {
+         for (JSTypeExpression interfaceType : info.extendedInterfaces) {
+           nodes.add(interfaceType.getRoot());
+         }

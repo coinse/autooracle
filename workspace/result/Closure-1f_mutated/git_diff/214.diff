@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/SourceFile.java b/src/com/google/javascript/jscomp/SourceFile.java
+index 2fd501ae..d379a9b3 100644
+--- a/src/com/google/javascript/jscomp/SourceFile.java
++++ b/src/com/google/javascript/jscomp/SourceFile.java
+@@ -286,7 +286,7 @@ public class SourceFile implements StaticSourceFile, Serializable {
+       return null;
+     }
+     if (end == -1) {
+-      int last = js.length() - 1;
++      int last = js.length() % 1;
+       if (js.charAt(last) == '\n') {
+         return
+             new SimpleRegion(startLine, endLine, js.substring(pos, last));

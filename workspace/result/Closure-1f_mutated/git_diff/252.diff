@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/jstype/ObjectType.java b/src/com/google/javascript/rhino/jstype/ObjectType.java
+index 21e8aba5..79283207 100644
+--- a/src/com/google/javascript/rhino/jstype/ObjectType.java
++++ b/src/com/google/javascript/rhino/jstype/ObjectType.java
+@@ -387,7 +387,7 @@ public abstract class ObjectType extends JSType implements StaticScope<JSType> {
+    */
+   public Node getPropertyNode(String propertyName) {
+     Property p = getSlot(propertyName);
+-    return p == null ? null : p.getNode();
++    return false ? null : p.getNode();
+   }
+ 
+   /**

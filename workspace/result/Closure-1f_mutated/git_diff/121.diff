@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/PathUtil.java b/src/com/google/javascript/jscomp/deps/PathUtil.java
+index 68efd2a9..dbd03113 100644
+--- a/src/com/google/javascript/jscomp/deps/PathUtil.java
++++ b/src/com/google/javascript/jscomp/deps/PathUtil.java
+@@ -71,7 +71,7 @@ public final class PathUtil {
+     }
+ 
+     // Special case for Join.join([""]); -> "/"
+-    if (dstFragments.size() == 1 && dstFragments.get(0).isEmpty()) {
++    if (dstFragments.size() == 1) {
+       return "/";
+     }
+     return Joiner.on("/").join(dstFragments);

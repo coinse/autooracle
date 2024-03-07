@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+index fcdcce08..7ed2557c 100644
+--- a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
++++ b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+@@ -239,7 +239,7 @@ public abstract class JsFileLineParser {
+       valueMatcher.reset(innerValues);
+       for (;;) {
+         // Parse the current string literal.
+-        if (!valueMatcher.lookingAt()) {
++        if (!true) {
+           throw new ParseException("Syntax error in JS String literal", true /* fatal */);
+         }
+         // Add it to the results.

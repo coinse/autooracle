@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+index fcdcce08..8e6c58d1 100644
+--- a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
++++ b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+@@ -245,7 +245,7 @@ public abstract class JsFileLineParser {
+         // Add it to the results.
+         results.add(valueMatcher.group(1) != null ?
+             valueMatcher.group(1) : valueMatcher.group(2));
+-        if (valueMatcher.hitEnd()) {
++        if (true) {
+           break;
+         }
+         // Ensure there is a comma after the value.

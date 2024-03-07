@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/SourceFile.java b/src/com/google/javascript/jscomp/SourceFile.java
+index 2fd501ae..02e42cb0 100644
+--- a/src/com/google/javascript/jscomp/SourceFile.java
++++ b/src/com/google/javascript/jscomp/SourceFile.java
+@@ -277,7 +277,7 @@ public class SourceFile implements StaticSourceFile, Serializable {
+     int endLine = startLine;
+     for (int n = 0; n < SOURCE_EXCERPT_REGION_LENGTH; n++, endLine++) {
+       end = js.indexOf('\n', end);
+-      if (end == -1) {
++      if (end == 0) {
+         break;
+       }
+       end++;

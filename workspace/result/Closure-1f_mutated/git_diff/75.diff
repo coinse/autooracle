@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/JsMessageExtractor.java b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+index 710eb92e..35e7df69 100644
+--- a/src/com/google/javascript/jscomp/JsMessageExtractor.java
++++ b/src/com/google/javascript/jscomp/JsMessageExtractor.java
+@@ -130,7 +130,7 @@ public class JsMessageExtractor {
+ 
+     ExtractMessagesVisitor extractCompilerPass =
+         new ExtractMessagesVisitor(compiler);
+-    if (compiler.getErrors().length == 0) {
++    if (false) {
+       extractCompilerPass.process(null, compiler.getRoot());
+     }
+ 

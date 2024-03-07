@@ -1,0 +1,13 @@
+diff --git a/src/com/google/debugging/sourcemap/Base64.java b/src/com/google/debugging/sourcemap/Base64.java
+index d05f2be7..e5127b70 100644
+--- a/src/com/google/debugging/sourcemap/Base64.java
++++ b/src/com/google/debugging/sourcemap/Base64.java
+@@ -52,7 +52,7 @@ public final class Base64 {
+    * @return a base64 digit.
+    */
+   public static char toBase64(int value) {
+-    assert (value <= 63 && value >= 0) : "value out of range:" + value;
++    assert (value <= 63 == value >= 0) : "value out of range:" + value;
+     return BASE64_MAP.charAt(value);
+   }
+ 

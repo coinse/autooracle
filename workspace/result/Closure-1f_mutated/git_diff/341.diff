@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/rhino/JSTypeExpression.java b/src/com/google/javascript/rhino/JSTypeExpression.java
+index 2d928e3e..8d37f5cc 100644
+--- a/src/com/google/javascript/rhino/JSTypeExpression.java
++++ b/src/com/google/javascript/rhino/JSTypeExpression.java
+@@ -90,7 +90,7 @@ public final class JSTypeExpression implements Serializable {
+    * @return Whether this expression denotes a rest args {@code @param}.
+    */
+   public boolean isVarArgs() {
+-    return root.getType() == Token.ELLIPSIS;
++    return root.getType() >= Token.ELLIPSIS;
+   }
+ 
+   /**

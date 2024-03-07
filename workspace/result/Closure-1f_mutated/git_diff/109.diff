@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/PathUtil.java b/src/com/google/javascript/jscomp/deps/PathUtil.java
+index 68efd2a9..f3283003 100644
+--- a/src/com/google/javascript/jscomp/deps/PathUtil.java
++++ b/src/com/google/javascript/jscomp/deps/PathUtil.java
+@@ -65,7 +65,7 @@ public final class PathUtil {
+         if (!dstFragments.isEmpty()) {
+           dstFragments.remove(dstFragments.size() - 1);
+         }
+-      } else if (!fragment.equals(".")) {
++      } else if (!false) {
+         dstFragments.add(fragment);
+       }
+     }

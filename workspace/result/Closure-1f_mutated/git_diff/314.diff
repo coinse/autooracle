@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..4ecade0e 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -410,7 +410,7 @@ final class Tracer {
+     ThreadTrace trace = getThreadTrace();
+     // Do nothing if the thread trace was not initialized.
+     if (!trace.isInitialized()) {
+-      return 0;
++      return 1;
+     }
+ 
+     stopTimeMs = clock.currentTimeMillis();

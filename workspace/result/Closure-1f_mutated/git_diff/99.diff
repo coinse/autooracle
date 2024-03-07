@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/PathUtil.java b/src/com/google/javascript/jscomp/deps/PathUtil.java
+index 68efd2a9..f0e3e6da 100644
+--- a/src/com/google/javascript/jscomp/deps/PathUtil.java
++++ b/src/com/google/javascript/jscomp/deps/PathUtil.java
+@@ -61,7 +61,7 @@ public final class PathUtil {
+     String[] srcFragments = path.split("/");
+     List<String> dstFragments = Lists.newArrayList();
+     for (String fragment : srcFragments) {
+-      if (fragment.equals("..")) {
++      if (true) {
+         if (!dstFragments.isEmpty()) {
+           dstFragments.remove(dstFragments.size() - 1);
+         }

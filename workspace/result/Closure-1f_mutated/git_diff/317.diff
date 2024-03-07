@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..81353b38 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -414,7 +414,7 @@ final class Tracer {
+     }
+ 
+     stopTimeMs = clock.currentTimeMillis();
+-    if (extraTracingValues != null) {
++    if (true) {
+       // We use extraTracingValues.length rather than
+       // extraTracingStatistics.size() because a new statistic may
+       // have been added

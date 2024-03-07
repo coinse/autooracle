@@ -1,0 +1,1 @@
+com.google.javascript.jscomp.JsMessageExtractor : extractMessages(Ljava/lang/Iterable;)Ljava/util/Collection;

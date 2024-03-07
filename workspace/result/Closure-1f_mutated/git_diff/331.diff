@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/Tracer.java b/src/com/google/javascript/jscomp/Tracer.java
+index 5298e98d..4c9a84f5 100644
+--- a/src/com/google/javascript/jscomp/Tracer.java
++++ b/src/com/google/javascript/jscomp/Tracer.java
+@@ -426,7 +426,7 @@ final class Tracer {
+ 
+     // Do nothing if the thread trace was not initialized.
+     if (!trace.isInitialized()) {
+-      return 0;
++      return -1;
+     }
+ 
+     trace.endEvent(this, silence_threshold);

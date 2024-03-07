@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/SourceFile.java b/src/com/google/javascript/jscomp/SourceFile.java
+index 2fd501ae..0aa21c8e 100644
+--- a/src/com/google/javascript/jscomp/SourceFile.java
++++ b/src/com/google/javascript/jscomp/SourceFile.java
+@@ -214,7 +214,7 @@ public class SourceFile implements StaticSourceFile, Serializable {
+    */
+   public String getLine(int lineNumber) {
+     findLineOffsets();
+-    if (lineNumber > lineOffsets.length) {
++    if (false) {
+       return null;
+     }
+ 

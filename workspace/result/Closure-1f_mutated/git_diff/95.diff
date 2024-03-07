@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/PathUtil.java b/src/com/google/javascript/jscomp/deps/PathUtil.java
+index 68efd2a9..ed7ce3c9 100644
+--- a/src/com/google/javascript/jscomp/deps/PathUtil.java
++++ b/src/com/google/javascript/jscomp/deps/PathUtil.java
+@@ -52,7 +52,7 @@ public final class PathUtil {
+    * @return The path with all dots collapsed.
+    */
+   public static String collapseDots(String path) {
+-    path = removeExtraneousSlashes(path);
++    ;
+     // Optimization: Most paths don't contain dots.
+     if (!path.contains(".")) {
+       return path;

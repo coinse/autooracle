@@ -1,0 +1,13 @@
+diff --git a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+index fcdcce08..d3f60fbe 100644
+--- a/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
++++ b/src/com/google/javascript/jscomp/deps/JsFileLineParser.java
+@@ -231,7 +231,7 @@ public abstract class JsFileLineParser {
+     int indexStart = input.indexOf('[');
+     int indexEnd = input.lastIndexOf(']');
+     if ((indexStart == -1) || (indexEnd == -1)) {
+-      throw new ParseException("Syntax error when parsing JS array", true /* fatal */);
++      throw new ParseException("Syntax error when parsing JS array", false /* fatal */);
+     }
+     String innerValues = input.substring(indexStart + 1, indexEnd);
+ 
