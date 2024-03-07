@@ -5,6 +5,7 @@ import argparse
 from utils.env import EvoD4jEnv
 import random
 import pickle
+from math import floor
 
 def parse_diff_file(diff_path):
     """Parse a diff file to extract starting line numbers of changes."""
@@ -21,14 +22,22 @@ def randomly_select_one_value_per_key(dic):
         selected.append(random.sample(value,1)[0])
     return selected
 
+def randomly_select_multiple_value_per_key(dic):
+    selected = []
+    select_num = floor(10/len(dic.keys()))
+    for key, value in dic.items():
+        if len(value) < select_num:
+            selected.extend(value)  # Add all values if the length is smaller than select_num
+        else:
+            selected.append(random.sample(value, select_num)[0])
+    return selected
+
 def select_random_diffs_per_line_number(diff_dir, infos):
     cand = {} # key: line_number , value: idxs
     for info in infos:
         diff = info[:info.find('_')] + ".diff"
         diff_path = os.path.join(diff_dir, diff)
-        
         line_number = parse_diff_file(diff_path)
-        print(line_number)
         if line_number not in cand:
             cand[line_number] = [info]
         else:
@@ -40,7 +49,7 @@ def select_random_diffs_per_line_number(diff_dir, infos):
         filtered_dict = {line_nubmer: cand[line_nubmer] for line_nubmer in selected_line_number}
         selected_elements = randomly_select_one_value_per_key(filtered_dict)
     else:
-        selected_elements = randomly_select_one_value_per_key(cand)
+        selected_elements = randomly_select_multiple_value_per_key(cand)
     return selected_elements
 
 if __name__ == "__main__":
@@ -74,12 +83,12 @@ if __name__ == "__main__":
     
     target_diffs = []
     for class_name, method_dic in info_dic.items():
-        print("------------------------------------")
         for method_name, infos in method_dic.items():
             if len(infos) <= 10: 
                 target_diffs.extend(infos)
             else: 
                 target_diffs.extend(select_random_diffs_per_line_number(diff_dir,infos))
     
+    print(len(target_diffs))
     with open(f'{project}_mutants.pkl','wb') as f:
         pickle.dump(target_diffs, f)
