@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Instant.java b/src/main/java/org/joda/time/Instant.java
+index 070baaab..91da3d8b 100644
+--- a/src/main/java/org/joda/time/Instant.java
++++ b/src/main/java/org/joda/time/Instant.java
+@@ -203,7 +203,7 @@ public final class Instant
+      * @throws ArithmeticException if the new instant exceeds the capacity of a long
+      */
+     public Instant plus(long duration) {
+-        return withDurationAdded(duration, 1);
++        return withDurationAdded(duration, 0);
+     }
+ 
+     /**

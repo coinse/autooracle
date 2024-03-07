@@ -1,0 +1,35 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/math/IEEE754rUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "IEEE754rUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 30,
+      "end_line": 107,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.math.IEEE754rUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.IEEE754rUtilsTest.testLang381()",
+      "begin_line": 32,
+      "end_line": 56,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.IEEE754rUtilsTest.testEnforceExceptions()",
+      "begin_line": 58,
+      "end_line": 100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.IEEE754rUtilsTest.testConstructorExists()",
+      "begin_line": 102,
+      "end_line": 105,
+      "comment": ""
+    }
+  ]
+}

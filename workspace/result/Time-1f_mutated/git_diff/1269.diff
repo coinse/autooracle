@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDateTime.java b/src/main/java/org/joda/time/LocalDateTime.java
+index 44d2ee9c..5bb66cdb 100644
+--- a/src/main/java/org/joda/time/LocalDateTime.java
++++ b/src/main/java/org/joda/time/LocalDateTime.java
+@@ -1343,7 +1343,7 @@ public final class LocalDateTime
+      * @return the new LocalDateTime minus the increased months
+      */
+     public LocalDateTime minusMonths(int months) {
+-        if (months == 0) {
++        if (months == 1) {
+             return this;
+         }
+         long instant = getChronology().months().subtract(getLocalMillis(), months);

@@ -1,0 +1,72 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/exception/ContextedExceptionTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ContextedExceptionTest",
+      "is_interface": false,
+      "parent_types": [
+        "AbstractExceptionContextTest\u003cContextedException\u003e"
+      ],
+      "begin_line": 31,
+      "end_line": 110,
+      "comment": "\n * JUnit tests for ContextedException.\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.setUp()",
+      "begin_line": 33,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testContextedException()",
+      "begin_line": 39,
+      "end_line": 46,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testContextedExceptionString()",
+      "begin_line": 48,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testContextedExceptionThrowable()",
+      "begin_line": 57,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testContextedExceptionStringThrowable()",
+      "begin_line": 67,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testContextedExceptionStringThrowableContext()",
+      "begin_line": 78,
+      "end_line": 87,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testNullExceptionPassing()",
+      "begin_line": 89,
+      "end_line": 100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ContextedExceptionTest.testRawMessage()",
+      "begin_line": 102,
+      "end_line": 109,
+      "comment": ""
+    }
+  ]
+}

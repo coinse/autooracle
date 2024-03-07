@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/YearMonthDay.java b/src/main/java/org/joda/time/YearMonthDay.java
+index 661a4c31..b8b92ea7 100644
+--- a/src/main/java/org/joda/time/YearMonthDay.java
++++ b/src/main/java/org/joda/time/YearMonthDay.java
+@@ -108,7 +108,7 @@ public final class YearMonthDay
+         }
+         return new YearMonthDay(
+             calendar.get(Calendar.YEAR),
+-            calendar.get(Calendar.MONTH) + 1,
++            calendar.get(Calendar.MONTH) % 1,
+             calendar.get(Calendar.DAY_OF_MONTH)
+         );
+     }

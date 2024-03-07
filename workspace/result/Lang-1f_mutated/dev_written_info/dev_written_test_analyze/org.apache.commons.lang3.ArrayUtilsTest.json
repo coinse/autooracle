@@ -1,0 +1,1085 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/ArrayUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ArrayUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 42,
+      "end_line": 3077,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.ArrayUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testConstructor()",
+      "begin_line": 45,
+      "end_line": 53,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToString()",
+      "begin_line": 56,
+      "end_line": 69,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testHashCode()",
+      "begin_line": 72,
+      "end_line": 87,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.assertIsEquals(java.lang.Object, java.lang.Object, java.lang.Object)",
+      "begin_line": 90,
+      "end_line": 100,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIsEquals()",
+      "begin_line": 102,
+      "end_line": 151,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testArrayCreation()",
+      "begin_line": 157,
+      "end_line": 164,
+      "comment": "\n     * Tests generic array creation with parameters of same type.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testArrayCreationWithGeneralReturnType()",
+      "begin_line": 169,
+      "end_line": 174,
+      "comment": "\n     * Tests generic array creation with general return type.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testArrayCreationWithDifferentTypes()",
+      "begin_line": 179,
+      "end_line": 186,
+      "comment": "\n     * Tests generic array creation with parameters of common base type.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndirectArrayCreation()",
+      "begin_line": 191,
+      "end_line": 198,
+      "comment": "\n     * Tests generic array creation with generic type.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testEmptyArrayCreation()",
+      "begin_line": 203,
+      "end_line": 208,
+      "comment": "\n     * Tests generic empty array creation with generic type.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndirectEmptyArrayCreation()",
+      "begin_line": 213,
+      "end_line": 218,
+      "comment": "\n     * Tests indirect generic empty array creation with generic type.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.toArrayPropagatingType(T...)",
+      "begin_line": 220,
+      "end_line": 223,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToMap()",
+      "begin_line": 226,
+      "end_line": 270,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.Anonymous-83863a66-6072-4e57-9e50-2d17c39842e0.getKey()",
+      "begin_line": 248,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.Anonymous-0ac745b5-ab7e-4077-90ac-196f4c8c6f61.getValue()",
+      "begin_line": 252,
+      "end_line": 255,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.Anonymous-4b21e774-bed5-4f5c-b465-7357121bcf2e.setValue(java.lang.Object)",
+      "begin_line": 256,
+      "end_line": 259,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.Anonymous-9740009f-22bc-4a16-a711-b19ad0a27553.equals(java.lang.Object)",
+      "begin_line": 260,
+      "end_line": 263,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.Anonymous-eee46dce-be47-4098-8fa7-3e2b56935724.hashCode()",
+      "begin_line": 264,
+      "end_line": 267,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testClone()",
+      "begin_line": 273,
+      "end_line": 289,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneBoolean()",
+      "begin_line": 291,
+      "end_line": 298,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneLong()",
+      "begin_line": 300,
+      "end_line": 307,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneInt()",
+      "begin_line": 309,
+      "end_line": 316,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneShort()",
+      "begin_line": 318,
+      "end_line": 325,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneChar()",
+      "begin_line": 327,
+      "end_line": 334,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneByte()",
+      "begin_line": 336,
+      "end_line": 343,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneDouble()",
+      "begin_line": 345,
+      "end_line": 352,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testCloneFloat()",
+      "begin_line": 354,
+      "end_line": 361,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyBoolean()",
+      "begin_line": 365,
+      "end_line": 377,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyLong()",
+      "begin_line": 379,
+      "end_line": 391,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyInt()",
+      "begin_line": 393,
+      "end_line": 405,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyShort()",
+      "begin_line": 407,
+      "end_line": 419,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyChar()",
+      "begin_line": 421,
+      "end_line": 433,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyByte()",
+      "begin_line": 435,
+      "end_line": 447,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyDouble()",
+      "begin_line": 449,
+      "end_line": 461,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyFloat()",
+      "begin_line": 463,
+      "end_line": 475,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyObject()",
+      "begin_line": 477,
+      "end_line": 489,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyString()",
+      "begin_line": 491,
+      "end_line": 503,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyBooleanObject()",
+      "begin_line": 505,
+      "end_line": 517,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyLongObject()",
+      "begin_line": 519,
+      "end_line": 533,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyIntObject()",
+      "begin_line": 535,
+      "end_line": 547,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyShortObject()",
+      "begin_line": 549,
+      "end_line": 563,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyCharObject()",
+      "begin_line": 565,
+      "end_line": 577,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyByteObject()",
+      "begin_line": 579,
+      "end_line": 591,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyDoubleObject()",
+      "begin_line": 593,
+      "end_line": 605,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testNullToEmptyFloatObject()",
+      "begin_line": 607,
+      "end_line": 619,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayObject()",
+      "begin_line": 623,
+      "end_line": 669,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayLong()",
+      "begin_line": 671,
+      "end_line": 746,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayInt()",
+      "begin_line": 748,
+      "end_line": 824,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayShort()",
+      "begin_line": 826,
+      "end_line": 902,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrChar()",
+      "begin_line": 904,
+      "end_line": 980,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayByte()",
+      "begin_line": 982,
+      "end_line": 1058,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayDouble()",
+      "begin_line": 1060,
+      "end_line": 1136,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayFloat()",
+      "begin_line": 1138,
+      "end_line": 1214,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSubarrayBoolean()",
+      "begin_line": 1216,
+      "end_line": 1292,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLength()",
+      "begin_line": 1295,
+      "end_line": 1321,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthBoolean()",
+      "begin_line": 1323,
+      "end_line": 1349,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthLong()",
+      "begin_line": 1351,
+      "end_line": 1377,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthInt()",
+      "begin_line": 1379,
+      "end_line": 1405,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthShort()",
+      "begin_line": 1407,
+      "end_line": 1433,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthChar()",
+      "begin_line": 1435,
+      "end_line": 1461,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthByte()",
+      "begin_line": 1463,
+      "end_line": 1489,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthDouble()",
+      "begin_line": 1491,
+      "end_line": 1517,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameLengthFloat()",
+      "begin_line": 1519,
+      "end_line": 1545,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testSameType()",
+      "begin_line": 1548,
+      "end_line": 1568,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverse()",
+      "begin_line": 1571,
+      "end_line": 1594,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseLong()",
+      "begin_line": 1596,
+      "end_line": 1607,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseInt()",
+      "begin_line": 1609,
+      "end_line": 1620,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseShort()",
+      "begin_line": 1622,
+      "end_line": 1633,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseChar()",
+      "begin_line": 1635,
+      "end_line": 1646,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseByte()",
+      "begin_line": 1648,
+      "end_line": 1659,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseDouble()",
+      "begin_line": 1661,
+      "end_line": 1672,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseFloat()",
+      "begin_line": 1674,
+      "end_line": 1685,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testReverseBoolean()",
+      "begin_line": 1687,
+      "end_line": 1698,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOf()",
+      "begin_line": 1701,
+      "end_line": 1713,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfWithStartIndex()",
+      "begin_line": 1715,
+      "end_line": 1731,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOf()",
+      "begin_line": 1733,
+      "end_line": 1744,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfWithStartIndex()",
+      "begin_line": 1746,
+      "end_line": 1762,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContains()",
+      "begin_line": 1764,
+      "end_line": 1775,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfLong()",
+      "begin_line": 1778,
+      "end_line": 1788,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfLongWithStartIndex()",
+      "begin_line": 1790,
+      "end_line": 1802,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfLong()",
+      "begin_line": 1804,
+      "end_line": 1814,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfLongWithStartIndex()",
+      "begin_line": 1816,
+      "end_line": 1828,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsLong()",
+      "begin_line": 1830,
+      "end_line": 1840,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfInt()",
+      "begin_line": 1843,
+      "end_line": 1853,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfIntWithStartIndex()",
+      "begin_line": 1855,
+      "end_line": 1867,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfInt()",
+      "begin_line": 1869,
+      "end_line": 1879,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfIntWithStartIndex()",
+      "begin_line": 1881,
+      "end_line": 1893,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsInt()",
+      "begin_line": 1895,
+      "end_line": 1905,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfShort()",
+      "begin_line": 1908,
+      "end_line": 1918,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfShortWithStartIndex()",
+      "begin_line": 1920,
+      "end_line": 1932,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfShort()",
+      "begin_line": 1934,
+      "end_line": 1944,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfShortWithStartIndex()",
+      "begin_line": 1946,
+      "end_line": 1958,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsShort()",
+      "begin_line": 1960,
+      "end_line": 1970,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfChar()",
+      "begin_line": 1973,
+      "end_line": 1983,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfCharWithStartIndex()",
+      "begin_line": 1985,
+      "end_line": 1997,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfChar()",
+      "begin_line": 1999,
+      "end_line": 2009,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfCharWithStartIndex()",
+      "begin_line": 2011,
+      "end_line": 2023,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsChar()",
+      "begin_line": 2025,
+      "end_line": 2035,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfByte()",
+      "begin_line": 2038,
+      "end_line": 2048,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfByteWithStartIndex()",
+      "begin_line": 2050,
+      "end_line": 2062,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfByte()",
+      "begin_line": 2064,
+      "end_line": 2074,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfByteWithStartIndex()",
+      "begin_line": 2076,
+      "end_line": 2088,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsByte()",
+      "begin_line": 2090,
+      "end_line": 2100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfDouble()",
+      "begin_line": 2103,
+      "end_line": 2117,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfDoubleTolerance()",
+      "begin_line": 2119,
+      "end_line": 2131,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfDoubleWithStartIndex()",
+      "begin_line": 2133,
+      "end_line": 2147,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfDoubleWithStartIndexTolerance()",
+      "begin_line": 2149,
+      "end_line": 2165,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfDouble()",
+      "begin_line": 2167,
+      "end_line": 2180,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfDoubleTolerance()",
+      "begin_line": 2182,
+      "end_line": 2194,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfDoubleWithStartIndex()",
+      "begin_line": 2196,
+      "end_line": 2211,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfDoubleWithStartIndexTolerance()",
+      "begin_line": 2213,
+      "end_line": 2229,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsDouble()",
+      "begin_line": 2231,
+      "end_line": 2242,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsDoubleTolerance()",
+      "begin_line": 2244,
+      "end_line": 2254,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfFloat()",
+      "begin_line": 2257,
+      "end_line": 2270,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfFloatWithStartIndex()",
+      "begin_line": 2272,
+      "end_line": 2287,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfFloat()",
+      "begin_line": 2289,
+      "end_line": 2302,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfFloatWithStartIndex()",
+      "begin_line": 2304,
+      "end_line": 2319,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsFloat()",
+      "begin_line": 2321,
+      "end_line": 2332,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfBoolean()",
+      "begin_line": 2335,
+      "end_line": 2346,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIndexOfBooleanWithStartIndex()",
+      "begin_line": 2348,
+      "end_line": 2362,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfBoolean()",
+      "begin_line": 2364,
+      "end_line": 2375,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testLastIndexOfBooleanWithStartIndex()",
+      "begin_line": 2377,
+      "end_line": 2391,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testContainsBoolean()",
+      "begin_line": 2393,
+      "end_line": 2403,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_boolean()",
+      "begin_line": 2407,
+      "end_line": 2421,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_boolean_boolean()",
+      "begin_line": 2423,
+      "end_line": 2439,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_boolean()",
+      "begin_line": 2441,
+      "end_line": 2450,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_char()",
+      "begin_line": 2454,
+      "end_line": 2471,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_char_char()",
+      "begin_line": 2473,
+      "end_line": 2493,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_char()",
+      "begin_line": 2495,
+      "end_line": 2509,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_byte()",
+      "begin_line": 2513,
+      "end_line": 2530,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_byte_byte()",
+      "begin_line": 2532,
+      "end_line": 2552,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_byte()",
+      "begin_line": 2554,
+      "end_line": 2568,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_short()",
+      "begin_line": 2572,
+      "end_line": 2589,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_short_short()",
+      "begin_line": 2591,
+      "end_line": 2610,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_short()",
+      "begin_line": 2612,
+      "end_line": 2626,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_int()",
+      "begin_line": 2630,
+      "end_line": 2645,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_int_int()",
+      "begin_line": 2647,
+      "end_line": 2662,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_intNull()",
+      "begin_line": 2664,
+      "end_line": 2668,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_int()",
+      "begin_line": 2670,
+      "end_line": 2687,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_long()",
+      "begin_line": 2691,
+      "end_line": 2709,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_long_long()",
+      "begin_line": 2711,
+      "end_line": 2729,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_long()",
+      "begin_line": 2731,
+      "end_line": 2748,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_float()",
+      "begin_line": 2752,
+      "end_line": 2770,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_float_float()",
+      "begin_line": 2772,
+      "end_line": 2790,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_float()",
+      "begin_line": 2792,
+      "end_line": 2809,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_double()",
+      "begin_line": 2813,
+      "end_line": 2831,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToPrimitive_double_double()",
+      "begin_line": 2833,
+      "end_line": 2851,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testToObject_double()",
+      "begin_line": 2853,
+      "end_line": 2870,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIsEmptyObject()",
+      "begin_line": 2876,
+      "end_line": 2883,
+      "comment": "\n     * Test for {@link ArrayUtils#isEmpty(java.lang.Object[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIsEmptyPrimitives()",
+      "begin_line": 2895,
+      "end_line": 2944,
+      "comment": "\n     * Tests for {@link ArrayUtils#isEmpty(long[])},\n     * {@link ArrayUtils#isEmpty(int[])},\n     * {@link ArrayUtils#isEmpty(short[])},\n     * {@link ArrayUtils#isEmpty(char[])},\n     * {@link ArrayUtils#isEmpty(byte[])},\n     * {@link ArrayUtils#isEmpty(double[])},\n     * {@link ArrayUtils#isEmpty(float[])} and\n     * {@link ArrayUtils#isEmpty(boolean[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIsNotEmptyObject()",
+      "begin_line": 2949,
+      "end_line": 2956,
+      "comment": "\n     * Test for {@link ArrayUtils#isNotEmpty(java.lang.Object[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testIsNotEmptyPrimitives()",
+      "begin_line": 2968,
+      "end_line": 3017,
+      "comment": "\n     * Tests for {@link ArrayUtils#isNotEmpty(long[])},\n     * {@link ArrayUtils#isNotEmpty(int[])},\n     * {@link ArrayUtils#isNotEmpty(short[])},\n     * {@link ArrayUtils#isNotEmpty(char[])},\n     * {@link ArrayUtils#isNotEmpty(byte[])},\n     * {@link ArrayUtils#isNotEmpty(double[])},\n     * {@link ArrayUtils#isNotEmpty(float[])} and\n     * {@link ArrayUtils#isNotEmpty(boolean[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsTest.testGetLength()",
+      "begin_line": 3019,
+      "end_line": 3075,
+      "comment": " ------------------------------------------------------------------------"
+    }
+  ]
+}

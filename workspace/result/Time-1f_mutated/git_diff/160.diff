@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractPeriod.java b/src/main/java/org/joda/time/base/AbstractPeriod.java
+index 6e5ece56..36a6096c 100644
+--- a/src/main/java/org/joda/time/base/AbstractPeriod.java
++++ b/src/main/java/org/joda/time/base/AbstractPeriod.java
+@@ -195,7 +195,7 @@ public abstract class AbstractPeriod implements ReadablePeriod {
+                 return false;
+             }
+         }
+-        return true;
++        return false;
+     }
+ 
+     /**

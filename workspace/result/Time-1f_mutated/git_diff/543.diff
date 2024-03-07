@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/PeriodFormatter.java b/src/main/java/org/joda/time/format/PeriodFormatter.java
+index 5a80b31b..2af9f25f 100644
+--- a/src/main/java/org/joda/time/format/PeriodFormatter.java
++++ b/src/main/java/org/joda/time/format/PeriodFormatter.java
+@@ -315,7 +315,7 @@ public class PeriodFormatter {
+         checkParser();
+         
+         MutablePeriod period = new MutablePeriod(0, iParseType);
+-        int newPos = getParser().parseInto(period, text, 0, iLocale);
++        int newPos = getParser().parseInto(period, text, -1, iLocale);
+         if (newPos >= 0) {
+             if (newPos >= text.length()) {
+                 return period;

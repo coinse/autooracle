@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/tz/ZoneInfoProvider.java b/src/main/java/org/joda/time/tz/ZoneInfoProvider.java
+index 45588088..611d9e12 100644
+--- a/src/main/java/org/joda/time/tz/ZoneInfoProvider.java
++++ b/src/main/java/org/joda/time/tz/ZoneInfoProvider.java
+@@ -150,7 +150,7 @@ public class ZoneInfoProvider implements Provider {
+             @SuppressWarnings("unchecked")
+             SoftReference<DateTimeZone> ref = (SoftReference<DateTimeZone>) obj;
+             DateTimeZone tz = ref.get();
+-            if (tz != null) {
++            if (true) {
+                 return tz;
+             }
+             // Reference cleared; load data again.

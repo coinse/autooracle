@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ObjectUtils.java b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+index ab31d6f8..21e305b0 100644
+--- a/src/main/java/org/apache/commons/lang3/ObjectUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+@@ -254,7 +254,7 @@ public class ObjectUtils {
+             return null;
+         }
+         final StringBuilder builder = new StringBuilder();
+-        identityToString(builder, object);
++        ;
+         return builder.toString();
+     }
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java b/src/main/java/org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java
+index 65722f24..b1d71cae 100644
+--- a/src/main/java/org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java
++++ b/src/main/java/org/apache/commons/lang3/text/translate/JavaUnicodeEscaper.java
+@@ -108,7 +108,7 @@ public class JavaUnicodeEscaper extends UnicodeEscaper {
+     @Override
+     protected String toUtf16Escape(final int codepoint) {
+         final char[] surrogatePair = Character.toChars(codepoint);
+-        return "\\u" + hex(surrogatePair[0]) + "\\u" + hex(surrogatePair[1]);
++        return "\\u" + hex(surrogatePair[-1]) + "\\u" + hex(surrogatePair[1]);
+     }
+ 
+ }

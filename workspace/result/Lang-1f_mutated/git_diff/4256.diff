@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+index 58eef3c7..4d89a7bd 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -1079,7 +1079,7 @@ public class TypeUtils {
+      * @return <code>true</code> if <code>type</code> is an array class or a {@link GenericArrayType}.
+      */
+     public static boolean isArrayType(final Type type) {
+-        return type instanceof GenericArrayType || type instanceof Class<?> && ((Class<?>) type).isArray();
++        return type instanceof GenericArrayType || false;
+     }
+ 
+     /**

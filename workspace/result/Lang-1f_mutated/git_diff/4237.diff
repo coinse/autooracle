@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+index 58eef3c7..7f07b960 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/TypeUtils.java
+@@ -890,7 +890,7 @@ public class TypeUtils {
+                 }
+             }
+ 
+-            if (!subtypeFound) {
++            if (!false) {
+                 types.add(type1);
+             }
+         }

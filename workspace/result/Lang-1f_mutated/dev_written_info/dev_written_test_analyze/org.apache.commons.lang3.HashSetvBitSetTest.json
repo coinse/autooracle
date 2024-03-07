@@ -1,0 +1,116 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/HashSetvBitSetTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "HashSetvBitSetTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 174,
+      "comment": "\n * Test to show whether using BitSet for removeAll() methods is faster than using HashSet.\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "LOOPS"
+      ],
+      "begin_line": 30,
+      "end_line": 30,
+      "comment": " number of times to invoke methods"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "LOOPS2"
+      ],
+      "begin_line": 31,
+      "end_line": 31,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.testTimes()",
+      "begin_line": 33,
+      "end_line": 46,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.printTimes(int)",
+      "begin_line": 51,
+      "end_line": 57,
+      "comment": "\n     * @return bitSet - HashSet\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.timeHashSet(int)",
+      "begin_line": 59,
+      "end_line": 68,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.timeBitSet(int)",
+      "begin_line": 70,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.testHashSet(int)",
+      "begin_line": 81,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.testBitSet(int)",
+      "begin_line": 91,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.extractIndices(java.util.HashSet\u003cjava.lang.Integer\u003e)",
+      "begin_line": 101,
+      "end_line": 108,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.extractIndices(java.util.BitSet)",
+      "begin_line": 110,
+      "end_line": 118,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.testTimesExtractOrBitset()",
+      "begin_line": 120,
+      "end_line": 136,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.printTimes(int, int)",
+      "begin_line": 138,
+      "end_line": 149,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.timeBitSetRemoveAll(int[], java.util.BitSet)",
+      "begin_line": 151,
+      "end_line": 160,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.HashSetvBitSetTest.timeExtractRemoveAll(int[], java.util.BitSet)",
+      "begin_line": 162,
+      "end_line": 172,
+      "comment": ""
+    }
+  ]
+}

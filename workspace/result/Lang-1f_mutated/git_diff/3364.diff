@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..5647588d 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1386,7 +1386,7 @@ public class NumberUtils {
+                 hasExp = true;
+                 allowSigns = true;
+             } else if (chars[i] == '+' || chars[i] == '-') {
+-                if (!allowSigns) {
++                if (!false) {
+                     return false;
+                 }
+                 allowSigns = false;

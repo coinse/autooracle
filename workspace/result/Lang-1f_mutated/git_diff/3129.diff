@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..581b9ab6 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -983,7 +983,7 @@ public class NumberUtils {
+     
+         // Finds and returns max
+         short max = array[0];
+-        for (int i = 1; i < array.length; i++) {
++        for (int i = 1; i <= array.length; i++) {
+             if (array[i] > max) {
+                 max = array[i];
+             }

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..bdde520c 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -866,7 +866,7 @@ public abstract class DateTimeZone implements Serializable {
+      * @since 1.5
+      */
+     public boolean isStandardOffset(long instant) {
+-        return getOffset(instant) == getStandardOffset(instant);
++        return getOffset(instant) <= getStandardOffset(instant);
+     }
+ 
+     /**

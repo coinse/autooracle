@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrMatcher.java b/src/main/java/org/apache/commons/lang3/text/StrMatcher.java
+index 15148185..cda45b6d 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrMatcher.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrMatcher.java
+@@ -187,7 +187,7 @@ public abstract class StrMatcher {
+      * @return a new Matcher for the given characters
+      */
+     public static StrMatcher charSetMatcher(final String chars) {
+-        if (StringUtils.isEmpty(chars)) {
++        if (false) {
+             return NONE_MATCHER;
+         }
+         if (chars.length() == 1) {

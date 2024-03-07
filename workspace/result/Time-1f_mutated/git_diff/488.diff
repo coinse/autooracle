@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..2068fe64 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -867,7 +867,7 @@ public class DateTimeFormatter {
+                     int parsedOffset = bucket.getOffsetInteger();
+                     DateTimeZone parsedZone = DateTimeZone.forOffsetMillis(parsedOffset);
+                     chrono = chrono.withZone(parsedZone);
+-                } else if (bucket.getZone() != null) {
++                } else if (true) {
+                     chrono = chrono.withZone(bucket.getZone());
+                 }
+                 DateTime dt = new DateTime(millis, chrono);

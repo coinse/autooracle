@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/MonthDay.java b/src/main/java/org/joda/time/MonthDay.java
+index c7dd59b6..7bd2fe7c 100644
+--- a/src/main/java/org/joda/time/MonthDay.java
++++ b/src/main/java/org/joda/time/MonthDay.java
+@@ -733,7 +733,7 @@ public final class MonthDay
+      */
+     public MonthDay withDayOfMonth(int dayOfMonth) {
+         int[] newValues = getValues();
+-        newValues = getChronology().dayOfMonth().set(this, DAY_OF_MONTH, newValues, dayOfMonth);
++        ;
+         return new MonthDay(this, newValues);
+     }
+ 

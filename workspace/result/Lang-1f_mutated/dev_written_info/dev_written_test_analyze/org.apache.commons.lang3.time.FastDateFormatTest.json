@@ -1,0 +1,153 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/time/FastDateFormatTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "FastDateFormatTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 45,
+      "end_line": 313,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.time.FastDateFormat}.\n *\n * @since 2.0\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_getInstance()",
+      "begin_line": 52,
+      "end_line": 57,
+      "comment": "\n     * Only the cache methods need to be tested here.  \n     * The print methods are tested by {@link FastDateFormat_PrinterTest}\n     * and the parse methods are tested by {@link FastDateFormat_ParserTest}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_getInstance_String()",
+      "begin_line": 59,
+      "end_line": 70,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_getInstance_String_TimeZone()",
+      "begin_line": 72,
+      "end_line": 99,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_getInstance_String_Locale()",
+      "begin_line": 101,
+      "end_line": 117,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_changeDefault_Locale_DateInstance()",
+      "begin_line": 119,
+      "end_line": 138,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_changeDefault_Locale_DateTimeInstance()",
+      "begin_line": 140,
+      "end_line": 159,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.test_getInstance_String_TimeZone_Locale()",
+      "begin_line": 161,
+      "end_line": 187,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.testCheckDefaults()",
+      "begin_line": 189,
+      "end_line": 200,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.testCheckDifferingStyles()",
+      "begin_line": 202,
+      "end_line": 215,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.testDateDefaults()",
+      "begin_line": 217,
+      "end_line": 227,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.testTimeDefaults()",
+      "begin_line": 229,
+      "end_line": 239,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.testTimeDateDefaults()",
+      "begin_line": 241,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.testParseSync()",
+      "begin_line": 253,
+      "end_line": 273,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 259,
+      "end_line": 259,
+      "comment": " because SimpleDateFormat is serializable"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.Anonymous-4cc4744b-885c-461e-a091-f6ac272ba9f0.parseObject(java.lang.String)",
+      "begin_line": 261,
+      "end_line": 266,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NTHREADS"
+      ],
+      "begin_line": 275,
+      "end_line": 275,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NROUNDS"
+      ],
+      "begin_line": 276,
+      "end_line": 276,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.measureTime(java.text.Format, java.text.Format)",
+      "begin_line": 278,
+      "end_line": 312,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormatTest.Anonymous-ab9dc927-ff74-42ab-9689-965c5c23e247.run()",
+      "begin_line": 285,
+      "end_line": 302,
+      "comment": ""
+    }
+  ]
+}

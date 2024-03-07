@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateMidnight.java b/src/main/java/org/joda/time/DateMidnight.java
+index 05e348de..6417cad4 100644
+--- a/src/main/java/org/joda/time/DateMidnight.java
++++ b/src/main/java/org/joda/time/DateMidnight.java
+@@ -568,7 +568,7 @@ public final class DateMidnight
+      * @throws ArithmeticException if the new datetime exceeds the capacity of a long
+      */
+     public DateMidnight plus(long duration) {
+-        return withDurationAdded(duration, 1);
++        return withDurationAdded(duration, -1);
+     }
+ 
+     /**

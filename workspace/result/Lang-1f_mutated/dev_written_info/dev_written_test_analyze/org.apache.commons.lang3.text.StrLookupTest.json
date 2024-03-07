@@ -1,0 +1,42 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/StrLookupTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StrLookupTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 33,
+      "end_line": 76,
+      "comment": "\n * Test class for StrLookup.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrLookupTest.testNoneLookup()",
+      "begin_line": 36,
+      "end_line": 41,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrLookupTest.testSystemProperiesLookup()",
+      "begin_line": 43,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrLookupTest.testMapLookup()",
+      "begin_line": 56,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrLookupTest.testMapLookup_nullMap()",
+      "begin_line": 68,
+      "end_line": 74,
+      "comment": ""
+    }
+  ]
+}

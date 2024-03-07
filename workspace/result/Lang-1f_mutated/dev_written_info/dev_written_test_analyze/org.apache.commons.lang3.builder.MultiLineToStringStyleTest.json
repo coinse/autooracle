@@ -1,0 +1,102 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/MultiLineToStringStyleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MultiLineToStringStyleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 132,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.builder.MultiLineToStringStyleTest}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "base"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "baseStr"
+      ],
+      "begin_line": 38,
+      "end_line": 38,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.setUp()",
+      "begin_line": 40,
+      "end_line": 43,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.tearDown()",
+      "begin_line": 45,
+      "end_line": 48,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testBlank()",
+      "begin_line": 52,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testAppendSuper()",
+      "begin_line": 57,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testObject()",
+      "begin_line": 67,
+      "end_line": 83,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testPerson()",
+      "begin_line": 85,
+      "end_line": 93,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testLong()",
+      "begin_line": 95,
+      "end_line": 100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testObjectArray()",
+      "begin_line": 102,
+      "end_line": 110,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testLongArray()",
+      "begin_line": 112,
+      "end_line": 120,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.MultiLineToStringStyleTest.testLongArrayArray()",
+      "begin_line": 122,
+      "end_line": 130,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDate.java b/src/main/java/org/joda/time/LocalDate.java
+index 9806eb32..06dd7fc9 100644
+--- a/src/main/java/org/joda/time/LocalDate.java
++++ b/src/main/java/org/joda/time/LocalDate.java
+@@ -630,7 +630,7 @@ public final class LocalDate
+     public boolean equals(Object partial) {
+         // override to perform faster
+         if (this == partial) {
+-            return true;
++            return false;
+         }
+         if (partial instanceof LocalDate) {
+             LocalDate other = (LocalDate) partial;

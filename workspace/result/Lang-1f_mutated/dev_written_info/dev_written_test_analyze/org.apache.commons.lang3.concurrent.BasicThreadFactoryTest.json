@@ -1,0 +1,158 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/concurrent/BasicThreadFactoryTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "BasicThreadFactoryTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 38,
+      "end_line": 302,
+      "comment": "\n * Test class for {@code BasicThreadFactory}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "PATTERN"
+      ],
+      "begin_line": 40,
+      "end_line": 40,
+      "comment": " Constant for the test naming pattern. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "builder"
+      ],
+      "begin_line": 43,
+      "end_line": 43,
+      "comment": " The builder for creating a thread factory. "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.setUp()",
+      "begin_line": 45,
+      "end_line": 48,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "checkFactoryDefaults(BasicThreadFactory)",
+      "begin_line": 55,
+      "end_line": 62,
+      "comment": "\n     * Tests the default options of a thread factory.\n     *\n     * @param factory the factory to be checked\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testBuildDefaults()",
+      "begin_line": 67,
+      "end_line": 71,
+      "comment": "\n     * Tests the default values used by the builder.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testBuildNamingPatternNull()",
+      "begin_line": 76,
+      "end_line": 79,
+      "comment": "\n     * Tries to set a null naming pattern.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testBuildWrappedFactoryNull()",
+      "begin_line": 84,
+      "end_line": 87,
+      "comment": "\n     * Tries to set a null wrapped factory.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testBuildUncaughtExceptionHandlerNull()",
+      "begin_line": 92,
+      "end_line": 95,
+      "comment": "\n     * Tries to set a null exception handler.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testBuilderReset()",
+      "begin_line": 100,
+      "end_line": 115,
+      "comment": "\n     * Tests the reset() method of the builder.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testBuilderResetAfterBuild()",
+      "begin_line": 120,
+      "end_line": 125,
+      "comment": "\n     * Tests whether reset() is automatically called after build().\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadNamingPattern()",
+      "begin_line": 130,
+      "end_line": 148,
+      "comment": "\n     * Tests whether the naming pattern is applied to new threads.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadNoNamingPattern()",
+      "begin_line": 154,
+      "end_line": 166,
+      "comment": "\n     * Tests whether the thread name is not modified if no naming pattern is\n     * set.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.checkDaemonFlag(boolean)",
+      "begin_line": 173,
+      "end_line": 184,
+      "comment": "\n     * Helper method for testing whether the daemon flag is taken into account.\n     *\n     * @param flag the value of the flag\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadDaemonTrue()",
+      "begin_line": 189,
+      "end_line": 192,
+      "comment": "\n     * Tests whether daemon threads can be created.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadDaemonFalse()",
+      "begin_line": 197,
+      "end_line": 200,
+      "comment": "\n     * Tests whether the daemon status of new threads can be turned off.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadNoDaemonFlag()",
+      "begin_line": 206,
+      "end_line": 223,
+      "comment": "\n     * Tests whether the daemon flag is not touched on newly created threads if\n     * it is not specified.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadPriority()",
+      "begin_line": 228,
+      "end_line": 241,
+      "comment": "\n     * Tests whether the priority is set on newly created threads.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadNoPriority()",
+      "begin_line": 247,
+      "end_line": 260,
+      "comment": "\n     * Tests whether the original priority is not changed if no priority is\n     * specified.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadExHandler()",
+      "begin_line": 265,
+      "end_line": 280,
+      "comment": "\n     * Tests whether the exception handler is set if one is provided.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BasicThreadFactoryTest.testNewThreadNoExHandler()",
+      "begin_line": 286,
+      "end_line": 301,
+      "comment": "\n     * Tests whether the original exception hander is not touched if none is\n     * specified.\n     "
+    }
+  ]
+}

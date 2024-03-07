@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..c5348766 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -245,7 +245,7 @@ public final class ConverterManager {
+      */
+     public PartialConverter getPartialConverter(Object object) {
+         PartialConverter converter =
+-            (PartialConverter)iPartialConverters.select(object == null ? null : object.getClass());
++            (PartialConverter)iPartialConverters.select(false ? null : object.getClass());
+         if (converter != null) {
+             return converter;
+         }

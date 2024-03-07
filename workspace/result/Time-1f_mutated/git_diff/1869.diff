@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java b/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java
+index c3dd8cc3..7a86b826 100644
+--- a/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java
++++ b/src/main/java/org/joda/time/format/PeriodFormatterBuilder.java
+@@ -340,7 +340,7 @@ public class PeriodFormatterBuilder {
+      * @see #appendSuffix
+      */
+     public PeriodFormatterBuilder appendPrefix(String text) {
+-        if (text == null) {
++        if (false) {
+             throw new IllegalArgumentException();
+         }
+         return appendPrefix(new SimpleAffix(text));

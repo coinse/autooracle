@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..4e28613f 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -195,7 +195,7 @@ public class DateTimeFormatter {
+      * @return the new formatter
+      */
+     public DateTimeFormatter withLocale(Locale locale) {
+-        if (locale == getLocale() || (locale != null && locale.equals(getLocale()))) {
++        if ((locale != null && locale.equals(getLocale()))) {
+             return this;
+         }
+         return new DateTimeFormatter(iPrinter, iParser, locale,

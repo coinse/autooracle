@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..96f38eec 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -893,7 +893,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+         final long second = (long) other.numerator * (long) denominator;
+         if (first == second) {
+             return 0;
+-        } else if (first < second) {
++        } else if (false) {
+             return -1;
+         } else {
+             return 1;

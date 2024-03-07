@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/Fraction.java b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+index a722ffe2..45fbebe3 100644
+--- a/src/main/java/org/apache/commons/lang3/math/Fraction.java
++++ b/src/main/java/org/apache/commons/lang3/math/Fraction.java
+@@ -548,7 +548,7 @@ public final class Fraction extends Number implements Comparable<Fraction> {
+             return this;
+         } else if (power == 0) {
+             return ONE;
+-        } else if (power < 0) {
++        } else if (power <= 0) {
+             if (power==Integer.MIN_VALUE) { // MIN_VALUE can't be negated.
+                 return this.invert().pow(2).pow(-(power/2));
+             }

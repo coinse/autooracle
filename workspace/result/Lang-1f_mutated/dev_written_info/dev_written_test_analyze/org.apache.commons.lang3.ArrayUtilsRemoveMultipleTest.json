@@ -1,0 +1,399 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/ArrayUtilsRemoveMultipleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ArrayUtilsRemoveMultipleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 1053,
+      "comment": "\n * Tests ArrayUtils remove and removeElement methods.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllObjectArray()",
+      "begin_line": 37,
+      "end_line": 73,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllObjectArrayRemoveNone()",
+      "begin_line": 75,
+      "end_line": 82,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllObjectArrayNegativeIndex()",
+      "begin_line": 84,
+      "end_line": 87,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllObjectArrayOutOfBoundsIndex()",
+      "begin_line": 89,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullObjectArray()",
+      "begin_line": 94,
+      "end_line": 97,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNumberArray()",
+      "begin_line": 99,
+      "end_line": 123,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllBooleanArray()",
+      "begin_line": 125,
+      "end_line": 171,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllBooleanArrayRemoveNone()",
+      "begin_line": 173,
+      "end_line": 180,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllBooleanArrayNegativeIndex()",
+      "begin_line": 182,
+      "end_line": 185,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllBooleanArrayOutOfBoundsIndex()",
+      "begin_line": 187,
+      "end_line": 190,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullBooleanArray()",
+      "begin_line": 192,
+      "end_line": 195,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllByteArray()",
+      "begin_line": 197,
+      "end_line": 237,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllByteArrayRemoveNone()",
+      "begin_line": 239,
+      "end_line": 246,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllByteArrayNegativeIndex()",
+      "begin_line": 248,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllByteArrayOutOfBoundsIndex()",
+      "begin_line": 253,
+      "end_line": 256,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullByteArray()",
+      "begin_line": 258,
+      "end_line": 261,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllCharArray()",
+      "begin_line": 263,
+      "end_line": 303,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllCharArrayRemoveNone()",
+      "begin_line": 305,
+      "end_line": 312,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllCharArrayNegativeIndex()",
+      "begin_line": 314,
+      "end_line": 317,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllCharArrayOutOfBoundsIndex()",
+      "begin_line": 319,
+      "end_line": 322,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullCharArray()",
+      "begin_line": 324,
+      "end_line": 327,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllDoubleArray()",
+      "begin_line": 329,
+      "end_line": 369,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllDoubleArrayRemoveNone()",
+      "begin_line": 371,
+      "end_line": 378,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllDoubleArrayNegativeIndex()",
+      "begin_line": 380,
+      "end_line": 383,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllDoubleArrayOutOfBoundsIndex()",
+      "begin_line": 385,
+      "end_line": 388,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullDoubleArray()",
+      "begin_line": 390,
+      "end_line": 393,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllFloatArray()",
+      "begin_line": 395,
+      "end_line": 435,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllFloatArrayRemoveNone()",
+      "begin_line": 437,
+      "end_line": 444,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllFloatArrayNegativeIndex()",
+      "begin_line": 446,
+      "end_line": 449,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllFloatArrayOutOfBoundsIndex()",
+      "begin_line": 451,
+      "end_line": 454,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullFloatArray()",
+      "begin_line": 456,
+      "end_line": 459,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllIntArray()",
+      "begin_line": 461,
+      "end_line": 505,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllIntArrayRemoveNone()",
+      "begin_line": 507,
+      "end_line": 514,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllIntArrayNegativeIndex()",
+      "begin_line": 516,
+      "end_line": 519,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllIntArrayOutOfBoundsIndex()",
+      "begin_line": 521,
+      "end_line": 524,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullIntArray()",
+      "begin_line": 526,
+      "end_line": 529,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllLongArray()",
+      "begin_line": 531,
+      "end_line": 571,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllLongArrayRemoveNone()",
+      "begin_line": 573,
+      "end_line": 580,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllLongArrayNegativeIndex()",
+      "begin_line": 582,
+      "end_line": 585,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllLongArrayOutOfBoundsIndex()",
+      "begin_line": 587,
+      "end_line": 590,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullLongArray()",
+      "begin_line": 592,
+      "end_line": 595,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllShortArray()",
+      "begin_line": 597,
+      "end_line": 637,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllShortArrayRemoveNone()",
+      "begin_line": 639,
+      "end_line": 646,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllShortArrayNegativeIndex()",
+      "begin_line": 648,
+      "end_line": 651,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllShortArrayOutOfBoundsIndex()",
+      "begin_line": 653,
+      "end_line": 656,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveAllNullShortArray()",
+      "begin_line": 658,
+      "end_line": 661,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementsObjectArray()",
+      "begin_line": 663,
+      "end_line": 704,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementBooleanArray()",
+      "begin_line": 706,
+      "end_line": 747,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementByteArray()",
+      "begin_line": 749,
+      "end_line": 790,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementCharArray()",
+      "begin_line": 792,
+      "end_line": 833,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementDoubleArray()",
+      "begin_line": 835,
+      "end_line": 877,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementFloatArray()",
+      "begin_line": 879,
+      "end_line": 921,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementIntArray()",
+      "begin_line": 923,
+      "end_line": 964,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementLongArray()",
+      "begin_line": 966,
+      "end_line": 1008,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveMultipleTest.testRemoveElementShortArray()",
+      "begin_line": 1010,
+      "end_line": 1051,
+      "comment": ""
+    }
+  ]
+}

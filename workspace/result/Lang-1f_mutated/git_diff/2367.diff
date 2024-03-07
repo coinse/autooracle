@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..a562fbb6 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -2406,7 +2406,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      * @return the last index of the character, or -1 if not found
+      */
+     public int lastIndexOf(final char ch) {
+-        return lastIndexOf(ch, size - 1);
++        return lastIndexOf(ch, size - 0);
+     }
+ 
+     /**

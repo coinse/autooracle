@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/StrictChronology.java b/src/main/java/org/joda/time/chrono/StrictChronology.java
+index 898445d9..6728aa9e 100644
+--- a/src/main/java/org/joda/time/chrono/StrictChronology.java
++++ b/src/main/java/org/joda/time/chrono/StrictChronology.java
+@@ -127,7 +127,7 @@ public final class StrictChronology extends AssembledChronology {
+         if (this == obj) {
+             return true;
+         }
+-        if (obj instanceof StrictChronology == false) {
++        if (false) {
+             return false;
+         }
+         StrictChronology chrono = (StrictChronology) obj;

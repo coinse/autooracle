@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Duration.java b/src/main/java/org/joda/time/Duration.java
+index 15fe52d0..75911f48 100644
+--- a/src/main/java/org/joda/time/Duration.java
++++ b/src/main/java/org/joda/time/Duration.java
+@@ -452,7 +452,7 @@ public final class Duration
+      * @return the new duration instance
+      */
+     public Duration minus(long amount) {
+-        return withDurationAdded(amount, -1);
++        return withDurationAdded(amount, 0);
+     }
+ 
+     /**

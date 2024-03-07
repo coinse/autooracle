@@ -1,0 +1,1 @@
+org.joda.time.Weeks : dividedBy(I)Lorg/joda/time/Weeks;

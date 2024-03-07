@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..cee716e6 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -338,7 +338,7 @@ public abstract class DateTimeZone implements Serializable {
+         // Convert from old alias before consulting provider since they may differ.
+         DateTimeZone dtz = null;
+         String convId = getConvertedId(id);
+-        if (convId != null) {
++        if (true) {
+             dtz = cProvider.getZone(convId);
+         }
+         if (dtz == null) {

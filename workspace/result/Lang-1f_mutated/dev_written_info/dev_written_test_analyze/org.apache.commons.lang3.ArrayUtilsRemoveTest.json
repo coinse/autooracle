@@ -1,0 +1,147 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/ArrayUtilsRemoveTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ArrayUtilsRemoveTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 487,
+      "comment": "\n * Tests ArrayUtils remove and removeElement methods.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveObjectArray()",
+      "begin_line": 36,
+      "end_line": 63,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveNumberArray()",
+      "begin_line": 65,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveBooleanArray()",
+      "begin_line": 81,
+      "end_line": 108,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveByteArray()",
+      "begin_line": 110,
+      "end_line": 137,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveCharArray()",
+      "begin_line": 139,
+      "end_line": 166,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveDoubleArray()",
+      "begin_line": 168,
+      "end_line": 195,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveFloatArray()",
+      "begin_line": 197,
+      "end_line": 224,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveIntArray()",
+      "begin_line": 226,
+      "end_line": 253,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveLongArray()",
+      "begin_line": 255,
+      "end_line": 282,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveShortArray()",
+      "begin_line": 284,
+      "end_line": 311,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementObjectArray()",
+      "begin_line": 313,
+      "end_line": 330,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementBooleanArray()",
+      "begin_line": 332,
+      "end_line": 349,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementByteArray()",
+      "begin_line": 351,
+      "end_line": 368,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementCharArray()",
+      "begin_line": 370,
+      "end_line": 387,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementDoubleArray()",
+      "begin_line": 389,
+      "end_line": 407,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementFloatArray()",
+      "begin_line": 409,
+      "end_line": 427,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementIntArray()",
+      "begin_line": 429,
+      "end_line": 446,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementLongArray()",
+      "begin_line": 448,
+      "end_line": 466,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsRemoveTest.testRemoveElementShortArray()",
+      "begin_line": 468,
+      "end_line": 485,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/CharRangeTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharRangeTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 38,
+      "end_line": 402,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.CharRange}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testClass()",
+      "begin_line": 41,
+      "end_line": 46,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_is()",
+      "begin_line": 49,
+      "end_line": 56,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isNot()",
+      "begin_line": 58,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isIn_Same()",
+      "begin_line": 67,
+      "end_line": 74,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isIn_Normal()",
+      "begin_line": 76,
+      "end_line": 83,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isIn_Reversed()",
+      "begin_line": 85,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isNotIn_Same()",
+      "begin_line": 94,
+      "end_line": 101,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isNotIn_Normal()",
+      "begin_line": 103,
+      "end_line": 110,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testConstructorAccessors_isNotIn_Reversed()",
+      "begin_line": 112,
+      "end_line": 119,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testEquals_Object()",
+      "begin_line": 122,
+      "end_line": 143,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testHashCode()",
+      "begin_line": 145,
+      "end_line": 164,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testContains_Char()",
+      "begin_line": 167,
+      "end_line": 194,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testContains_Charrange()",
+      "begin_line": 197,
+      "end_line": 310,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testContainsNullArg()",
+      "begin_line": 312,
+      "end_line": 322,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testIterator()",
+      "begin_line": 324,
+      "end_line": 389,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRangeTest.testSerialization()",
+      "begin_line": 392,
+      "end_line": 400,
+      "comment": "-----------------------------------------------------------------------"
+    }
+  ]
+}

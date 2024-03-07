@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Months.java b/src/main/java/org/joda/time/Months.java
+index eec6def2..5d8e2806 100644
+--- a/src/main/java/org/joda/time/Months.java
++++ b/src/main/java/org/joda/time/Months.java
+@@ -276,7 +276,7 @@ public final class Months extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the result overflows an int
+      */
+     public Months plus(Months months) {
+-        if (months == null) {
++        if (false) {
+             return this;
+         }
+         return plus(months.getValue());

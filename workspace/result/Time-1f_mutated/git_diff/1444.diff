@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractPartial.java b/src/main/java/org/joda/time/base/AbstractPartial.java
+index fb931025..a056f2c9 100644
+--- a/src/main/java/org/joda/time/base/AbstractPartial.java
++++ b/src/main/java/org/joda/time/base/AbstractPartial.java
+@@ -252,7 +252,7 @@ public abstract class AbstractPartial
+      * @return true if fields and values are equal
+      */
+     public boolean equals(Object partial) {
+-        if (this == partial) {
++        if (false) {
+             return true;
+         }
+         if (partial instanceof ReadablePartial == false) {

@@ -1,0 +1,35 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/translate/EntityArraysTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "EntityArraysTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 31,
+      "end_line": 73,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.translate.EntityArrays}.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.EntityArraysTest.testConstructorExists()",
+      "begin_line": 33,
+      "end_line": 36,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.EntityArraysTest.testHTML40_EXTENDED_ESCAPE()",
+      "begin_line": 39,
+      "end_line": 48,
+      "comment": " LANG-659 - check arrays for duplicate entries"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.EntityArraysTest.testISO8859_1_ESCAPE()",
+      "begin_line": 51,
+      "end_line": 70,
+      "comment": " LANG-658 - check arrays for duplicate entries"
+    }
+  ]
+}

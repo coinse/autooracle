@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/NullConverter.java b/src/main/java/org/joda/time/convert/NullConverter.java
+index 033138b8..1fa78e81 100644
+--- a/src/main/java/org/joda/time/convert/NullConverter.java
++++ b/src/main/java/org/joda/time/convert/NullConverter.java
+@@ -53,7 +53,7 @@ class NullConverter extends AbstractConverter
+      * @return the millisecond duration
+      */
+     public long getDurationMillis(Object object) {
+-        return 0L;
++        return 1L;
+     }
+ 
+     //-----------------------------------------------------------------------

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalTime.java b/src/main/java/org/joda/time/LocalTime.java
+index 6c3c5777..afa6e356 100644
+--- a/src/main/java/org/joda/time/LocalTime.java
++++ b/src/main/java/org/joda/time/LocalTime.java
+@@ -1041,7 +1041,7 @@ public final class LocalTime
+      * @return the new LocalTime minus the increased seconds
+      */
+     public LocalTime minusSeconds(int seconds) {
+-        if (seconds == 0) {
++        if (seconds <= 0) {
+             return this;
+         }
+         long instant = getChronology().seconds().subtract(getLocalMillis(), seconds);

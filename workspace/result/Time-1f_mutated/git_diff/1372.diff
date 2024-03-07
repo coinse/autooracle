@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/BasicChronology.java b/src/main/java/org/joda/time/chrono/BasicChronology.java
+index 63f394ae..115c9fb6 100644
+--- a/src/main/java/org/joda/time/chrono/BasicChronology.java
++++ b/src/main/java/org/joda/time/chrono/BasicChronology.java
+@@ -195,7 +195,7 @@ abstract class BasicChronology extends AssembledChronology {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (obj != null && getClass() == obj.getClass()) {
+             BasicChronology chrono = (BasicChronology) obj;

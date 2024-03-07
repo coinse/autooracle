@@ -1,0 +1,266 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/EnumUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "EnumUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 38,
+      "end_line": 367,
+      "comment": "\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.testConstructable()",
+      "begin_line": 40,
+      "end_line": 44,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_getEnumMap()",
+      "begin_line": 46,
+      "end_line": 58,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_getEnumList()",
+      "begin_line": 60,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_isEnum()",
+      "begin_line": 69,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_isEnum_nullClass()",
+      "begin_line": 78,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_getEnum()",
+      "begin_line": 83,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_getEnum_nullClass()",
+      "begin_line": 92,
+      "end_line": 95,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nullClass()",
+      "begin_line": 97,
+      "end_line": 100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nullClass()",
+      "begin_line": 102,
+      "end_line": 105,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nullIterable()",
+      "begin_line": 107,
+      "end_line": 110,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nullIterable()",
+      "begin_line": 112,
+      "end_line": 115,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nullElement()",
+      "begin_line": 117,
+      "end_line": 120,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nullElement()",
+      "begin_line": 122,
+      "end_line": 125,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nullClassWithArray()",
+      "begin_line": 127,
+      "end_line": 130,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nullClassWithArray()",
+      "begin_line": 132,
+      "end_line": 135,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nullArray()",
+      "begin_line": 137,
+      "end_line": 140,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nullArray()",
+      "begin_line": 142,
+      "end_line": 145,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nullArrayElement()",
+      "begin_line": 147,
+      "end_line": 150,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nullArrayElement()",
+      "begin_line": 152,
+      "end_line": 155,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_longClass()",
+      "begin_line": 157,
+      "end_line": 160,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_longClassWithArray()",
+      "begin_line": 162,
+      "end_line": 165,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nonEnumClass()",
+      "begin_line": 167,
+      "end_line": 177,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nonEnumClass()",
+      "begin_line": 179,
+      "end_line": 189,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector_nonEnumClassWithArray()",
+      "begin_line": 191,
+      "end_line": 198,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors_nonEnumClassWithArray()",
+      "begin_line": 200,
+      "end_line": 207,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVector()",
+      "begin_line": 209,
+      "end_line": 219,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectors()",
+      "begin_line": 221,
+      "end_line": 231,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectorFromArray()",
+      "begin_line": 233,
+      "end_line": 245,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_generateBitVectorsFromArray()",
+      "begin_line": 247,
+      "end_line": 259,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.assertArrayEquals(long[], long...)",
+      "begin_line": 261,
+      "end_line": 263,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_processBitVector_nullClass()",
+      "begin_line": 265,
+      "end_line": 269,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_processBitVectors_nullClass()",
+      "begin_line": 271,
+      "end_line": 275,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_processBitVector()",
+      "begin_line": 277,
+      "end_line": 287,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_processBitVectors()",
+      "begin_line": 289,
+      "end_line": 318,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_processBitVector_longClass()",
+      "begin_line": 320,
+      "end_line": 323,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtilsTest.test_processBitVectors_longClass()",
+      "begin_line": 325,
+      "end_line": 365,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ReflectionToStringBuilder",
+      "is_interface": false,
+      "parent_types": [
+        "ToStringBuilder"
+      ],
+      "begin_line": 88,
+      "end_line": 691,
+      "comment": "\n * \u003cp\u003e\n * Assists in implementing {@link Object#toString()} methods using reflection.\n * \u003c/p\u003e\n * \u003cp\u003e\n * This class uses reflection to determine the fields to append. Because these fields are usually private, the class\n * uses {@link java.lang.reflect.AccessibleObject#setAccessible(java.lang.reflect.AccessibleObject[], boolean)} to\n * change the visibility of the fields. This will fail under a security manager, unless the appropriate permissions are\n * set up correctly.\n * \u003c/p\u003e\n * \u003cp\u003e\n * Using reflection to access (private) fields circumvents any synchronization protection guarding access to these\n * fields. If a toString method cannot safely read a field, you should exclude it from the toString method, or use\n * synchronization consistent with the class\u0027 lock management around the invocation of the method. Take special care to\n * exclude non-thread-safe collection classes, because these classes may throw ConcurrentModificationException if\n * modified while the toString method is executing.\n * \u003c/p\u003e\n * \u003cp\u003e\n * A typical invocation for this method would look like:\n * \u003c/p\u003e\n * \u003cpre\u003e\n * public String toString() {\n *     return ReflectionToStringBuilder.toString(this);\n * }\n * \u003c/pre\u003e\n * \u003cp\u003e\n * You can also use the builder to debug 3rd party objects:\n * \u003c/p\u003e\n * \u003cpre\u003e\n * System.out.println(\u0026quot;An object: \u0026quot; + ReflectionToStringBuilder.toString(anObject));\n * \u003c/pre\u003e\n * \u003cp\u003e\n * A subclass can control field output by overriding the methods:\n * \u003cul\u003e\n * \u003cli\u003e{@link #accept(java.lang.reflect.Field)}\u003c/li\u003e\n * \u003cli\u003e{@link #getValue(java.lang.reflect.Field)}\u003c/li\u003e\n * \u003c/ul\u003e\n * \u003c/p\u003e\n * \u003cp\u003e\n * For example, this method does \u003ci\u003enot\u003c/i\u003e include the \u003ccode\u003epassword\u003c/code\u003e field in the returned \u003ccode\u003eString\u003c/code\u003e:\n * \u003c/p\u003e\n * \u003cpre\u003e\n * public String toString() {\n *     return (new ReflectionToStringBuilder(this) {\n *         protected boolean accept(Field f) {\n *             return super.accept(f) \u0026amp;\u0026amp; !f.getName().equals(\u0026quot;password\u0026quot;);\n *         }\n *     }).toString();\n * }\n * \u003c/pre\u003e\n * \u003cp\u003e\n * The exact format of the \u003ccode\u003etoString\u003c/code\u003e is determined by the {@link ToStringStyle} passed into the constructor.\n * \u003c/p\u003e\n * \n * @since 2.0\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString(java.lang.Object)",
+      "begin_line": 112,
+      "end_line": 114,
+      "comment": "\n     * \u003cp\u003e\n     * Builds a \u003ccode\u003etoString\u003c/code\u003e value using the default \u003ccode\u003eToStringStyle\u003c/code\u003e through reflection.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * It uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private fields. This means that it will\n     * throw a security exception if run under a security manager, if the permissions are not set up correctly. It is\n     * also not as efficient as testing explicitly.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * Transient members will be not be included, as they are likely derived. Static fields will not be included.\n     * Superclass fields will be appended.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to be output\n     * @return the String result\n     * @throws IllegalArgumentException\n     *             if the Object is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "toString(Object, ToStringStyle)",
+      "begin_line": 144,
+      "end_line": 146,
+      "comment": "\n     * \u003cp\u003e\n     * Builds a \u003ccode\u003etoString\u003c/code\u003e value through reflection.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * It uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private fields. This means that it will\n     * throw a security exception if run under a security manager, if the permissions are not set up correctly. It is\n     * also not as efficient as testing explicitly.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * Transient members will be not be included, as they are likely derived. Static fields will not be included.\n     * Superclass fields will be appended.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the style is \u003ccode\u003enull\u003c/code\u003e, the default \u003ccode\u003eToStringStyle\u003c/code\u003e is used.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to be output\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @return the String result\n     * @throws IllegalArgumentException\n     *             if the Object or \u003ccode\u003eToStringStyle\u003c/code\u003e is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "toString(Object, ToStringStyle, boolean)",
+      "begin_line": 182,
+      "end_line": 184,
+      "comment": "\n     * \u003cp\u003e\n     * Builds a \u003ccode\u003etoString\u003c/code\u003e value through reflection.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * It uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private fields. This means that it will\n     * throw a security exception if run under a security manager, if the permissions are not set up correctly. It is\n     * also not as efficient as testing explicitly.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the \u003ccode\u003eoutputTransients\u003c/code\u003e is \u003ccode\u003etrue\u003c/code\u003e, transient members will be output, otherwise they\n     * are ignored, as they are likely derived fields, and not part of the value of the Object.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * Static fields will not be included. Superclass fields will be appended.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the style is \u003ccode\u003enull\u003c/code\u003e, the default \u003ccode\u003eToStringStyle\u003c/code\u003e is used.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to be output\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @param outputTransients\n     *            whether to include transient fields\n     * @return the String result\n     * @throws IllegalArgumentException\n     *             if the Object is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "toString(Object, ToStringStyle, boolean, boolean)",
+      "begin_line": 228,
+      "end_line": 230,
+      "comment": "\n     * \u003cp\u003e\n     * Builds a \u003ccode\u003etoString\u003c/code\u003e value through reflection.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * It uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private fields. This means that it will\n     * throw a security exception if run under a security manager, if the permissions are not set up correctly. It is\n     * also not as efficient as testing explicitly.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the \u003ccode\u003eoutputTransients\u003c/code\u003e is \u003ccode\u003etrue\u003c/code\u003e, transient fields will be output, otherwise they\n     * are ignored, as they are likely derived fields, and not part of the value of the Object.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the \u003ccode\u003eoutputStatics\u003c/code\u003e is \u003ccode\u003etrue\u003c/code\u003e, static fields will be output, otherwise they are\n     * ignored.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * Static fields will not be included. Superclass fields will be appended.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the style is \u003ccode\u003enull\u003c/code\u003e, the default \u003ccode\u003eToStringStyle\u003c/code\u003e is used.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to be output\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @param outputTransients\n     *            whether to include transient fields\n     * @param outputStatics\n     *            whether to include transient fields\n     * @return the String result\n     * @throws IllegalArgumentException\n     *             if the Object is \u003ccode\u003enull\u003c/code\u003e\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "toString(T, ToStringStyle, boolean, boolean, Class)",
+      "begin_line": 279,
+      "end_line": 284,
+      "comment": "\n     * \u003cp\u003e\n     * Builds a \u003ccode\u003etoString\u003c/code\u003e value through reflection.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * It uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private fields. This means that it will\n     * throw a security exception if run under a security manager, if the permissions are not set up correctly. It is\n     * also not as efficient as testing explicitly.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the \u003ccode\u003eoutputTransients\u003c/code\u003e is \u003ccode\u003etrue\u003c/code\u003e, transient fields will be output, otherwise they\n     * are ignored, as they are likely derived fields, and not part of the value of the Object.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the \u003ccode\u003eoutputStatics\u003c/code\u003e is \u003ccode\u003etrue\u003c/code\u003e, static fields will be output, otherwise they are\n     * ignored.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * Superclass fields will be appended up to and including the specified superclass. A null superclass is treated as\n     * \u003ccode\u003ejava.lang.Object\u003c/code\u003e.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the style is \u003ccode\u003enull\u003c/code\u003e, the default \u003ccode\u003eToStringStyle\u003c/code\u003e is used.\n     * \u003c/p\u003e\n     *\n     * @param \u003cT\u003e\n     *            the type of the object\n     * @param object\n     *            the Object to be output\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @param outputTransients\n     *            whether to include transient fields\n     * @param outputStatics\n     *            whether to include static fields\n     * @param reflectUpToClass\n     *            the superclass to reflect up to (inclusive), may be \u003ccode\u003enull\u003c/code\u003e\n     * @return the String result\n     * @throws IllegalArgumentException\n     *             if the Object is \u003ccode\u003enull\u003c/code\u003e\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.toStringExclude(java.lang.Object, java.util.Collection\u003cjava.lang.String\u003e)",
+      "begin_line": 295,
+      "end_line": 297,
+      "comment": "\n     * Builds a String for a toString method excluding the given field names.\n     *\n     * @param object\n     *            The object to \"toString\".\n     * @param excludeFieldNames\n     *            The field names to exclude. Null excludes nothing.\n     * @return The toString value.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(java.util.Collection\u003cjava.lang.String\u003e)",
+      "begin_line": 308,
+      "end_line": 313,
+      "comment": "\n     * Converts the given Collection into an array of Strings. The returned array does not contain \u003ccode\u003enull\u003c/code\u003e\n     * entries. Note that {@link Arrays#sort(Object[])} will throw an {@link NullPointerException} if an array element\n     * is \u003ccode\u003enull\u003c/code\u003e.\n     *\n     * @param collection\n     *            The collection to convert\n     * @return A new array of Strings.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.toNoNullStringArray(java.lang.Object[])",
+      "begin_line": 324,
+      "end_line": 332,
+      "comment": "\n     * Returns a new array of Strings without null elements. Internal method used to normalize exclude lists\n     * (arrays and collections). Note that {@link Arrays#sort(Object[])} will throw an {@link NullPointerException}\n     * if an array element is \u003ccode\u003enull\u003c/code\u003e.\n     *\n     * @param array\n     *            The array to check\n     * @return The given array or a new array without null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.toStringExclude(java.lang.Object, java.lang.String...)",
+      "begin_line": 344,
+      "end_line": 346,
+      "comment": "\n     * Builds a String for a toString method excluding the given field names.\n     *\n     * @param object\n     *            The object to \"toString\".\n     * @param excludeFieldNames\n     *            The field names to exclude\n     * @return The toString value.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "appendStatics"
+      ],
+      "begin_line": 351,
+      "end_line": 351,
+      "comment": "\n     * Whether or not to append static fields.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "appendTransients"
+      ],
+      "begin_line": 356,
+      "end_line": 356,
+      "comment": "\n     * Whether or not to append transient fields.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "excludeFieldNames"
+      ],
+      "begin_line": 363,
+      "end_line": 363,
+      "comment": "\n     * Which field names to exclude from output. Intended for fields like \u003ccode\u003e\"password\"\u003c/code\u003e.\n     *\n     * @since 3.0 this is protected instead of private\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "upToClass"
+      ],
+      "begin_line": 368,
+      "end_line": 368,
+      "comment": "\n     * The last super class to stop appending fields for.\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.ReflectionToStringBuilder(java.lang.Object)",
+      "begin_line": 384,
+      "end_line": 386,
+      "comment": "\n     * \u003cp\u003e\n     * Constructor.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * This constructor outputs using the default style set with \u003ccode\u003esetDefaultStyle\u003c/code\u003e.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to build a \u003ccode\u003etoString\u003c/code\u003e for, must not be \u003ccode\u003enull\u003c/code\u003e\n     * @throws IllegalArgumentException\n     *             if the Object passed in is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "ReflectionToStringBuilder(Object, ToStringStyle)",
+      "begin_line": 404,
+      "end_line": 406,
+      "comment": "\n     * \u003cp\u003e\n     * Constructor.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the style is \u003ccode\u003enull\u003c/code\u003e, the default style is used.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to build a \u003ccode\u003etoString\u003c/code\u003e for, must not be \u003ccode\u003enull\u003c/code\u003e\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @throws IllegalArgumentException\n     *             if the Object passed in is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "ReflectionToStringBuilder(Object, ToStringStyle, StringBuffer)",
+      "begin_line": 430,
+      "end_line": 432,
+      "comment": "\n     * \u003cp\u003e\n     * Constructor.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the style is \u003ccode\u003enull\u003c/code\u003e, the default style is used.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If the buffer is \u003ccode\u003enull\u003c/code\u003e, a new one is created.\n     * \u003c/p\u003e\n     *\n     * @param object\n     *            the Object to build a \u003ccode\u003etoString\u003c/code\u003e for\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @param buffer\n     *            the \u003ccode\u003eStringBuffer\u003c/code\u003e to populate, may be \u003ccode\u003enull\u003c/code\u003e\n     * @throws IllegalArgumentException\n     *             if the Object passed in is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "ReflectionToStringBuilder(T, ToStringStyle, StringBuffer, Class, boolean, boolean)",
+      "begin_line": 453,
+      "end_line": 460,
+      "comment": "\n     * Constructor.\n     *\n     * @param \u003cT\u003e\n     *            the type of the object\n     * @param object\n     *            the Object to build a \u003ccode\u003etoString\u003c/code\u003e for\n     * @param style\n     *            the style of the \u003ccode\u003etoString\u003c/code\u003e to create, may be \u003ccode\u003enull\u003c/code\u003e\n     * @param buffer\n     *            the \u003ccode\u003eStringBuffer\u003c/code\u003e to populate, may be \u003ccode\u003enull\u003c/code\u003e\n     * @param reflectUpToClass\n     *            the superclass to reflect up to (inclusive), may be \u003ccode\u003enull\u003c/code\u003e\n     * @param outputTransients\n     *            whether to include transient fields\n     * @param outputStatics\n     *            whether to include static fields\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.accept(java.lang.reflect.Field)",
+      "begin_line": 474,
+      "end_line": 493,
+      "comment": "\n     * Returns whether or not to append the given \u003ccode\u003eField\u003c/code\u003e.\n     * \u003cul\u003e\n     * \u003cli\u003eTransient fields are appended only if {@link #isAppendTransients()} returns \u003ccode\u003etrue\u003c/code\u003e.\n     * \u003cli\u003eStatic fields are appended only if {@link #isAppendStatics()} returns \u003ccode\u003etrue\u003c/code\u003e.\n     * \u003cli\u003eInner class fields are not appended.\u003c/li\u003e\n     * \u003c/ul\u003e\n     *\n     * @param field\n     *            The Field to test.\n     * @return Whether or not to append the given \u003ccode\u003eField\u003c/code\u003e.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.appendFieldsIn(java.lang.Class\u003c?\u003e)",
+      "begin_line": 508,
+      "end_line": 532,
+      "comment": "\n     * \u003cp\u003e\n     * Appends the fields and values defined by the given object of the given Class.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * If a cycle is detected as an object is \u0026quot;toString()\u0027ed\u0026quot;, such an object is rendered as if\n     * \u003ccode\u003eObject.toString()\u003c/code\u003e had been called and not implemented by the object.\n     * \u003c/p\u003e\n     *\n     * @param clazz\n     *            The class of object parameter\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.getExcludeFieldNames()",
+      "begin_line": 537,
+      "end_line": 539,
+      "comment": "\n     * @return Returns the excludeFieldNames.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.getUpToClass()",
+      "begin_line": 548,
+      "end_line": 550,
+      "comment": "\n     * \u003cp\u003e\n     * Gets the last super class to stop appending fields for.\n     * \u003c/p\u003e\n     *\n     * @return The last super class to stop appending fields for.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.getValue(java.lang.reflect.Field)",
+      "begin_line": 568,
+      "end_line": 570,
+      "comment": "\n     * \u003cp\u003e\n     * Calls \u003ccode\u003ejava.lang.reflect.Field.get(Object)\u003c/code\u003e.\n     * \u003c/p\u003e\n     *\n     * @param field\n     *            The Field to query.\n     * @return The Object from the given Field.\n     *\n     * @throws IllegalArgumentException\n     *             see {@link java.lang.reflect.Field#get(Object)}\n     * @throws IllegalAccessException\n     *             see {@link java.lang.reflect.Field#get(Object)}\n     *\n     * @see java.lang.reflect.Field#get(Object)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.isAppendStatics()",
+      "begin_line": 580,
+      "end_line": 582,
+      "comment": "\n     * \u003cp\u003e\n     * Gets whether or not to append static fields.\n     * \u003c/p\u003e\n     *\n     * @return Whether or not to append static fields.\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.isAppendTransients()",
+      "begin_line": 591,
+      "end_line": 593,
+      "comment": "\n     * \u003cp\u003e\n     * Gets whether or not to append transient fields.\n     * \u003c/p\u003e\n     *\n     * @return Whether or not to append transient fields.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.reflectionAppendArray(java.lang.Object)",
+      "begin_line": 604,
+      "end_line": 607,
+      "comment": "\n     * \u003cp\u003e\n     * Append to the \u003ccode\u003etoString\u003c/code\u003e an \u003ccode\u003eObject\u003c/code\u003e array.\n     * \u003c/p\u003e\n     *\n     * @param array\n     *            the array to add to the \u003ccode\u003etoString\u003c/code\u003e\n     * @return this\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.setAppendStatics(boolean)",
+      "begin_line": 618,
+      "end_line": 620,
+      "comment": "\n     * \u003cp\u003e\n     * Sets whether or not to append static fields.\n     * \u003c/p\u003e\n     *\n     * @param appendStatics\n     *            Whether or not to append static fields.\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.setAppendTransients(boolean)",
+      "begin_line": 630,
+      "end_line": 632,
+      "comment": "\n     * \u003cp\u003e\n     * Sets whether or not to append transient fields.\n     * \u003c/p\u003e\n     *\n     * @param appendTransients\n     *            Whether or not to append transient fields.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.setExcludeFieldNames(java.lang.String...)",
+      "begin_line": 641,
+      "end_line": 650,
+      "comment": "\n     * Sets the field names to exclude.\n     *\n     * @param excludeFieldNamesParam\n     *            The excludeFieldNames to excluding from toString or \u003ccode\u003enull\u003c/code\u003e.\n     * @return \u003ccode\u003ethis\u003c/code\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.setUpToClass(java.lang.Class\u003c?\u003e)",
+      "begin_line": 660,
+      "end_line": 668,
+      "comment": "\n     * \u003cp\u003e\n     * Sets the last super class to stop appending fields for.\n     * \u003c/p\u003e\n     *\n     * @param clazz\n     *            The last super class to stop appending fields for.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ReflectionToStringBuilder.toString()",
+      "begin_line": 677,
+      "end_line": 689,
+      "comment": "\n     * \u003cp\u003e\n     * Gets the String built by this builder.\n     * \u003c/p\u003e\n     *\n     * @return the built string\n     "
+    }
+  ]
+}

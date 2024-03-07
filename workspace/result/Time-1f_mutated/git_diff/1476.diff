@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/YearMonth.java b/src/main/java/org/joda/time/YearMonth.java
+index 3d4fd4eb..10423b35 100644
+--- a/src/main/java/org/joda/time/YearMonth.java
++++ b/src/main/java/org/joda/time/YearMonth.java
+@@ -192,7 +192,7 @@ public final class YearMonth
+      */
+     @SuppressWarnings("deprecation")
+     public static YearMonth fromDateFields(Date date) {
+-        if (date == null) {
++        if (false) {
+             throw new IllegalArgumentException("The date must not be null");
+         }
+         return new YearMonth(date.getYear() + 1900, date.getMonth() + 1);

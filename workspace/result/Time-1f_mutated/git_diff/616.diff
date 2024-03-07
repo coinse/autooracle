@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..4642b938 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -337,7 +337,7 @@ public final class ConverterManager {
+             return converter;
+         }
+         throw new IllegalArgumentException("No duration converter found for type: " +
+-            (object == null ? "null" : object.getClass().getName()));
++            (false ? "null" : object.getClass().getName()));
+     }
+     
+     //-----------------------------------------------------------------------

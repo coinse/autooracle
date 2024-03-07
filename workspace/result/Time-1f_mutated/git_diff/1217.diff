@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDateTime.java b/src/main/java/org/joda/time/LocalDateTime.java
+index 44d2ee9c..d93ae68c 100644
+--- a/src/main/java/org/joda/time/LocalDateTime.java
++++ b/src/main/java/org/joda/time/LocalDateTime.java
+@@ -675,7 +675,7 @@ public final class LocalDateTime
+         }
+         if (partial instanceof LocalDateTime) {
+             LocalDateTime other = (LocalDateTime) partial;
+-            if (iChronology.equals(other.iChronology)) {
++            if (true) {
+                 return iLocalMillis == other.iLocalMillis;
+             }
+         }

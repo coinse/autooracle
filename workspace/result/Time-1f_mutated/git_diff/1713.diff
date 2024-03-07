@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Hours.java b/src/main/java/org/joda/time/Hours.java
+index fbca006e..4e005810 100644
+--- a/src/main/java/org/joda/time/Hours.java
++++ b/src/main/java/org/joda/time/Hours.java
+@@ -456,7 +456,7 @@ public final class Hours extends BaseSingleFieldPeriod {
+      */
+     public boolean isGreaterThan(Hours other) {
+         if (other == null) {
+-            return getValue() > 0;
++            return getValue() > 1;
+         }
+         return getValue() > other.getValue();
+     }

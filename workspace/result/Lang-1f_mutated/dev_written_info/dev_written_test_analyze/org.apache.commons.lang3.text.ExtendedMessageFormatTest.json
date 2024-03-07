@@ -1,0 +1,261 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/ExtendedMessageFormatTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ExtendedMessageFormatTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 47,
+      "end_line": 453,
+      "comment": "\n * Test case for {@link ExtendedMessageFormat}.\n *\n * @since 2.4\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "registry"
+      ],
+      "begin_line": 49,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.setUp()",
+      "begin_line": 51,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testExtendedFormats()",
+      "begin_line": 60,
+      "end_line": 70,
+      "comment": "\n     * Test extended formats.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testEscapedQuote_LANG_477()",
+      "begin_line": 75,
+      "end_line": 80,
+      "comment": "\n     * Test Bug LANG-477 - out of memory error with escaped quote\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testExtendedAndBuiltInFormats()",
+      "begin_line": 85,
+      "end_line": 124,
+      "comment": "\n     * Test extended and built in formats.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testBuiltInChoiceFormat()",
+      "begin_line": 184,
+      "end_line": 199,
+      "comment": "\n     * Test the built in choice format.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testBuiltInDateTimeFormat()",
+      "begin_line": 204,
+      "end_line": 223,
+      "comment": "\n     * Test the built in date/time formats\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testOverriddenBuiltinFormat()",
+      "begin_line": 225,
+      "end_line": 249,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testBuiltInNumberFormat()",
+      "begin_line": 254,
+      "end_line": 263,
+      "comment": "\n     * Test the built in number formats.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.testEqualsHashcode()",
+      "begin_line": 268,
+      "end_line": 306,
+      "comment": "\n     * Test equals() and hashcode.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.checkBuiltInFormat(java.lang.String, java.lang.Object[], java.util.Locale[])",
+      "begin_line": 314,
+      "end_line": 316,
+      "comment": "\n     * Test a built in format for the specified Locales, plus \u003ccode\u003enull\u003c/code\u003e Locale.\n     * @param pattern MessageFormat pattern\n     * @param args MessageFormat arguments\n     * @param locales to test\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.checkBuiltInFormat(java.lang.String, java.util.Map\u003cjava.lang.String, ?\u003e, java.lang.Object[], java.util.Locale[])",
+      "begin_line": 325,
+      "end_line": 330,
+      "comment": "\n     * Test a built in format for the specified Locales, plus \u003ccode\u003enull\u003c/code\u003e Locale.\n     * @param pattern MessageFormat pattern\n     * @param registry FormatFactory registry to use\n     * @param args MessageFormat arguments\n     * @param locales to test\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.checkBuiltInFormat(java.lang.String, java.util.Map\u003cjava.lang.String, ?\u003e, java.lang.Object[], java.util.Locale)",
+      "begin_line": 340,
+      "end_line": 357,
+      "comment": "\n     * Create an ExtendedMessageFormat for the specified pattern and locale and check the\n     * formated output matches the expected result for the parameters.\n     * @param pattern string\n     * @param registry map\n     * @param args Object[]\n     * @param locale Locale\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.assertPatternsEqual(java.lang.String, java.lang.String, java.lang.String)",
+      "begin_line": 360,
+      "end_line": 364,
+      "comment": "can\u0027t trust what MessageFormat does with toPattern() pre 1.4:"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.createMessageFormat(java.lang.String, java.util.Locale)",
+      "begin_line": 372,
+      "end_line": 379,
+      "comment": "\n     * Replace MessageFormat(String, Locale) constructor (not available until JDK 1.4).\n     * @param pattern string\n     * @param locale Locale\n     * @return MessageFormat\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "LowerCaseFormat",
+      "is_interface": false,
+      "parent_types": [
+        "java.text.Format"
+      ],
+      "begin_line": 386,
+      "end_line": 393,
+      "comment": "\n     * {@link Format} implementation which converts to lower case.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.LowerCaseFormat.format(java.lang.Object, java.lang.StringBuffer, java.text.FieldPosition)",
+      "begin_line": 387,
+      "end_line": 390,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.LowerCaseFormat.parseObject(java.lang.String, java.text.ParsePosition)",
+      "begin_line": 391,
+      "end_line": 392,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "UpperCaseFormat",
+      "is_interface": false,
+      "parent_types": [
+        "java.text.Format"
+      ],
+      "begin_line": 398,
+      "end_line": 405,
+      "comment": "\n     * {@link Format} implementation which converts to upper case.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.UpperCaseFormat.format(java.lang.Object, java.lang.StringBuffer, java.text.FieldPosition)",
+      "begin_line": 399,
+      "end_line": 402,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.UpperCaseFormat.parseObject(java.lang.String, java.text.ParsePosition)",
+      "begin_line": 403,
+      "end_line": 404,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "LowerCaseFormatFactory",
+      "is_interface": false,
+      "parent_types": [
+        "FormatFactory"
+      ],
+      "begin_line": 412,
+      "end_line": 418,
+      "comment": "\n     * {@link FormatFactory} implementation for lower case format.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "LOWER_INSTANCE"
+      ],
+      "begin_line": 413,
+      "end_line": 413,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.LowerCaseFormatFactory.getFormat(java.lang.String, java.lang.String, java.util.Locale)",
+      "begin_line": 414,
+      "end_line": 417,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "UpperCaseFormatFactory",
+      "is_interface": false,
+      "parent_types": [
+        "FormatFactory"
+      ],
+      "begin_line": 422,
+      "end_line": 428,
+      "comment": "\n     * {@link FormatFactory} implementation for upper case format.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "UPPER_INSTANCE"
+      ],
+      "begin_line": 423,
+      "end_line": 423,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.UpperCaseFormatFactory.getFormat(java.lang.String, java.lang.String, java.util.Locale)",
+      "begin_line": 424,
+      "end_line": 427,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "OverrideShortDateFormatFactory",
+      "is_interface": false,
+      "parent_types": [
+        "FormatFactory"
+      ],
+      "begin_line": 432,
+      "end_line": 440,
+      "comment": "\n     * {@link FormatFactory} implementation to override date format \"short\" to \"default\".\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.ExtendedMessageFormatTest.OverrideShortDateFormatFactory.getFormat(java.lang.String, java.lang.String, java.util.Locale)",
+      "begin_line": 433,
+      "end_line": 439,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "OtherExtendedMessageFormat",
+      "is_interface": false,
+      "parent_types": [
+        "ExtendedMessageFormat"
+      ],
+      "begin_line": 445,
+      "end_line": 451,
+      "comment": "\n     * Alternative ExtendedMessageFormat impl.\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "OtherExtendedMessageFormat(String, Locale, Map)",
+      "begin_line": 446,
+      "end_line": 449,
+      "comment": ""
+    }
+  ]
+}

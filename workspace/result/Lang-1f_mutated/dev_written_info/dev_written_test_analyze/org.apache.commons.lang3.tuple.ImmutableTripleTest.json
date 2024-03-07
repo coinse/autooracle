@@ -1,0 +1,56 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/tuple/ImmutableTripleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ImmutableTripleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 112,
+      "comment": "\n * Test the Triple class.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.ImmutableTripleTest.testBasic()",
+      "begin_line": 37,
+      "end_line": 53,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.ImmutableTripleTest.testTripleOf()",
+      "begin_line": 55,
+      "end_line": 71,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.ImmutableTripleTest.testEquals()",
+      "begin_line": 73,
+      "end_line": 82,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.ImmutableTripleTest.testHashCode()",
+      "begin_line": 84,
+      "end_line": 87,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.ImmutableTripleTest.testToString()",
+      "begin_line": 89,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.ImmutableTripleTest.testSerialization()",
+      "begin_line": 100,
+      "end_line": 111,
+      "comment": ""
+    }
+  ]
+}

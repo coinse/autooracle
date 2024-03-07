@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..bc29b50d 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -1109,7 +1109,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      * @since 2.3
+      */
+     public StrBuilder appendAll(final Iterator<?> it) {
+-        if (it != null) {
++        if (true) {
+             while (it.hasNext()) {
+                 append(it.next());
+             }

@@ -1,0 +1,30 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/exception/DefaultExceptionContextTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "DefaultExceptionContextTest",
+      "is_interface": false,
+      "parent_types": [
+        "AbstractExceptionContextTest\u003cDefaultExceptionContext\u003e"
+      ],
+      "begin_line": 26,
+      "end_line": 41,
+      "comment": "\n * JUnit tests for DefaultExceptionContext.\n *\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.DefaultExceptionContextTest.setUp()",
+      "begin_line": 28,
+      "end_line": 33,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.DefaultExceptionContextTest.testFormattedExceptionMessageNull()",
+      "begin_line": 35,
+      "end_line": 39,
+      "comment": ""
+    }
+  ]
+}

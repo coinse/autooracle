@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Range.java b/src/main/java/org/apache/commons/lang3/Range.java
+index 7a865589..8bc22eb7 100644
+--- a/src/main/java/org/apache/commons/lang3/Range.java
++++ b/src/main/java/org/apache/commons/lang3/Range.java
+@@ -294,7 +294,7 @@ public final class Range<T> implements Serializable {
+         } else if (isBefore(element)) {
+             return 1;
+         } else {
+-            return 0;
++            return 1;
+         }
+     }
+ 

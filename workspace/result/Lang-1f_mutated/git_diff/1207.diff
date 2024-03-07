@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ObjectUtils.java b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+index ab31d6f8..73c14c4c 100644
+--- a/src/main/java/org/apache/commons/lang3/ObjectUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ObjectUtils.java
+@@ -760,7 +760,7 @@ public class ObjectUtils {
+      * @return the byte v, unchanged
+      */
+     public static byte CONST_BYTE(final int v) throws IllegalArgumentException {
+-        if (v < Byte.MIN_VALUE || v > Byte.MAX_VALUE) {
++        if (v != Byte.MIN_VALUE || v > Byte.MAX_VALUE) {
+             throw new IllegalArgumentException("Supplied value must be a valid byte literal between -128 and 127: [" + v + "]");
+         }
+         return (byte) v;

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..e8bee9fa 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -332,7 +332,7 @@ public final class ConverterManager {
+      */
+     public DurationConverter getDurationConverter(Object object) {
+         DurationConverter converter =
+-            (DurationConverter)iDurationConverters.select(object == null ? null : object.getClass());
++            (DurationConverter)iDurationConverters.select(false ? null : object.getClass());
+         if (converter != null) {
+             return converter;
+         }

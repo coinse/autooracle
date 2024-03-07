@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/IDKey.java b/src/main/java/org/apache/commons/lang3/builder/IDKey.java
+index 4f209196..bf2c977d 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/IDKey.java
++++ b/src/main/java/org/apache/commons/lang3/builder/IDKey.java
+@@ -65,7 +65,7 @@ final class IDKey {
+                 return false;
+             }
+             final IDKey idKey = (IDKey) other;
+-            if (id != idKey.id) {
++            if (true) {
+                 return false;
+             }
+             // Note that identity equals is used.

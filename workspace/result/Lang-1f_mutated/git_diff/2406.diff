@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..efdec886 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -2656,7 +2656,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+             final char c1 = thisBuf[i];
+             final char c2 = otherBuf[i];
+             if (c1 != c2 && Character.toUpperCase(c1) != Character.toUpperCase(c2)) {
+-                return false;
++                return true;
+             }
+         }
+         return true;

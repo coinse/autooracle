@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..491a77e1 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -2789,7 +2789,7 @@ public class StringUtils {
+      * @since 2.1
+      */
+     public static String[] splitPreserveAllTokens(final String str) {
+-        return splitWorker(str, null, -1, true);
++        return splitWorker(str, null, -1, false);
+     }
+ 
+     /**

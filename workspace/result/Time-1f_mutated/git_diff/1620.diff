@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTime.java b/src/main/java/org/joda/time/DateTime.java
+index bb879a98..01495736 100644
+--- a/src/main/java/org/joda/time/DateTime.java
++++ b/src/main/java/org/joda/time/DateTime.java
+@@ -1003,7 +1003,7 @@ public final class DateTime
+      * @since 1.1
+      */
+     public DateTime plusMonths(int months) {
+-        if (months == 0) {
++        if (months <= 0) {
+             return this;
+         }
+         long instant = getChronology().months().add(getMillis(), months);

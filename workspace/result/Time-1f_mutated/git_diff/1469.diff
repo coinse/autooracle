@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/YearMonth.java b/src/main/java/org/joda/time/YearMonth.java
+index 3d4fd4eb..47d66fd3 100644
+--- a/src/main/java/org/joda/time/YearMonth.java
++++ b/src/main/java/org/joda/time/YearMonth.java
+@@ -171,7 +171,7 @@ public final class YearMonth
+      * @throws IllegalArgumentException if the year or month is invalid for the ISO chronology
+      */
+     public static YearMonth fromCalendarFields(Calendar calendar) {
+-        if (calendar == null) {
++        if (false) {
+             throw new IllegalArgumentException("The calendar must not be null");
+         }
+         return new YearMonth(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH) + 1);

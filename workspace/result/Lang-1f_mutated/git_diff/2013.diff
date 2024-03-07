@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..8e82e7b5 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -231,7 +231,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      * @return this, to enable chaining
+      */
+     public StrBuilder ensureCapacity(final int capacity) {
+-        if (capacity > buffer.length) {
++        if (capacity >= buffer.length) {
+             final char[] old = buffer;
+             buffer = new char[capacity * 2];
+             System.arraycopy(old, 0, buffer, 0, size);

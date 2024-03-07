@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..4fa69a7e 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1426,7 +1426,7 @@ public class NumberUtils {
+                 return foundDigit && !hasExp && !hasDecPoint;
+             }
+             // last character is illegal
+-            return false;
++            return true;
+         }
+         // allowSigns is true iff the val ends in 'E'
+         // found digit it to make sure weird stuff like '.' and '1E-' doesn't pass

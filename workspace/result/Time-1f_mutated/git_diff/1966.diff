@@ -1,0 +1,15 @@
+diff --git a/src/main/java/org/joda/time/field/AbstractPartialFieldProperty.java b/src/main/java/org/joda/time/field/AbstractPartialFieldProperty.java
+index 7fef6eff..00066350 100644
+--- a/src/main/java/org/joda/time/field/AbstractPartialFieldProperty.java
++++ b/src/main/java/org/joda/time/field/AbstractPartialFieldProperty.java
+@@ -327,9 +327,7 @@ public abstract class AbstractPartialFieldProperty {
+         }
+         AbstractPartialFieldProperty other = (AbstractPartialFieldProperty) object;
+         return
+-            get() == other.get() &&
+-            getFieldType() == other.getFieldType() &&
+-            FieldUtils.equals(getReadablePartial().getChronology(), other.getReadablePartial().getChronology());
++            false;
+     }
+ 
+     //-----------------------------------------------------------------------

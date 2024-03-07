@@ -1,0 +1,294 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/BooleanUtils.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "BooleanUtils",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 32,
+      "end_line": 1093,
+      "comment": "\n * \u003cp\u003eOperations on boolean primitives and Boolean objects.\u003c/p\u003e\n *\n * \u003cp\u003eThis class tries to handle {@code null} input gracefully.\n * An exception will not be thrown for a {@code null} input.\n * Each method documents its behaviour in more detail.\u003c/p\u003e\n *\n * \u003cp\u003e#ThreadSafe#\u003c/p\u003e\n * @since 2.0\n * @version $Id$\n "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.BooleanUtils.BooleanUtils()",
+      "begin_line": 41,
+      "end_line": 43,
+      "comment": "\n     * \u003cp\u003e{@code BooleanUtils} instances should NOT be constructed in standard programming.\n     * Instead, the class should be used as {@code BooleanUtils.negate(true);}.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis constructor is public to permit tools that require a JavaBean instance\n     * to operate.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.negate(java.lang.Boolean)",
+      "begin_line": 63,
+      "end_line": 68,
+      "comment": "\n     * \u003cp\u003eNegates the specified boolean.\u003c/p\u003e\n     *\n     * \u003cp\u003eIf {@code null} is passed in, {@code null} will be returned.\u003c/p\u003e\n     *\n     * \u003cp\u003eNOTE: This returns null and will throw a NullPointerException if autoboxed to a boolean. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.negate(Boolean.TRUE)  \u003d Boolean.FALSE;\n     *   BooleanUtils.negate(Boolean.FALSE) \u003d Boolean.TRUE;\n     *   BooleanUtils.negate(null)          \u003d null;\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to negate, may be null\n     * @return the negated Boolean, or {@code null} if {@code null} input\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.isTrue(java.lang.Boolean)",
+      "begin_line": 86,
+      "end_line": 88,
+      "comment": "\n     * \u003cp\u003eChecks if a {@code Boolean} value is {@code true},\n     * handling {@code null} by returning {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.isTrue(Boolean.TRUE)  \u003d true\n     *   BooleanUtils.isTrue(Boolean.FALSE) \u003d false\n     *   BooleanUtils.isTrue(null)          \u003d false\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to check, null returns {@code false}\n     * @return {@code true} only if the input is non-null and true\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.isNotTrue(java.lang.Boolean)",
+      "begin_line": 104,
+      "end_line": 106,
+      "comment": "\n     * \u003cp\u003eChecks if a {@code Boolean} value is \u003ci\u003enot\u003c/i\u003e {@code true},\n     * handling {@code null} by returning {@code true}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.isNotTrue(Boolean.TRUE)  \u003d false\n     *   BooleanUtils.isNotTrue(Boolean.FALSE) \u003d true\n     *   BooleanUtils.isNotTrue(null)          \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to check, null returns {@code true}\n     * @return {@code true} if the input is null or false\n     * @since 2.3\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.isFalse(java.lang.Boolean)",
+      "begin_line": 122,
+      "end_line": 124,
+      "comment": "\n     * \u003cp\u003eChecks if a {@code Boolean} value is {@code false},\n     * handling {@code null} by returning {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.isFalse(Boolean.TRUE)  \u003d false\n     *   BooleanUtils.isFalse(Boolean.FALSE) \u003d true\n     *   BooleanUtils.isFalse(null)          \u003d false\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to check, null returns {@code false}\n     * @return {@code true} only if the input is non-null and false\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.isNotFalse(java.lang.Boolean)",
+      "begin_line": 140,
+      "end_line": 142,
+      "comment": "\n     * \u003cp\u003eChecks if a {@code Boolean} value is \u003ci\u003enot\u003c/i\u003e {@code false},\n     * handling {@code null} by returning {@code true}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.isNotFalse(Boolean.TRUE)  \u003d true\n     *   BooleanUtils.isNotFalse(Boolean.FALSE) \u003d false\n     *   BooleanUtils.isNotFalse(null)          \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to check, null returns {@code true}\n     * @return {@code true} if the input is null or true\n     * @since 2.3\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBoolean(java.lang.Boolean)",
+      "begin_line": 158,
+      "end_line": 160,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a boolean handling {@code null}\n     * by returning {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(Boolean.TRUE)  \u003d true\n     *   BooleanUtils.toBoolean(Boolean.FALSE) \u003d false\n     *   BooleanUtils.toBoolean(null)          \u003d false\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to convert\n     * @return {@code true} or {@code false}, {@code null} returns {@code false}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanDefaultIfNull(java.lang.Boolean, boolean)",
+      "begin_line": 175,
+      "end_line": 180,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a boolean handling {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBooleanDefaultIfNull(Boolean.TRUE, false) \u003d true\n     *   BooleanUtils.toBooleanDefaultIfNull(Boolean.FALSE, true) \u003d false\n     *   BooleanUtils.toBooleanDefaultIfNull(null, true)          \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to convert\n     * @param valueIfNull  the boolean value to return if {@code null}\n     * @return {@code true} or {@code false}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBoolean(int)",
+      "begin_line": 198,
+      "end_line": 200,
+      "comment": "\n     * \u003cp\u003eConverts an int to a boolean using the convention that {@code zero}\n     * is {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(0) \u003d false\n     *   BooleanUtils.toBoolean(1) \u003d true\n     *   BooleanUtils.toBoolean(2) \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param value  the int to convert\n     * @return {@code true} if non-zero, {@code false}\n     *  if zero\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanObject(int)",
+      "begin_line": 216,
+      "end_line": 218,
+      "comment": "\n     * \u003cp\u003eConverts an int to a Boolean using the convention that {@code zero}\n     * is {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(0) \u003d Boolean.FALSE\n     *   BooleanUtils.toBoolean(1) \u003d Boolean.TRUE\n     *   BooleanUtils.toBoolean(2) \u003d Boolean.TRUE\n     * \u003c/pre\u003e\n     *\n     * @param value  the int to convert\n     * @return Boolean.TRUE if non-zero, Boolean.FALSE if zero,\n     *  {@code null} if {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanObject(java.lang.Integer)",
+      "begin_line": 238,
+      "end_line": 243,
+      "comment": "\n     * \u003cp\u003eConverts an Integer to a Boolean using the convention that {@code zero}\n     * is {@code false}.\u003c/p\u003e\n     *\n     * \u003cp\u003e{@code null} will be converted to {@code null}.\u003c/p\u003e\n     *\n     * \u003cp\u003eNOTE: This returns null and will throw a NullPointerException if autoboxed to a boolean. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(Integer.valueOf(0))    \u003d Boolean.FALSE\n     *   BooleanUtils.toBoolean(Integer.valueOf(1))    \u003d Boolean.TRUE\n     *   BooleanUtils.toBoolean(Integer.valueOf(null)) \u003d null\n     * \u003c/pre\u003e\n     *\n     * @param value  the Integer to convert\n     * @return Boolean.TRUE if non-zero, Boolean.FALSE if zero,\n     *  {@code null} if {@code null} input\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBoolean(int, int, int)",
+      "begin_line": 261,
+      "end_line": 270,
+      "comment": "\n     * \u003cp\u003eConverts an int to a boolean specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(0, 1, 0) \u003d false\n     *   BooleanUtils.toBoolean(1, 1, 0) \u003d true\n     *   BooleanUtils.toBoolean(2, 1, 2) \u003d false\n     *   BooleanUtils.toBoolean(2, 2, 0) \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param value  the Integer to convert\n     * @param trueValue  the value to match for {@code true}\n     * @param falseValue  the value to match for {@code false}\n     * @return {@code true} or {@code false}\n     * @throws IllegalArgumentException if no match\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBoolean(java.lang.Integer, java.lang.Integer, java.lang.Integer)",
+      "begin_line": 289,
+      "end_line": 304,
+      "comment": "\n     * \u003cp\u003eConverts an Integer to a boolean specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(Integer.valueOf(0), Integer.valueOf(1), Integer.valueOf(0)) \u003d false\n     *   BooleanUtils.toBoolean(Integer.valueOf(1), Integer.valueOf(1), Integer.valueOf(0)) \u003d true\n     *   BooleanUtils.toBoolean(Integer.valueOf(2), Integer.valueOf(1), Integer.valueOf(2)) \u003d false\n     *   BooleanUtils.toBoolean(Integer.valueOf(2), Integer.valueOf(2), Integer.valueOf(0)) \u003d true\n     *   BooleanUtils.toBoolean(null, null, Integer.valueOf(0))                     \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param value  the Integer to convert\n     * @param trueValue  the value to match for {@code true}, may be {@code null}\n     * @param falseValue  the value to match for {@code false}, may be {@code null}\n     * @return {@code true} or {@code false}\n     * @throws IllegalArgumentException if no match\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanObject(int, int, int, int)",
+      "begin_line": 324,
+      "end_line": 336,
+      "comment": "\n     * \u003cp\u003eConverts an int to a Boolean specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cp\u003eNOTE: This returns null and will throw a NullPointerException if autoboxed to a boolean. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBooleanObject(0, 0, 2, 3) \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(2, 1, 2, 3) \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(3, 1, 2, 3) \u003d null\n     * \u003c/pre\u003e\n     *\n     * @param value  the Integer to convert\n     * @param trueValue  the value to match for {@code true}\n     * @param falseValue  the value to match for {@code false}\n     * @param nullValue  the value to to match for {@code null}\n     * @return Boolean.TRUE, Boolean.FALSE, or {@code null}\n     * @throws IllegalArgumentException if no match\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanObject(java.lang.Integer, java.lang.Integer, java.lang.Integer, java.lang.Integer)",
+      "begin_line": 356,
+      "end_line": 376,
+      "comment": "\n     * \u003cp\u003eConverts an Integer to a Boolean specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cp\u003eNOTE: This returns null and will throw a NullPointerException if autoboxed to a boolean. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBooleanObject(Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(2), Integer.valueOf(3)) \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(Integer.valueOf(2), Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3)) \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(Integer.valueOf(3), Integer.valueOf(1), Integer.valueOf(2), Integer.valueOf(3)) \u003d null\n     * \u003c/pre\u003e\n     *\n     * @param value  the Integer to convert\n     * @param trueValue  the value to match for {@code true}, may be {@code null}\n     * @param falseValue  the value to match for {@code false}, may be {@code null}\n     * @param nullValue  the value to to match for {@code null}, may be {@code null}\n     * @return Boolean.TRUE, Boolean.FALSE, or {@code null}\n     * @throws IllegalArgumentException if no match\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toInteger(boolean)",
+      "begin_line": 392,
+      "end_line": 394,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to an int using the convention that\n     * {@code zero} is {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toInteger(true)  \u003d 1\n     *   BooleanUtils.toInteger(false) \u003d 0\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to convert\n     * @return one if {@code true}, zero if {@code false}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toIntegerObject(boolean)",
+      "begin_line": 408,
+      "end_line": 410,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to an Integer using the convention that\n     * {@code zero} is {@code false}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toIntegerObject(true)  \u003d Integer.valueOf(1)\n     *   BooleanUtils.toIntegerObject(false) \u003d Integer.valueOf(0)\n     * \u003c/pre\u003e\n     *\n     * @param bool  the boolean to convert\n     * @return one if {@code true}, zero if {@code false}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toIntegerObject(java.lang.Boolean)",
+      "begin_line": 426,
+      "end_line": 431,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a Integer using the convention that\n     * {@code zero} is {@code false}.\u003c/p\u003e\n     *\n     * \u003cp\u003e{@code null} will be converted to {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toIntegerObject(Boolean.TRUE)  \u003d Integer.valueOf(1)\n     *   BooleanUtils.toIntegerObject(Boolean.FALSE) \u003d Integer.valueOf(0)\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to convert\n     * @return one if Boolean.TRUE, zero if Boolean.FALSE, {@code null} if {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toInteger(boolean, int, int)",
+      "begin_line": 446,
+      "end_line": 448,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to an int specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toInteger(true, 1, 0)  \u003d 1\n     *   BooleanUtils.toInteger(false, 1, 0) \u003d 0\n     * \u003c/pre\u003e\n     *\n     * @param bool  the to convert\n     * @param trueValue  the value to return if {@code true}\n     * @param falseValue  the value to return if {@code false}\n     * @return the appropriate value\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toInteger(java.lang.Boolean, int, int, int)",
+      "begin_line": 465,
+      "end_line": 470,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to an int specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toInteger(Boolean.TRUE, 1, 0, 2)  \u003d 1\n     *   BooleanUtils.toInteger(Boolean.FALSE, 1, 0, 2) \u003d 0\n     *   BooleanUtils.toInteger(null, 1, 0, 2)          \u003d 2\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to convert\n     * @param trueValue  the value to return if {@code true}\n     * @param falseValue  the value to return if {@code false}\n     * @param nullValue  the value to return if {@code null}\n     * @return the appropriate value\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toIntegerObject(boolean, java.lang.Integer, java.lang.Integer)",
+      "begin_line": 485,
+      "end_line": 487,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to an Integer specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toIntegerObject(true, Integer.valueOf(1), Integer.valueOf(0))  \u003d Integer.valueOf(1)\n     *   BooleanUtils.toIntegerObject(false, Integer.valueOf(1), Integer.valueOf(0)) \u003d Integer.valueOf(0)\n     * \u003c/pre\u003e\n     *\n     * @param bool  the to convert\n     * @param trueValue  the value to return if {@code true}, may be {@code null}\n     * @param falseValue  the value to return if {@code false}, may be {@code null}\n     * @return the appropriate value\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toIntegerObject(java.lang.Boolean, java.lang.Integer, java.lang.Integer, java.lang.Integer)",
+      "begin_line": 504,
+      "end_line": 509,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to an Integer specifying the conversion values.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toIntegerObject(Boolean.TRUE, Integer.valueOf(1), Integer.valueOf(0), Integer.valueOf(2))  \u003d Integer.valueOf(1)\n     *   BooleanUtils.toIntegerObject(Boolean.FALSE, Integer.valueOf(1), Integer.valueOf(0), Integer.valueOf(2)) \u003d Integer.valueOf(0)\n     *   BooleanUtils.toIntegerObject(null, Integer.valueOf(1), Integer.valueOf(0), Integer.valueOf(2))          \u003d Integer.valueOf(2)\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to convert\n     * @param trueValue  the value to return if {@code true}, may be {@code null}\n     * @param falseValue  the value to return if {@code false}, may be {@code null}\n     * @param nullValue  the value to return if {@code null}, may be {@code null}\n     * @return the appropriate value\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanObject(java.lang.String)",
+      "begin_line": 545,
+      "end_line": 631,
+      "comment": "\n     * \u003cp\u003eConverts a String to a Boolean.\u003c/p\u003e\n     *\n     * \u003cp\u003e{@code \u0027true\u0027}, {@code \u0027on\u0027}, {@code \u0027y\u0027}, {@code \u0027t\u0027} or {@code \u0027yes\u0027}\n     * (case insensitive) will return {@code true}.\n     * {@code \u0027false\u0027}, {@code \u0027off\u0027}, {@code \u0027n\u0027}, {@code \u0027f\u0027} or {@code \u0027no\u0027}\n     * (case insensitive) will return {@code false}.\n     * Otherwise, {@code null} is returned.\u003c/p\u003e\n     *\n     * \u003cp\u003eNOTE: This returns null and will throw a NullPointerException if autoboxed to a boolean. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   // N.B. case is not significant\n     *   BooleanUtils.toBooleanObject(null)    \u003d null\n     *   BooleanUtils.toBooleanObject(\"true\")  \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(\"T\")     \u003d Boolean.TRUE // i.e. T[RUE]\n     *   BooleanUtils.toBooleanObject(\"false\") \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(\"f\")     \u003d Boolean.FALSE // i.e. f[alse]\n     *   BooleanUtils.toBooleanObject(\"No\")    \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(\"n\")     \u003d Boolean.FALSE // i.e. n[o]\n     *   BooleanUtils.toBooleanObject(\"on\")    \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(\"ON\")    \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(\"off\")   \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(\"oFf\")   \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(\"yes\")   \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(\"Y\")     \u003d Boolean.TRUE // i.e. Y[ES]\n     *   BooleanUtils.toBooleanObject(\"blue\")  \u003d null\n     * \u003c/pre\u003e\n     *\n     * @param str  the String to check; upper and lower case are treated as the same\n     * @return the Boolean value of the string, {@code null} if no match or {@code null} input\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBooleanObject(java.lang.String, java.lang.String, java.lang.String, java.lang.String)",
+      "begin_line": 652,
+      "end_line": 672,
+      "comment": "\n     * \u003cp\u003eConverts a String to a Boolean throwing an exception if no match.\u003c/p\u003e\n     *\n     * \u003cp\u003eNOTE: This returns null and will throw a NullPointerException if autoboxed to a boolean. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBooleanObject(\"true\", \"true\", \"false\", \"null\")  \u003d Boolean.TRUE\n     *   BooleanUtils.toBooleanObject(\"false\", \"true\", \"false\", \"null\") \u003d Boolean.FALSE\n     *   BooleanUtils.toBooleanObject(\"null\", \"true\", \"false\", \"null\")  \u003d null\n     * \u003c/pre\u003e\n     *\n     * @param str  the String to check\n     * @param trueString  the String to match for {@code true} (case sensitive), may be {@code null}\n     * @param falseString  the String to match for {@code false} (case sensitive), may be {@code null}\n     * @param nullString  the String to match for {@code null} (case sensitive), may be {@code null}\n     * @return the Boolean value of the string, {@code null} if either the String matches {@code nullString}\n     *  or if {@code null} input and {@code nullString} is {@code null}\n     * @throws IllegalArgumentException if the String doesn\u0027t match\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBoolean(java.lang.String)",
+      "begin_line": 705,
+      "end_line": 707,
+      "comment": "\n     * \u003cp\u003eConverts a String to a boolean (optimised for performance).\u003c/p\u003e\n     *\n     * \u003cp\u003e{@code \u0027true\u0027}, {@code \u0027on\u0027}, {@code \u0027y\u0027}, {@code \u0027t\u0027} or {@code \u0027yes\u0027}\n     * (case insensitive) will return {@code true}. Otherwise,\n     * {@code false} is returned.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis method performs 4 times faster (JDK1.4) than\n     * {@code Boolean.valueOf(String)}. However, this method accepts\n     * \u0027on\u0027 and \u0027yes\u0027, \u0027t\u0027, \u0027y\u0027 as true values.\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(null)    \u003d false\n     *   BooleanUtils.toBoolean(\"true\")  \u003d true\n     *   BooleanUtils.toBoolean(\"TRUE\")  \u003d true\n     *   BooleanUtils.toBoolean(\"tRUe\")  \u003d true\n     *   BooleanUtils.toBoolean(\"on\")    \u003d true\n     *   BooleanUtils.toBoolean(\"yes\")   \u003d true\n     *   BooleanUtils.toBoolean(\"false\") \u003d false\n     *   BooleanUtils.toBoolean(\"x gti\") \u003d false\n     *   BooleanUtils.toBooleanObject(\"y\") \u003d true\n     *   BooleanUtils.toBooleanObject(\"n\") \u003d false\n     *   BooleanUtils.toBooleanObject(\"t\") \u003d true\n     *   BooleanUtils.toBooleanObject(\"f\") \u003d false \n     * \u003c/pre\u003e\n     *\n     * @param str  the String to check\n     * @return the boolean value of the string, {@code false} if no match or the String is null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toBoolean(java.lang.String, java.lang.String, java.lang.String)",
+      "begin_line": 723,
+      "end_line": 737,
+      "comment": "\n     * \u003cp\u003eConverts a String to a Boolean throwing an exception if no match found.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toBoolean(\"true\", \"true\", \"false\")  \u003d true\n     *   BooleanUtils.toBoolean(\"false\", \"true\", \"false\") \u003d false\n     * \u003c/pre\u003e\n     *\n     * @param str  the String to check\n     * @param trueString  the String to match for {@code true} (case sensitive), may be {@code null}\n     * @param falseString  the String to match for {@code false} (case sensitive), may be {@code null}\n     * @return the boolean value of the string\n     * @throws IllegalArgumentException if the String doesn\u0027t match\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toStringTrueFalse(java.lang.Boolean)",
+      "begin_line": 754,
+      "end_line": 756,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a String returning {@code \u0027true\u0027},\n     * {@code \u0027false\u0027}, or {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toStringTrueFalse(Boolean.TRUE)  \u003d \"true\"\n     *   BooleanUtils.toStringTrueFalse(Boolean.FALSE) \u003d \"false\"\n     *   BooleanUtils.toStringTrueFalse(null)          \u003d null;\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @return {@code \u0027true\u0027}, {@code \u0027false\u0027}, or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toStringOnOff(java.lang.Boolean)",
+      "begin_line": 771,
+      "end_line": 773,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a String returning {@code \u0027on\u0027},\n     * {@code \u0027off\u0027}, or {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toStringOnOff(Boolean.TRUE)  \u003d \"on\"\n     *   BooleanUtils.toStringOnOff(Boolean.FALSE) \u003d \"off\"\n     *   BooleanUtils.toStringOnOff(null)          \u003d null;\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @return {@code \u0027on\u0027}, {@code \u0027off\u0027}, or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toStringYesNo(java.lang.Boolean)",
+      "begin_line": 788,
+      "end_line": 790,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a String returning {@code \u0027yes\u0027},\n     * {@code \u0027no\u0027}, or {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toStringYesNo(Boolean.TRUE)  \u003d \"yes\"\n     *   BooleanUtils.toStringYesNo(Boolean.FALSE) \u003d \"no\"\n     *   BooleanUtils.toStringYesNo(null)          \u003d null;\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @return {@code \u0027yes\u0027}, {@code \u0027no\u0027}, or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toString(java.lang.Boolean, java.lang.String, java.lang.String, java.lang.String)",
+      "begin_line": 807,
+      "end_line": 812,
+      "comment": "\n     * \u003cp\u003eConverts a Boolean to a String returning one of the input Strings.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toString(Boolean.TRUE, \"true\", \"false\", null)   \u003d \"true\"\n     *   BooleanUtils.toString(Boolean.FALSE, \"true\", \"false\", null)  \u003d \"false\"\n     *   BooleanUtils.toString(null, \"true\", \"false\", null)           \u003d null;\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @param trueString  the String to return if {@code true}, may be {@code null}\n     * @param falseString  the String to return if {@code false}, may be {@code null}\n     * @param nullString  the String to return if {@code null}, may be {@code null}\n     * @return one of the three input Strings\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toStringTrueFalse(boolean)",
+      "begin_line": 828,
+      "end_line": 830,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to a String returning {@code \u0027true\u0027}\n     * or {@code \u0027false\u0027}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toStringTrueFalse(true)   \u003d \"true\"\n     *   BooleanUtils.toStringTrueFalse(false)  \u003d \"false\"\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @return {@code \u0027true\u0027}, {@code \u0027false\u0027}, or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toStringOnOff(boolean)",
+      "begin_line": 844,
+      "end_line": 846,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to a String returning {@code \u0027on\u0027}\n     * or {@code \u0027off\u0027}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toStringOnOff(true)   \u003d \"on\"\n     *   BooleanUtils.toStringOnOff(false)  \u003d \"off\"\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @return {@code \u0027on\u0027}, {@code \u0027off\u0027}, or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toStringYesNo(boolean)",
+      "begin_line": 860,
+      "end_line": 862,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to a String returning {@code \u0027yes\u0027}\n     * or {@code \u0027no\u0027}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toStringYesNo(true)   \u003d \"yes\"\n     *   BooleanUtils.toStringYesNo(false)  \u003d \"no\"\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @return {@code \u0027yes\u0027}, {@code \u0027no\u0027}, or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.toString(boolean, java.lang.String, java.lang.String)",
+      "begin_line": 877,
+      "end_line": 879,
+      "comment": "\n     * \u003cp\u003eConverts a boolean to a String returning one of the input Strings.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.toString(true, \"true\", \"false\")   \u003d \"true\"\n     *   BooleanUtils.toString(false, \"true\", \"false\")  \u003d \"false\"\n     * \u003c/pre\u003e\n     *\n     * @param bool  the Boolean to check\n     * @param trueString  the String to return if {@code true}, may be {@code null}\n     * @param falseString  the String to return if {@code false}, may be {@code null}\n     * @return one of the two input Strings\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.and(boolean...)",
+      "begin_line": 900,
+      "end_line": 914,
+      "comment": "\n     * \u003cp\u003ePerforms an and on a set of booleans.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.and(true, true)         \u003d true\n     *   BooleanUtils.and(false, false)       \u003d false\n     *   BooleanUtils.and(true, false)        \u003d false\n     *   BooleanUtils.and(true, true, false)  \u003d false\n     *   BooleanUtils.and(true, true, true)   \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param array  an array of {@code boolean}s\n     * @return {@code true} if the and is successful.\n     * @throws IllegalArgumentException if {@code array} is {@code null}\n     * @throws IllegalArgumentException if {@code array} is empty.\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.and(java.lang.Boolean...)",
+      "begin_line": 935,
+      "end_line": 948,
+      "comment": "\n     * \u003cp\u003ePerforms an and on an array of Booleans.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.and(Boolean.TRUE, Boolean.TRUE)                 \u003d Boolean.TRUE\n     *   BooleanUtils.and(Boolean.FALSE, Boolean.FALSE)               \u003d Boolean.FALSE\n     *   BooleanUtils.and(Boolean.TRUE, Boolean.FALSE)                \u003d Boolean.FALSE\n     *   BooleanUtils.and(Boolean.TRUE, Boolean.TRUE, Boolean.TRUE)   \u003d Boolean.TRUE\n     *   BooleanUtils.and(Boolean.FALSE, Boolean.FALSE, Boolean.TRUE) \u003d Boolean.FALSE\n     *   BooleanUtils.and(Boolean.TRUE, Boolean.FALSE, Boolean.TRUE)  \u003d Boolean.FALSE\n     * \u003c/pre\u003e\n     *\n     * @param array  an array of {@code Boolean}s\n     * @return {@code true} if the and is successful.\n     * @throws IllegalArgumentException if {@code array} is {@code null}\n     * @throws IllegalArgumentException if {@code array} is empty.\n     * @throws IllegalArgumentException if {@code array} contains a {@code null}\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.or(boolean...)",
+      "begin_line": 968,
+      "end_line": 982,
+      "comment": "\n     * \u003cp\u003ePerforms an or on a set of booleans.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.or(true, true)          \u003d true\n     *   BooleanUtils.or(false, false)        \u003d false\n     *   BooleanUtils.or(true, false)         \u003d true\n     *   BooleanUtils.or(true, true, false)   \u003d true\n     *   BooleanUtils.or(true, true, true)    \u003d true\n     *   BooleanUtils.or(false, false, false) \u003d false\n     * \u003c/pre\u003e\n     *\n     * @param array  an array of {@code boolean}s\n     * @return {@code true} if the or is successful.\n     * @throws IllegalArgumentException if {@code array} is {@code null}\n     * @throws IllegalArgumentException if {@code array} is empty.\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.or(java.lang.Boolean...)",
+      "begin_line": 1004,
+      "end_line": 1017,
+      "comment": "\n     * \u003cp\u003ePerforms an or on an array of Booleans.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.or(Boolean.TRUE, Boolean.TRUE)                  \u003d Boolean.TRUE\n     *   BooleanUtils.or(Boolean.FALSE, Boolean.FALSE)                \u003d Boolean.FALSE\n     *   BooleanUtils.or(Boolean.TRUE, Boolean.FALSE)                 \u003d Boolean.TRUE\n     *   BooleanUtils.or(Boolean.TRUE, Boolean.TRUE, Boolean.TRUE)    \u003d Boolean.TRUE\n     *   BooleanUtils.or(Boolean.FALSE, Boolean.FALSE, Boolean.TRUE)  \u003d Boolean.TRUE\n     *   BooleanUtils.or(Boolean.TRUE, Boolean.FALSE, Boolean.TRUE)   \u003d Boolean.TRUE\n     *   BooleanUtils.or(Boolean.FALSE, Boolean.FALSE, Boolean.FALSE) \u003d Boolean.FALSE\n     * \u003c/pre\u003e\n     *\n     * @param array  an array of {@code Boolean}s\n     * @return {@code true} if the or is successful.\n     * @throws IllegalArgumentException if {@code array} is {@code null}\n     * @throws IllegalArgumentException if {@code array} is empty.\n     * @throws IllegalArgumentException if {@code array} contains a {@code null}\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.xor(boolean...)",
+      "begin_line": 1036,
+      "end_line": 1061,
+      "comment": "\n     * \u003cp\u003ePerforms an xor on a set of booleans.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.xor(true, true)   \u003d false\n     *   BooleanUtils.xor(false, false) \u003d false\n     *   BooleanUtils.xor(true, false)  \u003d true\n     *   BooleanUtils.xor(true, true)   \u003d false\n     *   BooleanUtils.xor(false, false) \u003d false\n     *   BooleanUtils.xor(true, false)  \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param array  an array of {@code boolean}s\n     * @return {@code true} if the xor is successful.\n     * @throws IllegalArgumentException if {@code array} is {@code null}\n     * @throws IllegalArgumentException if {@code array} is empty.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtils.xor(java.lang.Boolean...)",
+      "begin_line": 1078,
+      "end_line": 1091,
+      "comment": "\n     * \u003cp\u003ePerforms an xor on an array of Booleans.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     *   BooleanUtils.xor(new Boolean[] { Boolean.TRUE, Boolean.TRUE })   \u003d Boolean.FALSE\n     *   BooleanUtils.xor(new Boolean[] { Boolean.FALSE, Boolean.FALSE }) \u003d Boolean.FALSE\n     *   BooleanUtils.xor(new Boolean[] { Boolean.TRUE, Boolean.FALSE })  \u003d Boolean.TRUE\n     * \u003c/pre\u003e\n     *\n     * @param array  an array of {@code Boolean}s\n     * @return {@code true} if the xor is successful.\n     * @throws IllegalArgumentException if {@code array} is {@code null}\n     * @throws IllegalArgumentException if {@code array} is empty.\n     * @throws IllegalArgumentException if {@code array} contains a {@code null}\n     "
+    }
+  ]
+}

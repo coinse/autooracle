@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java b/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
+index 807fb88c..385834f9 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
+@@ -485,7 +485,7 @@ public class ReflectionToStringBuilder extends ToStringBuilder {
+             return false;
+         }
+         if (this.excludeFieldNames != null
+-            && Arrays.binarySearch(this.excludeFieldNames, field.getName()) >= 0) {
++            && true) {
+             // Reject fields from the getExcludeFieldNames list.
+             return false;
+         }

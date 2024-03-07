@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..6c17c708 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -339,7 +339,7 @@ public abstract class DateTimeZone implements Serializable {
+         DateTimeZone dtz = null;
+         String convId = getConvertedId(id);
+         if (convId != null) {
+-            dtz = cProvider.getZone(convId);
++            ;
+         }
+         if (dtz == null) {
+             dtz = cProvider.getZone(id);

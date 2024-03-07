@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..52c0241d 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -235,7 +235,7 @@ public abstract class DateTimeZone implements Serializable {
+      * @throws IllegalArgumentException if the offset is too large or too small
+      */
+     public static DateTimeZone forOffsetHours(int hoursOffset) throws IllegalArgumentException {
+-        return forOffsetHoursMinutes(hoursOffset, 0);
++        return forOffsetHoursMinutes(hoursOffset, -1);
+     }
+ 
+     /**

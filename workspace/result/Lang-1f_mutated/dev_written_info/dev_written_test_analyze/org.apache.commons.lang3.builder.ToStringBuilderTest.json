@@ -1,0 +1,1038 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/ToStringBuilderTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ToStringBuilderTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 36,
+      "end_line": 1084,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.builder.ToStringBuilder}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "base"
+      ],
+      "begin_line": 38,
+      "end_line": 38,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "baseStr"
+      ],
+      "begin_line": 39,
+      "end_line": 39,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.after()",
+      "begin_line": 44,
+      "end_line": 47,
+      "comment": "\n     * All tests should leave the registry empty. \n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testConstructorEx1()",
+      "begin_line": 51,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testConstructorEx2()",
+      "begin_line": 56,
+      "end_line": 60,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testConstructorEx3()",
+      "begin_line": 62,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testGetSetDefault()",
+      "begin_line": 69,
+      "end_line": 78,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testSetDefaultEx()",
+      "begin_line": 80,
+      "end_line": 83,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testBlank()",
+      "begin_line": 85,
+      "end_line": 88,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionInteger()",
+      "begin_line": 93,
+      "end_line": 96,
+      "comment": "\n     * Test wrapper for int primitive.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionCharacter()",
+      "begin_line": 101,
+      "end_line": 105,
+      "comment": "\n     * Test wrapper for char primitive.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionBoolean()",
+      "begin_line": 110,
+      "end_line": 117,
+      "comment": "\n     * Test wrapper for char boolean.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.toBaseString(java.lang.Object)",
+      "begin_line": 124,
+      "end_line": 126,
+      "comment": "\n     * Create the same toString() as Object.toString().\n     * @param o the object to create the string for.\n     * @return a String in the Object.toString format.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.assertReflectionArray(java.lang.String, java.lang.Object)",
+      "begin_line": 143,
+      "end_line": 152,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionObjectArray()",
+      "begin_line": 154,
+      "end_line": 161,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionLongArray()",
+      "begin_line": 163,
+      "end_line": 170,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionIntArray()",
+      "begin_line": 172,
+      "end_line": 179,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionShortArray()",
+      "begin_line": 181,
+      "end_line": 188,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionyteArray()",
+      "begin_line": 190,
+      "end_line": 197,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionCharArray()",
+      "begin_line": 199,
+      "end_line": 206,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionDoubleArray()",
+      "begin_line": 208,
+      "end_line": 215,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionFloatArray()",
+      "begin_line": 217,
+      "end_line": 224,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionBooleanArray()",
+      "begin_line": 226,
+      "end_line": 233,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionFloatArrayArray()",
+      "begin_line": 237,
+      "end_line": 244,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionLongArrayArray()",
+      "begin_line": 247,
+      "end_line": 254,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionIntArrayArray()",
+      "begin_line": 256,
+      "end_line": 263,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionhortArrayArray()",
+      "begin_line": 265,
+      "end_line": 272,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionByteArrayArray()",
+      "begin_line": 274,
+      "end_line": 281,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionCharArrayArray()",
+      "begin_line": 283,
+      "end_line": 290,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionDoubleArrayArray()",
+      "begin_line": 292,
+      "end_line": 299,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionBooleanArrayArray()",
+      "begin_line": 301,
+      "end_line": 309,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionHierarchyArrayList()",
+      "begin_line": 312,
+      "end_line": 313,
+      "comment": " Reflection hierarchy tests"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionHierarchy()",
+      "begin_line": 338,
+      "end_line": 361,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionTestFixtureA",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 363,
+      "end_line": 368,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "a"
+      ],
+      "begin_line": 364,
+      "end_line": 365,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "transientA"
+      ],
+      "begin_line": 366,
+      "end_line": 367,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionTestFixtureB",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.builder.ToStringBuilderTest.ReflectionTestFixtureA"
+      ],
+      "begin_line": 370,
+      "end_line": 375,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "b"
+      ],
+      "begin_line": 371,
+      "end_line": 372,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "transientB"
+      ],
+      "begin_line": 373,
+      "end_line": 374,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testInnerClassReflection()",
+      "begin_line": 377,
+      "end_line": 381,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "Outer",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 383,
+      "end_line": 395,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "inner"
+      ],
+      "begin_line": 384,
+      "end_line": 384,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "Inner",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 385,
+      "end_line": 390,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.Outer.Inner.toString()",
+      "begin_line": 386,
+      "end_line": 389,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.Outer.toString()",
+      "begin_line": 391,
+      "end_line": 394,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionArrayCycle()",
+      "begin_line": 402,
+      "end_line": 409,
+      "comment": "\n     * Test an array element pointing to its container.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionArrayCycleLevel2()",
+      "begin_line": 414,
+      "end_line": 426,
+      "comment": "\n     * Test an array element pointing to its container.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionArrayArrayCycle()",
+      "begin_line": 428,
+      "end_line": 448,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionTestCycleA",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 453,
+      "end_line": 460,
+      "comment": "\n     * A reflection test fixture.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "b"
+      ],
+      "begin_line": 454,
+      "end_line": 454,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.ReflectionTestCycleA.toString()",
+      "begin_line": 456,
+      "end_line": 459,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionTestCycleB",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 465,
+      "end_line": 472,
+      "comment": "\n     * A reflection test fixture.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "a"
+      ],
+      "begin_line": 466,
+      "end_line": 466,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.ReflectionTestCycleB.toString()",
+      "begin_line": 468,
+      "end_line": 471,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "SimpleReflectionTestFixture",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 477,
+      "end_line": 491,
+      "comment": "\n     * A reflection test fixture.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "o"
+      ],
+      "begin_line": 478,
+      "end_line": 478,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SimpleReflectionTestFixture.SimpleReflectionTestFixture()",
+      "begin_line": 480,
+      "end_line": 481,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SimpleReflectionTestFixture.SimpleReflectionTestFixture(java.lang.Object)",
+      "begin_line": 483,
+      "end_line": 485,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SimpleReflectionTestFixture.toString()",
+      "begin_line": 487,
+      "end_line": 490,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "SelfInstanceVarReflectionTestFixture",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 493,
+      "end_line": 505,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "typeIsSelf"
+      ],
+      "begin_line": 494,
+      "end_line": 495,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SelfInstanceVarReflectionTestFixture.SelfInstanceVarReflectionTestFixture()",
+      "begin_line": 497,
+      "end_line": 499,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SelfInstanceVarReflectionTestFixture.toString()",
+      "begin_line": 501,
+      "end_line": 504,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "SelfInstanceTwoVarsReflectionTestFixture",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 507,
+      "end_line": 524,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "typeIsSelf"
+      ],
+      "begin_line": 508,
+      "end_line": 509,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "otherType"
+      ],
+      "begin_line": 510,
+      "end_line": 510,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SelfInstanceTwoVarsReflectionTestFixture.SelfInstanceTwoVarsReflectionTestFixture()",
+      "begin_line": 512,
+      "end_line": 514,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SelfInstanceTwoVarsReflectionTestFixture.getOtherType()",
+      "begin_line": 516,
+      "end_line": 518,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.SelfInstanceTwoVarsReflectionTestFixture.toString()",
+      "begin_line": 520,
+      "end_line": 523,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testSimpleReflectionObjectCycle()",
+      "begin_line": 532,
+      "end_line": 537,
+      "comment": "\n     * Test an Object pointing to itself, the simplest test.\n     *\n     * @throws Exception\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testSelfInstanceVarReflectionObjectCycle()",
+      "begin_line": 544,
+      "end_line": 548,
+      "comment": "\n     * Test a class that defines an ivar pointing to itself.\n     *\n     * @throws Exception\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testSelfInstanceTwoVarsReflectionObjectCycle()",
+      "begin_line": 556,
+      "end_line": 560,
+      "comment": "\n     * Test a class that defines an ivar pointing to itself.  This test was\n     * created to show that handling cyclical object resulted in a missing endFieldSeparator call.\n     *\n     * @throws Exception\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionObjectCycle()",
+      "begin_line": 568,
+      "end_line": 577,
+      "comment": "\n     * Test Objects pointing to each other.\n     *\n     * @throws Exception\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionArrayAndObjectCycle()",
+      "begin_line": 585,
+      "end_line": 605,
+      "comment": "\n     * Test a nasty combination of arrays and Objects pointing to each other.\n     * objects[0] -\u003e SimpleReflectionTestFixture[ o -\u003e objects ]\n     *\n     * @throws Exception\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.validateNullToStringStyleRegistry()",
+      "begin_line": 607,
+      "end_line": 610,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testAppendSuper()",
+      "begin_line": 613,
+      "end_line": 621,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testAppendToString()",
+      "begin_line": 623,
+      "end_line": 631,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testObject()",
+      "begin_line": 633,
+      "end_line": 649,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testObjectBuild()",
+      "begin_line": 651,
+      "end_line": 667,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testLong()",
+      "begin_line": 669,
+      "end_line": 674,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testInt()",
+      "begin_line": 676,
+      "end_line": 682,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testShort()",
+      "begin_line": 684,
+      "end_line": 689,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testChar()",
+      "begin_line": 691,
+      "end_line": 696,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testByte()",
+      "begin_line": 698,
+      "end_line": 703,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testDouble()",
+      "begin_line": 705,
+      "end_line": 711,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testFloat()",
+      "begin_line": 713,
+      "end_line": 718,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testBoolean()",
+      "begin_line": 720,
+      "end_line": 725,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testObjectArray()",
+      "begin_line": 728,
+      "end_line": 736,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testLongArray()",
+      "begin_line": 738,
+      "end_line": 746,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testIntArray()",
+      "begin_line": 748,
+      "end_line": 756,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testShortArray()",
+      "begin_line": 758,
+      "end_line": 766,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testByteArray()",
+      "begin_line": 768,
+      "end_line": 776,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testCharArray()",
+      "begin_line": 778,
+      "end_line": 786,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testDoubleArray()",
+      "begin_line": 788,
+      "end_line": 796,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testFloatArray()",
+      "begin_line": 798,
+      "end_line": 806,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testBooleanArray()",
+      "begin_line": 808,
+      "end_line": 816,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testLongArrayArray()",
+      "begin_line": 818,
+      "end_line": 826,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testIntArrayArray()",
+      "begin_line": 828,
+      "end_line": 836,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testShortArrayArray()",
+      "begin_line": 838,
+      "end_line": 846,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testByteArrayArray()",
+      "begin_line": 848,
+      "end_line": 856,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testCharArrayArray()",
+      "begin_line": 858,
+      "end_line": 866,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testDoubleArrayArray()",
+      "begin_line": 868,
+      "end_line": 876,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testFloatArrayArray()",
+      "begin_line": 878,
+      "end_line": 886,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testBooleanArrayArray()",
+      "begin_line": 888,
+      "end_line": 896,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testObjectCycle()",
+      "begin_line": 898,
+      "end_line": 907,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ObjectCycle",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 909,
+      "end_line": 916,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "obj"
+      ],
+      "begin_line": 910,
+      "end_line": 910,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.ObjectCycle.toString()",
+      "begin_line": 912,
+      "end_line": 915,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testSimpleReflectionStatics()",
+      "begin_line": 918,
+      "end_line": 933,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionStatics()",
+      "begin_line": 938,
+      "end_line": 953,
+      "comment": "\n     * Tests ReflectionToStringBuilder.toString() for statics.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testInheritedReflectionStatics()",
+      "begin_line": 958,
+      "end_line": 973,
+      "comment": "\n     * Tests ReflectionToStringBuilder.toString() for statics.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "toStringWithStatics(T, ToStringStyle, Class)",
+      "begin_line": 1000,
+      "end_line": 1002,
+      "comment": "\n     * \u003cp\u003eThis method uses reflection to build a suitable\n     * \u003ccode\u003etoString\u003c/code\u003e value which includes static fields.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private\n     * fields. This means that it will throw a security exception if run\n     * under a security manager, if the permissions are not set up correctly.\n     * It is also not as efficient as testing explicitly. \u003c/p\u003e\n     *\n     * \u003cp\u003eTransient fields are not output.\u003c/p\u003e\n     *\n     * \u003cp\u003eSuperclass fields will be appended up to and including the specified superclass.\n     * A null superclass is treated as \u003ccode\u003ejava.lang.Object\u003c/code\u003e.\u003c/p\u003e\n     *\n     * \u003cp\u003eIf the style is \u003ccode\u003enull\u003c/code\u003e, the default\n     * \u003ccode\u003eToStringStyle\u003c/code\u003e is used.\u003c/p\u003e\n     *\n     * @param object  the Object to be output\n     * @param style  the style of the \u003ccode\u003etoString\u003c/code\u003e to create,\n     *  may be \u003ccode\u003enull\u003c/code\u003e\n     * @param reflectUpToClass  the superclass to reflect up to (inclusive),\n     *  may be \u003ccode\u003enull\u003c/code\u003e\n     * @return the String result\n     * @throws IllegalArgumentException if the Object is \u003ccode\u003enull\u003c/code\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.test_setUpToClass_valid()",
+      "begin_line": 1007,
+      "end_line": 1013,
+      "comment": "\n     * Tests ReflectionToStringBuilder setUpToClass().\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.test_setUpToClass_invalid()",
+      "begin_line": 1018,
+      "end_line": 1027,
+      "comment": "\n     * Tests ReflectionToStringBuilder setUpToClass().\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionStaticFieldsFixture",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 1032,
+      "end_line": 1041,
+      "comment": "\n     * Tests ReflectionToStringBuilder.toString() for statics.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticString"
+      ],
+      "begin_line": 1033,
+      "end_line": 1033,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticInt"
+      ],
+      "begin_line": 1034,
+      "end_line": 1034,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticTransientString"
+      ],
+      "begin_line": 1035,
+      "end_line": 1035,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticTransientInt"
+      ],
+      "begin_line": 1036,
+      "end_line": 1036,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "instanceString"
+      ],
+      "begin_line": 1037,
+      "end_line": 1037,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "instanceInt"
+      ],
+      "begin_line": 1038,
+      "end_line": 1038,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "transientString"
+      ],
+      "begin_line": 1039,
+      "end_line": 1039,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "transientInt"
+      ],
+      "begin_line": 1040,
+      "end_line": 1040,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "SimpleReflectionStaticFieldsFixture",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 1046,
+      "end_line": 1049,
+      "comment": "\n     * Test fixture for ReflectionToStringBuilder.toString() for statics.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticString"
+      ],
+      "begin_line": 1047,
+      "end_line": 1047,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticInt"
+      ],
+      "begin_line": 1048,
+      "end_line": 1048,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "InheritedReflectionStaticFieldsFixture",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.builder.ToStringBuilderTest.SimpleReflectionStaticFieldsFixture"
+      ],
+      "begin_line": 1054,
+      "end_line": 1057,
+      "comment": "\n     * Test fixture for ReflectionToStringBuilder.toString() for statics.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticString2"
+      ],
+      "begin_line": 1055,
+      "end_line": 1055,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "staticInt2"
+      ],
+      "begin_line": 1056,
+      "end_line": 1056,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testReflectionNull()",
+      "begin_line": 1059,
+      "end_line": 1062,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "MultiLineTestObject",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 1068,
+      "end_line": 1074,
+      "comment": "\n     * Points out failure to print anything from appendToString methods using MULTI_LINE_STYLE.\n     * See issue LANG-372.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "i"
+      ],
+      "begin_line": 1069,
+      "end_line": 1069,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.MultiLineTestObject.toString()",
+      "begin_line": 1070,
+      "end_line": 1073,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringBuilderTest.testAppendToStringUsingMultiLineStyle()",
+      "begin_line": 1076,
+      "end_line": 1082,
+      "comment": ""
+    }
+  ]
+}

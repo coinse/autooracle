@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/BasicChronology.java b/src/main/java/org/joda/time/chrono/BasicChronology.java
+index 63f394ae..ac6d5125 100644
+--- a/src/main/java/org/joda/time/chrono/BasicChronology.java
++++ b/src/main/java/org/joda/time/chrono/BasicChronology.java
+@@ -197,7 +197,7 @@ abstract class BasicChronology extends AssembledChronology {
+         if (this == obj) {
+             return true;
+         }
+-        if (obj != null && getClass() == obj.getClass()) {
++        if (obj != null) {
+             BasicChronology chrono = (BasicChronology) obj;
+             return getMinimumDaysInFirstWeek() == chrono.getMinimumDaysInFirstWeek() &&
+                     getZone().equals(chrono.getZone());

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+index 45dd74d4..0f520ee8 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+@@ -954,7 +954,7 @@ public class StrSubstitutor {
+      * @throws IllegalArgumentException if the suffix is null
+      */
+     public StrSubstitutor setVariableSuffix(final String suffix) {
+-       if (suffix == null) {
++       if (false) {
+             throw new IllegalArgumentException("Variable suffix must not be null!");
+         }
+         return setVariableSuffixMatcher(StrMatcher.stringMatcher(suffix));

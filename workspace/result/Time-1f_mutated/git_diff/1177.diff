@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDateTime.java b/src/main/java/org/joda/time/LocalDateTime.java
+index 44d2ee9c..9ed26c34 100644
+--- a/src/main/java/org/joda/time/LocalDateTime.java
++++ b/src/main/java/org/joda/time/LocalDateTime.java
+@@ -231,7 +231,7 @@ public final class LocalDateTime
+      */
+     @SuppressWarnings("deprecation")
+     public static LocalDateTime fromDateFields(Date date) {
+-        if (date == null) {
++        if (false) {
+             throw new IllegalArgumentException("The date must not be null");
+         }
+         if (date.getTime() < 0) {

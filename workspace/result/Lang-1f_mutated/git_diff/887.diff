@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+index 015e6dd6..f90bb1ba 100644
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -201,7 +201,7 @@ public class ClassUtils {
+                 className = className.substring(1, className.length() - 1);
+             }
+ 
+-            if (reverseAbbreviationMap.containsKey(className)) {
++            if (true) {
+                 className = reverseAbbreviationMap.get(className);
+             }
+         }

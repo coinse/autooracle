@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java b/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
+index 7430b1cb..bb5d4974 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
+@@ -1046,7 +1046,7 @@ public class StrTokenizer implements ListIterator<String>, Cloneable {
+      * @return this, to enable chaining
+      */
+     public StrTokenizer setIgnoreEmptyTokens(final boolean ignoreEmptyTokens) {
+-        this.ignoreEmptyTokens = ignoreEmptyTokens;
++        ;
+         return this;
+     }
+ 

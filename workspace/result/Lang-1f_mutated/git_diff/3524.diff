@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..63bdcb3d 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -527,7 +527,7 @@ public class ArrayUtils {
+      * @since 2.5
+      */
+     public static int[] nullToEmpty(final int[] array) {
+-        if (array == null || array.length == 0) {
++        if (array == null || array.length >= 0) {
+             return EMPTY_INT_ARRAY;
+         }
+         return array;

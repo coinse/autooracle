@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Interval.java b/src/main/java/org/joda/time/Interval.java
+index b2aa61b2..8ee90006 100644
+--- a/src/main/java/org/joda/time/Interval.java
++++ b/src/main/java/org/joda/time/Interval.java
+@@ -392,7 +392,7 @@ public final class Interval
+      * @throws IllegalArgumentException if the resulting interval has end before start
+      */
+     public Interval withEndMillis(long endInstant) {
+-        if (endInstant == getEndMillis()) {
++        if (endInstant <= getEndMillis()) {
+             return this;
+         }
+         return new Interval(getStartMillis(), endInstant, getChronology());

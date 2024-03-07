@@ -1,0 +1,272 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/builder/EqualsBuilder.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "EqualsBuilder",
+      "is_interface": false,
+      "parent_types": [
+        "Builder\u003cBoolean\u003e"
+      ],
+      "begin_line": 83,
+      "end_line": 945,
+      "comment": "\n * \u003cp\u003eAssists in implementing {@link Object#equals(Object)} methods.\u003c/p\u003e\n *\n * \u003cp\u003e This class provides methods to build a good equals method for any\n * class. It follows rules laid out in\n * \u003ca href\u003d\"http://www.oracle.com/technetwork/java/effectivejava-136174.html\"\u003eEffective Java\u003c/a\u003e\n * , by Joshua Bloch. In particular the rule for comparing \u003ccode\u003edoubles\u003c/code\u003e,\n * \u003ccode\u003efloats\u003c/code\u003e, and arrays can be tricky. Also, making sure that\n * \u003ccode\u003eequals()\u003c/code\u003e and \u003ccode\u003ehashCode()\u003c/code\u003e are consistent can be\n * difficult.\u003c/p\u003e\n *\n * \u003cp\u003eTwo Objects that compare as equals must generate the same hash code,\n * but two Objects with the same hash code do not have to be equal.\u003c/p\u003e\n *\n * \u003cp\u003eAll relevant fields should be included in the calculation of equals.\n * Derived fields may be ignored. In particular, any field used in\n * generating a hash code must be used in the equals method, and vice\n * versa.\u003c/p\u003e\n *\n * \u003cp\u003eTypical use for the code is as follows:\u003c/p\u003e\n * \u003cpre\u003e\n * public boolean equals(Object obj) {\n *   if (obj \u003d\u003d null) { return false; }\n *   if (obj \u003d\u003d this) { return true; }\n *   if (obj.getClass() !\u003d getClass()) {\n *     return false;\n *   }\n *   MyClass rhs \u003d (MyClass) obj;\n *   return new EqualsBuilder()\n *                 .appendSuper(super.equals(obj))\n *                 .append(field1, rhs.field1)\n *                 .append(field2, rhs.field2)\n *                 .append(field3, rhs.field3)\n *                 .isEquals();\n *  }\n * \u003c/pre\u003e\n *\n * \u003cp\u003e Alternatively, there is a method that uses reflection to determine\n * the fields to test. Because these fields are usually private, the method,\n * \u003ccode\u003ereflectionEquals\u003c/code\u003e, uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to\n * change the visibility of the fields. This will fail under a security\n * manager, unless the appropriate permissions are set up correctly. It is\n * also slower than testing explicitly.\u003c/p\u003e\n *\n * \u003cp\u003e A typical invocation for this method would look like:\u003c/p\u003e\n * \u003cpre\u003e\n * public boolean equals(Object obj) {\n *   return EqualsBuilder.reflectionEquals(this, obj);\n * }\n * \u003c/pre\u003e\n *\n * @since 1.0\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "REGISTRY"
+      ],
+      "begin_line": 92,
+      "end_line": 92,
+      "comment": "\n     * \u003cp\u003e\n     * A registry of objects used by reflection methods to detect cyclical object references and avoid infinite loops.\n     * \u003c/p\u003e\n     *\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.getRegistry()",
+      "begin_line": 120,
+      "end_line": 122,
+      "comment": "\n     * \u003cp\u003e\n     * Returns the registry of object pairs being traversed by the reflection\n     * methods in the current thread.\n     * \u003c/p\u003e\n     *\n     * @return Set the registry of objects being traversed\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.getRegisterPair(java.lang.Object, java.lang.Object)",
+      "begin_line": 134,
+      "end_line": 138,
+      "comment": "\n     * \u003cp\u003e\n     * Converters value pair into a register pair.\n     * \u003c/p\u003e\n     *\n     * @param lhs \u003ccode\u003ethis\u003c/code\u003e object\n     * @param rhs the other object\n     *\n     * @return the pair\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.isRegistered(java.lang.Object, java.lang.Object)",
+      "begin_line": 153,
+      "end_line": 160,
+      "comment": "\n     * \u003cp\u003e\n     * Returns \u003ccode\u003etrue\u003c/code\u003e if the registry contains the given object pair.\n     * Used by the reflection methods to avoid infinite loops.\n     * Objects might be swapped therefore a check is needed if the object pair\n     * is registered in given or swapped order.\n     * \u003c/p\u003e\n     *\n     * @param lhs \u003ccode\u003ethis\u003c/code\u003e object to lookup in registry\n     * @param rhs the other object to lookup on registry\n     * @return boolean \u003ccode\u003etrue\u003c/code\u003e if the registry contains the given object.\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.register(java.lang.Object, java.lang.Object)",
+      "begin_line": 171,
+      "end_line": 181,
+      "comment": "\n     * \u003cp\u003e\n     * Registers the given object pair.\n     * Used by the reflection methods to avoid infinite loops.\n     * \u003c/p\u003e\n     *\n     * @param lhs \u003ccode\u003ethis\u003c/code\u003e object to register\n     * @param rhs the other object to register\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.unregister(java.lang.Object, java.lang.Object)",
+      "begin_line": 195,
+      "end_line": 208,
+      "comment": "\n     * \u003cp\u003e\n     * Unregisters the given object pair.\n     * \u003c/p\u003e\n     *\n     * \u003cp\u003e\n     * Used by the reflection methods to avoid infinite loops.\n     *\n     * @param lhs \u003ccode\u003ethis\u003c/code\u003e object to unregister\n     * @param rhs the other object to unregister\n     * @since 3.0\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "isEquals"
+      ],
+      "begin_line": 214,
+      "end_line": 214,
+      "comment": "\n     * If the fields tested are equals.\n     * The default value is \u003ccode\u003etrue\u003c/code\u003e.\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.EqualsBuilder()",
+      "begin_line": 222,
+      "end_line": 224,
+      "comment": "\n     * \u003cp\u003eConstructor for EqualsBuilder.\u003c/p\u003e\n     *\n     * \u003cp\u003eStarts off assuming that equals is \u003ccode\u003etrue\u003c/code\u003e.\u003c/p\u003e\n     * @see Object#equals(Object)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals(java.lang.Object, java.lang.Object, java.util.Collection\u003cjava.lang.String\u003e)",
+      "begin_line": 247,
+      "end_line": 249,
+      "comment": "\n     * \u003cp\u003eThis method uses reflection to determine if the two \u003ccode\u003eObject\u003c/code\u003es\n     * are equal.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private\n     * fields. This means that it will throw a security exception if run under\n     * a security manager, if the permissions are not set up correctly. It is also\n     * not as efficient as testing explicitly.\u003c/p\u003e\n     *\n     * \u003cp\u003eTransient members will be not be tested, as they are likely derived\n     * fields, and not part of the value of the Object.\u003c/p\u003e\n     *\n     * \u003cp\u003eStatic fields will not be tested. Superclass fields will be included.\u003c/p\u003e\n     *\n     * @param lhs  \u003ccode\u003ethis\u003c/code\u003e object\n     * @param rhs  the other object\n     * @param excludeFields  Collection of String field names to exclude from testing\n     * @return \u003ccode\u003etrue\u003c/code\u003e if the two Objects have tested equals.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals(java.lang.Object, java.lang.Object, java.lang.String...)",
+      "begin_line": 270,
+      "end_line": 272,
+      "comment": "\n     * \u003cp\u003eThis method uses reflection to determine if the two \u003ccode\u003eObject\u003c/code\u003es\n     * are equal.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private\n     * fields. This means that it will throw a security exception if run under\n     * a security manager, if the permissions are not set up correctly. It is also\n     * not as efficient as testing explicitly.\u003c/p\u003e\n     *\n     * \u003cp\u003eTransient members will be not be tested, as they are likely derived\n     * fields, and not part of the value of the Object.\u003c/p\u003e\n     *\n     * \u003cp\u003eStatic fields will not be tested. Superclass fields will be included.\u003c/p\u003e\n     *\n     * @param lhs  \u003ccode\u003ethis\u003c/code\u003e object\n     * @param rhs  the other object\n     * @param excludeFields  array of field names to exclude from testing\n     * @return \u003ccode\u003etrue\u003c/code\u003e if the two Objects have tested equals.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals(java.lang.Object, java.lang.Object, boolean)",
+      "begin_line": 294,
+      "end_line": 296,
+      "comment": "\n     * \u003cp\u003eThis method uses reflection to determine if the two \u003ccode\u003eObject\u003c/code\u003es\n     * are equal.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private\n     * fields. This means that it will throw a security exception if run under\n     * a security manager, if the permissions are not set up correctly. It is also\n     * not as efficient as testing explicitly.\u003c/p\u003e\n     *\n     * \u003cp\u003eIf the TestTransients parameter is set to \u003ccode\u003etrue\u003c/code\u003e, transient\n     * members will be tested, otherwise they are ignored, as they are likely\n     * derived fields, and not part of the value of the \u003ccode\u003eObject\u003c/code\u003e.\u003c/p\u003e\n     *\n     * \u003cp\u003eStatic fields will not be tested. Superclass fields will be included.\u003c/p\u003e\n     *\n     * @param lhs  \u003ccode\u003ethis\u003c/code\u003e object\n     * @param rhs  the other object\n     * @param testTransients  whether to include transient fields\n     * @return \u003ccode\u003etrue\u003c/code\u003e if the two Objects have tested equals.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.reflectionEquals(java.lang.Object, java.lang.Object, boolean, java.lang.Class\u003c?\u003e, java.lang.String...)",
+      "begin_line": 324,
+      "end_line": 371,
+      "comment": "\n     * \u003cp\u003eThis method uses reflection to determine if the two \u003ccode\u003eObject\u003c/code\u003es\n     * are equal.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt uses \u003ccode\u003eAccessibleObject.setAccessible\u003c/code\u003e to gain access to private\n     * fields. This means that it will throw a security exception if run under\n     * a security manager, if the permissions are not set up correctly. It is also\n     * not as efficient as testing explicitly.\u003c/p\u003e\n     *\n     * \u003cp\u003eIf the testTransients parameter is set to \u003ccode\u003etrue\u003c/code\u003e, transient\n     * members will be tested, otherwise they are ignored, as they are likely\n     * derived fields, and not part of the value of the \u003ccode\u003eObject\u003c/code\u003e.\u003c/p\u003e\n     *\n     * \u003cp\u003eStatic fields will not be included. Superclass fields will be appended\n     * up to and including the specified superclass. A null superclass is treated\n     * as java.lang.Object.\u003c/p\u003e\n     *\n     * @param lhs  \u003ccode\u003ethis\u003c/code\u003e object\n     * @param rhs  the other object\n     * @param testTransients  whether to include transient fields\n     * @param reflectUpToClass  the superclass to reflect up to (inclusive),\n     *  may be \u003ccode\u003enull\u003c/code\u003e\n     * @param excludeFields  array of field names to exclude from testing\n     * @return \u003ccode\u003etrue\u003c/code\u003e if the two Objects have tested equals.\n     * @since 2.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.reflectionAppend(java.lang.Object, java.lang.Object, java.lang.Class\u003c?\u003e, org.apache.commons.lang3.builder.EqualsBuilder, boolean, java.lang.String[])",
+      "begin_line": 384,
+      "end_line": 418,
+      "comment": "\n     * \u003cp\u003eAppends the fields and values defined by the given object of the\n     * given Class.\u003c/p\u003e\n     *\n     * @param lhs  the left hand object\n     * @param rhs  the right hand object\n     * @param clazz  the class to append details of\n     * @param builder  the builder to append to\n     * @param useTransients  whether to test transient fields\n     * @param excludeFields  array of field names to exclude from testing\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.appendSuper(boolean)",
+      "begin_line": 429,
+      "end_line": 435,
+      "comment": "\n     * \u003cp\u003eAdds the result of \u003ccode\u003esuper.equals()\u003c/code\u003e to this builder.\u003c/p\u003e\n     *\n     * @param superEquals  the result of calling \u003ccode\u003esuper.equals()\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     * @since 2.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(java.lang.Object, java.lang.Object)",
+      "begin_line": 447,
+      "end_line": 489,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003eObject\u003c/code\u003es are equal using their\n     * \u003ccode\u003eequals\u003c/code\u003e method.\u003c/p\u003e\n     *\n     * @param lhs  the left hand object\n     * @param rhs  the right hand object\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(long, long)",
+      "begin_line": 502,
+      "end_line": 508,
+      "comment": "\n     * \u003cp\u003e\n     * Test if two \u003ccode\u003elong\u003c/code\u003e s are equal.\n     * \u003c/p\u003e\n     *\n     * @param lhs\n     *                  the left hand \u003ccode\u003elong\u003c/code\u003e\n     * @param rhs\n     *                  the right hand \u003ccode\u003elong\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(int, int)",
+      "begin_line": 517,
+      "end_line": 523,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003eint\u003c/code\u003es are equal.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eint\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eint\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(short, short)",
+      "begin_line": 532,
+      "end_line": 538,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003eshort\u003c/code\u003es are equal.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eshort\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eshort\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(char, char)",
+      "begin_line": 547,
+      "end_line": 553,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003echar\u003c/code\u003es are equal.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003echar\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003echar\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(byte, byte)",
+      "begin_line": 562,
+      "end_line": 568,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003ebyte\u003c/code\u003es are equal.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003ebyte\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003ebyte\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(double, double)",
+      "begin_line": 583,
+      "end_line": 588,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003edouble\u003c/code\u003es are equal by testing that the\n     * pattern of bits returned by \u003ccode\u003edoubleToLong\u003c/code\u003e are equal.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis handles NaNs, Infinities, and \u003ccode\u003e-0.0\u003c/code\u003e.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt is compatible with the hash code generated by\n     * \u003ccode\u003eHashCodeBuilder\u003c/code\u003e.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003edouble\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003edouble\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(float, float)",
+      "begin_line": 603,
+      "end_line": 608,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003efloat\u003c/code\u003es are equal byt testing that the\n     * pattern of bits returned by doubleToLong are equal.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis handles NaNs, Infinities, and \u003ccode\u003e-0.0\u003c/code\u003e.\u003c/p\u003e\n     *\n     * \u003cp\u003eIt is compatible with the hash code generated by\n     * \u003ccode\u003eHashCodeBuilder\u003c/code\u003e.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003efloat\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003efloat\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(boolean, boolean)",
+      "begin_line": 617,
+      "end_line": 623,
+      "comment": "\n     * \u003cp\u003eTest if two \u003ccode\u003ebooleans\u003c/code\u003es are equal.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eboolean\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eboolean\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n      "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(java.lang.Object[], java.lang.Object[])",
+      "begin_line": 635,
+      "end_line": 654,
+      "comment": "\n     * \u003cp\u003ePerforms a deep comparison of two \u003ccode\u003eObject\u003c/code\u003e arrays.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis also will be called for the top level of\n     * multi-dimensional, ragged, and multi-typed arrays.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eObject[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eObject[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(long[], long[])",
+      "begin_line": 666,
+      "end_line": 685,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003elong\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(long, long)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003elong[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003elong[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(int[], int[])",
+      "begin_line": 697,
+      "end_line": 716,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003eint\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(int, int)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eint[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eint[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(short[], short[])",
+      "begin_line": 728,
+      "end_line": 747,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003eshort\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(short, short)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eshort[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eshort[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(char[], char[])",
+      "begin_line": 759,
+      "end_line": 778,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003echar\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(char, char)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003echar[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003echar[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(byte[], byte[])",
+      "begin_line": 790,
+      "end_line": 809,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003ebyte\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(byte, byte)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003ebyte[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003ebyte[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(double[], double[])",
+      "begin_line": 821,
+      "end_line": 840,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003edouble\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(double, double)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003edouble[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003edouble[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(float[], float[])",
+      "begin_line": 852,
+      "end_line": 871,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003efloat\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(float, float)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003efloat[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003efloat[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.append(boolean[], boolean[])",
+      "begin_line": 883,
+      "end_line": 902,
+      "comment": "\n     * \u003cp\u003eDeep comparison of array of \u003ccode\u003eboolean\u003c/code\u003e. Length and all\n     * values are compared.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe method {@link #append(boolean, boolean)} is used.\u003c/p\u003e\n     *\n     * @param lhs  the left hand \u003ccode\u003eboolean[]\u003c/code\u003e\n     * @param rhs  the right hand \u003ccode\u003eboolean[]\u003c/code\u003e\n     * @return EqualsBuilder - used to chain calls.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.isEquals()",
+      "begin_line": 910,
+      "end_line": 912,
+      "comment": "\n     * \u003cp\u003eReturns \u003ccode\u003etrue\u003c/code\u003e if the fields that have been checked\n     * are all equal.\u003c/p\u003e\n     *\n     * @return boolean\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.build()",
+      "begin_line": 923,
+      "end_line": 926,
+      "comment": "\n     * \u003cp\u003eReturns \u003ccode\u003etrue\u003c/code\u003e if the fields that have been checked\n     * are all equal.\u003c/p\u003e\n     *\n     * @return \u003ccode\u003etrue\u003c/code\u003e if all of the fields that have been checked\n     *         are equal, \u003ccode\u003efalse\u003c/code\u003e otherwise.\n     *\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.setEquals(boolean)",
+      "begin_line": 934,
+      "end_line": 936,
+      "comment": "\n     * Sets the \u003ccode\u003eisEquals\u003c/code\u003e value.\n     *\n     * @param isEquals The value to set.\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.EqualsBuilder.reset()",
+      "begin_line": 942,
+      "end_line": 944,
+      "comment": "\n     * Reset the EqualsBuilder so you can use the same object again\n     * @since 2.5\n     "
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/time/DurationFormatUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "DurationFormatUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 31,
+      "end_line": 588,
+      "comment": "\n * TestCase for DurationFormatUtils.\n * \n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testConstructor()",
+      "begin_line": 34,
+      "end_line": 42,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatDurationWords()",
+      "begin_line": 45,
+      "end_line": 128,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatDurationPluralWords()",
+      "begin_line": 133,
+      "end_line": 174,
+      "comment": "\n     * Tests that \"1 \u003cunit\u003es\" gets converted to \"1 \u003cunit\u003e\" but that \"11 \u003cunit\u003es\" is left alone.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatDurationHMS()",
+      "begin_line": 176,
+      "end_line": 204,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatDurationISO()",
+      "begin_line": 206,
+      "end_line": 213,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatDuration()",
+      "begin_line": 215,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatPeriodISO()",
+      "begin_line": 253,
+      "end_line": 279,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testFormatPeriod()",
+      "begin_line": 281,
+      "end_line": 333,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testLexx()",
+      "begin_line": 335,
+      "end_line": 385,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testBugzilla38401()",
+      "begin_line": 389,
+      "end_line": 393,
+      "comment": " http://issues.apache.org/bugzilla/show_bug.cgi?id\u003d38401"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testJiraLang281()",
+      "begin_line": 396,
+      "end_line": 400,
+      "comment": " https://issues.apache.org/jira/browse/LANG-281"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testLANG815()",
+      "begin_line": 402,
+      "end_line": 412,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testLowDurations()",
+      "begin_line": 415,
+      "end_line": 428,
+      "comment": " Testing the under a day range in DurationFormatUtils.formatPeriod"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testEdgeDurations()",
+      "begin_line": 431,
+      "end_line": 519,
+      "comment": " Attempting to test edge cases in DurationFormatUtils.formatPeriod"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.testDurationsByBruteForce()",
+      "begin_line": 521,
+      "end_line": 531,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOUR_YEARS"
+      ],
+      "begin_line": 533,
+      "end_line": 533,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.bruteForce(int, int, int, java.lang.String, int)",
+      "begin_line": 545,
+      "end_line": 559,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.assertEqualDuration(java.lang.String, int[], int[], java.lang.String)",
+      "begin_line": 561,
+      "end_line": 563,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DurationFormatUtilsTest.assertEqualDuration(java.lang.String, java.lang.String, int[], int[], java.lang.String)",
+      "begin_line": 564,
+      "end_line": 579,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "assertArrayEquals(DurationFormatUtils.Token[], DurationFormatUtils.Token[])",
+      "begin_line": 581,
+      "end_line": 586,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..605d21d8 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -926,7 +926,7 @@ public abstract class DateTimeZone implements Serializable {
+             long prev = previousTransition(instantAdjusted);
+             if (prev < instantAdjusted) {
+                 int offsetPrev = getOffset(prev);
+-                int diff = offsetPrev - offsetLocal;
++                int diff = offsetPrev * offsetLocal;
+                 if (instantAdjusted - prev <= diff) {
+                     return offsetPrev;
+                 }

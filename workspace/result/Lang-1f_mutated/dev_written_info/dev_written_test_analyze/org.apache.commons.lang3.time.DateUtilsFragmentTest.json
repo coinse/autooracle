@@ -1,0 +1,457 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/time/DateUtilsFragmentTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "DateUtilsFragmentTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 25,
+      "end_line": 551,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "months"
+      ],
+      "begin_line": 27,
+      "end_line": 27,
+      "comment": " second final prime before 12"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "days"
+      ],
+      "begin_line": 28,
+      "end_line": 28,
+      "comment": " second final prime before 31 (and valid)"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "hours"
+      ],
+      "begin_line": 29,
+      "end_line": 29,
+      "comment": " second final prime before 24"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "minutes"
+      ],
+      "begin_line": 30,
+      "end_line": 30,
+      "comment": " second final prime before 60"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "seconds"
+      ],
+      "begin_line": 31,
+      "end_line": 31,
+      "comment": " third final prime before 60"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "millis"
+      ],
+      "begin_line": 32,
+      "end_line": 32,
+      "comment": " second final prime before 1000"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "aDate"
+      ],
+      "begin_line": 34,
+      "end_line": 34,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "aCalendar"
+      ],
+      "begin_line": 35,
+      "end_line": 35,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.setUp()",
+      "begin_line": 38,
+      "end_line": 44,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testNullDate()",
+      "begin_line": 46,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testNullCalendar()",
+      "begin_line": 74,
+      "end_line": 100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testInvalidFragmentWithDate()",
+      "begin_line": 102,
+      "end_line": 128,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testInvalidFragmentWithCalendar()",
+      "begin_line": 130,
+      "end_line": 156,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondFragmentInLargerUnitWithDate()",
+      "begin_line": 158,
+      "end_line": 165,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondFragmentInLargerUnitWithCalendar()",
+      "begin_line": 167,
+      "end_line": 174,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondFragmentInLargerUnitWithDate()",
+      "begin_line": 176,
+      "end_line": 182,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondFragmentInLargerUnitWithCalendar()",
+      "begin_line": 184,
+      "end_line": 190,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinuteFragmentInLargerUnitWithDate()",
+      "begin_line": 192,
+      "end_line": 197,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinuteFragmentInLargerUnitWithCalendar()",
+      "begin_line": 199,
+      "end_line": 204,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHourOfDayFragmentInLargerUnitWithDate()",
+      "begin_line": 206,
+      "end_line": 210,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHourOfDayFragmentInLargerUnitWithCalendar()",
+      "begin_line": 212,
+      "end_line": 216,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testDayOfYearFragmentInLargerUnitWithDate()",
+      "begin_line": 218,
+      "end_line": 221,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testDayOfYearFragmentInLargerUnitWithCalendar()",
+      "begin_line": 223,
+      "end_line": 226,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testDateFragmentInLargerUnitWithDate()",
+      "begin_line": 228,
+      "end_line": 231,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testDateFragmentInLargerUnitWithCalendar()",
+      "begin_line": 233,
+      "end_line": 236,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfSecondWithDate()",
+      "begin_line": 240,
+      "end_line": 244,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfSecondWithCalendar()",
+      "begin_line": 246,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfMinuteWithDate()",
+      "begin_line": 255,
+      "end_line": 259,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfMinuteWithCalender()",
+      "begin_line": 261,
+      "end_line": 265,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsofMinuteWithDate()",
+      "begin_line": 267,
+      "end_line": 271,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsofMinuteWithCalendar()",
+      "begin_line": 273,
+      "end_line": 278,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfHourWithDate()",
+      "begin_line": 282,
+      "end_line": 286,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfHourWithCalendar()",
+      "begin_line": 288,
+      "end_line": 292,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsofHourWithDate()",
+      "begin_line": 294,
+      "end_line": 302,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsofHourWithCalendar()",
+      "begin_line": 304,
+      "end_line": 312,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfHourWithDate()",
+      "begin_line": 314,
+      "end_line": 318,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfHourWithCalendar()",
+      "begin_line": 320,
+      "end_line": 324,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfDayWithDate()",
+      "begin_line": 327,
+      "end_line": 334,
+      "comment": "Calendar.DATE and Calendar.DAY_OF_YEAR as useful fragment"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfDayWithCalendar()",
+      "begin_line": 336,
+      "end_line": 343,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsOfDayWithDate()",
+      "begin_line": 345,
+      "end_line": 352,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsOfDayWithCalendar()",
+      "begin_line": 354,
+      "end_line": 361,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfDayWithDate()",
+      "begin_line": 363,
+      "end_line": 370,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfDayWithCalendar()",
+      "begin_line": 372,
+      "end_line": 379,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHoursOfDayWithDate()",
+      "begin_line": 381,
+      "end_line": 388,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHoursOfDayWithCalendar()",
+      "begin_line": 390,
+      "end_line": 397,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfMonthWithDate()",
+      "begin_line": 401,
+      "end_line": 407,
+      "comment": "Calendar.MONTH as useful fragment"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfMonthWithCalendar()",
+      "begin_line": 409,
+      "end_line": 415,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsOfMonthWithDate()",
+      "begin_line": 417,
+      "end_line": 426,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsOfMonthWithCalendar()",
+      "begin_line": 428,
+      "end_line": 437,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfMonthWithDate()",
+      "begin_line": 439,
+      "end_line": 446,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfMonthWithCalendar()",
+      "begin_line": 448,
+      "end_line": 454,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHoursOfMonthWithDate()",
+      "begin_line": 456,
+      "end_line": 462,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHoursOfMonthWithCalendar()",
+      "begin_line": 464,
+      "end_line": 470,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfYearWithDate()",
+      "begin_line": 473,
+      "end_line": 481,
+      "comment": "Calendar.YEAR as useful fragment"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMillisecondsOfYearWithCalendar()",
+      "begin_line": 483,
+      "end_line": 489,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsOfYearWithDate()",
+      "begin_line": 491,
+      "end_line": 502,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testSecondsOfYearWithCalendar()",
+      "begin_line": 504,
+      "end_line": 513,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfYearWithDate()",
+      "begin_line": 515,
+      "end_line": 524,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testMinutesOfYearWithCalendar()",
+      "begin_line": 526,
+      "end_line": 532,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHoursOfYearWithDate()",
+      "begin_line": 534,
+      "end_line": 542,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsFragmentTest.testHoursOfYearWithCalendar()",
+      "begin_line": 544,
+      "end_line": 550,
+      "comment": ""
+    }
+  ]
+}

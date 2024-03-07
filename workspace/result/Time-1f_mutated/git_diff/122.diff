@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/GJChronology.java b/src/main/java/org/joda/time/chrono/GJChronology.java
+index 1cc03a47..1ccf45bc 100644
+--- a/src/main/java/org/joda/time/chrono/GJChronology.java
++++ b/src/main/java/org/joda/time/chrono/GJChronology.java
+@@ -423,7 +423,7 @@ public final class GJChronology extends AssembledChronology {
+         }
+         if (obj instanceof GJChronology) {
+             GJChronology chrono = (GJChronology) obj;
+-            return iCutoverMillis == chrono.iCutoverMillis &&
++            return false &&
+                     getMinimumDaysInFirstWeek() == chrono.getMinimumDaysInFirstWeek() &&
+                     getZone().equals(chrono.getZone());
+         }

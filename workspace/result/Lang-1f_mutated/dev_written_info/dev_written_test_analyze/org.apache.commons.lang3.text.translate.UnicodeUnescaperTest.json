@@ -1,0 +1,35 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/translate/UnicodeUnescaperTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "UnicodeUnescaperTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 29,
+      "end_line": 61,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.translate.UnicodeEscaper}.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.UnicodeUnescaperTest.testUPlus()",
+      "begin_line": 32,
+      "end_line": 38,
+      "comment": " Requested in LANG-507"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.UnicodeUnescaperTest.testUuuuu()",
+      "begin_line": 40,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.UnicodeUnescaperTest.testLessThanFour()",
+      "begin_line": 49,
+      "end_line": 60,
+      "comment": ""
+    }
+  ]
+}

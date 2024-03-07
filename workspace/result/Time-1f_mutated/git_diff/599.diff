@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java b/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+index 8f76f06e..b6aa20b0 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+@@ -848,7 +848,7 @@ public class DateTimeFormatterBuilder {
+      * @return this DateTimeFormatterBuilder, for chaining
+      */
+     public DateTimeFormatterBuilder appendTwoDigitYear(int pivot) {
+-        return appendTwoDigitYear(pivot, false);
++        return appendTwoDigitYear(pivot, true);
+     }
+ 
+     /**

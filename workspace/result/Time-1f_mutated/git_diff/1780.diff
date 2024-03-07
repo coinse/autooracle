@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/BaseDateTimeField.java b/src/main/java/org/joda/time/field/BaseDateTimeField.java
+index c86bf1c3..c29f3d00 100644
+--- a/src/main/java/org/joda/time/field/BaseDateTimeField.java
++++ b/src/main/java/org/joda/time/field/BaseDateTimeField.java
+@@ -884,7 +884,7 @@ public abstract class BaseDateTimeField extends DateTimeField {
+      */
+     public long roundCeiling(long instant) {
+         long newInstant = roundFloor(instant);
+-        if (newInstant != instant) {
++        if (newInstant > instant) {
+             instant = add(newInstant, 1);
+         }
+         return instant;

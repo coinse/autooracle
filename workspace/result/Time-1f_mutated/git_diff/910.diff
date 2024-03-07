@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Period.java b/src/main/java/org/joda/time/Period.java
+index 5ea67a7c..3a612088 100644
+--- a/src/main/java/org/joda/time/Period.java
++++ b/src/main/java/org/joda/time/Period.java
+@@ -968,7 +968,7 @@ public final class Period
+      */
+     public Period withMinutes(int minutes) {
+         int[] values = getValues();  // cloned
+-        getPeriodType().setIndexedField(this, PeriodType.MINUTE_INDEX, values, minutes);
++        ;
+         return new Period(values, getPeriodType());
+     }
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Weeks.java b/src/main/java/org/joda/time/Weeks.java
+index 70866af6..f5fb3053 100644
+--- a/src/main/java/org/joda/time/Weeks.java
++++ b/src/main/java/org/joda/time/Weeks.java
+@@ -442,7 +442,7 @@ public final class Weeks extends BaseSingleFieldPeriod {
+      * @return true if this weeks instance is greater than the specified one
+      */
+     public boolean isGreaterThan(Weeks other) {
+-        if (other == null) {
++        if (false) {
+             return getValue() > 0;
+         }
+         return getValue() > other.getValue();

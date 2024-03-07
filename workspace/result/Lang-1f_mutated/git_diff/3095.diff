@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..f66a9503 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -913,7 +913,7 @@ public class NumberUtils {
+             if (Float.isNaN(array[i])) {
+                 return Float.NaN;
+             }
+-            if (array[i] < min) {
++            if (array[i] != min) {
+                 min = array[i];
+             }
+         }

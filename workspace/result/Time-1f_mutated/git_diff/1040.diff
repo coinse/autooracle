@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDate.java b/src/main/java/org/joda/time/LocalDate.java
+index 9806eb32..cb95d253 100644
+--- a/src/main/java/org/joda/time/LocalDate.java
++++ b/src/main/java/org/joda/time/LocalDate.java
+@@ -204,7 +204,7 @@ public final class LocalDate
+      * @throws IllegalArgumentException if the date is invalid for the ISO chronology
+      */
+     public static LocalDate fromCalendarFields(Calendar calendar) {
+-        if (calendar == null) {
++        if (false) {
+             throw new IllegalArgumentException("The calendar must not be null");
+         }
+         int era = calendar.get(Calendar.ERA);

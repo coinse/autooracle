@@ -1,0 +1,140 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/mutable/MutableDoubleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableDoubleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 206,
+      "comment": "\n * JUnit tests.\n * \n * @version $Id$\n * @see MutableDouble\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testConstructors()",
+      "begin_line": 31,
+      "end_line": 42,
+      "comment": " ----------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testConstructorNull()",
+      "begin_line": 44,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testGetSet()",
+      "begin_line": 49,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testSetNull()",
+      "begin_line": 68,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testNanInfinite()",
+      "begin_line": 74,
+      "end_line": 84,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testEquals()",
+      "begin_line": 86,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testHashCode()",
+      "begin_line": 104,
+      "end_line": 114,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testCompareTo()",
+      "begin_line": 116,
+      "end_line": 123,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testCompareToNull()",
+      "begin_line": 125,
+      "end_line": 129,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testPrimitiveValues()",
+      "begin_line": 131,
+      "end_line": 141,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testToDouble()",
+      "begin_line": 143,
+      "end_line": 147,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testIncrement()",
+      "begin_line": 149,
+      "end_line": 156,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testDecrement()",
+      "begin_line": 158,
+      "end_line": 165,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testAddValuePrimitive()",
+      "begin_line": 167,
+      "end_line": 173,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testAddValueObject()",
+      "begin_line": 175,
+      "end_line": 181,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testSubtractValuePrimitive()",
+      "begin_line": 183,
+      "end_line": 189,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testSubtractValueObject()",
+      "begin_line": 191,
+      "end_line": 197,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableDoubleTest.testToString()",
+      "begin_line": 199,
+      "end_line": 204,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,409 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/reflect/MethodUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MethodUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 43,
+      "end_line": 416,
+      "comment": "\n * Unit tests MethodUtils\n * @version $Id$\n "
+    },
+    {
+      "type": "class_interface",
+      "name": "PrivateInterface",
+      "is_interface": true,
+      "parent_types": [],
+      "begin_line": 45,
+      "end_line": 45,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestBeanWithInterfaces",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.MethodUtilsTest.PrivateInterface"
+      ],
+      "begin_line": 47,
+      "end_line": 51,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBeanWithInterfaces.foo()",
+      "begin_line": 48,
+      "end_line": 50,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestBean",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 53,
+      "end_line": 115,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.bar()",
+      "begin_line": 55,
+      "end_line": 57,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.bar(int)",
+      "begin_line": 59,
+      "end_line": 61,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.bar(java.lang.Integer)",
+      "begin_line": 63,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.bar(double)",
+      "begin_line": 67,
+      "end_line": 69,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.bar(java.lang.String)",
+      "begin_line": 71,
+      "end_line": 73,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.bar(java.lang.Object)",
+      "begin_line": 75,
+      "end_line": 77,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.oneParameterStatic(java.lang.String)",
+      "begin_line": 79,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.privateStuff()",
+      "begin_line": 83,
+      "end_line": 85,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.foo()",
+      "begin_line": 88,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.foo(int)",
+      "begin_line": 92,
+      "end_line": 94,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.foo(java.lang.Integer)",
+      "begin_line": 96,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.foo(double)",
+      "begin_line": 100,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.foo(java.lang.String)",
+      "begin_line": 104,
+      "end_line": 106,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.foo(java.lang.Object)",
+      "begin_line": 108,
+      "end_line": 110,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestBean.oneParameter(java.lang.String)",
+      "begin_line": 112,
+      "end_line": 114,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestMutable",
+      "is_interface": false,
+      "parent_types": [
+        "Mutable\u003cObject\u003e"
+      ],
+      "begin_line": 117,
+      "end_line": 126,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestMutable.getValue()",
+      "begin_line": 118,
+      "end_line": 121,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.TestMutable.setValue(java.lang.Object)",
+      "begin_line": 123,
+      "end_line": 125,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "testBean"
+      ],
+      "begin_line": 128,
+      "end_line": 128,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "classCache"
+      ],
+      "begin_line": 129,
+      "end_line": 129,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.setUp()",
+      "begin_line": 131,
+      "end_line": 135,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testConstructor()",
+      "begin_line": 137,
+      "end_line": 140,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testInvokeMethod()",
+      "begin_line": 142,
+      "end_line": 164,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testInvokeExactMethod()",
+      "begin_line": 166,
+      "end_line": 201,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testInvokeStaticMethod()",
+      "begin_line": 203,
+      "end_line": 231,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testInvokeExactStaticMethod()",
+      "begin_line": 233,
+      "end_line": 269,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetAccessibleInterfaceMethod()",
+      "begin_line": 271,
+      "end_line": 280,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetAccessibleMethodPrivateInterface()",
+      "begin_line": 282,
+      "end_line": 288,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetAccessibleInterfaceMethodFromDescription()",
+      "begin_line": 290,
+      "end_line": 299,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetAccessiblePublicMethod()",
+      "begin_line": 301,
+      "end_line": 306,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetAccessiblePublicMethodFromDescription()",
+      "begin_line": 308,
+      "end_line": 313,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetAccessibleMethodInaccessible()",
+      "begin_line": 315,
+      "end_line": 320,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testGetMatchingAccessibleMethod()",
+      "begin_line": 322,
+      "end_line": 372,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.testNullArgument()",
+      "begin_line": 374,
+      "end_line": 378,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.expectMatchingAccessibleMethodParameterTypes(java.lang.Class\u003c?\u003e, java.lang.String, java.lang.Class\u003c?\u003e[], java.lang.Class\u003c?\u003e[])",
+      "begin_line": 380,
+      "end_line": 387,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.toString(java.lang.Class\u003c?\u003e[])",
+      "begin_line": 389,
+      "end_line": 391,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.singletonArray(java.lang.Class\u003c?\u003e)",
+      "begin_line": 393,
+      "end_line": 400,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "InheritanceBean",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 402,
+      "end_line": 409,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.InheritanceBean.testOne(java.lang.Object)",
+      "begin_line": 403,
+      "end_line": 403,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.InheritanceBean.testOne(org.apache.commons.lang3.reflect.MethodUtilsTest.GrandParentObject)",
+      "begin_line": 404,
+      "end_line": 404,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.InheritanceBean.testOne(org.apache.commons.lang3.reflect.MethodUtilsTest.ParentObject)",
+      "begin_line": 405,
+      "end_line": 405,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.InheritanceBean.testTwo(java.lang.Object)",
+      "begin_line": 406,
+      "end_line": 406,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.InheritanceBean.testTwo(org.apache.commons.lang3.reflect.MethodUtilsTest.GrandParentObject)",
+      "begin_line": 407,
+      "end_line": 407,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.MethodUtilsTest.InheritanceBean.testTwo(org.apache.commons.lang3.reflect.MethodUtilsTest.ChildInterface)",
+      "begin_line": 408,
+      "end_line": 408,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ChildInterface",
+      "is_interface": true,
+      "parent_types": [],
+      "begin_line": 411,
+      "end_line": 411,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "GrandParentObject",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 412,
+      "end_line": 412,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ParentObject",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.MethodUtilsTest.GrandParentObject"
+      ],
+      "begin_line": 413,
+      "end_line": 413,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ChildObject",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.MethodUtilsTest.ParentObject",
+        "org.apache.commons.lang3.reflect.MethodUtilsTest.ChildInterface"
+      ],
+      "begin_line": 414,
+      "end_line": 414,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/BaseDateTimeField.java b/src/main/java/org/joda/time/field/BaseDateTimeField.java
+index c86bf1c3..c2fc8e4d 100644
+--- a/src/main/java/org/joda/time/field/BaseDateTimeField.java
++++ b/src/main/java/org/joda/time/field/BaseDateTimeField.java
+@@ -829,7 +829,7 @@ public abstract class BaseDateTimeField extends DateTimeField {
+         int max = getMaximumValue();
+         if (max >= 0) {
+             if (max < 10) {
+-                return 1;
++                return 0;
+             } else if (max < 100) {
+                 return 2;
+             } else if (max < 1000) {

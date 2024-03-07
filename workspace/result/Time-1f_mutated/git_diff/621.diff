@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..4d3e9fbd 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -507,7 +507,7 @@ public final class ConverterManager {
+     public IntervalConverter getIntervalConverter(Object object) {
+         IntervalConverter converter =
+             (IntervalConverter)iIntervalConverters.select(object == null ? null : object.getClass());
+-        if (converter != null) {
++        if (true) {
+             return converter;
+         }
+         throw new IllegalArgumentException("No interval converter found for type: " +

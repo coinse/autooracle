@@ -1,0 +1,146 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/BitFieldTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "BitFieldTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 30,
+      "end_line": 261,
+      "comment": "\n * Class to test BitField functionality\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "bf_multi"
+      ],
+      "begin_line": 32,
+      "end_line": 32,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "bf_single"
+      ],
+      "begin_line": 33,
+      "end_line": 33,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "bf_zero"
+      ],
+      "begin_line": 34,
+      "end_line": 34,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testGetValue()",
+      "begin_line": 39,
+      "end_line": 47,
+      "comment": "\n     * test the getValue() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testGetShortValue()",
+      "begin_line": 52,
+      "end_line": 60,
+      "comment": "\n     * test the getShortValue() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testGetRawValue()",
+      "begin_line": 65,
+      "end_line": 73,
+      "comment": "\n     * test the getRawValue() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testGetShortRawValue()",
+      "begin_line": 78,
+      "end_line": 86,
+      "comment": "\n     * test the getShortRawValue() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testIsSet()",
+      "begin_line": 91,
+      "end_line": 103,
+      "comment": "\n     * test the isSet() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testIsAllSet()",
+      "begin_line": 108,
+      "end_line": 117,
+      "comment": "\n     * test the isAllSet() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testSetValue()",
+      "begin_line": 122,
+      "end_line": 142,
+      "comment": "\n     * test the setValue() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testSetShortValue()",
+      "begin_line": 147,
+      "end_line": 167,
+      "comment": "\n     * test the setShortValue() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testByte()",
+      "begin_line": 169,
+      "end_line": 193,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testClear()",
+      "begin_line": 198,
+      "end_line": 203,
+      "comment": "\n     * test the clear() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testClearShort()",
+      "begin_line": 208,
+      "end_line": 213,
+      "comment": "\n     * test the clearShort() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testSet()",
+      "begin_line": 218,
+      "end_line": 223,
+      "comment": "\n     * test the set() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testSetShort()",
+      "begin_line": 228,
+      "end_line": 233,
+      "comment": "\n     * test the setShort() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testSetBoolean()",
+      "begin_line": 238,
+      "end_line": 246,
+      "comment": "\n     * test the setBoolean() method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BitFieldTest.testSetShortBoolean()",
+      "begin_line": 251,
+      "end_line": 259,
+      "comment": "\n     * test the setShortBoolean() method\n     "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeComparator.java b/src/main/java/org/joda/time/DateTimeComparator.java
+index 646918f5..08aa035a 100644
+--- a/src/main/java/org/joda/time/DateTimeComparator.java
++++ b/src/main/java/org/joda/time/DateTimeComparator.java
+@@ -236,7 +236,7 @@ public class DateTimeComparator implements Comparator<Object>, Serializable {
+         if (object instanceof DateTimeComparator) {
+             DateTimeComparator other = (DateTimeComparator) object;
+             return (iLowerLimit == other.getLowerLimit() ||
+-                    (iLowerLimit != null && iLowerLimit.equals(other.getLowerLimit()))) &&
++                    (iLowerLimit != null)) &&
+                    (iUpperLimit == other.getUpperLimit() ||
+                     (iUpperLimit != null && iUpperLimit.equals(other.getUpperLimit())));
+         }

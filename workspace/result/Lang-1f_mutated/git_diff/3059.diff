@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..b1db5e9a 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -854,7 +854,7 @@ public class NumberUtils {
+      */
+     public static byte min(final byte[] array) {
+         // Validates input
+-        validateArray(array);
++        ;
+     
+         // Finds and returns min
+         byte min = array[0];

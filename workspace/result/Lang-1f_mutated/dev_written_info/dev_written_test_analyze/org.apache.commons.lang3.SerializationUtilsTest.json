@@ -1,0 +1,266 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/SerializationUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "SerializationUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 48,
+      "end_line": 419,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.SerializationUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CLASS_NOT_FOUND_MESSAGE"
+      ],
+      "begin_line": 50,
+      "end_line": 50,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SERIALIZE_IO_EXCEPTION_MESSAGE"
+      ],
+      "begin_line": 51,
+      "end_line": 51,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "iString"
+      ],
+      "begin_line": 53,
+      "end_line": 53,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "iInteger"
+      ],
+      "begin_line": 54,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "iMap"
+      ],
+      "begin_line": 55,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.setUp()",
+      "begin_line": 57,
+      "end_line": 64,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testConstructor()",
+      "begin_line": 68,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testException()",
+      "begin_line": 78,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeStream()",
+      "begin_line": 102,
+      "end_line": 119,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeStreamUnserializable()",
+      "begin_line": 121,
+      "end_line": 131,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeStreamNullObj()",
+      "begin_line": 133,
+      "end_line": 150,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeStreamObjNull()",
+      "begin_line": 152,
+      "end_line": 160,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeStreamNullNull()",
+      "begin_line": 162,
+      "end_line": 170,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeIOException()",
+      "begin_line": 172,
+      "end_line": 188,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.Anonymous-96ecaa7d-2608-41f3-a25c-7a204f0126f2.write(int)",
+      "begin_line": 177,
+      "end_line": 180,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeStream()",
+      "begin_line": 192,
+      "end_line": 211,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeClassCastException()",
+      "begin_line": 213,
+      "end_line": 221,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeStreamOfNull()",
+      "begin_line": 223,
+      "end_line": 234,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeStreamNull()",
+      "begin_line": 236,
+      "end_line": 244,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeStreamBadStream()",
+      "begin_line": 246,
+      "end_line": 254,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeStreamClassNotFound()",
+      "begin_line": 256,
+      "end_line": 272,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeBytes()",
+      "begin_line": 276,
+      "end_line": 291,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeBytesUnserializable()",
+      "begin_line": 293,
+      "end_line": 302,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testSerializeBytesNull()",
+      "begin_line": 304,
+      "end_line": 319,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeBytes()",
+      "begin_line": 323,
+      "end_line": 341,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeBytesOfNull()",
+      "begin_line": 343,
+      "end_line": 353,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeBytesNull()",
+      "begin_line": 355,
+      "end_line": 363,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testDeserializeBytesBadStream()",
+      "begin_line": 365,
+      "end_line": 373,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testClone()",
+      "begin_line": 377,
+      "end_line": 389,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testCloneNull()",
+      "begin_line": 391,
+      "end_line": 395,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testCloneUnserializable()",
+      "begin_line": 397,
+      "end_line": 406,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.SerializationUtilsTest.testPrimitiveTypeClassSerialization()",
+      "begin_line": 408,
+      "end_line": 417,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ClassNotFoundSerialization",
+      "is_interface": false,
+      "parent_types": [
+        "java.io.Serializable"
+      ],
+      "begin_line": 421,
+      "end_line": 428,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ClassNotFoundSerialization.readObject(java.io.ObjectInputStream)",
+      "begin_line": 425,
+      "end_line": 427,
+      "comment": ""
+    }
+  ]
+}

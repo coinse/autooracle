@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Seconds.java b/src/main/java/org/joda/time/Seconds.java
+index f75ee922..80a560ee 100644
+--- a/src/main/java/org/joda/time/Seconds.java
++++ b/src/main/java/org/joda/time/Seconds.java
+@@ -411,7 +411,7 @@ public final class Seconds extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the divisor is zero
+      */
+     public Seconds dividedBy(int divisor) {
+-        if (divisor == 1) {
++        if (divisor == -1) {
+             return this;
+         }
+         return Seconds.seconds(getValue() / divisor);

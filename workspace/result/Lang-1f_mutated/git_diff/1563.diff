@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BitField.java b/src/main/java/org/apache/commons/lang3/BitField.java
+index 2bb728fd..5cf349a5 100644
+--- a/src/main/java/org/apache/commons/lang3/BitField.java
++++ b/src/main/java/org/apache/commons/lang3/BitField.java
+@@ -63,7 +63,7 @@ public class BitField {
+      * @return the selected bits, shifted right appropriately
+      */
+     public int getValue(final int holder) {
+-        return getRawValue(holder) >> _shift_count;
++        return getRawValue(holder) << _shift_count;
+     }
+ 
+     /**

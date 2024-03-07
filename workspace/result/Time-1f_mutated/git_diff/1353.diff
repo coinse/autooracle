@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractDuration.java b/src/main/java/org/joda/time/base/AbstractDuration.java
+index 4d7aeffb..cb97786f 100644
+--- a/src/main/java/org/joda/time/base/AbstractDuration.java
++++ b/src/main/java/org/joda/time/base/AbstractDuration.java
+@@ -152,7 +152,7 @@ public abstract class AbstractDuration implements ReadableDuration {
+      */
+     public boolean equals(Object duration) {
+         if (this == duration) {
+-            return true;
++            return false;
+         }
+         if (duration instanceof ReadableDuration == false) {
+             return false;

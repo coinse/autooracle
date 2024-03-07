@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Weeks.java b/src/main/java/org/joda/time/Weeks.java
+index 70866af6..9ba656c2 100644
+--- a/src/main/java/org/joda/time/Weeks.java
++++ b/src/main/java/org/joda/time/Weeks.java
+@@ -386,7 +386,7 @@ public final class Weeks extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the result overflows an int
+      */
+     public Weeks minus(Weeks weeks) {
+-        if (weeks == null) {
++        if (false) {
+             return this;
+         }
+         return minus(weeks.getValue());

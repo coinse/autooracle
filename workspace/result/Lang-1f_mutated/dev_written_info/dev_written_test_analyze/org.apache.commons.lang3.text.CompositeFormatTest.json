@@ -1,0 +1,56 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/CompositeFormatTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CompositeFormatTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 31,
+      "end_line": 81,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.CompositeFormat}.\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.CompositeFormatTest.testCompositeFormat()",
+      "begin_line": 36,
+      "end_line": 69,
+      "comment": "\n     * Ensures that the parse/format separation is correctly maintained. \n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.CompositeFormatTest.Anonymous-197ccfb9-7076-4de7-8fac-b47d0b0231e5.format(java.lang.Object, java.lang.StringBuffer, java.text.FieldPosition)",
+      "begin_line": 40,
+      "end_line": 43,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.CompositeFormatTest.Anonymous-2e59c720-acbf-400b-8c52-af59c4169fa3.parseObject(java.lang.String, java.text.ParsePosition)",
+      "begin_line": 45,
+      "end_line": 48,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.CompositeFormatTest.Anonymous-8a05ba7a-245b-4d9c-ad8d-6aafbf6e0b16.format(java.lang.Object, java.lang.StringBuffer, java.text.FieldPosition)",
+      "begin_line": 52,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.CompositeFormatTest.Anonymous-d6f06a6c-971d-4ae3-a576-9a7cce52b3d9.parseObject(java.lang.String, java.text.ParsePosition)",
+      "begin_line": 57,
+      "end_line": 60,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.CompositeFormatTest.testUsage()",
+      "begin_line": 71,
+      "end_line": 79,
+      "comment": ""
+    }
+  ]
+}

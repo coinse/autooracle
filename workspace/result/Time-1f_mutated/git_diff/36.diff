@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..690957ba 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -349,7 +349,7 @@ public abstract class DateTimeZone implements Serializable {
+         }
+ 
+         // Support GMT+/-hh:mm formats
+-        if (convId == null) {
++        if (false) {
+             convId = zone.getID();
+             if (convId.startsWith("GMT+") || convId.startsWith("GMT-")) {
+                 convId = convId.substring(3);

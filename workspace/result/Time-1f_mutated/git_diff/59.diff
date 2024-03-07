@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..6db0c253 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -909,7 +909,7 @@ public abstract class DateTimeZone implements Serializable {
+         final long instantAdjusted = instantLocal - offsetLocal;
+         final int offsetAdjusted = getOffset(instantAdjusted);
+         // if the offsets differ, we must be near a DST boundary
+-        if (offsetLocal != offsetAdjusted) {
++        if (offsetLocal > offsetAdjusted) {
+             // we need to ensure that time is always after the DST gap
+             // this happens naturally for positive offsets, but not for negative
+             if ((offsetLocal - offsetAdjusted) < 0) {

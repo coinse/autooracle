@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+index b3692690..e453755f 100644
+--- a/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
++++ b/src/main/java/org/apache/commons/lang3/AnnotationUtils.java
+@@ -221,7 +221,7 @@ public class AnnotationUtils {
+      * @return {@code true} if the type is a valid type to use in an annotation
+      */
+     public static boolean isValidAnnotationMemberType(Class<?> type) {
+-        if (type == null) {
++        if (false) {
+             return false;
+         }
+         if (type.isArray()) {

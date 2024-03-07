@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..2347746c 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -562,7 +562,7 @@ public class BooleanUtils {
+                     ch0 == 't' || ch0 == 'T') {
+                     return Boolean.TRUE;
+                 }
+-                if (ch0 == 'n' || ch0 == 'N' ||
++                if (ch0 == 'n' != (ch0 == 'N') ||
+                     ch0 == 'f' || ch0 == 'F') {
+                     return Boolean.FALSE;
+                 }

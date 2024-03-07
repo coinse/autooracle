@@ -1,0 +1,134 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/mutable/MutableBoolean.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableBoolean",
+      "is_interface": false,
+      "parent_types": [
+        "Mutable\u003cBoolean\u003e",
+        "java.io.Serializable",
+        "java.lang.Comparable\u003corg.apache.commons.lang3.mutable.MutableBoolean\u003e"
+      ],
+      "begin_line": 31,
+      "end_line": 196,
+      "comment": "\n * A mutable \u003ccode\u003eboolean\u003c/code\u003e wrapper.\n * \u003cp\u003e\n * Note that as MutableBoolean does not extend Boolean, it is not treated by String.format as a Boolean parameter. \n * \n * @see Boolean\n * @since 2.2\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 38,
+      "end_line": 38,
+      "comment": "\n     * Required for serialization support.\n     * \n     * @see java.io.Serializable\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "value"
+      ],
+      "begin_line": 41,
+      "end_line": 41,
+      "comment": " The mutable value. "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.MutableBoolean()",
+      "begin_line": 46,
+      "end_line": 48,
+      "comment": "\n     * Constructs a new MutableBoolean with the default value of false.\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.MutableBoolean(boolean)",
+      "begin_line": 55,
+      "end_line": 58,
+      "comment": "\n     * Constructs a new MutableBoolean with the specified value.\n     * \n     * @param value  the initial value to store\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.MutableBoolean(java.lang.Boolean)",
+      "begin_line": 66,
+      "end_line": 69,
+      "comment": "\n     * Constructs a new MutableBoolean with the specified value.\n     * \n     * @param value  the initial value to store, not null\n     * @throws NullPointerException if the object is null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.getValue()",
+      "begin_line": 77,
+      "end_line": 80,
+      "comment": "\n     * Gets the value as a Boolean instance.\n     * \n     * @return the value as a Boolean, never null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.setValue(boolean)",
+      "begin_line": 87,
+      "end_line": 89,
+      "comment": "\n     * Sets the value.\n     * \n     * @param value  the value to set\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.setValue(java.lang.Boolean)",
+      "begin_line": 97,
+      "end_line": 100,
+      "comment": "\n     * Sets the value from any Boolean instance.\n     * \n     * @param value  the value to set, not null\n     * @throws NullPointerException if the object is null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.isTrue()",
+      "begin_line": 109,
+      "end_line": 111,
+      "comment": "\n     * Checks if the current value is \u003ccode\u003etrue\u003c/code\u003e.\n     * \n     * @return \u003ccode\u003etrue\u003c/code\u003e if the current value is \u003ccode\u003etrue\u003c/code\u003e\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.isFalse()",
+      "begin_line": 119,
+      "end_line": 121,
+      "comment": "\n     * Checks if the current value is \u003ccode\u003efalse\u003c/code\u003e.\n     * \n     * @return \u003ccode\u003etrue\u003c/code\u003e if the current value is \u003ccode\u003efalse\u003c/code\u003e\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.booleanValue()",
+      "begin_line": 129,
+      "end_line": 131,
+      "comment": "\n     * Returns the value of this MutableBoolean as a boolean.\n     * \n     * @return the boolean value represented by this object.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.toBoolean()",
+      "begin_line": 140,
+      "end_line": 142,
+      "comment": "\n     * Gets this mutable as an instance of Boolean.\n     *\n     * @return a Boolean instance containing the value from this mutable, never null\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.equals(java.lang.Object)",
+      "begin_line": 153,
+      "end_line": 159,
+      "comment": "\n     * Compares this object to the specified object. The result is \u003ccode\u003etrue\u003c/code\u003e if and only if the argument is\n     * not \u003ccode\u003enull\u003c/code\u003e and is an \u003ccode\u003eMutableBoolean\u003c/code\u003e object that contains the same\n     * \u003ccode\u003eboolean\u003c/code\u003e value as this object.\n     * \n     * @param obj  the object to compare with, null returns false\n     * @return \u003ccode\u003etrue\u003c/code\u003e if the objects are the same; \u003ccode\u003efalse\u003c/code\u003e otherwise.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.hashCode()",
+      "begin_line": 166,
+      "end_line": 169,
+      "comment": "\n     * Returns a suitable hash code for this mutable.\n     * \n     * @return the hash code returned by \u003ccode\u003eBoolean.TRUE\u003c/code\u003e or \u003ccode\u003eBoolean.FALSE\u003c/code\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.compareTo(org.apache.commons.lang3.mutable.MutableBoolean)",
+      "begin_line": 179,
+      "end_line": 183,
+      "comment": "\n     * Compares this mutable to another in ascending order.\n     * \n     * @param other  the other mutable to compare to, not null\n     * @return negative if this is less, zero if equal, positive if greater\n     *  where false is less than true\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBoolean.toString()",
+      "begin_line": 191,
+      "end_line": 194,
+      "comment": "\n     * Returns the String value of this mutable.\n     * \n     * @return the mutable value as a string\n     "
+    }
+  ]
+}

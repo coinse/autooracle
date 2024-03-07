@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDateTime.java b/src/main/java/org/joda/time/LocalDateTime.java
+index 44d2ee9c..97897f94 100644
+--- a/src/main/java/org/joda/time/LocalDateTime.java
++++ b/src/main/java/org/joda/time/LocalDateTime.java
+@@ -1265,7 +1265,7 @@ public final class LocalDateTime
+      * @return the new LocalDateTime plus the increased millis
+      */
+     public LocalDateTime plusMillis(int millis) {
+-        if (millis == 0) {
++        if (millis == -1) {
+             return this;
+         }
+         long instant = getChronology().millis().add(getLocalMillis(), millis);

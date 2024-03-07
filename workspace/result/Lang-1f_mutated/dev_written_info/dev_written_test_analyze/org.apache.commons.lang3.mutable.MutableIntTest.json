@@ -1,0 +1,140 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/mutable/MutableIntTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableIntTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 204,
+      "comment": "\n * JUnit tests.\n * \n * @version $Id$\n * @see MutableInt\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testConstructors()",
+      "begin_line": 31,
+      "end_line": 42,
+      "comment": " ----------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testConstructorNull()",
+      "begin_line": 44,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testGetSet()",
+      "begin_line": 49,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testSetNull()",
+      "begin_line": 68,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testEquals()",
+      "begin_line": 74,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testEquals(java.lang.Number, java.lang.Number, java.lang.Number)",
+      "begin_line": 86,
+      "end_line": 97,
+      "comment": "\n     * @param numA must not be a 0 Integer; must not equal numC.\n     * @param numB must equal numA; must not equal numC.\n     * @param numC must not equal numA; must not equal numC.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testHashCode()",
+      "begin_line": 99,
+      "end_line": 109,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testCompareTo()",
+      "begin_line": 111,
+      "end_line": 118,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testCompareToNull()",
+      "begin_line": 120,
+      "end_line": 124,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testPrimitiveValues()",
+      "begin_line": 126,
+      "end_line": 135,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testToInteger()",
+      "begin_line": 137,
+      "end_line": 141,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testIncrement()",
+      "begin_line": 143,
+      "end_line": 150,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testDecrement()",
+      "begin_line": 152,
+      "end_line": 159,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testAddValuePrimitive()",
+      "begin_line": 161,
+      "end_line": 168,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testAddValueObject()",
+      "begin_line": 170,
+      "end_line": 177,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testSubtractValuePrimitive()",
+      "begin_line": 179,
+      "end_line": 186,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testSubtractValueObject()",
+      "begin_line": 188,
+      "end_line": 195,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableIntTest.testToString()",
+      "begin_line": 197,
+      "end_line": 202,
+      "comment": ""
+    }
+  ]
+}

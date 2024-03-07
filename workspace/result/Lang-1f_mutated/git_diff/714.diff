@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableObject.java b/src/main/java/org/apache/commons/lang3/mutable/MutableObject.java
+index 869ceb6a..78fd07a1 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableObject.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableObject.java
+@@ -95,7 +95,7 @@ public class MutableObject<T> implements Mutable<T>, Serializable {
+             return false;
+         }
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (this.getClass() == obj.getClass()) {
+             final MutableObject<?> that = (MutableObject<?>) obj;

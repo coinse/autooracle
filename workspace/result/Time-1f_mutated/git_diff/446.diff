@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..45659438 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -758,7 +758,7 @@ public class DateTimeFormatter {
+                 return bucket.computeMillis(true, text);
+             }
+         } else {
+-            newPos = ~newPos;
++            newPos = +newPos;
+         }
+         throw new IllegalArgumentException(FormatUtils.createErrorMessage(text, newPos));
+     }

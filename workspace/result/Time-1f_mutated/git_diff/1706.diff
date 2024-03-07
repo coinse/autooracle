@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Hours.java b/src/main/java/org/joda/time/Hours.java
+index fbca006e..7c8a94e2 100644
+--- a/src/main/java/org/joda/time/Hours.java
++++ b/src/main/java/org/joda/time/Hours.java
+@@ -430,7 +430,7 @@ public final class Hours extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the divisor is zero
+      */
+     public Hours dividedBy(int divisor) {
+-        if (divisor == 1) {
++        if (divisor >= 1) {
+             return this;
+         }
+         return Hours.hours(getValue() / divisor);

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+index 015e6dd6..7ef42106 100644
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -286,7 +286,7 @@ public class ClassUtils {
+      * @return the package name or an empty string
+      */
+     public static String getPackageName(String className) {
+-        if (StringUtils.isEmpty(className)) {
++        if (true) {
+             return StringUtils.EMPTY;
+         }
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..ad2848c8 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1311,7 +1311,7 @@ public class NumberUtils {
+             return false;
+         }
+         for (int i = 0; i < str.length(); i++) {
+-            if (!Character.isDigit(str.charAt(i))) {
++            if (!false) {
+                 return false;
+             }
+         }

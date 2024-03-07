@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java b/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
+index 807fb88c..c8cf2f69 100644
+--- a/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/builder/ReflectionToStringBuilder.java
+@@ -480,7 +480,7 @@ public class ReflectionToStringBuilder extends ToStringBuilder {
+             // Reject transient fields.
+             return false;
+         }
+-        if (Modifier.isStatic(field.getModifiers()) && !this.isAppendStatics()) {
++        if (false) {
+             // Reject static fields.
+             return false;
+         }

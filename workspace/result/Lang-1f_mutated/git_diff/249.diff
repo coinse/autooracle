@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
+index 006fcb71..2102e957 100644
+--- a/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/reflect/MemberUtils.java
+@@ -72,7 +72,7 @@ abstract class MemberUtils {
+      * @return true unless package/protected/private modifier detected
+      */
+     static boolean isPackageAccess(final int modifiers) {
+-        return (modifiers & ACCESS_TEST) == 0;
++        return (modifiers & ACCESS_TEST) <= 0;
+     }
+ 
+     /**

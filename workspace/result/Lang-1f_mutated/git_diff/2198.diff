@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..cfa37e16 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -1695,7 +1695,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      * @return this, to enable chaining
+      */
+     public StrBuilder deleteAll(final char ch) {
+-        for (int i = 0; i < size; i++) {
++        for (int i = 0; false; i++) {
+             if (buffer[i] == ch) {
+                 final int start = i;
+                 while (++i < size) {

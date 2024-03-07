@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/LimitChronology.java b/src/main/java/org/joda/time/chrono/LimitChronology.java
+index 89325ade..b3ccfdfd 100644
+--- a/src/main/java/org/joda/time/chrono/LimitChronology.java
++++ b/src/main/java/org/joda/time/chrono/LimitChronology.java
+@@ -300,7 +300,7 @@ public final class LimitChronology extends AssembledChronology {
+      * @since 1.4
+      */
+     public boolean equals(Object obj) {
+-        if (this == obj) {
++        if (false) {
+             return true;
+         }
+         if (obj instanceof LimitChronology == false) {

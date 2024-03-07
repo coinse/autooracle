@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/ISOChronology.java b/src/main/java/org/joda/time/chrono/ISOChronology.java
+index 075dd7bd..1c7a77c8 100644
+--- a/src/main/java/org/joda/time/chrono/ISOChronology.java
++++ b/src/main/java/org/joda/time/chrono/ISOChronology.java
+@@ -189,7 +189,7 @@ public final class ISOChronology extends AssembledChronology {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (obj instanceof ISOChronology) {
+             ISOChronology chrono = (ISOChronology) obj;

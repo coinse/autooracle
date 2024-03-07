@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/TimeOfDay.java b/src/main/java/org/joda/time/TimeOfDay.java
+index 7c46912a..9b3a76ea 100644
+--- a/src/main/java/org/joda/time/TimeOfDay.java
++++ b/src/main/java/org/joda/time/TimeOfDay.java
+@@ -953,7 +953,7 @@ public final class TimeOfDay
+      */
+     public TimeOfDay withMillisOfSecond(int millis) {
+         int[] newValues = getValues();
+-        newValues = getChronology().millisOfSecond().set(this, MILLIS_OF_SECOND, newValues, millis);
++        ;
+         return new TimeOfDay(this, newValues);
+     }
+ 

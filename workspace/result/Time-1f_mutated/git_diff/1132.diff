@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Minutes.java b/src/main/java/org/joda/time/Minutes.java
+index 0f96dabf..f6edb7f0 100644
+--- a/src/main/java/org/joda/time/Minutes.java
++++ b/src/main/java/org/joda/time/Minutes.java
+@@ -350,7 +350,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the result overflows an int
+      */
+     public Minutes plus(Minutes minutes) {
+-        if (minutes == null) {
++        if (false) {
+             return this;
+         }
+         return plus(minutes.getValue());

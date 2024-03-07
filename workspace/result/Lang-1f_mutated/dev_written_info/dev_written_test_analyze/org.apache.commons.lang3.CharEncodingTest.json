@@ -1,0 +1,70 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/CharEncodingTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharEncodingTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 112,
+      "comment": "\n * Tests CharEncoding.\n * \n * @see CharEncoding\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.assertSupportedEncoding(java.lang.String)",
+      "begin_line": 36,
+      "end_line": 38,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.testConstructor()",
+      "begin_line": 43,
+      "end_line": 46,
+      "comment": "\n     * The class can be instantiated.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.testMustBeSupportedJava1_3_1()",
+      "begin_line": 48,
+      "end_line": 60,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.testSupported()",
+      "begin_line": 62,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.testNotSupported()",
+      "begin_line": 69,
+      "end_line": 77,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.testWorksOnJava1_1_8()",
+      "begin_line": 79,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.testWorksOnJava1_2_2()",
+      "begin_line": 94,
+      "end_line": 107,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharEncodingTest.warn(java.lang.String)",
+      "begin_line": 109,
+      "end_line": 111,
+      "comment": ""
+    }
+  ]
+}

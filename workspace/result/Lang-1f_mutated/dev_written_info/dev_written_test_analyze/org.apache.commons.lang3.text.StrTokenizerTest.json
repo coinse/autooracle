@@ -1,0 +1,466 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/StrTokenizerTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StrTokenizerTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 879,
+      "comment": "\n * Unit test for Tokenizer.\n * \n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CSV_SIMPLE_FIXTURE"
+      ],
+      "begin_line": 36,
+      "end_line": 36,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "TSV_SIMPLE_FIXTURE"
+      ],
+      "begin_line": 38,
+      "end_line": 38,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "checkClone(StrTokenizer)",
+      "begin_line": 40,
+      "end_line": 43,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test1()",
+      "begin_line": 46,
+      "end_line": 65,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test2()",
+      "begin_line": 67,
+      "end_line": 86,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test3()",
+      "begin_line": 88,
+      "end_line": 107,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test4()",
+      "begin_line": 109,
+      "end_line": 128,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test5()",
+      "begin_line": 130,
+      "end_line": 150,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test6()",
+      "begin_line": 152,
+      "end_line": 186,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test7()",
+      "begin_line": 188,
+      "end_line": 207,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.test8()",
+      "begin_line": 209,
+      "end_line": 228,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasic1()",
+      "begin_line": 230,
+      "end_line": 238,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasic2()",
+      "begin_line": 240,
+      "end_line": 248,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasic3()",
+      "begin_line": 250,
+      "end_line": 258,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasic4()",
+      "begin_line": 260,
+      "end_line": 268,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasic5()",
+      "begin_line": 270,
+      "end_line": 278,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicDelim1()",
+      "begin_line": 280,
+      "end_line": 288,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicDelim2()",
+      "begin_line": 290,
+      "end_line": 296,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicEmpty1()",
+      "begin_line": 298,
+      "end_line": 308,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicEmpty2()",
+      "begin_line": 310,
+      "end_line": 321,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted1()",
+      "begin_line": 323,
+      "end_line": 331,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted2()",
+      "begin_line": 333,
+      "end_line": 343,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted3()",
+      "begin_line": 345,
+      "end_line": 354,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted4()",
+      "begin_line": 356,
+      "end_line": 367,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted5()",
+      "begin_line": 369,
+      "end_line": 380,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted6()",
+      "begin_line": 382,
+      "end_line": 390,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuoted7()",
+      "begin_line": 392,
+      "end_line": 401,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicQuotedTrimmed1()",
+      "begin_line": 403,
+      "end_line": 414,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicTrimmed1()",
+      "begin_line": 416,
+      "end_line": 427,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicTrimmed2()",
+      "begin_line": 429,
+      "end_line": 440,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicIgnoreTrimmed1()",
+      "begin_line": 442,
+      "end_line": 454,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicIgnoreTrimmed2()",
+      "begin_line": 456,
+      "end_line": 468,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicIgnoreTrimmed3()",
+      "begin_line": 470,
+      "end_line": 481,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testBasicIgnoreTrimmed4()",
+      "begin_line": 483,
+      "end_line": 495,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testListArray()",
+      "begin_line": 498,
+      "end_line": 507,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCSV(java.lang.String)",
+      "begin_line": 510,
+      "end_line": 513,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCSVEmpty()",
+      "begin_line": 515,
+      "end_line": 519,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCSVSimple()",
+      "begin_line": 521,
+      "end_line": 524,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCSVSimpleNeedsTrim()",
+      "begin_line": 526,
+      "end_line": 531,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "testEmpty(StrTokenizer)",
+      "begin_line": 533,
+      "end_line": 543,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testGetContent()",
+      "begin_line": 545,
+      "end_line": 556,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testChaining()",
+      "begin_line": 559,
+      "end_line": 575,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCloneNotSupportedException()",
+      "begin_line": 581,
+      "end_line": 590,
+      "comment": "\n     * Tests that the {@link StrTokenizer#clone()} clone method catches {@link CloneNotSupportedException} and returns\n     * \u003ccode\u003enull\u003c/code\u003e.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "cloneReset()",
+      "begin_line": 584,
+      "end_line": 587,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCloneNull()",
+      "begin_line": 592,
+      "end_line": 604,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testCloneReset()",
+      "begin_line": 606,
+      "end_line": 620,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testConstructor_String()",
+      "begin_line": 623,
+      "end_line": 635,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testConstructor_String_char()",
+      "begin_line": 638,
+      "end_line": 651,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testConstructor_String_char_char()",
+      "begin_line": 654,
+      "end_line": 668,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testConstructor_charArray()",
+      "begin_line": 671,
+      "end_line": 683,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testConstructor_charArray_char()",
+      "begin_line": 686,
+      "end_line": 699,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testConstructor_charArray_char_char()",
+      "begin_line": 702,
+      "end_line": 716,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testReset()",
+      "begin_line": 719,
+      "end_line": 732,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testReset_String()",
+      "begin_line": 735,
+      "end_line": 745,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testReset_charArray()",
+      "begin_line": 748,
+      "end_line": 759,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testTSV()",
+      "begin_line": 762,
+      "end_line": 766,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testTSVEmpty()",
+      "begin_line": 768,
+      "end_line": 772,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "testXSVAbc(StrTokenizer)",
+      "begin_line": 774,
+      "end_line": 797,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testIteration()",
+      "begin_line": 799,
+      "end_line": 839,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testTokenizeSubclassInputChange()",
+      "begin_line": 842,
+      "end_line": 852,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "tokenize(char[], int, int)",
+      "begin_line": 845,
+      "end_line": 848,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testTokenizeSubclassOutputChange()",
+      "begin_line": 855,
+      "end_line": 868,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "tokenize(char[], int, int)",
+      "begin_line": 858,
+      "end_line": 863,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrTokenizerTest.testToString()",
+      "begin_line": 871,
+      "end_line": 877,
+      "comment": "-----------------------------------------------------------------------"
+    }
+  ]
+}

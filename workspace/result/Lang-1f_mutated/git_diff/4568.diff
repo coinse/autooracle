@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..d5893c8f 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5881,7 +5881,7 @@ public class StringUtils {
+      * @since 3.0 Changed signature from isAsciiPrintable(String) to isAsciiPrintable(CharSequence)
+      */
+     public static boolean isAsciiPrintable(final CharSequence cs) {
+-        if (cs == null) {
++        if (false) {
+             return false;
+         }
+         final int sz = cs.length();

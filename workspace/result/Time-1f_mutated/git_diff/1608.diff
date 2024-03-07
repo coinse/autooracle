@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTime.java b/src/main/java/org/joda/time/DateTime.java
+index bb879a98..f48fcfb7 100644
+--- a/src/main/java/org/joda/time/DateTime.java
++++ b/src/main/java/org/joda/time/DateTime.java
+@@ -579,7 +579,7 @@ public final class DateTime
+      * @return a copy of this datetime with different millis
+      */
+     public DateTime withMillis(long newMillis) {
+-        return (newMillis == getMillis() ? this : new DateTime(newMillis, getChronology()));
++        return (newMillis <= getMillis() ? this : new DateTime(newMillis, getChronology()));
+     }
+ 
+     /**

@@ -1,0 +1,150 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/StringUtilsSubstringTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StringUtilsSubstringTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 30,
+      "end_line": 325,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.StringUtils} - Substring methods\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO"
+      ],
+      "begin_line": 31,
+      "end_line": 31,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BAR"
+      ],
+      "begin_line": 32,
+      "end_line": 32,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BAZ"
+      ],
+      "begin_line": 33,
+      "end_line": 33,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOOBAR"
+      ],
+      "begin_line": 34,
+      "end_line": 34,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SENTENCE"
+      ],
+      "begin_line": 35,
+      "end_line": 35,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstring_StringInt()",
+      "begin_line": 39,
+      "end_line": 58,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstring_StringIntInt()",
+      "begin_line": 60,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testLeft_String()",
+      "begin_line": 78,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testRight_String()",
+      "begin_line": 94,
+      "end_line": 108,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testMid_String()",
+      "begin_line": 110,
+      "end_line": 130,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringBefore_StringString()",
+      "begin_line": 133,
+      "end_line": 151,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringAfter_StringString()",
+      "begin_line": 153,
+      "end_line": 171,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringBeforeLast_StringString()",
+      "begin_line": 173,
+      "end_line": 195,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringAfterLast_StringString()",
+      "begin_line": 197,
+      "end_line": 216,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringBetween_StringString()",
+      "begin_line": 219,
+      "end_line": 231,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringBetween_StringStringString()",
+      "begin_line": 233,
+      "end_line": 244,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testSubstringsBetween_StringStringString()",
+      "begin_line": 249,
+      "end_line": 305,
+      "comment": "\n     * Tests the substringsBetween method that returns an String Array of substrings.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsSubstringTest.testCountMatches_String()",
+      "begin_line": 308,
+      "end_line": 323,
+      "comment": "-----------------------------------------------------------------------"
+    }
+  ]
+}

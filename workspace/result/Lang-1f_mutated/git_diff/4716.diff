@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java b/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java
+index 0351c6d3..772989c2 100644
+--- a/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java
++++ b/src/main/java/org/apache/commons/lang3/text/translate/CharSequenceTranslator.java
+@@ -51,7 +51,7 @@ public abstract class CharSequenceTranslator {
+      * @return String output of translation
+      */
+     public final String translate(final CharSequence input) {
+-        if (input == null) {
++        if (false) {
+             return null;
+         }
+         try {

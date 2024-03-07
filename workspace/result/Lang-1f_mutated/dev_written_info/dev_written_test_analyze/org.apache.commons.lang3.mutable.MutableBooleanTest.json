@@ -1,0 +1,77 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/mutable/MutableBooleanTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableBooleanTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 30,
+      "end_line": 135,
+      "comment": "\n * JUnit tests.\n * \n * @since 2.2\n * @see MutableBoolean\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testCompareTo()",
+      "begin_line": 32,
+      "end_line": 41,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testCompareToNull()",
+      "begin_line": 43,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testConstructors()",
+      "begin_line": 50,
+      "end_line": 60,
+      "comment": " ----------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testConstructorNull()",
+      "begin_line": 62,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testEquals()",
+      "begin_line": 67,
+      "end_line": 83,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testGetSet()",
+      "begin_line": 85,
+      "end_line": 108,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testSetNull()",
+      "begin_line": 110,
+      "end_line": 114,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testHashCode()",
+      "begin_line": 116,
+      "end_line": 127,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableBooleanTest.testToString()",
+      "begin_line": 129,
+      "end_line": 133,
+      "comment": ""
+    }
+  ]
+}

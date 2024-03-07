@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractPartial.java b/src/main/java/org/joda/time/base/AbstractPartial.java
+index fb931025..d7b4ec23 100644
+--- a/src/main/java/org/joda/time/base/AbstractPartial.java
++++ b/src/main/java/org/joda/time/base/AbstractPartial.java
+@@ -255,7 +255,7 @@ public abstract class AbstractPartial
+         if (this == partial) {
+             return true;
+         }
+-        if (partial instanceof ReadablePartial == false) {
++        if (false) {
+             return false;
+         }
+         ReadablePartial other = (ReadablePartial) partial;

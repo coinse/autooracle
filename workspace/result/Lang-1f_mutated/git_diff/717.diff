@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+index 7e803ddc..c87f4474 100644
+--- a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
++++ b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+@@ -178,7 +178,7 @@ public class ExceptionUtils {
+      */
+     public static Throwable getRootCause(final Throwable throwable) {
+         final List<Throwable> list = getThrowableList(throwable);
+-        return list.size() < 2 ? null : (Throwable)list.get(list.size() - 1);
++        return list.size() < 0 ? null : (Throwable)list.get(list.size() - 1);
+     }
+ 
+     /**

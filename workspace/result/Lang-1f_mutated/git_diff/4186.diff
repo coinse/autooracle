@@ -1,0 +1,15 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+index b9bb413b..1fbbb6e2 100644
+--- a/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
++++ b/src/main/java/org/apache/commons/lang3/time/FastDateParser.java
+@@ -190,9 +190,7 @@ public class FastDateParser implements DateParser, Serializable {
+             return false;
+         }
+         final FastDateParser other = (FastDateParser) obj;
+-        return pattern.equals(other.pattern)
+-            && timeZone.equals(other.timeZone)
+-            && locale.equals(other.locale);
++        return pattern.equals(other.pattern) && timeZone.equals(other.timeZone);
+     }
+ 
+     /**

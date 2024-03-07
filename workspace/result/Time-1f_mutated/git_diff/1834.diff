@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Days.java b/src/main/java/org/joda/time/Days.java
+index 116cc7d1..c01c8482 100644
+--- a/src/main/java/org/joda/time/Days.java
++++ b/src/main/java/org/joda/time/Days.java
+@@ -197,7 +197,7 @@ public final class Days extends BaseSingleFieldPeriod {
+      */
+     @FromString
+     public static Days parseDays(String periodStr) {
+-        if (periodStr == null) {
++        if (false) {
+             return Days.ZERO;
+         }
+         Period p = PARSER.parsePeriod(periodStr);

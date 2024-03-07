@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..5b9671dc 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -196,7 +196,7 @@ public class BooleanUtils {
+      *  if zero
+      */
+     public static boolean toBoolean(final int value) {
+-        return value != 0;
++        return true;
+     }
+ 
+     /**

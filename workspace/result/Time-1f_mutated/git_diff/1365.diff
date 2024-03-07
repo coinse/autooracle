@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/OffsetDateTimeField.java b/src/main/java/org/joda/time/field/OffsetDateTimeField.java
+index b317eb29..f7c6fea3 100644
+--- a/src/main/java/org/joda/time/field/OffsetDateTimeField.java
++++ b/src/main/java/org/joda/time/field/OffsetDateTimeField.java
+@@ -98,7 +98,7 @@ public class OffsetDateTimeField extends DecoratedDateTimeField {
+      * @return the amount of units extracted from the input.
+      */
+     public int get(long instant) {
+-        return super.get(instant) + iOffset;
++        return super.get(instant) / iOffset;
+     }
+ 
+     /**

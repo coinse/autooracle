@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..9e2fdd32 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -627,7 +627,7 @@ public class ArrayUtils {
+      * @since 2.5
+      */
+     public static float[] nullToEmpty(final float[] array) {
+-        if (array == null || array.length == 0) {
++        if (array == null || array.length == -1) {
+             return EMPTY_FLOAT_ARRAY;
+         }
+         return array;

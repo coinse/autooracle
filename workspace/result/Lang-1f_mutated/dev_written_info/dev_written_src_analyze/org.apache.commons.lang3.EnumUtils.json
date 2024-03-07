@@ -1,0 +1,141 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/EnumUtils.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "EnumUtils",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 311,
+      "comment": "\n * \u003cp\u003eUtility library to provide helper methods for Java enums.\u003c/p\u003e\n *\n * \u003cp\u003e#ThreadSafe#\u003c/p\u003e\n *\n * @since 3.0\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NULL_ELEMENTS_NOT_PERMITTED"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CANNOT_STORE_S_S_VALUES_IN_S_BITS"
+      ],
+      "begin_line": 38,
+      "end_line": 38,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "S_DOES_NOT_SEEM_TO_BE_AN_ENUM_TYPE"
+      ],
+      "begin_line": 39,
+      "end_line": 39,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "ENUM_CLASS_MUST_BE_DEFINED"
+      ],
+      "begin_line": 40,
+      "end_line": 40,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.EnumUtils.EnumUtils()",
+      "begin_line": 46,
+      "end_line": 47,
+      "comment": "\n     * This constructor is public to permit tools that require a JavaBean\n     * instance to operate.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.getEnumMap(java.lang.Class\u003cE\u003e)",
+      "begin_line": 58,
+      "end_line": 64,
+      "comment": "\n     * \u003cp\u003eGets the {@code Map} of enums by name.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis method is useful when you need a map of enums by name.\u003c/p\u003e\n     *\n     * @param \u003cE\u003e the type of the enumeration\n     * @param enumClass  the class of the enum to query, not null\n     * @return the modifiable map of enum names to enums, never null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.getEnumList(java.lang.Class\u003cE\u003e)",
+      "begin_line": 75,
+      "end_line": 77,
+      "comment": "\n     * \u003cp\u003eGets the {@code List} of enums.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis method is useful when you need a list of enums rather than an array.\u003c/p\u003e\n     *\n     * @param \u003cE\u003e the type of the enumeration\n     * @param enumClass  the class of the enum to query, not null\n     * @return the modifiable list of enums, never null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.isValidEnum(java.lang.Class\u003cE\u003e, java.lang.String)",
+      "begin_line": 90,
+      "end_line": 100,
+      "comment": "\n     * \u003cp\u003eChecks if the specified name is a valid enum for the class.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis method differs from {@link Enum#valueOf} in that checks if the name is\n     * a valid enum without needing to catch the exception.\u003c/p\u003e\n     *\n     * @param \u003cE\u003e the type of the enumeration\n     * @param enumClass  the class of the enum to query, not null\n     * @param enumName   the enum name, null returns false\n     * @return true if the enum name is valid, otherwise false\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.getEnum(java.lang.Class\u003cE\u003e, java.lang.String)",
+      "begin_line": 113,
+      "end_line": 122,
+      "comment": "\n     * \u003cp\u003eGets the enum for the class, returning {@code null} if not found.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis method differs from {@link Enum#valueOf} in that it does not throw an exception\n     * for an invalid enum name.\u003c/p\u003e\n     *\n     * @param \u003cE\u003e the type of the enumeration\n     * @param enumClass  the class of the enum to query, not null\n     * @param enumName   the enum name, null returns null\n     * @return the enum, null if not found\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.generateBitVector(java.lang.Class\u003cE\u003e, java.lang.Iterable\u003cE\u003e)",
+      "begin_line": 142,
+      "end_line": 151,
+      "comment": "\n     * \u003cp\u003eCreates a long bit vector representation of the given subset of an Enum.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis generates a value that is usable by {@link EnumUtils#processBitVector}.\u003c/p\u003e\n     *\n     * \u003cp\u003eDo not use this method if you have more than 64 values in your Enum, as this\n     * would create a value greater than a long can hold.\u003c/p\u003e\n     *\n     * @param enumClass the class of the enum we are working with, not {@code null}\n     * @param values    the values we want to convert, not {@code null}, neither containing {@code null}\n     * @param \u003cE\u003e       the type of the enumeration\n     * @return a long whose value provides a binary representation of the given set of enum values.\n     * @throws NullPointerException if {@code enumClass} or {@code values} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class or has more than 64 values,\n     *                                  or if any {@code values} {@code null}\n     * @since 3.0.1\n     * @see #generateBitVectors(Class, Iterable)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.generateBitVectors(java.lang.Class\u003cE\u003e, java.lang.Iterable\u003cE\u003e)",
+      "begin_line": 169,
+      "end_line": 183,
+      "comment": "\n     * \u003cp\u003eCreates a bit vector representation of the given subset of an Enum using as many {@code long}s as needed.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis generates a value that is usable by {@link EnumUtils#processBitVectors}.\u003c/p\u003e\n     *\n     * \u003cp\u003eUse this method if you have more than 64 values in your Enum.\u003c/p\u003e\n     *\n     * @param enumClass the class of the enum we are working with, not {@code null}\n     * @param values    the values we want to convert, not {@code null}, neither containing {@code null}\n     * @param \u003cE\u003e       the type of the enumeration\n     * @return a long[] whose values provide a binary representation of the given set of enum values\n     *         with least significant digits rightmost.\n     * @throws NullPointerException if {@code enumClass} or {@code values} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class, or if any {@code values} {@code null}\n     * @since 3.2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.generateBitVector(java.lang.Class\u003cE\u003e, E...)",
+      "begin_line": 202,
+      "end_line": 205,
+      "comment": "\n     * \u003cp\u003eCreates a long bit vector representation of the given array of Enum values.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis generates a value that is usable by {@link EnumUtils#processBitVector}.\u003c/p\u003e\n     *\n     * \u003cp\u003eDo not use this method if you have more than 64 values in your Enum, as this\n     * would create a value greater than a long can hold.\u003c/p\u003e\n     *\n     * @param enumClass the class of the enum we are working with, not {@code null}\n     * @param values    the values we want to convert, not {@code null}\n     * @param \u003cE\u003e       the type of the enumeration\n     * @return a long whose value provides a binary representation of the given set of enum values.\n     * @throws NullPointerException if {@code enumClass} or {@code values} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class or has more than 64 values\n     * @since 3.0.1\n     * @see #generateBitVectors(Class, Iterable)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.generateBitVectors(java.lang.Class\u003cE\u003e, E...)",
+      "begin_line": 223,
+      "end_line": 234,
+      "comment": "\n     * \u003cp\u003eCreates a bit vector representation of the given subset of an Enum using as many {@code long}s as needed.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis generates a value that is usable by {@link EnumUtils#processBitVectors}.\u003c/p\u003e\n     *\n     * \u003cp\u003eUse this method if you have more than 64 values in your Enum.\u003c/p\u003e\n     *\n     * @param enumClass the class of the enum we are working with, not {@code null}\n     * @param values    the values we want to convert, not {@code null}, neither containing {@code null}\n     * @param \u003cE\u003e       the type of the enumeration\n     * @return a long[] whose values provide a binary representation of the given set of enum values\n     *         with least significant digits rightmost.\n     * @throws NullPointerException if {@code enumClass} or {@code values} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class, or if any {@code values} {@code null}\n     * @since 3.2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.processBitVector(java.lang.Class\u003cE\u003e, long)",
+      "begin_line": 249,
+      "end_line": 252,
+      "comment": "\n     * \u003cp\u003eConvert a long value created by {@link EnumUtils#generateBitVector} into the set of\n     * enum values that it represents.\u003c/p\u003e\n     *\n     * \u003cp\u003eIf you store this value, beware any changes to the enum that would affect ordinal values.\u003c/p\u003e\n     * @param enumClass the class of the enum we are working with, not {@code null}\n     * @param value     the long value representation of a set of enum values\n     * @param \u003cE\u003e       the type of the enumeration\n     * @return a set of enum values\n     * @throws NullPointerException if {@code enumClass} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class or has more than 64 values\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.processBitVectors(java.lang.Class\u003cE\u003e, long...)",
+      "begin_line": 267,
+      "end_line": 278,
+      "comment": "\n     * \u003cp\u003eConvert a {@code long[]} created by {@link EnumUtils#generateBitVectors} into the set of\n     * enum values that it represents.\u003c/p\u003e\n     *\n     * \u003cp\u003eIf you store this value, beware any changes to the enum that would affect ordinal values.\u003c/p\u003e\n     * @param enumClass the class of the enum we are working with, not {@code null}\n     * @param values     the long[] bearing the representation of a set of enum values, least significant digits rightmost, not {@code null}\n     * @param \u003cE\u003e       the type of the enumeration\n     * @return a set of enum values\n     * @throws NullPointerException if {@code enumClass} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class\n     * @since 3.2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.checkBitVectorable(java.lang.Class\u003cE\u003e)",
+      "begin_line": 289,
+      "end_line": 295,
+      "comment": "\n     * Validate that {@code enumClass} is compatible with representation in a {@code long}.\n     * @param \u003cE\u003e the type of the enumeration\n     * @param enumClass to check\n     * @return {@code enumClass}\n     * @throws NullPointerException if {@code enumClass} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class or has more than 64 values\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.EnumUtils.asEnum(java.lang.Class\u003cE\u003e)",
+      "begin_line": 306,
+      "end_line": 310,
+      "comment": "\n     * Validate {@code enumClass}.\n     * @param \u003cE\u003e the type of the enumeration\n     * @param enumClass to check\n     * @return {@code enumClass}\n     * @throws NullPointerException if {@code enumClass} is {@code null}\n     * @throws IllegalArgumentException if {@code enumClass} is not an enum class\n     * @since 3.2\n     "
+    }
+  ]
+}

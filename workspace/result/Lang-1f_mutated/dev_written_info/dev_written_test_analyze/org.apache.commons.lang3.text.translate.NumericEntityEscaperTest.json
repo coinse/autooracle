@@ -1,0 +1,42 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/translate/NumericEntityEscaperTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "NumericEntityEscaperTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 69,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.translate.NumericEntityEscaper}.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.NumericEntityEscaperTest.testBelow()",
+      "begin_line": 30,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.NumericEntityEscaperTest.testBetween()",
+      "begin_line": 39,
+      "end_line": 46,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.NumericEntityEscaperTest.testAbove()",
+      "begin_line": 48,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.NumericEntityEscaperTest.testSupplementary()",
+      "begin_line": 58,
+      "end_line": 67,
+      "comment": " See LANG-617"
+    }
+  ]
+}

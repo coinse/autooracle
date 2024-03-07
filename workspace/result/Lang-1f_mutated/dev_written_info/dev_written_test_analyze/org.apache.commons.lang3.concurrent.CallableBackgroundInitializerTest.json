@@ -1,0 +1,78 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/concurrent/CallableBackgroundInitializerTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CallableBackgroundInitializerTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 32,
+      "end_line": 96,
+      "comment": "\n * Test class for {@code CallableBackgroundInitializer}\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "RESULT"
+      ],
+      "begin_line": 34,
+      "end_line": 34,
+      "comment": " Constant for the result of the call() invocation. "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest.testInitNullCallable()",
+      "begin_line": 40,
+      "end_line": 43,
+      "comment": "\n     * Tries to create an instance without a Callable. This should cause an\n     * exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest.testInitExecutor()",
+      "begin_line": 49,
+      "end_line": 55,
+      "comment": "\n     * Tests whether the executor service is correctly passed to the super\n     * class.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest.testInitExecutorNullCallable()",
+      "begin_line": 61,
+      "end_line": 65,
+      "comment": "\n     * Tries to pass a null Callable to the constructor that takes an executor.\n     * This should cause an exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest.testInitialize()",
+      "begin_line": 70,
+      "end_line": 77,
+      "comment": "\n     * Tests the implementation of initialize().\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "TestCallable",
+      "is_interface": false,
+      "parent_types": [
+        "java.util.concurrent.Callable\u003cjava.lang.Integer\u003e"
+      ],
+      "begin_line": 83,
+      "end_line": 95,
+      "comment": "\n     * A test Callable implementation for checking the initializer\u0027s\n     * implementation of the initialize() method.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "callCount"
+      ],
+      "begin_line": 85,
+      "end_line": 85,
+      "comment": " A counter for the number of call() invocations. "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.CallableBackgroundInitializerTest.TestCallable.call()",
+      "begin_line": 90,
+      "end_line": 94,
+      "comment": "\n         * Records this invocation and returns the test result.\n         "
+    }
+  ]
+}

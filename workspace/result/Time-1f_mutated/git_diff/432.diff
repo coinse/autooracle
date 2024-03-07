@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..bc7f9478 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -605,7 +605,7 @@ public class DateTimeFormatter {
+      */
+     public String print(long instant) {
+         StringBuffer buf = new StringBuffer(requirePrinter().estimatePrintedLength());
+-        printTo(buf, instant);
++        ;
+         return buf.toString();
+     }
+ 

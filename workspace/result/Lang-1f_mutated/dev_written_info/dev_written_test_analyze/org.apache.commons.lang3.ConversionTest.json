@@ -1,0 +1,322 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/ConversionTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ConversionTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 1824,
+      "comment": "\n * Unit tests {@link Conversion}.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexDigitToInt()",
+      "begin_line": 40,
+      "end_line": 70,
+      "comment": "\n     * Tests {@link Conversion#hexDigitToInt(char)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexDigitMsb0ToInt()",
+      "begin_line": 75,
+      "end_line": 105,
+      "comment": "\n     * Tests {@link Conversion#hexDigitMsb0ToInt(char)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexDigitToBinary()",
+      "begin_line": 110,
+      "end_line": 162,
+      "comment": "\n     * Tests {@link Conversion#hexDigitToBinary(char)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexDigitMsb0ToBinary()",
+      "begin_line": 167,
+      "end_line": 219,
+      "comment": "\n     * Tests {@link Conversion#hexDigitMsb0ToBinary(char)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToHexDigit()",
+      "begin_line": 224,
+      "end_line": 252,
+      "comment": "\n     * Tests {@link Conversion#binaryToHexDigit(boolean[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToHexDigit_2args()",
+      "begin_line": 257,
+      "end_line": 271,
+      "comment": "\n     * Tests {@link Conversion#binaryBeMsb0ToHexDigit(boolean[], int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToHexDigitMsb0_bits()",
+      "begin_line": 276,
+      "end_line": 321,
+      "comment": "\n     * Tests {@link Conversion#binaryToHexDigitMsb0_4bits(boolean[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToHexDigitMsb0_4bits_2args()",
+      "begin_line": 326,
+      "end_line": 356,
+      "comment": "\n     * Tests {@link Conversion#binaryToHexDigitMsb0_4bits(boolean[], int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryBeMsb0ToHexDigit()",
+      "begin_line": 361,
+      "end_line": 406,
+      "comment": "\n     * Tests {@link Conversion#binaryToHexDigit(boolean[])}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryBeMsb0ToHexDigit_2args()",
+      "begin_line": 411,
+      "end_line": 453,
+      "comment": "\n     * Tests {@link Conversion#binaryToHexDigit(boolean[], int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntToHexDigit()",
+      "begin_line": 458,
+      "end_line": 482,
+      "comment": "\n     * Tests {@link Conversion#intToHexDigit(int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntToHexDigitMsb0()",
+      "begin_line": 487,
+      "end_line": 511,
+      "comment": "\n     * Tests {@link Conversion#intToHexDigitMsb0(int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.dbgPrint(boolean[])",
+      "begin_line": 513,
+      "end_line": 524,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.assertBinaryEquals(boolean[], boolean[])",
+      "begin_line": 527,
+      "end_line": 542,
+      "comment": " org.junit.Assert(boolean[], boolean[]) does not exist in JUnit 4.2"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntArrayToLong()",
+      "begin_line": 547,
+      "end_line": 560,
+      "comment": "\n     * Tests {@link Conversion#intArrayToLong(int[], int, long, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testShortArrayToLong()",
+      "begin_line": 565,
+      "end_line": 581,
+      "comment": "\n     * Tests {@link Conversion#shortArrayToLong(short[], int, long, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testByteArrayToLong()",
+      "begin_line": 586,
+      "end_line": 601,
+      "comment": "\n     * Tests {@link Conversion#byteArrayToLong(byte[], int, long, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testShortArrayToInt()",
+      "begin_line": 606,
+      "end_line": 617,
+      "comment": "\n     * Tests {@link Conversion#shortArrayToInt(short[], int, int, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testByteArrayToInt()",
+      "begin_line": 622,
+      "end_line": 634,
+      "comment": "\n     * Tests {@link Conversion#byteArrayToInt(byte[], int, int, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testByteArrayToShort()",
+      "begin_line": 639,
+      "end_line": 652,
+      "comment": "\n     * Tests {@link Conversion#byteArrayToShort(byte[], int, short, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexToLong()",
+      "begin_line": 657,
+      "end_line": 668,
+      "comment": "\n     * Tests {@link Conversion#hexToLong(String, int, long, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexToInt()",
+      "begin_line": 673,
+      "end_line": 682,
+      "comment": "\n     * Tests {@link Conversion#hexToInt(String, int, int, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexToShort()",
+      "begin_line": 687,
+      "end_line": 696,
+      "comment": "\n     * Tests {@link Conversion#hexToShort(String, int, short, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testHexToByte()",
+      "begin_line": 701,
+      "end_line": 710,
+      "comment": "\n     * Tests {@link Conversion#hexToByte(String, int, byte, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToLong()",
+      "begin_line": 715,
+      "end_line": 734,
+      "comment": "\n     * Tests {@link Conversion#binaryToLong(boolean[], int, long, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToInt()",
+      "begin_line": 739,
+      "end_line": 755,
+      "comment": "\n     * Tests {@link Conversion#binaryToInt(boolean[], int, int, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToShort()",
+      "begin_line": 760,
+      "end_line": 778,
+      "comment": "\n     * Tests {@link Conversion#binaryToShort(boolean[], int, short, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testBinaryToByte()",
+      "begin_line": 783,
+      "end_line": 799,
+      "comment": "\n     * Tests {@link Conversion#binaryToByte(boolean[], int, byte, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testLongToIntArray()",
+      "begin_line": 804,
+      "end_line": 854,
+      "comment": "\n     * Tests {@link Conversion#longToIntArray(long, int, int[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testLongToShortArray()",
+      "begin_line": 859,
+      "end_line": 929,
+      "comment": "\n     * Tests {@link Conversion#longToShortArray(long, int, short[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntToShortArray()",
+      "begin_line": 934,
+      "end_line": 990,
+      "comment": "\n     * Tests {@link Conversion#intToShortArray(int, int, short[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testLongToByteArray()",
+      "begin_line": 995,
+      "end_line": 1099,
+      "comment": "\n     * Tests {@link Conversion#longToByteArray(long, int, byte[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntToByteArray()",
+      "begin_line": 1104,
+      "end_line": 1181,
+      "comment": "\n     * Tests {@link Conversion#intToByteArray(int, int, byte[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testShortToByteArray()",
+      "begin_line": 1186,
+      "end_line": 1242,
+      "comment": "\n     * Tests {@link Conversion#shortToByteArray(short, int, byte[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testLongToHex()",
+      "begin_line": 1247,
+      "end_line": 1307,
+      "comment": "\n     * Tests {@link Conversion#longToHex(long, int, String, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntToHex()",
+      "begin_line": 1312,
+      "end_line": 1371,
+      "comment": "\n     * Tests {@link Conversion#intToHex(int, int, String, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testShortToHex()",
+      "begin_line": 1376,
+      "end_line": 1423,
+      "comment": "\n     * Tests {@link Conversion#shortToHex(short, int, String, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testByteToHex()",
+      "begin_line": 1428,
+      "end_line": 1451,
+      "comment": "\n     * Tests {@link Conversion#byteToHex(byte, int, String, int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testLongToBinary()",
+      "begin_line": 1456,
+      "end_line": 1574,
+      "comment": "\n     * Tests {@link Conversion#longToBinary(long, int, boolean[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testIntToBinary()",
+      "begin_line": 1579,
+      "end_line": 1651,
+      "comment": "\n     * Tests {@link Conversion#intToBinary(int, int, boolean[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testShortToBinary()",
+      "begin_line": 1656,
+      "end_line": 1723,
+      "comment": "\n     * Tests {@link Conversion#shortToBinary(short, int, boolean[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testByteToBinary()",
+      "begin_line": 1728,
+      "end_line": 1771,
+      "comment": "\n     * Tests {@link Conversion#byteToBinary(byte, int, boolean[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testUuidToByteArray()",
+      "begin_line": 1776,
+      "end_line": 1798,
+      "comment": "\n     * Tests {@link Conversion#uuidToByteArray(UUID, byte[], int, int)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ConversionTest.testByteArrayToUuid()",
+      "begin_line": 1803,
+      "end_line": 1823,
+      "comment": "\n     * Tests {@link Conversion#byteArrayToUuid(byte[], int)}.\n     "
+    }
+  ]
+}

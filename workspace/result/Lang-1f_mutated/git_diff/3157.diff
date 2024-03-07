@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..0ce0e362 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1034,7 +1034,7 @@ public class NumberUtils {
+             if (Double.isNaN(array[j])) {
+                 return Double.NaN;
+             }
+-            if (array[j] > max) {
++            if (array[j] != max) {
+                 max = array[j];
+             }
+         }

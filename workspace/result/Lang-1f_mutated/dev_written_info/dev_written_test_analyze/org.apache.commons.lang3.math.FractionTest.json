@@ -1,0 +1,198 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/math/FractionTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "FractionTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 1369,
+      "comment": "\n * Test cases for the {@link Fraction} class\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SKIP"
+      ],
+      "begin_line": 36,
+      "end_line": 36,
+      "comment": "53"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testConstants()",
+      "begin_line": 39,
+      "end_line": 76,
+      "comment": "--------------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_int_int()",
+      "begin_line": 78,
+      "end_line": 147,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_int_int_int()",
+      "begin_line": 149,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testReducedFactory_int_int()",
+      "begin_line": 252,
+      "end_line": 341,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_double()",
+      "begin_line": 343,
+      "end_line": 431,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_String()",
+      "begin_line": 433,
+      "end_line": 436,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_String_double()",
+      "begin_line": 439,
+      "end_line": 473,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_String_proper()",
+      "begin_line": 475,
+      "end_line": 532,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testFactory_String_improper()",
+      "begin_line": 534,
+      "end_line": 581,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testGets()",
+      "begin_line": 583,
+      "end_line": 604,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testConversions()",
+      "begin_line": 606,
+      "end_line": 615,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testReduce()",
+      "begin_line": 617,
+      "end_line": 664,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testInvert()",
+      "begin_line": 666,
+      "end_line": 702,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testNegate()",
+      "begin_line": 704,
+      "end_line": 729,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testAbs()",
+      "begin_line": 731,
+      "end_line": 760,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testPow()",
+      "begin_line": 762,
+      "end_line": 873,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testAdd()",
+      "begin_line": 875,
+      "end_line": 992,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testSubtract()",
+      "begin_line": 994,
+      "end_line": 1105,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testMultiply()",
+      "begin_line": 1107,
+      "end_line": 1174,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testDivide()",
+      "begin_line": 1176,
+      "end_line": 1232,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testEquals()",
+      "begin_line": 1234,
+      "end_line": 1255,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testHashCode()",
+      "begin_line": 1257,
+      "end_line": 1269,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testCompareTo()",
+      "begin_line": 1271,
+      "end_line": 1304,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testToString()",
+      "begin_line": 1306,
+      "end_line": 1332,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.math.FractionTest.testToProperString()",
+      "begin_line": 1334,
+      "end_line": 1368,
+      "comment": ""
+    }
+  ]
+}

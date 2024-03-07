@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/WordUtils.java b/src/main/java/org/apache/commons/lang3/text/WordUtils.java
+index 7f29b59f..ba82bcfa 100644
+--- a/src/main/java/org/apache/commons/lang3/text/WordUtils.java
++++ b/src/main/java/org/apache/commons/lang3/text/WordUtils.java
+@@ -385,7 +385,7 @@ public class WordUtils {
+                     buffer[i] = Character.toTitleCase(ch);
+                     whitespace = false;
+                 } else {
+-                    buffer[i] = Character.toUpperCase(ch);
++                    ;
+                 }
+             } else {
+                 whitespace = Character.isWhitespace(ch);

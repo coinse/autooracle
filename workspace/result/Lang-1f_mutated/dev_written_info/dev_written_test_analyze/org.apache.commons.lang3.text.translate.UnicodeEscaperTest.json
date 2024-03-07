@@ -1,0 +1,35 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/translate/UnicodeEscaperTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "UnicodeEscaperTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 56,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.translate.UnicodeEscaper}.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.UnicodeEscaperTest.testBelow()",
+      "begin_line": 30,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.UnicodeEscaperTest.testBetween()",
+      "begin_line": 39,
+      "end_line": 46,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.UnicodeEscaperTest.testAbove()",
+      "begin_line": 48,
+      "end_line": 55,
+      "comment": ""
+    }
+  ]
+}

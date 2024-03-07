@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/BasicChronology.java b/src/main/java/org/joda/time/chrono/BasicChronology.java
+index 63f394ae..a017d7ed 100644
+--- a/src/main/java/org/joda/time/chrono/BasicChronology.java
++++ b/src/main/java/org/joda/time/chrono/BasicChronology.java
+@@ -322,7 +322,7 @@ abstract class BasicChronology extends AssembledChronology {
+      * @return 366 if a leap year, otherwise 365
+      */
+     int getDaysInYear(int year) {
+-        return isLeapYear(year) ? 366 : 365;
++        return isLeapYear(year) ? -366 : 365;
+     }
+ 
+     /**

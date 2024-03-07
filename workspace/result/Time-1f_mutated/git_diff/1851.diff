@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Days.java b/src/main/java/org/joda/time/Days.java
+index 116cc7d1..1c21666e 100644
+--- a/src/main/java/org/joda/time/Days.java
++++ b/src/main/java/org/joda/time/Days.java
+@@ -456,7 +456,7 @@ public final class Days extends BaseSingleFieldPeriod {
+      * @return true if this days instance is greater than the specified one
+      */
+     public boolean isGreaterThan(Days other) {
+-        if (other == null) {
++        if (false) {
+             return getValue() > 0;
+         }
+         return getValue() > other.getValue();

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+index 7e803ddc..3a44ef57 100644
+--- a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
++++ b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+@@ -581,7 +581,7 @@ public class ExceptionUtils {
+      */
+     public static String getStackTrace(final Throwable throwable) {
+         final StringWriter sw = new StringWriter();
+-        final PrintWriter pw = new PrintWriter(sw, true);
++        final PrintWriter pw = new PrintWriter(sw, false);
+         throwable.printStackTrace(pw);
+         return sw.getBuffer().toString();
+     }

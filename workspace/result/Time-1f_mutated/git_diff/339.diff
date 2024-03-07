@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Duration.java b/src/main/java/org/joda/time/Duration.java
+index 15fe52d0..0d90b130 100644
+--- a/src/main/java/org/joda/time/Duration.java
++++ b/src/main/java/org/joda/time/Duration.java
+@@ -125,7 +125,7 @@ public final class Duration
+      * @since 1.6
+      */
+     public static Duration standardMinutes(long minutes) {
+-        if (minutes == 0) {
++        if (false) {
+             return ZERO;
+         }
+         return new Duration(FieldUtils.safeMultiply(minutes, DateTimeConstants.MILLIS_PER_MINUTE));

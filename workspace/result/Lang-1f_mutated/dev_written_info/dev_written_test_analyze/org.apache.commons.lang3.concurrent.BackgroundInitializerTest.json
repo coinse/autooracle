@@ -1,0 +1,192 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/concurrent/BackgroundInitializerTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "BackgroundInitializerTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 27,
+      "end_line": 304,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.checkInitialize(org.apache.commons.lang3.concurrent.BackgroundInitializerTest.BackgroundInitializerTestImpl)",
+      "begin_line": 34,
+      "end_line": 43,
+      "comment": "\n     * Helper method for checking whether the initialize() method was correctly\n     * called. start() must already have been invoked.\n     *\n     * @param init the initializer to test\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testInitialize()",
+      "begin_line": 48,
+      "end_line": 53,
+      "comment": "\n     * Tests whether initialize() is invoked.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetActiveExecutorBeforeStart()",
+      "begin_line": 59,
+      "end_line": 63,
+      "comment": "\n     * Tries to obtain the executor before start(). It should not have been\n     * initialized yet.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetActiveExecutorExternal()",
+      "begin_line": 68,
+      "end_line": 80,
+      "comment": "\n     * Tests whether an external executor is correctly detected.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetActiveExecutorTemp()",
+      "begin_line": 85,
+      "end_line": 91,
+      "comment": "\n     * Tests getActiveExecutor() for a temporary executor.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testInitializeTempExecutor()",
+      "begin_line": 97,
+      "end_line": 104,
+      "comment": "\n     * Tests the execution of the background task if a temporary executor has to\n     * be created.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testSetExternalExecutor()",
+      "begin_line": 110,
+      "end_line": 125,
+      "comment": "\n     * Tests whether an external executor can be set using the\n     * setExternalExecutor() method.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testSetExternalExecutorAfterStart()",
+      "begin_line": 130,
+      "end_line": 140,
+      "comment": "\n     * Tests that setting an executor after start() causes an exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testStartMultipleTimes()",
+      "begin_line": 146,
+      "end_line": 154,
+      "comment": "\n     * Tests invoking start() multiple times. Only the first invocation should\n     * have an effect.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetBeforeStart()",
+      "begin_line": 159,
+      "end_line": 163,
+      "comment": "\n     * Tests calling get() before start(). This should cause an exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetRuntimeException()",
+      "begin_line": 169,
+      "end_line": 181,
+      "comment": "\n     * Tests the get() method if background processing causes a runtime\n     * exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetCheckedException()",
+      "begin_line": 187,
+      "end_line": 199,
+      "comment": "\n     * Tests the get() method if background processing causes a checked\n     * exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testGetInterruptedException()",
+      "begin_line": 204,
+      "end_line": 234,
+      "comment": "\n     * Tests the get() method if waiting for the initialization is interrupted.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.Anonymous-7c693d6c-ab10-4c25-80bb-032b4b725ead.run()",
+      "begin_line": 214,
+      "end_line": 226,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testIsStartedFalse()",
+      "begin_line": 239,
+      "end_line": 243,
+      "comment": "\n     * Tests isStarted() before start() was called.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testIsStartedTrue()",
+      "begin_line": 248,
+      "end_line": 253,
+      "comment": "\n     * Tests isStarted() after start().\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.testIsStartedAfterGet()",
+      "begin_line": 258,
+      "end_line": 264,
+      "comment": "\n     * Tests isStarted() after the background task has finished.\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "BackgroundInitializerTestImpl",
+      "is_interface": false,
+      "parent_types": [
+        "BackgroundInitializer\u003cInteger\u003e"
+      ],
+      "begin_line": 270,
+      "end_line": 303,
+      "comment": "\n     * A concrete implementation of BackgroundInitializer. It also overloads\n     * some methods that simplify testing.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "ex"
+      ],
+      "begin_line": 273,
+      "end_line": 273,
+      "comment": " An exception to be thrown by initialize(). "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "shouldSleep"
+      ],
+      "begin_line": 276,
+      "end_line": 276,
+      "comment": " A flag whether the background task should sleep a while. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "initializeCalls"
+      ],
+      "begin_line": 279,
+      "end_line": 279,
+      "comment": " The number of invocations of initialize(). "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.BackgroundInitializerTestImpl.BackgroundInitializerTestImpl()",
+      "begin_line": 281,
+      "end_line": 283,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.BackgroundInitializerTestImpl.BackgroundInitializerTestImpl(java.util.concurrent.ExecutorService)",
+      "begin_line": 285,
+      "end_line": 287,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.BackgroundInitializerTest.BackgroundInitializerTestImpl.initialize()",
+      "begin_line": 293,
+      "end_line": 302,
+      "comment": "\n         * Records this invocation. Optionally throws an exception or sleeps a\n         * while.\n         "
+    }
+  ]
+}

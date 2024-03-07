@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..df6ffe0f 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5887,7 +5887,7 @@ public class StringUtils {
+         final int sz = cs.length();
+         for (int i = 0; i < sz; i++) {
+             if (CharUtils.isAsciiPrintable(cs.charAt(i)) == false) {
+-                return false;
++                return true;
+             }
+         }
+         return true;

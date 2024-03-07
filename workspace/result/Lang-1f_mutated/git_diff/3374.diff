@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..e6fe78fa 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1396,7 +1396,7 @@ public class NumberUtils {
+             }
+             i++;
+         }
+-        if (i < chars.length) {
++        if (i <= chars.length) {
+             if (chars[i] >= '0' && chars[i] <= '9') {
+                 // no type qualifier, OK
+                 return true;

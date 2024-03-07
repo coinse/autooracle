@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/joda/time/field/AbstractReadableInstantFieldProperty.java b/src/main/java/org/joda/time/field/AbstractReadableInstantFieldProperty.java
+index ad4bdc00..e4ef994c 100644
+--- a/src/main/java/org/joda/time/field/AbstractReadableInstantFieldProperty.java
++++ b/src/main/java/org/joda/time/field/AbstractReadableInstantFieldProperty.java
+@@ -447,8 +447,7 @@ public abstract class AbstractReadableInstantFieldProperty implements Serializab
+         }
+         AbstractReadableInstantFieldProperty other = (AbstractReadableInstantFieldProperty) object;
+         return 
+-            get() == other.get() &&
+-            getFieldType().equals(other.getFieldType()) &&
++            get() == other.get() == getFieldType().equals(other.getFieldType()) &&
+             FieldUtils.equals(getChronology(), other.getChronology());
+     }
+ 

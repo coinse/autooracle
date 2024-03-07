@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/joda/time/chrono/BasicChronology.java b/src/main/java/org/joda/time/chrono/BasicChronology.java
+index 63f394ae..b36daa8f 100644
+--- a/src/main/java/org/joda/time/chrono/BasicChronology.java
++++ b/src/main/java/org/joda/time/chrono/BasicChronology.java
+@@ -353,8 +353,7 @@ abstract class BasicChronology extends AssembledChronology {
+                 * (long)DateTimeConstants.MILLIS_PER_DAY;
+         } else {
+             // First week is start of this year because it has enough days.
+-            return jan1millis - (jan1dayOfWeek - 1)
+-                * (long)DateTimeConstants.MILLIS_PER_DAY;
++            return jan1millis % ((jan1dayOfWeek - 1) * (long)DateTimeConstants.MILLIS_PER_DAY);
+         }
+     }
+ 

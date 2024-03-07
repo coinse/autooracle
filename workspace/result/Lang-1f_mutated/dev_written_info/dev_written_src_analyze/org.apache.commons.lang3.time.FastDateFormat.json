@@ -1,0 +1,349 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/time/FastDateFormat.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "FastDateFormat",
+      "is_interface": false,
+      "parent_types": [
+        "java.text.Format",
+        "DateParser",
+        "DatePrinter"
+      ],
+      "begin_line": 63,
+      "end_line": 590,
+      "comment": "\n * \u003cp\u003eFastDateFormat is a fast and thread-safe version of\n * {@link java.text.SimpleDateFormat}.\u003c/p\u003e\n *\n * \u003cp\u003eThis class can be used as a direct replacement to\n * {@code SimpleDateFormat} in most formatting and parsing situations.\n * This class is especially useful in multi-threaded server environments.\n * {@code SimpleDateFormat} is not thread-safe in any JDK version,\n * nor will it be as Sun have closed the bug/RFE.\n * \u003c/p\u003e\n *\n * \u003cp\u003eAll patterns are compatible with\n * SimpleDateFormat (except time zones and some year patterns - see below).\u003c/p\u003e\n * \n * \u003cp\u003eSince 3.2, FastDateFormat supports parsing as well as printing.\u003c/p\u003e\n *\n * \u003cp\u003eJava 1.4 introduced a new pattern letter, {@code \u0027Z\u0027}, to represent\n * time zones in RFC822 format (eg. {@code +0800} or {@code -1100}).\n * This pattern letter can be used here (on all JDK versions).\u003c/p\u003e\n *\n * \u003cp\u003eIn addition, the pattern {@code \u0027ZZ\u0027} has been made to represent\n * ISO8601 full format time zones (eg. {@code +08:00} or {@code -11:00}).\n * This introduces a minor incompatibility with Java 1.4, but at a gain of\n * useful functionality.\u003c/p\u003e\n *\n * \u003cp\u003eJavadoc cites for the year pattern: \u003ci\u003eFor formatting, if the number of\n * pattern letters is 2, the year is truncated to 2 digits; otherwise it is\n * interpreted as a number.\u003c/i\u003e Starting with Java 1.7 a pattern of \u0027Y\u0027 or\n * \u0027YYY\u0027 will be formatted as \u00272003\u0027, while it was \u002703\u0027 in former Java\n * versions. FastDateFormat implements the behavior of Java 7.\u003c/p\u003e\n *\n * @since 2.0\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 69,
+      "end_line": 69,
+      "comment": "\n     * Required for serialization support.\n     *\n     * @see java.io.Serializable\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FULL"
+      ],
+      "begin_line": 74,
+      "end_line": 74,
+      "comment": "\n     * FULL locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "LONG"
+      ],
+      "begin_line": 78,
+      "end_line": 78,
+      "comment": "\n     * LONG locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "MEDIUM"
+      ],
+      "begin_line": 82,
+      "end_line": 82,
+      "comment": "\n     * MEDIUM locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SHORT"
+      ],
+      "begin_line": 86,
+      "end_line": 86,
+      "comment": "\n     * SHORT locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cache"
+      ],
+      "begin_line": 88,
+      "end_line": 93,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "createInstance(String, TimeZone, Locale)",
+      "begin_line": 89,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "printer"
+      ],
+      "begin_line": 95,
+      "end_line": 95,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "parser"
+      ],
+      "begin_line": 96,
+      "end_line": 96,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getInstance()",
+      "begin_line": 105,
+      "end_line": 107,
+      "comment": "\n     * \u003cp\u003eGets a formatter instance using the default pattern in the\n     * default locale.\u003c/p\u003e\n     *\n     * @return a date/time formatter\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getInstance(java.lang.String)",
+      "begin_line": 118,
+      "end_line": 120,
+      "comment": "\n     * \u003cp\u003eGets a formatter instance using the specified pattern in the\n     * default locale.\u003c/p\u003e\n     *\n     * @param pattern  {@link java.text.SimpleDateFormat} compatible\n     *  pattern\n     * @return a pattern based date/time formatter\n     * @throws IllegalArgumentException if pattern is invalid\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getInstance(java.lang.String, java.util.TimeZone)",
+      "begin_line": 133,
+      "end_line": 135,
+      "comment": "\n     * \u003cp\u003eGets a formatter instance using the specified pattern and\n     * time zone.\u003c/p\u003e\n     *\n     * @param pattern  {@link java.text.SimpleDateFormat} compatible\n     *  pattern\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted date\n     * @return a pattern based date/time formatter\n     * @throws IllegalArgumentException if pattern is invalid\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getInstance(java.lang.String, java.util.Locale)",
+      "begin_line": 147,
+      "end_line": 149,
+      "comment": "\n     * \u003cp\u003eGets a formatter instance using the specified pattern and\n     * locale.\u003c/p\u003e\n     *\n     * @param pattern  {@link java.text.SimpleDateFormat} compatible\n     *  pattern\n     * @param locale  optional locale, overrides system locale\n     * @return a pattern based date/time formatter\n     * @throws IllegalArgumentException if pattern is invalid\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getInstance(java.lang.String, java.util.TimeZone, java.util.Locale)",
+      "begin_line": 164,
+      "end_line": 166,
+      "comment": "\n     * \u003cp\u003eGets a formatter instance using the specified pattern, time zone\n     * and locale.\u003c/p\u003e\n     *\n     * @param pattern  {@link java.text.SimpleDateFormat} compatible\n     *  pattern\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted date\n     * @param locale  optional locale, overrides system locale\n     * @return a pattern based date/time formatter\n     * @throws IllegalArgumentException if pattern is invalid\n     *  or {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateInstance(int)",
+      "begin_line": 179,
+      "end_line": 181,
+      "comment": "\n     * \u003cp\u003eGets a date formatter instance using the specified style in the\n     * default time zone and locale.\u003c/p\u003e\n     *\n     * @param style  date style: FULL, LONG, MEDIUM, or SHORT\n     * @return a localized standard date formatter\n     * @throws IllegalArgumentException if the Locale has no date\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateInstance(int, java.util.Locale)",
+      "begin_line": 194,
+      "end_line": 196,
+      "comment": "\n     * \u003cp\u003eGets a date formatter instance using the specified style and\n     * locale in the default time zone.\u003c/p\u003e\n     *\n     * @param style  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param locale  optional locale, overrides system locale\n     * @return a localized standard date formatter\n     * @throws IllegalArgumentException if the Locale has no date\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateInstance(int, java.util.TimeZone)",
+      "begin_line": 210,
+      "end_line": 212,
+      "comment": "\n     * \u003cp\u003eGets a date formatter instance using the specified style and\n     * time zone in the default locale.\u003c/p\u003e\n     *\n     * @param style  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted date\n     * @return a localized standard date formatter\n     * @throws IllegalArgumentException if the Locale has no date\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateInstance(int, java.util.TimeZone, java.util.Locale)",
+      "begin_line": 226,
+      "end_line": 228,
+      "comment": "\n     * \u003cp\u003eGets a date formatter instance using the specified style, time\n     * zone and locale.\u003c/p\u003e\n     *\n     * @param style  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted date\n     * @param locale  optional locale, overrides system locale\n     * @return a localized standard date formatter\n     * @throws IllegalArgumentException if the Locale has no date\n     *  pattern defined\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getTimeInstance(int)",
+      "begin_line": 241,
+      "end_line": 243,
+      "comment": "\n     * \u003cp\u003eGets a time formatter instance using the specified style in the\n     * default time zone and locale.\u003c/p\u003e\n     *\n     * @param style  time style: FULL, LONG, MEDIUM, or SHORT\n     * @return a localized standard time formatter\n     * @throws IllegalArgumentException if the Locale has no time\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getTimeInstance(int, java.util.Locale)",
+      "begin_line": 256,
+      "end_line": 258,
+      "comment": "\n     * \u003cp\u003eGets a time formatter instance using the specified style and\n     * locale in the default time zone.\u003c/p\u003e\n     *\n     * @param style  time style: FULL, LONG, MEDIUM, or SHORT\n     * @param locale  optional locale, overrides system locale\n     * @return a localized standard time formatter\n     * @throws IllegalArgumentException if the Locale has no time\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getTimeInstance(int, java.util.TimeZone)",
+      "begin_line": 272,
+      "end_line": 274,
+      "comment": "\n     * \u003cp\u003eGets a time formatter instance using the specified style and\n     * time zone in the default locale.\u003c/p\u003e\n     *\n     * @param style  time style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted time\n     * @return a localized standard time formatter\n     * @throws IllegalArgumentException if the Locale has no time\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getTimeInstance(int, java.util.TimeZone, java.util.Locale)",
+      "begin_line": 288,
+      "end_line": 290,
+      "comment": "\n     * \u003cp\u003eGets a time formatter instance using the specified style, time\n     * zone and locale.\u003c/p\u003e\n     *\n     * @param style  time style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted time\n     * @param locale  optional locale, overrides system locale\n     * @return a localized standard time formatter\n     * @throws IllegalArgumentException if the Locale has no time\n     *  pattern defined\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateTimeInstance(int, int)",
+      "begin_line": 304,
+      "end_line": 306,
+      "comment": "\n     * \u003cp\u003eGets a date/time formatter instance using the specified style\n     * in the default time zone and locale.\u003c/p\u003e\n     *\n     * @param dateStyle  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeStyle  time style: FULL, LONG, MEDIUM, or SHORT\n     * @return a localized standard date/time formatter\n     * @throws IllegalArgumentException if the Locale has no date/time\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateTimeInstance(int, int, java.util.Locale)",
+      "begin_line": 320,
+      "end_line": 322,
+      "comment": "\n     * \u003cp\u003eGets a date/time formatter instance using the specified style and\n     * locale in the default time zone.\u003c/p\u003e\n     *\n     * @param dateStyle  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeStyle  time style: FULL, LONG, MEDIUM, or SHORT\n     * @param locale  optional locale, overrides system locale\n     * @return a localized standard date/time formatter\n     * @throws IllegalArgumentException if the Locale has no date/time\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateTimeInstance(int, int, java.util.TimeZone)",
+      "begin_line": 337,
+      "end_line": 339,
+      "comment": "\n     * \u003cp\u003eGets a date/time formatter instance using the specified style and\n     * time zone in the default locale.\u003c/p\u003e\n     *\n     * @param dateStyle  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeStyle  time style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted date\n     * @return a localized standard date/time formatter\n     * @throws IllegalArgumentException if the Locale has no date/time\n     *  pattern defined\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getDateTimeInstance(int, int, java.util.TimeZone, java.util.Locale)",
+      "begin_line": 353,
+      "end_line": 356,
+      "comment": "\n     * \u003cp\u003eGets a date/time formatter instance using the specified style,\n     * time zone and locale.\u003c/p\u003e\n     *\n     * @param dateStyle  date style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeStyle  time style: FULL, LONG, MEDIUM, or SHORT\n     * @param timeZone  optional time zone, overrides time zone of\n     *  formatted date\n     * @param locale  optional locale, overrides system locale\n     * @return a localized standard date/time formatter\n     * @throws IllegalArgumentException if the Locale has no date/time\n     *  pattern defined\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.FastDateFormat(java.lang.String, java.util.TimeZone, java.util.Locale)",
+      "begin_line": 368,
+      "end_line": 371,
+      "comment": "\n     * \u003cp\u003eConstructs a new FastDateFormat.\u003c/p\u003e\n     *\n     * @param pattern  {@link java.text.SimpleDateFormat} compatible pattern\n     * @param timeZone  non-null time zone to use\n     * @param locale  non-null locale to use\n     * @throws NullPointerException if pattern, timeZone, or locale is null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(java.lang.Object, java.lang.StringBuffer, java.text.FieldPosition)",
+      "begin_line": 384,
+      "end_line": 387,
+      "comment": "\n     * \u003cp\u003eFormats a {@code Date}, {@code Calendar} or\n     * {@code Long} (milliseconds) object.\u003c/p\u003e\n     *\n     * @param obj  the object to format\n     * @param toAppendTo  the buffer to append to\n     * @param pos  the position - ignored\n     * @return the buffer passed in\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(long)",
+      "begin_line": 396,
+      "end_line": 399,
+      "comment": "\n     * \u003cp\u003eFormats a millisecond {@code long} value.\u003c/p\u003e\n     *\n     * @param millis  the millisecond value to format\n     * @return the formatted string\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(java.util.Date)",
+      "begin_line": 407,
+      "end_line": 410,
+      "comment": "\n     * \u003cp\u003eFormats a {@code Date} object using a {@code GregorianCalendar}.\u003c/p\u003e\n     *\n     * @param date  the date to format\n     * @return the formatted string\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(java.util.Calendar)",
+      "begin_line": 418,
+      "end_line": 421,
+      "comment": "\n     * \u003cp\u003eFormats a {@code Calendar} object.\u003c/p\u003e\n     *\n     * @param calendar  the calendar to format\n     * @return the formatted string\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(long, java.lang.StringBuffer)",
+      "begin_line": 432,
+      "end_line": 435,
+      "comment": "\n     * \u003cp\u003eFormats a milliseond {@code long} value into the\n     * supplied {@code StringBuffer}.\u003c/p\u003e\n     *\n     * @param millis  the millisecond value to format\n     * @param buf  the buffer to format into\n     * @return the specified string buffer\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(java.util.Date, java.lang.StringBuffer)",
+      "begin_line": 445,
+      "end_line": 448,
+      "comment": "\n     * \u003cp\u003eFormats a {@code Date} object into the\n     * supplied {@code StringBuffer} using a {@code GregorianCalendar}.\u003c/p\u003e\n     *\n     * @param date  the date to format\n     * @param buf  the buffer to format into\n     * @return the specified string buffer\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.format(java.util.Calendar, java.lang.StringBuffer)",
+      "begin_line": 458,
+      "end_line": 461,
+      "comment": "\n     * \u003cp\u003eFormats a {@code Calendar} object into the\n     * supplied {@code StringBuffer}.\u003c/p\u003e\n     *\n     * @param calendar  the calendar to format\n     * @param buf  the buffer to format into\n     * @return the specified string buffer\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.parse(java.lang.String)",
+      "begin_line": 470,
+      "end_line": 473,
+      "comment": " (non-Javadoc)\n     * @see DateParser#parse(java.lang.String)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.parse(java.lang.String, java.text.ParsePosition)",
+      "begin_line": 478,
+      "end_line": 481,
+      "comment": " (non-Javadoc)\n     * @see DateParser#parse(java.lang.String, java.text.ParsePosition)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.parseObject(java.lang.String, java.text.ParsePosition)",
+      "begin_line": 486,
+      "end_line": 489,
+      "comment": " (non-Javadoc)\n     * @see java.text.Format#parseObject(java.lang.String, java.text.ParsePosition)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getPattern()",
+      "begin_line": 498,
+      "end_line": 501,
+      "comment": "\n     * \u003cp\u003eGets the pattern used by this formatter.\u003c/p\u003e\n     *\n     * @return the pattern, {@link java.text.SimpleDateFormat} compatible\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getTimeZone()",
+      "begin_line": 510,
+      "end_line": 513,
+      "comment": "\n     * \u003cp\u003eGets the time zone used by this formatter.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis zone is always used for {@code Date} formatting. \u003c/p\u003e\n     *\n     * @return the time zone\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getLocale()",
+      "begin_line": 520,
+      "end_line": 523,
+      "comment": "\n     * \u003cp\u003eGets the locale used by this formatter.\u003c/p\u003e\n     *\n     * @return the locale\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.getMaxLengthEstimate()",
+      "begin_line": 534,
+      "end_line": 536,
+      "comment": "\n     * \u003cp\u003eGets an estimate for the maximum string length that the\n     * formatter will produce.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe actual formatted length will almost always be less than or\n     * equal to this amount.\u003c/p\u003e\n     *\n     * @return the maximum formatted length\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.equals(java.lang.Object)",
+      "begin_line": 546,
+      "end_line": 554,
+      "comment": "\n     * \u003cp\u003eCompares two objects for equality.\u003c/p\u003e\n     *\n     * @param obj  the object to compare to\n     * @return {@code true} if equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.hashCode()",
+      "begin_line": 561,
+      "end_line": 564,
+      "comment": "\n     * \u003cp\u003eReturns a hashcode compatible with equals.\u003c/p\u003e\n     *\n     * @return a hashcode compatible with equals\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.toString()",
+      "begin_line": 571,
+      "end_line": 574,
+      "comment": "\n     * \u003cp\u003eGets a debugging string version of this formatter.\u003c/p\u003e\n     *\n     * @return a debugging string\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDateFormat.applyRules(java.util.Calendar, java.lang.StringBuffer)",
+      "begin_line": 585,
+      "end_line": 587,
+      "comment": "\n     * \u003cp\u003ePerforms the formatting by applying the rules to the\n     * specified calendar.\u003c/p\u003e\n     *\n     * @param calendar  the calendar to format\n     * @param buf  the buffer to format into\n     * @return the specified string buffer\n     "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..eb783a8b 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -506,7 +506,7 @@ public final class ConverterManager {
+      */
+     public IntervalConverter getIntervalConverter(Object object) {
+         IntervalConverter converter =
+-            (IntervalConverter)iIntervalConverters.select(object == null ? null : object.getClass());
++            (IntervalConverter)iIntervalConverters.select(false ? null : object.getClass());
+         if (converter != null) {
+             return converter;
+         }

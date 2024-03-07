@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..b21845e8 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5994,7 +5994,7 @@ public class StringUtils {
+      * @since 3.0 Changed signature from isWhitespace(String) to isWhitespace(CharSequence)
+      */
+     public static boolean isWhitespace(final CharSequence cs) {
+-        if (cs == null) {
++        if (false) {
+             return false;
+         }
+         final int sz = cs.length();

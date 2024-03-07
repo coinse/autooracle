@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/PreciseDurationField.java b/src/main/java/org/joda/time/field/PreciseDurationField.java
+index dcd91fec..ff249567 100644
+--- a/src/main/java/org/joda/time/field/PreciseDurationField.java
++++ b/src/main/java/org/joda/time/field/PreciseDurationField.java
+@@ -128,7 +128,7 @@ public class PreciseDurationField extends BaseDurationField {
+             return true;
+         } else if (obj instanceof PreciseDurationField) {
+             PreciseDurationField other = (PreciseDurationField) obj;
+-            return (getType() == other.getType()) && (iUnitMillis == other.iUnitMillis);
++            return (getType() == other.getType()) && (iUnitMillis <= other.iUnitMillis);
+         }
+         return false;
+     }

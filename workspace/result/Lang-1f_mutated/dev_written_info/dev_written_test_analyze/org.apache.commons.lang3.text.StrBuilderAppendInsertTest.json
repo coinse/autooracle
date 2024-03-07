@@ -1,0 +1,550 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/StrBuilderAppendInsertTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StrBuilderAppendInsertTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 1582,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.StrBuilder}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SEP"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": " The system line separator. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO"
+      ],
+      "begin_line": 40,
+      "end_line": 45,
+      "comment": " Test subclass of Object, with a toString method. "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.Anonymous-31cae517-ea0a-4301-b7f2-c0114c62d5d5.toString()",
+      "begin_line": 41,
+      "end_line": 44,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendNewLine()",
+      "begin_line": 48,
+      "end_line": 57,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendWithNullText()",
+      "begin_line": 60,
+      "end_line": 89,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_Object()",
+      "begin_line": 92,
+      "end_line": 118,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_StringBuilder()",
+      "begin_line": 121,
+      "end_line": 136,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_String()",
+      "begin_line": 139,
+      "end_line": 154,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_String_int_int()",
+      "begin_line": 157,
+      "end_line": 217,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_StringBuilder_int_int()",
+      "begin_line": 220,
+      "end_line": 280,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_StringBuffer()",
+      "begin_line": 283,
+      "end_line": 298,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_StringBuffer_int_int()",
+      "begin_line": 301,
+      "end_line": 358,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_StrBuilder()",
+      "begin_line": 361,
+      "end_line": 376,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_StrBuilder_int_int()",
+      "begin_line": 379,
+      "end_line": 436,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_CharArray()",
+      "begin_line": 439,
+      "end_line": 451,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_CharArray_int_int()",
+      "begin_line": 454,
+      "end_line": 511,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_Boolean()",
+      "begin_line": 514,
+      "end_line": 525,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_PrimitiveNumber()",
+      "begin_line": 528,
+      "end_line": 542,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_FormattedString()",
+      "begin_line": 545,
+      "end_line": 564,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(String)",
+      "begin_line": 549,
+      "end_line": 553,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 554,
+      "end_line": 558,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_Object()",
+      "begin_line": 567,
+      "end_line": 578,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_String()",
+      "begin_line": 581,
+      "end_line": 600,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(String)",
+      "begin_line": 585,
+      "end_line": 589,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 590,
+      "end_line": 594,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_String_int_int()",
+      "begin_line": 603,
+      "end_line": 622,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(String, int, int)",
+      "begin_line": 607,
+      "end_line": 611,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 612,
+      "end_line": 616,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_StringBuffer()",
+      "begin_line": 625,
+      "end_line": 644,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(StringBuffer)",
+      "begin_line": 629,
+      "end_line": 633,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 634,
+      "end_line": 638,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_StringBuilder()",
+      "begin_line": 647,
+      "end_line": 666,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(StringBuilder)",
+      "begin_line": 651,
+      "end_line": 655,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 656,
+      "end_line": 660,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_StringBuffer_int_int()",
+      "begin_line": 669,
+      "end_line": 688,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(StringBuffer, int, int)",
+      "begin_line": 673,
+      "end_line": 677,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 678,
+      "end_line": 682,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_StringBuilder_int_int()",
+      "begin_line": 691,
+      "end_line": 710,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(StringBuilder, int, int)",
+      "begin_line": 695,
+      "end_line": 699,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 700,
+      "end_line": 704,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_StrBuilder()",
+      "begin_line": 713,
+      "end_line": 732,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(StrBuilder)",
+      "begin_line": 717,
+      "end_line": 721,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 722,
+      "end_line": 726,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_StrBuilder_int_int()",
+      "begin_line": 735,
+      "end_line": 754,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(StrBuilder, int, int)",
+      "begin_line": 739,
+      "end_line": 743,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 744,
+      "end_line": 748,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_CharArray()",
+      "begin_line": 757,
+      "end_line": 776,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(char[])",
+      "begin_line": 761,
+      "end_line": 765,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 766,
+      "end_line": 770,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_CharArray_int_int()",
+      "begin_line": 779,
+      "end_line": 798,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "append(char[], int, int)",
+      "begin_line": 783,
+      "end_line": 787,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "appendNewLine()",
+      "begin_line": 788,
+      "end_line": 792,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_Boolean()",
+      "begin_line": 801,
+      "end_line": 810,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendln_PrimitiveNumber()",
+      "begin_line": 813,
+      "end_line": 830,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendPadding()",
+      "begin_line": 833,
+      "end_line": 852,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendFixedWidthPadLeft()",
+      "begin_line": 855,
+      "end_line": 891,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendFixedWidthPadLeft_int()",
+      "begin_line": 894,
+      "end_line": 925,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendFixedWidthPadRight()",
+      "begin_line": 928,
+      "end_line": 964,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testLang299()",
+      "begin_line": 967,
+      "end_line": 972,
+      "comment": " See: http://issues.apache.org/jira/browse/LANG-299"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendFixedWidthPadRight_int()",
+      "begin_line": 975,
+      "end_line": 1006,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppend_FormattedString()",
+      "begin_line": 1009,
+      "end_line": 1028,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendAll_Array()",
+      "begin_line": 1031,
+      "end_line": 1048,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendAll_Collection()",
+      "begin_line": 1051,
+      "end_line": 1064,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendAll_Iterator()",
+      "begin_line": 1067,
+      "end_line": 1080,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendWithSeparators_Array()",
+      "begin_line": 1083,
+      "end_line": 1104,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendWithSeparators_Collection()",
+      "begin_line": 1107,
+      "end_line": 1128,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendWithSeparators_Iterator()",
+      "begin_line": 1131,
+      "end_line": 1152,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendWithSeparatorsWithNullText()",
+      "begin_line": 1155,
+      "end_line": 1165,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendSeparator_String()",
+      "begin_line": 1168,
+      "end_line": 1177,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendSeparator_String_String()",
+      "begin_line": 1180,
+      "end_line": 1200,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendSeparator_char()",
+      "begin_line": 1203,
+      "end_line": 1212,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendSeparator_char_char()",
+      "begin_line": 1213,
+      "end_line": 1225,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendSeparator_String_int()",
+      "begin_line": 1228,
+      "end_line": 1240,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testAppendSeparator_char_int()",
+      "begin_line": 1243,
+      "end_line": 1255,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testInsert()",
+      "begin_line": 1258,
+      "end_line": 1522,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderAppendInsertTest.testInsertWithNullText()",
+      "begin_line": 1525,
+      "end_line": 1581,
+      "comment": "-----------------------------------------------------------------------"
+    }
+  ]
+}

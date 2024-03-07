@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Months.java b/src/main/java/org/joda/time/Months.java
+index eec6def2..6220c7cf 100644
+--- a/src/main/java/org/joda/time/Months.java
++++ b/src/main/java/org/joda/time/Months.java
+@@ -337,7 +337,7 @@ public final class Months extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the divisor is zero
+      */
+     public Months dividedBy(int divisor) {
+-        if (divisor == 1) {
++        if (divisor <= 1) {
+             return this;
+         }
+         return Months.months(getValue() / divisor);

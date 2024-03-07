@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/LenientChronology.java b/src/main/java/org/joda/time/chrono/LenientChronology.java
+index f072d586..511fa10d 100644
+--- a/src/main/java/org/joda/time/chrono/LenientChronology.java
++++ b/src/main/java/org/joda/time/chrono/LenientChronology.java
+@@ -128,7 +128,7 @@ public final class LenientChronology extends AssembledChronology {
+             return true;
+         }
+         if (obj instanceof LenientChronology == false) {
+-            return false;
++            return true;
+         }
+         LenientChronology chrono = (LenientChronology) obj;
+         return getBase().equals(chrono.getBase());

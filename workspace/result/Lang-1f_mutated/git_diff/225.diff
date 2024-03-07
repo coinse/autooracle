@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharSequenceUtils.java b/src/main/java/org/apache/commons/lang3/CharSequenceUtils.java
+index b69e12f5..c84f3bae 100644
+--- a/src/main/java/org/apache/commons/lang3/CharSequenceUtils.java
++++ b/src/main/java/org/apache/commons/lang3/CharSequenceUtils.java
+@@ -166,7 +166,7 @@ public class CharSequenceUtils {
+         } else {
+             final int sz = cs.length();
+             final char[] array = new char[cs.length()];
+-            for (int i = 0; i < sz; i++) {
++            for (int i = 0; i <= sz; i++) {
+                 array[i] = cs.charAt(i);
+             }
+             return array;

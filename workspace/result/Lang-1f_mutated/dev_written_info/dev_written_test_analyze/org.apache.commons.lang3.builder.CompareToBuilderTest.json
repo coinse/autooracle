@@ -1,0 +1,508 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/CompareToBuilderTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CompareToBuilderTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 31,
+      "end_line": 1167,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.builder.CompareToBuilder}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "class_interface",
+      "name": "TestObject",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.Comparable\u003corg.apache.commons.lang3.builder.CompareToBuilderTest.TestObject\u003e"
+      ],
+      "begin_line": 35,
+      "end_line": 68,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "a"
+      ],
+      "begin_line": 36,
+      "end_line": 36,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject.TestObject(int)",
+      "begin_line": 37,
+      "end_line": 39,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject.equals(java.lang.Object)",
+      "begin_line": 40,
+      "end_line": 50,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject.hashCode()",
+      "begin_line": 52,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject.setA(int)",
+      "begin_line": 57,
+      "end_line": 59,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject.getA()",
+      "begin_line": 61,
+      "end_line": 63,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject.compareTo(org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject)",
+      "begin_line": 64,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestSubObject",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject"
+      ],
+      "begin_line": 70,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "b"
+      ],
+      "begin_line": 71,
+      "end_line": 71,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestSubObject.TestSubObject()",
+      "begin_line": 72,
+      "end_line": 74,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestSubObject.TestSubObject(int, int)",
+      "begin_line": 75,
+      "end_line": 78,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestSubObject.equals(java.lang.Object)",
+      "begin_line": 79,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestTransientSubObject",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.builder.CompareToBuilderTest.TestObject"
+      ],
+      "begin_line": 92,
+      "end_line": 99,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "t"
+      ],
+      "begin_line": 93,
+      "end_line": 94,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.TestTransientSubObject.TestTransientSubObject(int, int)",
+      "begin_line": 95,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionCompare()",
+      "begin_line": 101,
+      "end_line": 110,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionCompareEx1()",
+      "begin_line": 112,
+      "end_line": 116,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionCompareEx2()",
+      "begin_line": 118,
+      "end_line": 123,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionHierarchyCompare()",
+      "begin_line": 125,
+      "end_line": 128,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionHierarchyCompareExcludeFields()",
+      "begin_line": 130,
+      "end_line": 148,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionHierarchyCompareTransients()",
+      "begin_line": 150,
+      "end_line": 167,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.assertXYZCompareOrder(java.lang.Object, java.lang.Object, java.lang.Object, boolean, java.lang.String[])",
+      "begin_line": 169,
+      "end_line": 181,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testReflectionHierarchyCompare(boolean, java.lang.String[])",
+      "begin_line": 183,
+      "end_line": 204,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.assertReflectionCompareContract(java.lang.Object, java.lang.Object, java.lang.Object, boolean, java.lang.String[])",
+      "begin_line": 215,
+      "end_line": 233,
+      "comment": "\n     * See \"Effective Java\" under \"Consider Implementing Comparable\".\n     *  \n     * @param x an object to compare \n     * @param y an object to compare\n     * @param z an object to compare\n     * @param testTransients Whether to include transients in the comparison\n     * @param excludeFields fields to exclude\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.reflectionCompareSignum(java.lang.Object, java.lang.Object, boolean, java.lang.String[])",
+      "begin_line": 245,
+      "end_line": 247,
+      "comment": "\n     * Returns the signum of the result of comparing x and y with\n     * \u003ccode\u003eCompareToBuilder.reflectionCompare\u003c/code\u003e\n     * \n     * @param lhs The \"left-hand-side\" of the comparison.\n     * @param rhs The \"right-hand-side\" of the comparison.\n     * @param testTransients Whether to include transients in the comparison\n     * @param excludeFields fields to exclude\n     * @return int The signum\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testAppendSuper()",
+      "begin_line": 249,
+      "end_line": 262,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObject()",
+      "begin_line": 264,
+      "end_line": 277,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObjectBuild()",
+      "begin_line": 279,
+      "end_line": 292,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObjectEx2()",
+      "begin_line": 294,
+      "end_line": 299,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObjectComparator()",
+      "begin_line": 301,
+      "end_line": 317,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObjectComparatorNull()",
+      "begin_line": 319,
+      "end_line": 332,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testLong()",
+      "begin_line": 334,
+      "end_line": 345,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testInt()",
+      "begin_line": 347,
+      "end_line": 358,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testShort()",
+      "begin_line": 360,
+      "end_line": 371,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testChar()",
+      "begin_line": 373,
+      "end_line": 384,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testByte()",
+      "begin_line": 386,
+      "end_line": 397,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testDouble()",
+      "begin_line": 399,
+      "end_line": 418,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testFloat()",
+      "begin_line": 420,
+      "end_line": 439,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testBoolean()",
+      "begin_line": 441,
+      "end_line": 449,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObjectArray()",
+      "begin_line": 451,
+      "end_line": 476,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testLongArray()",
+      "begin_line": 478,
+      "end_line": 503,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testIntArray()",
+      "begin_line": 505,
+      "end_line": 530,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testShortArray()",
+      "begin_line": 532,
+      "end_line": 557,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testCharArray()",
+      "begin_line": 559,
+      "end_line": 584,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testByteArray()",
+      "begin_line": 586,
+      "end_line": 611,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testDoubleArray()",
+      "begin_line": 613,
+      "end_line": 638,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testFloatArray()",
+      "begin_line": 640,
+      "end_line": 665,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testBooleanArray()",
+      "begin_line": 667,
+      "end_line": 692,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiLongArray()",
+      "begin_line": 694,
+      "end_line": 716,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiIntArray()",
+      "begin_line": 718,
+      "end_line": 740,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiShortArray()",
+      "begin_line": 742,
+      "end_line": 764,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiCharArray()",
+      "begin_line": 766,
+      "end_line": 788,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiByteArray()",
+      "begin_line": 790,
+      "end_line": 812,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiFloatArray()",
+      "begin_line": 814,
+      "end_line": 836,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiDoubleArray()",
+      "begin_line": 838,
+      "end_line": 860,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMultiBooleanArray()",
+      "begin_line": 862,
+      "end_line": 884,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testRaggedArray()",
+      "begin_line": 886,
+      "end_line": 912,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testMixedArray()",
+      "begin_line": 914,
+      "end_line": 938,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testObjectArrayHiddenByObject()",
+      "begin_line": 940,
+      "end_line": 965,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testLongArrayHiddenByObject()",
+      "begin_line": 967,
+      "end_line": 990,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testIntArrayHiddenByObject()",
+      "begin_line": 992,
+      "end_line": 1015,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testShortArrayHiddenByObject()",
+      "begin_line": 1017,
+      "end_line": 1040,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testCharArrayHiddenByObject()",
+      "begin_line": 1042,
+      "end_line": 1065,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testByteArrayHiddenByObject()",
+      "begin_line": 1067,
+      "end_line": 1090,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testDoubleArrayHiddenByObject()",
+      "begin_line": 1092,
+      "end_line": 1115,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testFloatArrayHiddenByObject()",
+      "begin_line": 1117,
+      "end_line": 1140,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.CompareToBuilderTest.testBooleanArrayHiddenByObject()",
+      "begin_line": 1142,
+      "end_line": 1165,
+      "comment": ""
+    }
+  ]
+}

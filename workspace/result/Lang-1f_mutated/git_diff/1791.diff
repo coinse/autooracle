@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharRange.java b/src/main/java/org/apache/commons/lang3/CharRange.java
+index 39b26f9f..6ba7b25c 100644
+--- a/src/main/java/org/apache/commons/lang3/CharRange.java
++++ b/src/main/java/org/apache/commons/lang3/CharRange.java
+@@ -98,7 +98,7 @@ final class CharRange implements Iterable<Character>, Serializable {
+      * @since 2.5
+      */
+     public static CharRange isNot(final char ch) {
+-        return new CharRange(ch, ch, true);
++        return new CharRange(ch, ch, false);
+     }
+ 
+     /**

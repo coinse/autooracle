@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Period.java b/src/main/java/org/joda/time/Period.java
+index 5ea67a7c..69b29a54 100644
+--- a/src/main/java/org/joda/time/Period.java
++++ b/src/main/java/org/joda/time/Period.java
+@@ -1291,7 +1291,7 @@ public final class Period
+      * @throws UnsupportedOperationException if the field is not supported
+      */
+     public Period minusMinutes(int minutes) {
+-        return plusMinutes(-minutes);
++        return plusMinutes(+minutes);
+     }
+ 
+     /**

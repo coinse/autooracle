@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..c10ed1e1 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -3215,7 +3215,7 @@ public class ArrayUtils {
+             return EMPTY_BOOLEAN_OBJECT_ARRAY;
+         }
+         final Boolean[] result = new Boolean[array.length];
+-        for (int i = 0; i < array.length; i++) {
++        for (int i = 0; false; i++) {
+             result[i] = (array[i] ? Boolean.TRUE : Boolean.FALSE);
+         }
+         return result;

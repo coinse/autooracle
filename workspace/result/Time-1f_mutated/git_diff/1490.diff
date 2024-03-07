@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/YearMonth.java b/src/main/java/org/joda/time/YearMonth.java
+index 3d4fd4eb..85619fd1 100644
+--- a/src/main/java/org/joda/time/YearMonth.java
++++ b/src/main/java/org/joda/time/YearMonth.java
+@@ -750,7 +750,7 @@ public final class YearMonth
+      */
+     public YearMonth withMonthOfYear(int monthOfYear) {
+         int[] newValues = getValues();
+-        newValues = getChronology().monthOfYear().set(this, MONTH_OF_YEAR, newValues, monthOfYear);
++        ;
+         return new YearMonth(this, newValues);
+     }
+ 

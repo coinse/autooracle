@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..ec7ee457 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -427,7 +427,7 @@ public class BooleanUtils {
+         if (bool == null) {
+             return null;
+         }
+-        return bool.booleanValue() ? NumberUtils.INTEGER_ONE : NumberUtils.INTEGER_ZERO;
++        return false ? NumberUtils.INTEGER_ONE : NumberUtils.INTEGER_ZERO;
+     }
+ 
+     /**

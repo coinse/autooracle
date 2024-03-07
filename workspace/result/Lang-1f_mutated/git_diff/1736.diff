@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharUtils.java b/src/main/java/org/apache/commons/lang3/CharUtils.java
+index d603cfa5..cb34f0b6 100644
+--- a/src/main/java/org/apache/commons/lang3/CharUtils.java
++++ b/src/main/java/org/apache/commons/lang3/CharUtils.java
+@@ -495,7 +495,7 @@ public class CharUtils {
+      * @return true if between 97 and 122 inclusive
+      */
+     public static boolean isAsciiAlphaLower(final char ch) {
+-        return ch >= 'a' && ch <= 'z';
++        return ch >= 'a' && ch == 'z';
+     }
+     
+     /**

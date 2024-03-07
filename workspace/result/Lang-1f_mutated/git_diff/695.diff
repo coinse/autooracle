@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+index 45dd74d4..58633283 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrSubstitutor.java
+@@ -424,7 +424,7 @@ public class StrSubstitutor {
+         if (source == null) {
+             return null;
+         }
+-        return replace(source, 0, source.length());
++        return replace(source, 1, source.length());
+     }
+ 
+     /**

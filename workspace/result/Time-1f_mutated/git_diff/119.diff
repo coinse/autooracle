@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/GJChronology.java b/src/main/java/org/joda/time/chrono/GJChronology.java
+index 1cc03a47..4ebd74dc 100644
+--- a/src/main/java/org/joda/time/chrono/GJChronology.java
++++ b/src/main/java/org/joda/time/chrono/GJChronology.java
+@@ -419,7 +419,7 @@ public final class GJChronology extends AssembledChronology {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (obj instanceof GJChronology) {
+             GJChronology chrono = (GJChronology) obj;

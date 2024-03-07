@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/BaseDateTimeField.java b/src/main/java/org/joda/time/field/BaseDateTimeField.java
+index c86bf1c3..19af045d 100644
+--- a/src/main/java/org/joda/time/field/BaseDateTimeField.java
++++ b/src/main/java/org/joda/time/field/BaseDateTimeField.java
+@@ -967,7 +967,7 @@ public abstract class BaseDateTimeField extends DateTimeField {
+         } else {
+             // Round to the instant that makes this field even. If both values
+             // make this field even (unlikely), favor the ceiling.
+-            if ((get(ceiling) & 1) == 0) {
++            if ((get(ceiling) & 1) == 1) {
+                 return ceiling;
+             }
+             return floor;

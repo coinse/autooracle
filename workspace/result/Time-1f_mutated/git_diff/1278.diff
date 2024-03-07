@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDateTime.java b/src/main/java/org/joda/time/LocalDateTime.java
+index 44d2ee9c..ec258eae 100644
+--- a/src/main/java/org/joda/time/LocalDateTime.java
++++ b/src/main/java/org/joda/time/LocalDateTime.java
+@@ -1366,7 +1366,7 @@ public final class LocalDateTime
+      * @return the new LocalDateTime minus the increased weeks
+      */
+     public LocalDateTime minusWeeks(int weeks) {
+-        if (weeks == 0) {
++        if (false) {
+             return this;
+         }
+         long instant = getChronology().weeks().subtract(getLocalMillis(), weeks);

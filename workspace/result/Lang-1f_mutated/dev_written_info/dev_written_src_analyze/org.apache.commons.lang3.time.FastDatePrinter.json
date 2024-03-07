@@ -1,0 +1,1034 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/time/FastDatePrinter.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "FastDatePrinter",
+      "is_interface": false,
+      "parent_types": [
+        "DatePrinter",
+        "java.io.Serializable"
+      ],
+      "begin_line": 68,
+      "end_line": 1261,
+      "comment": "\n * \u003cp\u003eFastDatePrinter is a fast and thread-safe version of\n * {@link java.text.SimpleDateFormat}.\u003c/p\u003e\n *\n * \u003cp\u003eThis class can be used as a direct replacement to\n * {@code SimpleDateFormat} in most formatting situations.\n * This class is especially useful in multi-threaded server environments.\n * {@code SimpleDateFormat} is not thread-safe in any JDK version,\n * nor will it be as Sun have closed the bug/RFE.\n * \u003c/p\u003e\n *\n * \u003cp\u003eOnly formatting is supported, but all patterns are compatible with\n * SimpleDateFormat (except time zones and some year patterns - see below).\u003c/p\u003e\n *\n * \u003cp\u003eJava 1.4 introduced a new pattern letter, {@code \u0027Z\u0027}, to represent\n * time zones in RFC822 format (eg. {@code +0800} or {@code -1100}).\n * This pattern letter can be used here (on all JDK versions).\u003c/p\u003e\n *\n * \u003cp\u003eIn addition, the pattern {@code \u0027ZZ\u0027} has been made to represent\n * ISO8601 full format time zones (eg. {@code +08:00} or {@code -11:00}).\n * This introduces a minor incompatibility with Java 1.4, but at a gain of\n * useful functionality.\u003c/p\u003e\n *\n * \u003cp\u003eJavadoc cites for the year pattern: \u003ci\u003eFor formatting, if the number of\n * pattern letters is 2, the year is truncated to 2 digits; otherwise it is\n * interpreted as a number.\u003c/i\u003e Starting with Java 1.7 a pattern of \u0027Y\u0027 or\n * \u0027YYY\u0027 will be formatted as \u00272003\u0027, while it was \u002703\u0027 in former Java\n * versions. FastDatePrinter implements the behavior of Java 7.\u003c/p\u003e\n *\n * @since 3.2\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 86,
+      "end_line": 86,
+      "comment": "\n     * Required for serialization support.\n     *\n     * @see java.io.Serializable\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FULL"
+      ],
+      "begin_line": 91,
+      "end_line": 91,
+      "comment": "\n     * FULL locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "LONG"
+      ],
+      "begin_line": 95,
+      "end_line": 95,
+      "comment": "\n     * LONG locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "MEDIUM"
+      ],
+      "begin_line": 99,
+      "end_line": 99,
+      "comment": "\n     * MEDIUM locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SHORT"
+      ],
+      "begin_line": 103,
+      "end_line": 103,
+      "comment": "\n     * SHORT locale dependent date or time style.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mPattern"
+      ],
+      "begin_line": 108,
+      "end_line": 108,
+      "comment": "\n     * The pattern.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mTimeZone"
+      ],
+      "begin_line": 112,
+      "end_line": 112,
+      "comment": "\n     * The time zone.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mLocale"
+      ],
+      "begin_line": 116,
+      "end_line": 116,
+      "comment": "\n     * The locale.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mRules"
+      ],
+      "begin_line": 120,
+      "end_line": 120,
+      "comment": "\n     * The parsed rules.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mMaxLengthEstimate"
+      ],
+      "begin_line": 124,
+      "end_line": 124,
+      "comment": "\n     * The estimated maximum length.\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.FastDatePrinter(java.lang.String, java.util.TimeZone, java.util.Locale)",
+      "begin_line": 136,
+      "end_line": 142,
+      "comment": "\n     * \u003cp\u003eConstructs a new FastDatePrinter.\u003c/p\u003e\n     *\n     * @param pattern  {@link java.text.SimpleDateFormat} compatible pattern\n     * @param timeZone  non-null time zone to use\n     * @param locale  non-null locale to use\n     * @throws NullPointerException if pattern, timeZone, or locale is null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.init()",
+      "begin_line": 147,
+      "end_line": 157,
+      "comment": "\n     * \u003cp\u003eInitializes the instance for first use.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.parsePattern()",
+      "begin_line": 167,
+      "end_line": 288,
+      "comment": "\n     * \u003cp\u003eReturns a list of Rules given a pattern.\u003c/p\u003e\n     *\n     * @return a {@code List} of Rule objects\n     * @throws IllegalArgumentException if pattern is invalid\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.parseToken(java.lang.String, int[])",
+      "begin_line": 297,
+      "end_line": 347,
+      "comment": "\n     * \u003cp\u003ePerforms the parsing of tokens.\u003c/p\u003e\n     *\n     * @param pattern  the pattern\n     * @param indexRef  index references\n     * @return parsed token\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.selectNumberRule(int, int)",
+      "begin_line": 356,
+      "end_line": 365,
+      "comment": "\n     * \u003cp\u003eGets an appropriate rule for the padding required.\u003c/p\u003e\n     *\n     * @param field  the field to get a rule for\n     * @param padding  the padding required\n     * @return a new rule with the correct padding\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(java.lang.Object, java.lang.StringBuffer, java.text.FieldPosition)",
+      "begin_line": 378,
+      "end_line": 390,
+      "comment": "\n     * \u003cp\u003eFormats a {@code Date}, {@code Calendar} or\n     * {@code Long} (milliseconds) object.\u003c/p\u003e\n     *\n     * @param obj  the object to format\n     * @param toAppendTo  the buffer to append to\n     * @param pos  the position - ignored\n     * @return the buffer passed in\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(long)",
+      "begin_line": 395,
+      "end_line": 400,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#format(long)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.applyRulesToString(java.util.Calendar)",
+      "begin_line": 402,
+      "end_line": 404,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.newCalendar()",
+      "begin_line": 406,
+      "end_line": 409,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(java.util.Date)",
+      "begin_line": 414,
+      "end_line": 419,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#format(java.util.Date)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(java.util.Calendar)",
+      "begin_line": 424,
+      "end_line": 427,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#format(java.util.Calendar)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(long, java.lang.StringBuffer)",
+      "begin_line": 432,
+      "end_line": 435,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#format(long, java.lang.StringBuffer)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(java.util.Date, java.lang.StringBuffer)",
+      "begin_line": 440,
+      "end_line": 445,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#format(java.util.Date, java.lang.StringBuffer)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.format(java.util.Calendar, java.lang.StringBuffer)",
+      "begin_line": 450,
+      "end_line": 453,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#format(java.util.Calendar, java.lang.StringBuffer)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.applyRules(java.util.Calendar, java.lang.StringBuffer)",
+      "begin_line": 463,
+      "end_line": 468,
+      "comment": "\n     * \u003cp\u003ePerforms the formatting by applying the rules to the\n     * specified calendar.\u003c/p\u003e\n     *\n     * @param calendar  the calendar to format\n     * @param buf  the buffer to format into\n     * @return the specified string buffer\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.getPattern()",
+      "begin_line": 475,
+      "end_line": 478,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#getPattern()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.getTimeZone()",
+      "begin_line": 483,
+      "end_line": 486,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#getTimeZone()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.getLocale()",
+      "begin_line": 491,
+      "end_line": 494,
+      "comment": " (non-Javadoc)\n     * @see org.apache.commons.lang3.time.DatePrinter#getLocale()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.getMaxLengthEstimate()",
+      "begin_line": 505,
+      "end_line": 507,
+      "comment": "\n     * \u003cp\u003eGets an estimate for the maximum string length that the\n     * formatter will produce.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe actual formatted length will almost always be less than or\n     * equal to this amount.\u003c/p\u003e\n     *\n     * @return the maximum formatted length\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.equals(java.lang.Object)",
+      "begin_line": 517,
+      "end_line": 526,
+      "comment": "\n     * \u003cp\u003eCompares two objects for equality.\u003c/p\u003e\n     *\n     * @param obj  the object to compare to\n     * @return {@code true} if equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.hashCode()",
+      "begin_line": 533,
+      "end_line": 536,
+      "comment": "\n     * \u003cp\u003eReturns a hashcode compatible with equals.\u003c/p\u003e\n     *\n     * @return a hashcode compatible with equals\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.toString()",
+      "begin_line": 543,
+      "end_line": 546,
+      "comment": "\n     * \u003cp\u003eGets a debugging string version of this formatter.\u003c/p\u003e\n     *\n     * @return a debugging string\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.readObject(java.io.ObjectInputStream)",
+      "begin_line": 558,
+      "end_line": 561,
+      "comment": "\n     * Create the object after serialization. This implementation reinitializes the\n     * transient properties.\n     *\n     * @param in ObjectInputStream from which the object is being deserialized.\n     * @throws IOException if there is an IO issue.\n     * @throws ClassNotFoundException if a class cannot be found.\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "Rule",
+      "is_interface": true,
+      "parent_types": [],
+      "begin_line": 568,
+      "end_line": 583,
+      "comment": "\n     * \u003cp\u003eInner class defining a rule.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.Rule.estimateLength()",
+      "begin_line": 574,
+      "end_line": 574,
+      "comment": "\n         * Returns the estimated lentgh of the result.\n         *\n         * @return the estimated length\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.Rule.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 582,
+      "end_line": 582,
+      "comment": "\n         * Appends the value of the specified calendar to the output buffer based on the rule implementation.\n         *\n         * @param buffer the output buffer\n         * @param calendar calendar to be appended\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "NumberRule",
+      "is_interface": true,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.Rule"
+      ],
+      "begin_line": 588,
+      "end_line": 596,
+      "comment": "\n     * \u003cp\u003eInner class defining a numeric rule.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.NumberRule.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 595,
+      "end_line": 595,
+      "comment": "\n         * Appends the specified value to the output buffer based on the rule implementation.\n         *\n         * @param buffer the output buffer\n         * @param value the value to be appended\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "CharacterLiteral",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.Rule"
+      ],
+      "begin_line": 601,
+      "end_line": 629,
+      "comment": "\n     * \u003cp\u003eInner class to output a constant single character.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mValue"
+      ],
+      "begin_line": 602,
+      "end_line": 602,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.CharacterLiteral.CharacterLiteral(char)",
+      "begin_line": 610,
+      "end_line": 612,
+      "comment": "\n         * Constructs a new instance of {@code CharacterLiteral}\n         * to hold the specified value.\n         *\n         * @param value the character literal\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.CharacterLiteral.estimateLength()",
+      "begin_line": 617,
+      "end_line": 620,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.CharacterLiteral.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 625,
+      "end_line": 628,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "StringLiteral",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.Rule"
+      ],
+      "begin_line": 634,
+      "end_line": 662,
+      "comment": "\n     * \u003cp\u003eInner class to output a constant string.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mValue"
+      ],
+      "begin_line": 635,
+      "end_line": 635,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.StringLiteral.StringLiteral(java.lang.String)",
+      "begin_line": 643,
+      "end_line": 645,
+      "comment": "\n         * Constructs a new instance of {@code StringLiteral}\n         * to hold the specified value.\n         *\n         * @param value the string literal\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.StringLiteral.estimateLength()",
+      "begin_line": 650,
+      "end_line": 653,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.StringLiteral.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 658,
+      "end_line": 661,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TextField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.Rule"
+      ],
+      "begin_line": 667,
+      "end_line": 705,
+      "comment": "\n     * \u003cp\u003eInner class to output one of a set of values.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mField"
+      ],
+      "begin_line": 668,
+      "end_line": 668,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mValues"
+      ],
+      "begin_line": 669,
+      "end_line": 669,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TextField.TextField(int, java.lang.String[])",
+      "begin_line": 678,
+      "end_line": 681,
+      "comment": "\n         * Constructs an instance of {@code TextField}\n         * with the specified field and values.\n         *\n         * @param field the field\n         * @param values the field values\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TextField.estimateLength()",
+      "begin_line": 686,
+      "end_line": 696,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TextField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 701,
+      "end_line": 704,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "UnpaddedNumberField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 710,
+      "end_line": 752,
+      "comment": "\n     * \u003cp\u003eInner class to output an unpadded number.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mField"
+      ],
+      "begin_line": 711,
+      "end_line": 711,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField.UnpaddedNumberField(int)",
+      "begin_line": 718,
+      "end_line": 720,
+      "comment": "\n         * Constructs an instance of {@code UnpadedNumberField} with the specified field.\n         *\n         * @param field the field\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField.estimateLength()",
+      "begin_line": 725,
+      "end_line": 728,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 733,
+      "end_line": 736,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedNumberField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 741,
+      "end_line": 751,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "UnpaddedMonthField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 757,
+      "end_line": 796,
+      "comment": "\n     * \u003cp\u003eInner class to output an unpadded month.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "INSTANCE"
+      ],
+      "begin_line": 758,
+      "end_line": 758,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedMonthField.UnpaddedMonthField()",
+      "begin_line": 764,
+      "end_line": 766,
+      "comment": "\n         * Constructs an instance of {@code UnpaddedMonthField}.\n         *\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedMonthField.estimateLength()",
+      "begin_line": 771,
+      "end_line": 774,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedMonthField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 779,
+      "end_line": 782,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.UnpaddedMonthField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 787,
+      "end_line": 795,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "PaddedNumberField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 801,
+      "end_line": 861,
+      "comment": "\n     * \u003cp\u003eInner class to output a padded number.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mField"
+      ],
+      "begin_line": 802,
+      "end_line": 802,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mSize"
+      ],
+      "begin_line": 803,
+      "end_line": 803,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField.PaddedNumberField(int, int)",
+      "begin_line": 811,
+      "end_line": 818,
+      "comment": "\n         * Constructs an instance of {@code PaddedNumberField}.\n         *\n         * @param field the field\n         * @param size size of the output field\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField.estimateLength()",
+      "begin_line": 823,
+      "end_line": 826,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 831,
+      "end_line": 834,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.PaddedNumberField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 839,
+      "end_line": 860,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TwoDigitNumberField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 866,
+      "end_line": 906,
+      "comment": "\n     * \u003cp\u003eInner class to output a two digit number.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mField"
+      ],
+      "begin_line": 867,
+      "end_line": 867,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField.TwoDigitNumberField(int)",
+      "begin_line": 874,
+      "end_line": 876,
+      "comment": "\n         * Constructs an instance of {@code TwoDigitNumberField} with the specified field.\n         *\n         * @param field the field\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField.estimateLength()",
+      "begin_line": 881,
+      "end_line": 884,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 889,
+      "end_line": 892,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitNumberField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 897,
+      "end_line": 905,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TwoDigitYearField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 911,
+      "end_line": 945,
+      "comment": "\n     * \u003cp\u003eInner class to output a two digit year.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "INSTANCE"
+      ],
+      "begin_line": 912,
+      "end_line": 912,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitYearField.TwoDigitYearField()",
+      "begin_line": 917,
+      "end_line": 919,
+      "comment": "\n         * Constructs an instance of {@code TwoDigitYearField}.\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitYearField.estimateLength()",
+      "begin_line": 924,
+      "end_line": 927,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitYearField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 932,
+      "end_line": 935,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitYearField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 940,
+      "end_line": 944,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TwoDigitMonthField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 950,
+      "end_line": 984,
+      "comment": "\n     * \u003cp\u003eInner class to output a two digit month.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "INSTANCE"
+      ],
+      "begin_line": 951,
+      "end_line": 951,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitMonthField.TwoDigitMonthField()",
+      "begin_line": 956,
+      "end_line": 958,
+      "comment": "\n         * Constructs an instance of {@code TwoDigitMonthField}.\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitMonthField.estimateLength()",
+      "begin_line": 963,
+      "end_line": 966,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitMonthField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 971,
+      "end_line": 974,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwoDigitMonthField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 979,
+      "end_line": 983,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TwelveHourField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 989,
+      "end_line": 1029,
+      "comment": "\n     * \u003cp\u003eInner class to output the twelve hour field.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mRule"
+      ],
+      "begin_line": 990,
+      "end_line": 990,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwelveHourField.TwelveHourField(org.apache.commons.lang3.time.FastDatePrinter.NumberRule)",
+      "begin_line": 998,
+      "end_line": 1000,
+      "comment": "\n         * Constructs an instance of {@code TwelveHourField} with the specified\n         * {@code NumberRule}.\n         *\n         * @param rule the rule\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwelveHourField.estimateLength()",
+      "begin_line": 1005,
+      "end_line": 1008,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwelveHourField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 1013,
+      "end_line": 1020,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwelveHourField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 1025,
+      "end_line": 1028,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TwentyFourHourField",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.NumberRule"
+      ],
+      "begin_line": 1034,
+      "end_line": 1074,
+      "comment": "\n     * \u003cp\u003eInner class to output the twenty four hour field.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mRule"
+      ],
+      "begin_line": 1035,
+      "end_line": 1035,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwentyFourHourField.TwentyFourHourField(org.apache.commons.lang3.time.FastDatePrinter.NumberRule)",
+      "begin_line": 1043,
+      "end_line": 1045,
+      "comment": "\n         * Constructs an instance of {@code TwentyFourHourField} with the specified\n         * {@code NumberRule}.\n         *\n         * @param rule the rule\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwentyFourHourField.estimateLength()",
+      "begin_line": 1050,
+      "end_line": 1053,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwentyFourHourField.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 1058,
+      "end_line": 1065,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TwentyFourHourField.appendTo(java.lang.StringBuffer, int)",
+      "begin_line": 1070,
+      "end_line": 1073,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cTimeZoneDisplayCache"
+      ],
+      "begin_line": 1078,
+      "end_line": 1079,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.getTimeZoneDisplay(java.util.TimeZone, boolean, int, java.util.Locale)",
+      "begin_line": 1089,
+      "end_line": 1101,
+      "comment": "\n     * \u003cp\u003eGets the time zone display name, using a cache for performance.\u003c/p\u003e\n     *\n     * @param tz  the zone to query\n     * @param daylight  true if daylight savings\n     * @param style  the style to use {@code TimeZone.LONG} or {@code TimeZone.SHORT}\n     * @param locale  the locale to use\n     * @return the textual name of the time zone\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "TimeZoneNameRule",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.Rule"
+      ],
+      "begin_line": 1106,
+      "end_line": 1151,
+      "comment": "\n     * \u003cp\u003eInner class to output a time zone name.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mLocale"
+      ],
+      "begin_line": 1107,
+      "end_line": 1107,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mStyle"
+      ],
+      "begin_line": 1108,
+      "end_line": 1108,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mStandard"
+      ],
+      "begin_line": 1109,
+      "end_line": 1109,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mDaylight"
+      ],
+      "begin_line": 1110,
+      "end_line": 1110,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneNameRule.TimeZoneNameRule(java.util.TimeZone, java.util.Locale, int)",
+      "begin_line": 1119,
+      "end_line": 1125,
+      "comment": "\n         * Constructs an instance of {@code TimeZoneNameRule} with the specified properties.\n         *\n         * @param timeZone the time zone\n         * @param locale the locale\n         * @param style the style\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneNameRule.estimateLength()",
+      "begin_line": 1130,
+      "end_line": 1136,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneNameRule.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 1141,
+      "end_line": 1150,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TimeZoneNumberRule",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.time.FastDatePrinter.Rule"
+      ],
+      "begin_line": 1157,
+      "end_line": 1206,
+      "comment": "\n     * \u003cp\u003eInner class to output a time zone as a number {@code +/-HHMM}\n     * or {@code +/-HH:MM}.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "INSTANCE_COLON"
+      ],
+      "begin_line": 1158,
+      "end_line": 1158,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "INSTANCE_NO_COLON"
+      ],
+      "begin_line": 1159,
+      "end_line": 1159,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mColon"
+      ],
+      "begin_line": 1161,
+      "end_line": 1161,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneNumberRule.TimeZoneNumberRule(boolean)",
+      "begin_line": 1168,
+      "end_line": 1170,
+      "comment": "\n         * Constructs an instance of {@code TimeZoneNumberRule} with the specified properties.\n         *\n         * @param colon add colon between HH and MM in the output if {@code true}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneNumberRule.estimateLength()",
+      "begin_line": 1175,
+      "end_line": 1178,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneNumberRule.appendTo(java.lang.StringBuffer, java.util.Calendar)",
+      "begin_line": 1183,
+      "end_line": 1205,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "class_interface",
+      "name": "TimeZoneDisplayKey",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 1212,
+      "end_line": 1260,
+      "comment": "\n     * \u003cp\u003eInner class that acts as a compound key for time zone names.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mTimeZone"
+      ],
+      "begin_line": 1213,
+      "end_line": 1213,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mStyle"
+      ],
+      "begin_line": 1214,
+      "end_line": 1214,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "mLocale"
+      ],
+      "begin_line": 1215,
+      "end_line": 1215,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey.TimeZoneDisplayKey(java.util.TimeZone, boolean, int, java.util.Locale)",
+      "begin_line": 1225,
+      "end_line": 1233,
+      "comment": "\n         * Constructs an instance of {@code TimeZoneDisplayKey} with the specified properties.\n         *\n         * @param timeZone the time zone\n         * @param daylight adjust the style for daylight saving time if {@code true}\n         * @param style the timezone style\n         * @param locale the timezone locale\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey.hashCode()",
+      "begin_line": 1238,
+      "end_line": 1241,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.FastDatePrinter.TimeZoneDisplayKey.equals(java.lang.Object)",
+      "begin_line": 1246,
+      "end_line": 1259,
+      "comment": "\n         * {@inheritDoc}\n         "
+    }
+  ]
+}

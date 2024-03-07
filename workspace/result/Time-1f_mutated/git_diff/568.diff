@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractDateTime.java b/src/main/java/org/joda/time/base/AbstractDateTime.java
+index 7825df73..96156da7 100644
+--- a/src/main/java/org/joda/time/base/AbstractDateTime.java
++++ b/src/main/java/org/joda/time/base/AbstractDateTime.java
+@@ -272,7 +272,7 @@ public abstract class AbstractDateTime
+         }
+         DateTimeZone zone = getZone();
+         Calendar cal = Calendar.getInstance(zone.toTimeZone(), locale);
+-        cal.setTime(toDate());
++        ;
+         return cal;
+     }
+ 

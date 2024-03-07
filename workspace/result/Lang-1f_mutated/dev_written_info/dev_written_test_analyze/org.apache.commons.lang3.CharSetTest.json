@@ -1,0 +1,112 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/CharSetTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharSetTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 469,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.CharSet}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testClass()",
+      "begin_line": 38,
+      "end_line": 42,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testGetInstance()",
+      "begin_line": 45,
+      "end_line": 54,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testGetInstance_Stringarray()",
+      "begin_line": 57,
+      "end_line": 63,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testConstructor_String_simple()",
+      "begin_line": 66,
+      "end_line": 104,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testConstructor_String_combo()",
+      "begin_line": 106,
+      "end_line": 143,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testConstructor_String_comboNegated()",
+      "begin_line": 145,
+      "end_line": 184,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testConstructor_String_oddDash()",
+      "begin_line": 186,
+      "end_line": 232,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testConstructor_String_oddNegate()",
+      "begin_line": 234,
+      "end_line": 292,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testConstructor_String_oddCombinations()",
+      "begin_line": 294,
+      "end_line": 341,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testEquals_Object()",
+      "begin_line": 344,
+      "end_line": 369,
+      "comment": "-----------------------------------------------------------------------    "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testHashCode()",
+      "begin_line": 371,
+      "end_line": 386,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testContains_Char()",
+      "begin_line": 389,
+      "end_line": 430,
+      "comment": "-----------------------------------------------------------------------    "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testSerialization()",
+      "begin_line": 433,
+      "end_line": 441,
+      "comment": "-----------------------------------------------------------------------    "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetTest.testStatics()",
+      "begin_line": 444,
+      "end_line": 467,
+      "comment": "-----------------------------------------------------------------------    "
+    }
+  ]
+}

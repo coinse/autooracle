@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Minutes.java b/src/main/java/org/joda/time/Minutes.java
+index 0f96dabf..f5b2d614 100644
+--- a/src/main/java/org/joda/time/Minutes.java
++++ b/src/main/java/org/joda/time/Minutes.java
+@@ -179,7 +179,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
+      */
+     @FromString
+     public static Minutes parseMinutes(String periodStr) {
+-        if (periodStr == null) {
++        if (false) {
+             return Minutes.ZERO;
+         }
+         Period p = PARSER.parsePeriod(periodStr);

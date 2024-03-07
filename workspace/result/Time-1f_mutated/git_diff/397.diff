@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/joda/time/chrono/IslamicChronology.java b/src/main/java/org/joda/time/chrono/IslamicChronology.java
+index 9a5dcc85..884ae07c 100644
+--- a/src/main/java/org/joda/time/chrono/IslamicChronology.java
++++ b/src/main/java/org/joda/time/chrono/IslamicChronology.java
+@@ -289,8 +289,7 @@ public final class IslamicChronology extends BasicChronology {
+         }
+         if (obj instanceof IslamicChronology) {
+             IslamicChronology chrono = (IslamicChronology) obj;
+-            return getLeapYearPatternType().index == chrono.getLeapYearPatternType().index &&
+-                    super.equals(obj);
++            return false;
+         }
+         return false;
+     }

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharEncoding.java b/src/main/java/org/apache/commons/lang3/CharEncoding.java
+index 2b48829b..1fa27534 100644
+--- a/src/main/java/org/apache/commons/lang3/CharEncoding.java
++++ b/src/main/java/org/apache/commons/lang3/CharEncoding.java
+@@ -98,7 +98,7 @@ public class CharEncoding {
+         try {
+             return Charset.isSupported(name);
+         } catch (final IllegalCharsetNameException ex) {
+-            return false;
++            return true;
+         }
+     }
+ 

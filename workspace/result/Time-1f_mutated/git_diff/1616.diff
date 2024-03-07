@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTime.java b/src/main/java/org/joda/time/DateTime.java
+index bb879a98..16da1515 100644
+--- a/src/main/java/org/joda/time/DateTime.java
++++ b/src/main/java/org/joda/time/DateTime.java
+@@ -973,7 +973,7 @@ public final class DateTime
+      * @since 1.1
+      */
+     public DateTime plusYears(int years) {
+-        if (years == 0) {
++        if (years >= 0) {
+             return this;
+         }
+         long instant = getChronology().years().add(getMillis(), years);

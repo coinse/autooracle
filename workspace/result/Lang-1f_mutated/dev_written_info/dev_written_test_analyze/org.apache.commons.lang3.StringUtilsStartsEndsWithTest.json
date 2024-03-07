@@ -1,0 +1,110 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/StringUtilsStartsEndsWithTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StringUtilsStartsEndsWithTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 183,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.StringUtils} - StartsWith/EndsWith methods\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "foo"
+      ],
+      "begin_line": 29,
+      "end_line": 29,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "bar"
+      ],
+      "begin_line": 30,
+      "end_line": 30,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "foobar"
+      ],
+      "begin_line": 31,
+      "end_line": 31,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO"
+      ],
+      "begin_line": 32,
+      "end_line": 32,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BAR"
+      ],
+      "begin_line": 33,
+      "end_line": 33,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOOBAR"
+      ],
+      "begin_line": 34,
+      "end_line": 34,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsStartsEndsWithTest.testStartsWith()",
+      "begin_line": 41,
+      "end_line": 60,
+      "comment": "\n     * Test StringUtils.startsWith()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsStartsEndsWithTest.testStartsWithIgnoreCase()",
+      "begin_line": 65,
+      "end_line": 84,
+      "comment": "\n     * Test StringUtils.testStartsWithIgnoreCase()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsStartsEndsWithTest.testStartsWithAny()",
+      "begin_line": 86,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsStartsEndsWithTest.testEndsWith()",
+      "begin_line": 104,
+      "end_line": 130,
+      "comment": "\n     * Test StringUtils.endsWith()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsStartsEndsWithTest.testEndsWithIgnoreCase()",
+      "begin_line": 135,
+      "end_line": 166,
+      "comment": "\n     * Test StringUtils.endsWithIgnoreCase()\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsStartsEndsWithTest.testEndsWithAny()",
+      "begin_line": 168,
+      "end_line": 180,
+      "comment": ""
+    }
+  ]
+}

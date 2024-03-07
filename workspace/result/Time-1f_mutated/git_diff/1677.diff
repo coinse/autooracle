@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTime.java b/src/main/java/org/joda/time/DateTime.java
+index bb879a98..35f439d5 100644
+--- a/src/main/java/org/joda/time/DateTime.java
++++ b/src/main/java/org/joda/time/DateTime.java
+@@ -1385,7 +1385,7 @@ public final class DateTime
+      * @since 1.1
+      */
+     public DateTime minusHours(int hours) {
+-        if (hours == 0) {
++        if (hours <= 0) {
+             return this;
+         }
+         long instant = getChronology().hours().subtract(getMillis(), hours);

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..75a5f915 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -246,7 +246,7 @@ public final class ConverterManager {
+     public PartialConverter getPartialConverter(Object object) {
+         PartialConverter converter =
+             (PartialConverter)iPartialConverters.select(object == null ? null : object.getClass());
+-        if (converter != null) {
++        if (true) {
+             return converter;
+         }
+         throw new IllegalArgumentException("No partial converter found for type: " +

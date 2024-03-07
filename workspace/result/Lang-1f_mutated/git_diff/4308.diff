@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..5396625d 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -254,7 +254,7 @@ public class StringUtils {
+      */
+     public static boolean isBlank(final CharSequence cs) {
+         int strLen;
+-        if (cs == null || (strLen = cs.length()) == 0) {
++        if (cs == null != ((strLen = cs.length()) == 0)) {
+             return true;
+         }
+         for (int i = 0; i < strLen; i++) {

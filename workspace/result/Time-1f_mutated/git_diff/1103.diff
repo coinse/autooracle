@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDate.java b/src/main/java/org/joda/time/LocalDate.java
+index 9806eb32..3c662ef9 100644
+--- a/src/main/java/org/joda/time/LocalDate.java
++++ b/src/main/java/org/joda/time/LocalDate.java
+@@ -1271,7 +1271,7 @@ public final class LocalDate
+      * @return the new LocalDate plus the increased days
+      */
+     public LocalDate plusDays(int days) {
+-        if (days == 0) {
++        if (days <= 0) {
+             return this;
+         }
+         long instant = getChronology().days().add(getLocalMillis(), days);

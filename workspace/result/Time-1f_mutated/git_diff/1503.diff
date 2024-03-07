@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Seconds.java b/src/main/java/org/joda/time/Seconds.java
+index f75ee922..9eb51d7a 100644
+--- a/src/main/java/org/joda/time/Seconds.java
++++ b/src/main/java/org/joda/time/Seconds.java
+@@ -350,7 +350,7 @@ public final class Seconds extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the result overflows an int
+      */
+     public Seconds plus(Seconds seconds) {
+-        if (seconds == null) {
++        if (false) {
+             return this;
+         }
+         return plus(seconds.getValue());

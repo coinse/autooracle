@@ -1,0 +1,70 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/tuple/MutableTripleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableTripleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 120,
+      "comment": "\n * Test the MutableTriple class.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testBasic()",
+      "begin_line": 37,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testDefault()",
+      "begin_line": 49,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testMutate()",
+      "begin_line": 57,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testTripleOf()",
+      "begin_line": 68,
+      "end_line": 78,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testEquals()",
+      "begin_line": 80,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testHashCode()",
+      "begin_line": 92,
+      "end_line": 95,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testToString()",
+      "begin_line": 97,
+      "end_line": 106,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.MutableTripleTest.testSerialization()",
+      "begin_line": 108,
+      "end_line": 119,
+      "comment": ""
+    }
+  ]
+}

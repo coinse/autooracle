@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Period.java b/src/main/java/org/joda/time/Period.java
+index 5ea67a7c..fe9194cb 100644
+--- a/src/main/java/org/joda/time/Period.java
++++ b/src/main/java/org/joda/time/Period.java
+@@ -1265,7 +1265,7 @@ public final class Period
+      * @throws UnsupportedOperationException if the field is not supported
+      */
+     public Period minusDays(int days) {
+-        return plusDays(-days);
++        return plusDays(+days);
+     }
+ 
+     /**

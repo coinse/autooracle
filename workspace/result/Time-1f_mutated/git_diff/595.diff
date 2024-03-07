@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java b/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+index 8f76f06e..95138580 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+@@ -792,7 +792,7 @@ public class DateTimeFormatterBuilder {
+      * @return this DateTimeFormatterBuilder, for chaining
+      */
+     public DateTimeFormatterBuilder appendWeekOfWeekyear(int minDigits) {
+-        return appendDecimal(DateTimeFieldType.weekOfWeekyear(), minDigits, 2);
++        return appendDecimal(DateTimeFieldType.weekOfWeekyear(), minDigits, 0);
+     }
+ 
+     /**

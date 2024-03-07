@@ -1,0 +1,294 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/concurrent/ConcurrentUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ConcurrentUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 40,
+      "end_line": 555,
+      "comment": "\n * Test class for {@link ConcurrentUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConcurrentExceptionCauseUnchecked()",
+      "begin_line": 44,
+      "end_line": 47,
+      "comment": "\n     * Tests creating a ConcurrentException with a runtime exception as cause.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConcurrentExceptionCauseError()",
+      "begin_line": 52,
+      "end_line": 55,
+      "comment": "\n     * Tests creating a ConcurrentException with an error as cause.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConcurrentExceptionCauseNull()",
+      "begin_line": 60,
+      "end_line": 63,
+      "comment": "\n     * Tests creating a ConcurrentException with null as cause.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConcurrentRuntimeExceptionCauseUnchecked()",
+      "begin_line": 68,
+      "end_line": 71,
+      "comment": "\n     * Tries to create a ConcurrentRuntimeException with a runtime as cause.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConcurrentRuntimeExceptionCauseError()",
+      "begin_line": 76,
+      "end_line": 79,
+      "comment": "\n     * Tries to create a ConcurrentRuntimeException with an error as cause.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConcurrentRuntimeExceptionCauseNull()",
+      "begin_line": 84,
+      "end_line": 87,
+      "comment": "\n     * Tries to create a ConcurrentRuntimeException with null as cause.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseNull()",
+      "begin_line": 92,
+      "end_line": 95,
+      "comment": "\n     * Tests extractCause() for a null exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseNullCause()",
+      "begin_line": 100,
+      "end_line": 104,
+      "comment": "\n     * Tests extractCause() if the cause of the passed in exception is null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseError()",
+      "begin_line": 109,
+      "end_line": 118,
+      "comment": "\n     * Tests extractCause() if the cause is an error.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseUncheckedException()",
+      "begin_line": 123,
+      "end_line": 132,
+      "comment": "\n     * Tests extractCause() if the cause is an unchecked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseChecked()",
+      "begin_line": 137,
+      "end_line": 143,
+      "comment": "\n     * Tests extractCause() if the cause is a checked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseUncheckedNull()",
+      "begin_line": 148,
+      "end_line": 151,
+      "comment": "\n     * Tests extractCauseUnchecked() for a null exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseUncheckedNullCause()",
+      "begin_line": 156,
+      "end_line": 160,
+      "comment": "\n     * Tests extractCauseUnchecked() if the cause of the passed in exception is null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseUncheckedError()",
+      "begin_line": 165,
+      "end_line": 174,
+      "comment": "\n     * Tests extractCauseUnchecked() if the cause is an error.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseUncheckedUncheckedException()",
+      "begin_line": 179,
+      "end_line": 188,
+      "comment": "\n     * Tests extractCauseUnchecked() if the cause is an unchecked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testExtractCauseUncheckedChecked()",
+      "begin_line": 193,
+      "end_line": 199,
+      "comment": "\n     * Tests extractCauseUnchecked() if the cause is a checked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseError()",
+      "begin_line": 204,
+      "end_line": 213,
+      "comment": "\n     * Tests handleCause() if the cause is an error.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseUncheckedException()",
+      "begin_line": 218,
+      "end_line": 227,
+      "comment": "\n     * Tests handleCause() if the cause is an unchecked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseChecked()",
+      "begin_line": 232,
+      "end_line": 241,
+      "comment": "\n     * Tests handleCause() if the cause is a checked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseNull()",
+      "begin_line": 248,
+      "end_line": 252,
+      "comment": "\n     * Tests handleCause() for a null parameter or a null cause. In this case\n     * the method should do nothing. We can only test that no exception is\n     * thrown.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseUncheckedError()",
+      "begin_line": 257,
+      "end_line": 266,
+      "comment": "\n     * Tests handleCauseUnchecked() if the cause is an error.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseUncheckedUncheckedException()",
+      "begin_line": 271,
+      "end_line": 280,
+      "comment": "\n     * Tests handleCauseUnchecked() if the cause is an unchecked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseUncheckedChecked()",
+      "begin_line": 285,
+      "end_line": 294,
+      "comment": "\n     * Tests handleCauseUnchecked() if the cause is a checked exception.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testHandleCauseUncheckedNull()",
+      "begin_line": 301,
+      "end_line": 306,
+      "comment": "\n     * Tests handleCauseUnchecked() for a null parameter or a null cause. In\n     * this case the method should do nothing. We can only test that no\n     * exception is thrown.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testInitializeNull()",
+      "begin_line": 312,
+      "end_line": 315,
+      "comment": "\n     * Tests initialize() for a null argument.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testInitialize()",
+      "begin_line": 320,
+      "end_line": 332,
+      "comment": "\n     * Tests a successful initialize() operation.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testInitializeUncheckedNull()",
+      "begin_line": 337,
+      "end_line": 340,
+      "comment": "\n     * Tests initializeUnchecked() for a null argument.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testInitializeUnchecked()",
+      "begin_line": 345,
+      "end_line": 357,
+      "comment": "\n     * Tests a successful initializeUnchecked() operation.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testInitializeUncheckedEx()",
+      "begin_line": 362,
+      "end_line": 378,
+      "comment": "\n     * Tests whether exceptions are correctly handled by initializeUnchecked().\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConstantFuture_Integer()",
+      "begin_line": 384,
+      "end_line": 395,
+      "comment": "\n     * Tests constant future.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testConstantFuture_null()",
+      "begin_line": 400,
+      "end_line": 411,
+      "comment": "\n     * Tests constant future.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testPutIfAbsentKeyPresent()",
+      "begin_line": 417,
+      "end_line": 426,
+      "comment": "\n     * Tests putIfAbsent() if the map contains the key in question.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testPutIfAbsentKeyNotPresent()",
+      "begin_line": 431,
+      "end_line": 439,
+      "comment": "\n     * Tests putIfAbsent() if the map does not contain the key in question.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testPutIfAbsentNullMap()",
+      "begin_line": 444,
+      "end_line": 448,
+      "comment": "\n     * Tests putIfAbsent() if a null map is passed in.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testCreateIfAbsentKeyPresent()",
+      "begin_line": 453,
+      "end_line": 468,
+      "comment": "\n     * Tests createIfAbsent() if the key is found in the map.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testCreateIfAbsentKeyNotPresent()",
+      "begin_line": 473,
+      "end_line": 488,
+      "comment": "\n     * Tests createIfAbsent() if the map does not contain the key in question.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testCreateIfAbsentNullMap()",
+      "begin_line": 493,
+      "end_line": 503,
+      "comment": "\n     * Tests createIfAbsent() if a null map is passed in.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testCreateIfAbsentNullInit()",
+      "begin_line": 508,
+      "end_line": 517,
+      "comment": "\n     * Tests createIfAbsent() if a null initializer is passed in.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testCreateIfAbsentUncheckedSuccess()",
+      "begin_line": 522,
+      "end_line": 531,
+      "comment": "\n     * Tests createIfAbsentUnchecked() if no exception is thrown.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.concurrent.ConcurrentUtilsTest.testCreateIfAbsentUncheckedException()",
+      "begin_line": 536,
+      "end_line": 554,
+      "comment": "\n     * Tests createIfAbsentUnchecked() if an exception is thrown.\n     "
+    }
+  ]
+}

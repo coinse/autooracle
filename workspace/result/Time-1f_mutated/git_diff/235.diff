@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Years.java b/src/main/java/org/joda/time/Years.java
+index e7faa69d..50708121 100644
+--- a/src/main/java/org/joda/time/Years.java
++++ b/src/main/java/org/joda/time/Years.java
+@@ -304,7 +304,7 @@ public final class Years extends BaseSingleFieldPeriod {
+         if (divisor == 1) {
+             return this;
+         }
+-        return Years.years(getValue() / divisor);
++        return Years.years(getValue() + divisor);
+     }
+ 
+     //-----------------------------------------------------------------------

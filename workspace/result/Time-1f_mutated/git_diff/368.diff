@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/TimeOfDay.java b/src/main/java/org/joda/time/TimeOfDay.java
+index 7c46912a..094617ef 100644
+--- a/src/main/java/org/joda/time/TimeOfDay.java
++++ b/src/main/java/org/joda/time/TimeOfDay.java
+@@ -142,7 +142,7 @@ public final class TimeOfDay
+      * @since 1.2
+      */
+     public static TimeOfDay fromDateFields(Date date) {
+-        if (date == null) {
++        if (false) {
+             throw new IllegalArgumentException("The date must not be null");
+         }
+         return new TimeOfDay(

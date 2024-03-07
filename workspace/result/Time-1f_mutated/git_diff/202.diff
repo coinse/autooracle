@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateMidnight.java b/src/main/java/org/joda/time/DateMidnight.java
+index 05e348de..249a03e8 100644
+--- a/src/main/java/org/joda/time/DateMidnight.java
++++ b/src/main/java/org/joda/time/DateMidnight.java
+@@ -808,7 +808,7 @@ public final class DateMidnight
+      * @since 1.1
+      */
+     public DateMidnight minusWeeks(int weeks) {
+-        if (weeks == 0) {
++        if (weeks >= 0) {
+             return this;
+         }
+         long instant = getChronology().weeks().subtract(getMillis(), weeks);

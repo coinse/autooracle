@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..6e51c9a7 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -916,7 +916,7 @@ public class DateTimeFormatter {
+                     chrono = chrono.withZone(bucket.getZone());
+                 }
+                 MutableDateTime dt = new MutableDateTime(millis, chrono);
+-                if (iZone != null) {
++                if (true) {
+                     dt.setZone(iZone);
+                 }
+                 return dt;

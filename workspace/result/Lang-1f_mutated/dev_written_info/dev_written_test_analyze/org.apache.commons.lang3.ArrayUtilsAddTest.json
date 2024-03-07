@@ -1,0 +1,105 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/ArrayUtilsAddTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ArrayUtilsAddTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 36,
+      "end_line": 612,
+      "comment": "\n * Tests ArrayUtils add methods.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testJira567()",
+      "begin_line": 38,
+      "end_line": 51,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayBoolean()",
+      "begin_line": 53,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayByte()",
+      "begin_line": 68,
+      "end_line": 84,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayChar()",
+      "begin_line": 86,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayDouble()",
+      "begin_line": 104,
+      "end_line": 120,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayFloat()",
+      "begin_line": 122,
+      "end_line": 138,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayInt()",
+      "begin_line": 140,
+      "end_line": 156,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayLong()",
+      "begin_line": 158,
+      "end_line": 174,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayShort()",
+      "begin_line": 176,
+      "end_line": 192,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayObject()",
+      "begin_line": 194,
+      "end_line": 228,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testLANG571()",
+      "begin_line": 230,
+      "end_line": 250,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectArrayToObjectArray()",
+      "begin_line": 252,
+      "end_line": 368,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ArrayUtilsAddTest.testAddObjectAtIndex()",
+      "begin_line": 370,
+      "end_line": 610,
+      "comment": ""
+    }
+  ]
+}

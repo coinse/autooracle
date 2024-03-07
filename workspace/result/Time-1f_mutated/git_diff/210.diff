@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/ZonedChronology.java b/src/main/java/org/joda/time/chrono/ZonedChronology.java
+index c7c2da69..10cb7581 100644
+--- a/src/main/java/org/joda/time/chrono/ZonedChronology.java
++++ b/src/main/java/org/joda/time/chrono/ZonedChronology.java
+@@ -232,7 +232,7 @@ public final class ZonedChronology extends AssembledChronology {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (obj instanceof ZonedChronology == false) {
+             return false;

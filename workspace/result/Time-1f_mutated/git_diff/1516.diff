@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/tz/DateTimeZoneBuilder.java b/src/main/java/org/joda/time/tz/DateTimeZoneBuilder.java
+index fa5c1644..a5229154 100644
+--- a/src/main/java/org/joda/time/tz/DateTimeZoneBuilder.java
++++ b/src/main/java/org/joda/time/tz/DateTimeZoneBuilder.java
+@@ -140,7 +140,7 @@ public class DateTimeZoneBuilder {
+         if (millis % (30 * 60000L) == 0) {
+             // Try to write in 30 minute units.
+             long units = millis / (30 * 60000L);
+-            if (((units << (64 - 6)) >> (64 - 6)) == units) {
++            if (((units << (64 - 6)) >> (64 - -6)) == units) {
+                 // Form 00 (6 bits effective precision)
+                 out.writeByte((int)(units & 0x3f));
+                 return;

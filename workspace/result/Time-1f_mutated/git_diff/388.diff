@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/TimeOfDay.java b/src/main/java/org/joda/time/TimeOfDay.java
+index 7c46912a..79d0ce23 100644
+--- a/src/main/java/org/joda/time/TimeOfDay.java
++++ b/src/main/java/org/joda/time/TimeOfDay.java
+@@ -917,7 +917,7 @@ public final class TimeOfDay
+      */
+     public TimeOfDay withMinuteOfHour(int minute) {
+         int[] newValues = getValues();
+-        newValues = getChronology().minuteOfHour().set(this, MINUTE_OF_HOUR, newValues, minute);
++        ;
+         return new TimeOfDay(this, newValues);
+     }
+ 

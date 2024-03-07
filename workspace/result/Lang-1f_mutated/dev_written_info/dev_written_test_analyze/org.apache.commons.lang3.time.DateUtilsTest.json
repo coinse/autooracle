@@ -1,0 +1,608 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/time/DateUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "DateUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 52,
+      "end_line": 1694,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.time.DateUtils}.\n *\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "MILLIS_TEST"
+      ],
+      "begin_line": 54,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateParser"
+      ],
+      "begin_line": 62,
+      "end_line": 62,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateTimeParser"
+      ],
+      "begin_line": 63,
+      "end_line": 63,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "timeZoneDateParser"
+      ],
+      "begin_line": 64,
+      "end_line": 64,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateAmPm1"
+      ],
+      "begin_line": 65,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateAmPm2"
+      ],
+      "begin_line": 66,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateAmPm3"
+      ],
+      "begin_line": 67,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateAmPm4"
+      ],
+      "begin_line": 68,
+      "end_line": 68,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date0"
+      ],
+      "begin_line": 69,
+      "end_line": 69,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date1"
+      ],
+      "begin_line": 70,
+      "end_line": 70,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date2"
+      ],
+      "begin_line": 71,
+      "end_line": 71,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date3"
+      ],
+      "begin_line": 72,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date4"
+      ],
+      "begin_line": 73,
+      "end_line": 73,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date5"
+      ],
+      "begin_line": 74,
+      "end_line": 74,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date6"
+      ],
+      "begin_line": 75,
+      "end_line": 75,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date7"
+      ],
+      "begin_line": 76,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "date8"
+      ],
+      "begin_line": 77,
+      "end_line": 77,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "calAmPm1"
+      ],
+      "begin_line": 78,
+      "end_line": 78,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "calAmPm2"
+      ],
+      "begin_line": 79,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "calAmPm3"
+      ],
+      "begin_line": 80,
+      "end_line": 80,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "calAmPm4"
+      ],
+      "begin_line": 81,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal1"
+      ],
+      "begin_line": 82,
+      "end_line": 82,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal2"
+      ],
+      "begin_line": 83,
+      "end_line": 83,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal3"
+      ],
+      "begin_line": 84,
+      "end_line": 84,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal4"
+      ],
+      "begin_line": 85,
+      "end_line": 85,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal5"
+      ],
+      "begin_line": 86,
+      "end_line": 86,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal6"
+      ],
+      "begin_line": 87,
+      "end_line": 87,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal7"
+      ],
+      "begin_line": 88,
+      "end_line": 88,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cal8"
+      ],
+      "begin_line": 89,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "zone"
+      ],
+      "begin_line": 90,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "defaultZone"
+      ],
+      "begin_line": 91,
+      "end_line": 91,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.setUp()",
+      "begin_line": 94,
+      "end_line": 146,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testConstructor()",
+      "begin_line": 149,
+      "end_line": 157,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testIsSameDay_Date()",
+      "begin_line": 160,
+      "end_line": 175,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testIsSameDay_Cal()",
+      "begin_line": 178,
+      "end_line": 193,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testIsSameInstant_Date()",
+      "begin_line": 196,
+      "end_line": 211,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testIsSameInstant_Cal()",
+      "begin_line": 214,
+      "end_line": 230,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testIsSameLocalTime_Cal()",
+      "begin_line": 233,
+      "end_line": 257,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testParseDate()",
+      "begin_line": 260,
+      "end_line": 296,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testParseDateWithLeniency()",
+      "begin_line": 298,
+      "end_line": 311,
+      "comment": " LANG-486"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddYears()",
+      "begin_line": 314,
+      "end_line": 331,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddMonths()",
+      "begin_line": 334,
+      "end_line": 351,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddWeeks()",
+      "begin_line": 354,
+      "end_line": 371,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddDays()",
+      "begin_line": 374,
+      "end_line": 391,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddHours()",
+      "begin_line": 394,
+      "end_line": 411,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddMinutes()",
+      "begin_line": 414,
+      "end_line": 431,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddSeconds()",
+      "begin_line": 434,
+      "end_line": 451,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testAddMilliseconds()",
+      "begin_line": 454,
+      "end_line": 471,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetYears()",
+      "begin_line": 474,
+      "end_line": 491,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetMonths()",
+      "begin_line": 494,
+      "end_line": 513,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetDays()",
+      "begin_line": 516,
+      "end_line": 535,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetHours()",
+      "begin_line": 538,
+      "end_line": 557,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetMinutes()",
+      "begin_line": 560,
+      "end_line": 579,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetSeconds()",
+      "begin_line": 582,
+      "end_line": 601,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testSetMilliseconds()",
+      "begin_line": 604,
+      "end_line": 623,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.assertDate(java.util.Date, int, int, int, int, int, int, int)",
+      "begin_line": 626,
+      "end_line": 636,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testToCalendar()",
+      "begin_line": 639,
+      "end_line": 648,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testRound()",
+      "begin_line": 654,
+      "end_line": 872,
+      "comment": "\n     * Tests various values with the round method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testRoundLang346()",
+      "begin_line": 878,
+      "end_line": 936,
+      "comment": "\n     * Tests the Changes Made by LANG-346 to the DateUtils.modify() private method invoked\n     * by DateUtils.round().\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testTruncate()",
+      "begin_line": 941,
+      "end_line": 1128,
+      "comment": "\n     * Tests various values with the trunc method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testTruncateLang59()",
+      "begin_line": 1135,
+      "end_line": 1208,
+      "comment": "\n     * Tests for LANG-59\n     *\n     * see http://issues.apache.org/jira/browse/LANG-59\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testLang530()",
+      "begin_line": 1211,
+      "end_line": 1218,
+      "comment": " http://issues.apache.org/jira/browse/LANG-530"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testCeil()",
+      "begin_line": 1223,
+      "end_line": 1468,
+      "comment": "\n     * Tests various values with the ceiling method\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testIteratorEx()",
+      "begin_line": 1473,
+      "end_line": 1494,
+      "comment": "\n     * Tests the iterator exceptions\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testWeekIterator()",
+      "begin_line": 1499,
+      "end_line": 1541,
+      "comment": "\n     * Tests the calendar iterator for week ranges\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testMonthIterator()",
+      "begin_line": 1546,
+      "end_line": 1567,
+      "comment": "\n     * Tests the calendar iterator for month-based ranges\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testLANG799_EN_OK()",
+      "begin_line": 1569,
+      "end_line": 1579,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testLANG799_EN_FAIL()",
+      "begin_line": 1582,
+      "end_line": 1591,
+      "comment": " Parse German date with English Locale"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testLANG799_DE_OK()",
+      "begin_line": 1593,
+      "end_line": 1603,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testLANG799_DE_FAIL()",
+      "begin_line": 1606,
+      "end_line": 1615,
+      "comment": " Parse English date with German Locale"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.testLANG799_EN_WITH_DE_LOCALE()",
+      "begin_line": 1618,
+      "end_line": 1627,
+      "comment": " Parse German date with English Locale, specifying German Locale override"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.assertWeekIterator(java.util.Iterator\u003c?\u003e, java.util.Calendar)",
+      "begin_line": 1633,
+      "end_line": 1638,
+      "comment": "\n     * This checks that this is a 7 element iterator of Calendar objects\n     * that are dates (no time), and exactly 1 day spaced after each other.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.assertWeekIterator(java.util.Iterator\u003c?\u003e, java.util.Date, java.util.Date)",
+      "begin_line": 1643,
+      "end_line": 1650,
+      "comment": "\n     * Convenience method for when working with Date objects\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.assertWeekIterator(java.util.Iterator\u003c?\u003e, java.util.Calendar, java.util.Calendar)",
+      "begin_line": 1657,
+      "end_line": 1678,
+      "comment": "\n     * This checks that this is a 7 divisble iterator of Calendar objects\n     * that are dates (no time), and exactly 1 day spaced after each other\n     * (in addition to the proper start and stop dates)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.assertCalendarsEquals(java.lang.String, java.util.Calendar, java.util.Calendar, long)",
+      "begin_line": 1684,
+      "end_line": 1689,
+      "comment": "\n     * Used to check that Calendar objects are close enough\n     * delta is in milliseconds\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsTest.warn(java.lang.String)",
+      "begin_line": 1691,
+      "end_line": 1693,
+      "comment": ""
+    }
+  ]
+}

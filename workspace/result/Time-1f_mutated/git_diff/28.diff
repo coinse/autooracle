@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..ef5a9704 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -327,7 +327,7 @@ public abstract class DateTimeZone implements Serializable {
+      * @throws IllegalArgumentException if the zone is not recognised
+      */
+     public static DateTimeZone forTimeZone(TimeZone zone) {
+-        if (zone == null) {
++        if (false) {
+             return getDefault();
+         }
+         final String id = zone.getID();

@@ -1,0 +1,28 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/CharSequenceUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharSequenceUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 36,
+      "end_line": 83,
+      "comment": "\n * Tests CharSequenceUtils\n *\n * @version $Id: CharSequenceUtilsTest.java 1066341 2011-02-02 06:21:53Z bayard $\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSequenceUtilsTest.testConstructor()",
+      "begin_line": 39,
+      "end_line": 47,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSequenceUtilsTest.testSubSequence()",
+      "begin_line": 50,
+      "end_line": 81,
+      "comment": "-----------------------------------------------------------------------"
+    }
+  ]
+}

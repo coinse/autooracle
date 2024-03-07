@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/StringUtils.java b/src/main/java/org/apache/commons/lang3/StringUtils.java
+index 04b53faf..5497c1c8 100644
+--- a/src/main/java/org/apache/commons/lang3/StringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/StringUtils.java
+@@ -5621,7 +5621,7 @@ public class StringUtils {
+         }
+         
+         char firstChar = str.charAt(0);
+-        if (Character.isLowerCase(firstChar)) {
++        if (true) {
+         	// already uncapitalized
+         	return str;
+         }

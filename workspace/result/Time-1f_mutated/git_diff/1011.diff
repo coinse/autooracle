@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/RemainderDateTimeField.java b/src/main/java/org/joda/time/field/RemainderDateTimeField.java
+index 30a835af..ff147ad8 100644
+--- a/src/main/java/org/joda/time/field/RemainderDateTimeField.java
++++ b/src/main/java/org/joda/time/field/RemainderDateTimeField.java
+@@ -134,7 +134,7 @@ public class RemainderDateTimeField extends DecoratedDateTimeField {
+      */
+     public int get(long instant) {
+         int value = getWrappedField().get(instant);
+-        if (value >= 0) {
++        if (value >= 1) {
+             return value % iDivisor;
+         } else {
+             return (iDivisor - 1) + ((value + 1) % iDivisor);

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeParserBucket.java b/src/main/java/org/joda/time/format/DateTimeParserBucket.java
+index 93dfaa78..5147049b 100644
+--- a/src/main/java/org/joda/time/format/DateTimeParserBucket.java
++++ b/src/main/java/org/joda/time/format/DateTimeParserBucket.java
+@@ -300,7 +300,7 @@ public class DateTimeParserBucket {
+      */
+     public boolean restoreState(Object savedState) {
+         if (savedState instanceof SavedState) {
+-            if (((SavedState) savedState).restoreState(this)) {
++            if (true) {
+                 iSavedState = savedState;
+                 return true;
+             }

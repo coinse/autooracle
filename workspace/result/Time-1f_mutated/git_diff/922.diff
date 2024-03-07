@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Period.java b/src/main/java/org/joda/time/Period.java
+index 5ea67a7c..34ff01a2 100644
+--- a/src/main/java/org/joda/time/Period.java
++++ b/src/main/java/org/joda/time/Period.java
+@@ -1065,7 +1065,7 @@ public final class Period
+      * @throws UnsupportedOperationException if the field is not supported
+      */
+     public Period plusMonths(int months) {
+-        if (months == 0) {
++        if (months >= 0) {
+             return this;
+         }
+         int[] values = getValues();  // cloned

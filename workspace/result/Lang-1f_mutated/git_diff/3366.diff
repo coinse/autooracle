@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..b6371686 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -1387,7 +1387,7 @@ public class NumberUtils {
+                 allowSigns = true;
+             } else if (chars[i] == '+' || chars[i] == '-') {
+                 if (!allowSigns) {
+-                    return false;
++                    return true;
+                 }
+                 allowSigns = false;
+                 foundDigit = false; // we need a digit after the E

@@ -1,0 +1,249 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/StringEscapeUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StringEscapeUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 41,
+      "end_line": 559,
+      "comment": "\n * Unit tests for {@link StringEscapeUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO"
+      ],
+      "begin_line": 42,
+      "end_line": 42,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testConstructor()",
+      "begin_line": 44,
+      "end_line": 52,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeJava()",
+      "begin_line": 54,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeJavaWithSlash()",
+      "begin_line": 95,
+      "end_line": 107,
+      "comment": "\n     * Tests https://issues.apache.org/jira/browse/LANG-421\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.assertEscapeJava(java.lang.String, java.lang.String)",
+      "begin_line": 109,
+      "end_line": 111,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.assertEscapeJava(java.lang.String, java.lang.String, java.lang.String)",
+      "begin_line": 113,
+      "end_line": 121,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeJava()",
+      "begin_line": 123,
+      "end_line": 156,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.assertUnescapeJava(java.lang.String, java.lang.String)",
+      "begin_line": 158,
+      "end_line": 160,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.assertUnescapeJava(java.lang.String, java.lang.String, java.lang.String)",
+      "begin_line": 162,
+      "end_line": 177,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeEcmaScript()",
+      "begin_line": 179,
+      "end_line": 200,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "HTML_ESCAPES"
+      ],
+      "begin_line": 206,
+      "end_line": 218,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeHtml()",
+      "begin_line": 220,
+      "end_line": 235,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeHtml4()",
+      "begin_line": 237,
+      "end_line": 262,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeHexCharsHtml()",
+      "begin_line": 264,
+      "end_line": 278,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeUnknownEntity()",
+      "begin_line": 280,
+      "end_line": 283,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeHtmlVersions()",
+      "begin_line": 285,
+      "end_line": 291,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeXml()",
+      "begin_line": 293,
+      "end_line": 328,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeXmlSupplementaryCharacters()",
+      "begin_line": 344,
+      "end_line": 351,
+      "comment": "\n     * Tests Supplementary characters. \n     * \u003cp\u003e\n     * From http://www.w3.org/International/questions/qa-escapes\n     * \u003c/p\u003e\n     * \u003cblockquote\u003e\n     * Supplementary characters are those Unicode characters that have code points higher than the characters in\n     * the Basic Multilingual Plane (BMP). In UTF-16 a supplementary character is encoded using two 16-bit surrogate code points from the\n     * BMP. Because of this, some people think that supplementary characters need to be represented using two escapes, but this is incorrect\n     * - you must use the single, code point value for that character. For example, use \u0026#x233B4; rather than \u0026#xD84C;\u0026#xDFB4;.\n     * \u003c/blockquote\u003e\n     * @see \u003ca href\u003d\"http://www.w3.org/International/questions/qa-escapes\"\u003eUsing character escapes in markup and CSS\u003c/a\u003e\n     * @see \u003ca href\u003d\"https://issues.apache.org/jira/browse/LANG-728\"\u003eLANG-728\u003c/a\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeXmlAllCharacters()",
+      "begin_line": 353,
+      "end_line": 369,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeXmlSupplementaryCharacters()",
+      "begin_line": 376,
+      "end_line": 380,
+      "comment": "\n     * Reverse of the above.\n     *\n     * @see \u003ca href\u003d\"https://issues.apache.org/jira/browse/LANG-729\"\u003eLANG-729\u003c/a\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testStandaloneAmphersand()",
+      "begin_line": 384,
+      "end_line": 390,
+      "comment": " http://issues.apache.org/bugzilla/show_bug.cgi?id\u003d38569"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testLang313()",
+      "begin_line": 392,
+      "end_line": 395,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeCsvString()",
+      "begin_line": 397,
+      "end_line": 406,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeCsvWriter()",
+      "begin_line": 408,
+      "end_line": 417,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.checkCsvEscapeWriter(java.lang.String, java.lang.String)",
+      "begin_line": 419,
+      "end_line": 427,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeCsvString()",
+      "begin_line": 429,
+      "end_line": 440,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testUnescapeCsvWriter()",
+      "begin_line": 442,
+      "end_line": 453,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.checkCsvUnescapeWriter(java.lang.String, java.lang.String)",
+      "begin_line": 455,
+      "end_line": 463,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeHtmlHighUnicode()",
+      "begin_line": 470,
+      "end_line": 489,
+      "comment": "\n     * Tests // https://issues.apache.org/jira/browse/LANG-480\n     * \n     * @throws java.io.UnsupportedEncodingException\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeHiragana()",
+      "begin_line": 494,
+      "end_line": 505,
+      "comment": "\n     * Tests https://issues.apache.org/jira/browse/LANG-339\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testLang708()",
+      "begin_line": 513,
+      "end_line": 521,
+      "comment": "\n     * Tests https://issues.apache.org/jira/browse/LANG-708\n     * \n     * @throws IOException\n     *             if an I/O error occurs\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testLang720()",
+      "begin_line": 526,
+      "end_line": 531,
+      "comment": "\n     * Tests https://issues.apache.org/jira/browse/LANG-720\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringEscapeUtilsTest.testEscapeJson()",
+      "begin_line": 533,
+      "end_line": 557,
+      "comment": ""
+    }
+  ]
+}

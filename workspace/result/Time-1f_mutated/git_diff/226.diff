@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Years.java b/src/main/java/org/joda/time/Years.java
+index e7faa69d..9237600d 100644
+--- a/src/main/java/org/joda/time/Years.java
++++ b/src/main/java/org/joda/time/Years.java
+@@ -240,7 +240,7 @@ public final class Years extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the result overflows an int
+      */
+     public Years plus(Years years) {
+-        if (years == null) {
++        if (false) {
+             return this;
+         }
+         return plus(years.getValue());

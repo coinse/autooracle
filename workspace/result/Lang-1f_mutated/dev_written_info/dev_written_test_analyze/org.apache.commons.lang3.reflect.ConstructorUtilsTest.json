@@ -1,0 +1,190 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/reflect/ConstructorUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ConstructorUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 237,
+      "comment": "\n * Unit tests ConstructorUtils\n * @version $Id$\n "
+    },
+    {
+      "type": "class_interface",
+      "name": "TestBean",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 36,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "toString"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.TestBean()",
+      "begin_line": 39,
+      "end_line": 41,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.TestBean(int)",
+      "begin_line": 43,
+      "end_line": 45,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.TestBean(java.lang.Integer)",
+      "begin_line": 47,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.TestBean(double)",
+      "begin_line": 51,
+      "end_line": 53,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.TestBean(java.lang.String)",
+      "begin_line": 55,
+      "end_line": 57,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.TestBean(java.lang.Object)",
+      "begin_line": 59,
+      "end_line": 61,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.TestBean.toString()",
+      "begin_line": 63,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "PrivateClass",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 69,
+      "end_line": 73,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.PrivateClass.PrivateClass()",
+      "begin_line": 70,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "classCache"
+      ],
+      "begin_line": 75,
+      "end_line": 75,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.ConstructorUtilsTest()",
+      "begin_line": 77,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.setUp()",
+      "begin_line": 82,
+      "end_line": 85,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testConstructor()",
+      "begin_line": 87,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testInvokeConstructor()",
+      "begin_line": 92,
+      "end_line": 113,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testInvokeExactConstructor()",
+      "begin_line": 115,
+      "end_line": 149,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testGetAccessibleConstructor()",
+      "begin_line": 151,
+      "end_line": 157,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testGetAccessibleConstructorFromDescription()",
+      "begin_line": 159,
+      "end_line": 165,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testGetMatchingAccessibleMethod()",
+      "begin_line": 167,
+      "end_line": 207,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.testNullArgument()",
+      "begin_line": 209,
+      "end_line": 213,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.expectMatchingAccessibleConstructorParameterTypes(java.lang.Class\u003c?\u003e, java.lang.Class\u003c?\u003e[], java.lang.Class\u003c?\u003e[])",
+      "begin_line": 215,
+      "end_line": 222,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.toString(java.lang.Class\u003c?\u003e[])",
+      "begin_line": 224,
+      "end_line": 226,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.ConstructorUtilsTest.singletonArray(java.lang.Class\u003c?\u003e)",
+      "begin_line": 228,
+      "end_line": 235,
+      "comment": ""
+    }
+  ]
+}

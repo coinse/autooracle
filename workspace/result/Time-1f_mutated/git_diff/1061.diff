@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDate.java b/src/main/java/org/joda/time/LocalDate.java
+index 9806eb32..45eebe2e 100644
+--- a/src/main/java/org/joda/time/LocalDate.java
++++ b/src/main/java/org/joda/time/LocalDate.java
+@@ -241,7 +241,7 @@ public final class LocalDate
+         if (date == null) {
+             throw new IllegalArgumentException("The date must not be null");
+         }
+-        if (date.getTime() < 0) {
++        if (false) {
+             // handle years in era BC
+             GregorianCalendar cal = new GregorianCalendar();
+             cal.setTime(date);

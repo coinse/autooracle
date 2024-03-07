@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/ScaledDurationField.java b/src/main/java/org/joda/time/field/ScaledDurationField.java
+index b82fd6d2..d94d482e 100644
+--- a/src/main/java/org/joda/time/field/ScaledDurationField.java
++++ b/src/main/java/org/joda/time/field/ScaledDurationField.java
+@@ -128,7 +128,7 @@ public class ScaledDurationField extends DecoratedDurationField {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         } else if (obj instanceof ScaledDurationField) {
+             ScaledDurationField other = (ScaledDurationField) obj;
+             return (getWrappedField().equals(other.getWrappedField())) &&

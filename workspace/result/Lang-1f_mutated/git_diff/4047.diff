@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/mutable/MutableLong.java b/src/main/java/org/apache/commons/lang3/mutable/MutableLong.java
+index 8ed50d85..94e06af2 100644
+--- a/src/main/java/org/apache/commons/lang3/mutable/MutableLong.java
++++ b/src/main/java/org/apache/commons/lang3/mutable/MutableLong.java
+@@ -234,7 +234,7 @@ public class MutableLong extends Number implements Comparable<MutableLong>, Muta
+     @Override
+     public boolean equals(final Object obj) {
+         if (obj instanceof MutableLong) {
+-            return value == ((MutableLong) obj).longValue();
++            return false;
+         }
+         return false;
+     }

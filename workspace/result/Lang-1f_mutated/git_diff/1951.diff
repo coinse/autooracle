@@ -1,0 +1,14 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Range.java b/src/main/java/org/apache/commons/lang3/Range.java
+index 7a865589..a2273c90 100644
+--- a/src/main/java/org/apache/commons/lang3/Range.java
++++ b/src/main/java/org/apache/commons/lang3/Range.java
+@@ -350,8 +350,7 @@ public final class Range<T> implements Serializable {
+         if (otherRange == null) {
+             return false;
+         }
+-        return otherRange.contains(minimum)
+-            || otherRange.contains(maximum)
++        return true
+             || contains(otherRange.minimum);
+     }
+ 

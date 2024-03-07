@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+index 70b8d646..6e749544 100644
+--- a/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
++++ b/src/main/java/org/apache/commons/lang3/math/NumberUtils.java
+@@ -597,7 +597,7 @@ public class NumberUtils {
+         }
+ 
+         //Must be a Float, Double, BigDecimal
+-        final boolean allZeros = isAllZeros(mant) && isAllZeros(exp);
++        final boolean allZeros = isAllZeros(exp);
+         try {
+             if(numDecimals <= 7){// If number has 7 or fewer digits past the decimal point then make it a float
+                 final Float f = createFloat(str);

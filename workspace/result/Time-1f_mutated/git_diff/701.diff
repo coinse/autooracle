@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeParserBucket.java b/src/main/java/org/joda/time/format/DateTimeParserBucket.java
+index 93dfaa78..2cdfade6 100644
+--- a/src/main/java/org/joda/time/format/DateTimeParserBucket.java
++++ b/src/main/java/org/joda/time/format/DateTimeParserBucket.java
+@@ -305,7 +305,7 @@ public class DateTimeParserBucket {
+                 return true;
+             }
+         }
+-        return false;
++        return true;
+     }
+     
+     /**

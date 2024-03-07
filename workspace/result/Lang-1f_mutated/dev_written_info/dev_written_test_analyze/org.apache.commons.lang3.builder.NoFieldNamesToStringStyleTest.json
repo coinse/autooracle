@@ -1,0 +1,102 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/NoFieldNamesToStringStyleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "NoFieldNamesToStringStyleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 131,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "base"
+      ],
+      "begin_line": 36,
+      "end_line": 36,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "baseStr"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.setUp()",
+      "begin_line": 39,
+      "end_line": 42,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.tearDown()",
+      "begin_line": 44,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testBlank()",
+      "begin_line": 51,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testAppendSuper()",
+      "begin_line": 56,
+      "end_line": 64,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testObject()",
+      "begin_line": 66,
+      "end_line": 82,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testPerson()",
+      "begin_line": 84,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testLong()",
+      "begin_line": 94,
+      "end_line": 99,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testObjectArray()",
+      "begin_line": 101,
+      "end_line": 109,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testLongArray()",
+      "begin_line": 111,
+      "end_line": 119,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.NoFieldNamesToStringStyleTest.testLongArrayArray()",
+      "begin_line": 121,
+      "end_line": 129,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/WordUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "WordUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 368,
+      "comment": "\n * Unit tests for WordUtils class.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testConstructor()",
+      "begin_line": 37,
+      "end_line": 45,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testWrap_StringInt()",
+      "begin_line": 48,
+      "end_line": 74,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testWrap_StringIntStringBoolean()",
+      "begin_line": 76,
+      "end_line": 153,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testCapitalize_String()",
+      "begin_line": 156,
+      "end_line": 168,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testCapitalizeWithDelimiters_String()",
+      "begin_line": 170,
+      "end_line": 186,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testCapitalizeFully_String()",
+      "begin_line": 188,
+      "end_line": 200,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testCapitalizeFullyWithDelimiters_String()",
+      "begin_line": 202,
+      "end_line": 218,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testUncapitalize_String()",
+      "begin_line": 220,
+      "end_line": 232,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testUncapitalizeWithDelimiters_String()",
+      "begin_line": 234,
+      "end_line": 250,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testInitials_String()",
+      "begin_line": 253,
+      "end_line": 265,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testInitials_String_charArray()",
+      "begin_line": 268,
+      "end_line": 347,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.WordUtilsTest.testSwapCase_String()",
+      "begin_line": 350,
+      "end_line": 366,
+      "comment": " -----------------------------------------------------------------------"
+    }
+  ]
+}

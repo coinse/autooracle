@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Days.java b/src/main/java/org/joda/time/Days.java
+index 116cc7d1..2949961b 100644
+--- a/src/main/java/org/joda/time/Days.java
++++ b/src/main/java/org/joda/time/Days.java
+@@ -431,7 +431,7 @@ public final class Days extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the divisor is zero
+      */
+     public Days dividedBy(int divisor) {
+-        if (divisor == 1) {
++        if (false) {
+             return this;
+         }
+         return Days.days(getValue() / divisor);

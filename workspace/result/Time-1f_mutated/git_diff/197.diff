@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateMidnight.java b/src/main/java/org/joda/time/DateMidnight.java
+index 05e348de..443369ea 100644
+--- a/src/main/java/org/joda/time/DateMidnight.java
++++ b/src/main/java/org/joda/time/DateMidnight.java
+@@ -784,7 +784,7 @@ public final class DateMidnight
+      * @since 1.1
+      */
+     public DateMidnight minusMonths(int months) {
+-        if (months == 0) {
++        if (months >= 0) {
+             return this;
+         }
+         long instant = getChronology().months().subtract(getMillis(), months);

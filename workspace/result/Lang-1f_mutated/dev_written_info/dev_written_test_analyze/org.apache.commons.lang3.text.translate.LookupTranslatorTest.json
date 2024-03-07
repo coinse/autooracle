@@ -1,0 +1,28 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/translate/LookupTranslatorTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "LookupTranslatorTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 31,
+      "end_line": 52,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.translate.LookupTranslator}.\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.LookupTranslatorTest.testBasicLookup()",
+      "begin_line": 33,
+      "end_line": 40,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.translate.LookupTranslatorTest.testLang882()",
+      "begin_line": 43,
+      "end_line": 50,
+      "comment": " Tests: https://issues.apache.org/jira/browse/LANG-882"
+    }
+  ]
+}

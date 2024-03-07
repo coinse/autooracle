@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..273241bc 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -2733,7 +2733,7 @@ public class ArrayUtils {
+      * @return a {@code Character} array, {@code null} if null array input
+      */
+     public static Character[] toObject(final char[] array) {
+-        if (array == null) {
++        if (false) {
+             return null;
+         } else if (array.length == 0) {
+             return EMPTY_CHARACTER_OBJECT_ARRAY;

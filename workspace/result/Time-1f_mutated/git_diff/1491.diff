@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Seconds.java b/src/main/java/org/joda/time/Seconds.java
+index f75ee922..96fdb489 100644
+--- a/src/main/java/org/joda/time/Seconds.java
++++ b/src/main/java/org/joda/time/Seconds.java
+@@ -179,7 +179,7 @@ public final class Seconds extends BaseSingleFieldPeriod {
+      */
+     @FromString
+     public static Seconds parseSeconds(String periodStr) {
+-        if (periodStr == null) {
++        if (false) {
+             return Seconds.ZERO;
+         }
+         Period p = PARSER.parsePeriod(periodStr);

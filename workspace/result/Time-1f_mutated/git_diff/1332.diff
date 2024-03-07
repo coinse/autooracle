@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeUtils.java b/src/main/java/org/joda/time/DateTimeUtils.java
+index 391cafd7..8245b7c6 100644
+--- a/src/main/java/org/joda/time/DateTimeUtils.java
++++ b/src/main/java/org/joda/time/DateTimeUtils.java
+@@ -499,7 +499,7 @@ public class DateTimeUtils {
+      */
+     public static final long fromJulianDay(double julianDay) {
+         double epochDay = julianDay - 2440587.5d;
+-        return (long) (epochDay * 86400000d);
++        return (long) (epochDay - 8.64E7);
+     }
+ 
+     //-----------------------------------------------------------------------

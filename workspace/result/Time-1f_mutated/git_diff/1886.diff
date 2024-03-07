@@ -1,0 +1,12 @@
+diff --git a/src/main/java/org/joda/time/chrono/LimitChronology.java b/src/main/java/org/joda/time/chrono/LimitChronology.java
+index 89325ade..b81dcce5 100644
+--- a/src/main/java/org/joda/time/chrono/LimitChronology.java
++++ b/src/main/java/org/joda/time/chrono/LimitChronology.java
+@@ -309,7 +309,6 @@ public final class LimitChronology extends AssembledChronology {
+         LimitChronology chrono = (LimitChronology) obj;
+         return
+             getBase().equals(chrono.getBase()) &&
+-            FieldUtils.equals(getLowerLimit(), chrono.getLowerLimit()) &&
+             FieldUtils.equals(getUpperLimit(), chrono.getUpperLimit());
+     }
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Years.java b/src/main/java/org/joda/time/Years.java
+index e7faa69d..561b4f2a 100644
+--- a/src/main/java/org/joda/time/Years.java
++++ b/src/main/java/org/joda/time/Years.java
+@@ -156,7 +156,7 @@ public final class Years extends BaseSingleFieldPeriod {
+      */
+     @FromString
+     public static Years parseYears(String periodStr) {
+-        if (periodStr == null) {
++        if (false) {
+             return Years.ZERO;
+         }
+         Period p = PARSER.parsePeriod(periodStr);

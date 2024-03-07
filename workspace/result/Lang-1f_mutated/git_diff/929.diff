@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+index 015e6dd6..fcb9cfa8 100644
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -295,7 +295,7 @@ public class ClassUtils {
+             className = className.substring(1);
+         }
+         // Strip Object type encoding
+-        if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {
++        if (className.charAt(0) >= 'L' && className.charAt(className.length() - 1) == ';') {
+             className = className.substring(1);
+         }
+ 

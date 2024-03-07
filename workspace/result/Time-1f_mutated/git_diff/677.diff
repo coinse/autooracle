@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractInterval.java b/src/main/java/org/joda/time/base/AbstractInterval.java
+index 86b7f83f..be3696fa 100644
+--- a/src/main/java/org/joda/time/base/AbstractInterval.java
++++ b/src/main/java/org/joda/time/base/AbstractInterval.java
+@@ -462,7 +462,7 @@ public abstract class AbstractInterval implements ReadableInterval {
+      */
+     public boolean equals(Object readableInterval) {
+         if (this == readableInterval) {
+-            return true;
++            return false;
+         }
+         if (readableInterval instanceof ReadableInterval == false) {
+             return false;

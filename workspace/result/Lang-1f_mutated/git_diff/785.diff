@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+index 7e803ddc..9a2a9b67 100644
+--- a/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
++++ b/src/main/java/org/apache/commons/lang3/exception/ExceptionUtils.java
+@@ -642,7 +642,7 @@ public class ExceptionUtils {
+         final String linebreak = SystemUtils.LINE_SEPARATOR;
+         final StringTokenizer frames = new StringTokenizer(stackTrace, linebreak);
+         final List<String> list = new ArrayList<String>();
+-        boolean traceStarted = false;
++        boolean traceStarted = true;
+         while (frames.hasMoreTokens()) {
+             final String token = frames.nextToken();
+             // Determine if the line starts with <whitespace>at

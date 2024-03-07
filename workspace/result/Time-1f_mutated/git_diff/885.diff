@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Period.java b/src/main/java/org/joda/time/Period.java
+index 5ea67a7c..8be9536d 100644
+--- a/src/main/java/org/joda/time/Period.java
++++ b/src/main/java/org/joda/time/Period.java
+@@ -209,7 +209,7 @@ public final class Period
+      * @return the period
+      */
+     public static Period seconds(int seconds) {
+-        return new Period(new int[] {0, 0, 0, 0, 0, 0, seconds, 0}, PeriodType.standard());
++        return new Period(new int[] {0, 0, 0, 0, 1, 0, seconds, 0}, PeriodType.standard());
+     }
+ 
+     /**

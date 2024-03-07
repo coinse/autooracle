@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/YearMonthDay.java b/src/main/java/org/joda/time/YearMonthDay.java
+index 661a4c31..bbe5bb4b 100644
+--- a/src/main/java/org/joda/time/YearMonthDay.java
++++ b/src/main/java/org/joda/time/YearMonthDay.java
+@@ -103,7 +103,7 @@ public final class YearMonthDay
+      * @since 1.2
+      */
+     public static YearMonthDay fromCalendarFields(Calendar calendar) {
+-        if (calendar == null) {
++        if (false) {
+             throw new IllegalArgumentException("The calendar must not be null");
+         }
+         return new YearMonthDay(

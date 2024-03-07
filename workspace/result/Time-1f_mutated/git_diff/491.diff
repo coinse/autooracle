@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..08dc1897 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -872,7 +872,7 @@ public class DateTimeFormatter {
+                 }
+                 DateTime dt = new DateTime(millis, chrono);
+                 if (iZone != null) {
+-                    dt = dt.withZone(iZone);
++                    ;
+                 }
+                 return dt;
+             }

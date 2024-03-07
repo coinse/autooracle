@@ -1,0 +1,583 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/StrBuilderTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StrBuilderTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 33,
+      "end_line": 1858,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.StrBuilder}.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testConstructors()",
+      "begin_line": 36,
+      "end_line": 77,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testChaining()",
+      "begin_line": 80,
+      "end_line": 92,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testGetSetNewLineText()",
+      "begin_line": 95,
+      "end_line": 108,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testGetSetNullText()",
+      "begin_line": 111,
+      "end_line": 127,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testCapacityAndLength()",
+      "begin_line": 130,
+      "end_line": 212,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLength()",
+      "begin_line": 215,
+      "end_line": 222,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testSetLength()",
+      "begin_line": 224,
+      "end_line": 241,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testCapacity()",
+      "begin_line": 244,
+      "end_line": 251,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testEnsureCapacity()",
+      "begin_line": 253,
+      "end_line": 265,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testMinimizeCapacity()",
+      "begin_line": 267,
+      "end_line": 276,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testSize()",
+      "begin_line": 279,
+      "end_line": 286,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIsEmpty()",
+      "begin_line": 288,
+      "end_line": 298,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testClear()",
+      "begin_line": 300,
+      "end_line": 307,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testCharAt()",
+      "begin_line": 310,
+      "end_line": 341,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testSetCharAt()",
+      "begin_line": 344,
+      "end_line": 370,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteCharAt()",
+      "begin_line": 373,
+      "end_line": 383,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testToCharArray()",
+      "begin_line": 386,
+      "end_line": 399,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testToCharArrayIntInt()",
+      "begin_line": 401,
+      "end_line": 433,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testGetChars()",
+      "begin_line": 435,
+      "end_line": 461,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testGetCharsIntIntCharArrayInt()",
+      "begin_line": 463,
+      "end_line": 503,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteIntInt()",
+      "begin_line": 506,
+      "end_line": 532,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteAll_char()",
+      "begin_line": 535,
+      "end_line": 550,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteFirst_char()",
+      "begin_line": 552,
+      "end_line": 567,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteAll_String()",
+      "begin_line": 570,
+      "end_line": 594,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteFirst_String()",
+      "begin_line": 596,
+      "end_line": 620,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteAll_StrMatcher()",
+      "begin_line": 623,
+      "end_line": 638,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testDeleteFirst_StrMatcher()",
+      "begin_line": 640,
+      "end_line": 655,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplace_int_int_String()",
+      "begin_line": 658,
+      "end_line": 691,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplaceAll_char_char()",
+      "begin_line": 694,
+      "end_line": 707,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplaceFirst_char_char()",
+      "begin_line": 710,
+      "end_line": 723,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplaceAll_String_String()",
+      "begin_line": 726,
+      "end_line": 754,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplaceFirst_String_String()",
+      "begin_line": 756,
+      "end_line": 784,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplaceAll_StrMatcher_String()",
+      "begin_line": 787,
+      "end_line": 819,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplaceFirst_StrMatcher_String()",
+      "begin_line": 821,
+      "end_line": 853,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplace_StrMatcher_String_int_int_int_VaryMatcher()",
+      "begin_line": 856,
+      "end_line": 875,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplace_StrMatcher_String_int_int_int_VaryReplace()",
+      "begin_line": 877,
+      "end_line": 898,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplace_StrMatcher_String_int_int_int_VaryStartIndex()",
+      "begin_line": 900,
+      "end_line": 959,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplace_StrMatcher_String_int_int_int_VaryEndIndex()",
+      "begin_line": 961,
+      "end_line": 1013,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReplace_StrMatcher_String_int_int_int_VaryCount()",
+      "begin_line": 1015,
+      "end_line": 1044,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testReverse()",
+      "begin_line": 1047,
+      "end_line": 1055,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testTrim()",
+      "begin_line": 1058,
+      "end_line": 1077,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testStartsWith()",
+      "begin_line": 1080,
+      "end_line": 1091,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testEndsWith()",
+      "begin_line": 1093,
+      "end_line": 1108,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testSubSequenceIntInt()",
+      "begin_line": 1111,
+      "end_line": 1143,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testSubstringInt()",
+      "begin_line": 1145,
+      "end_line": 1162,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testSubstringIntInt()",
+      "begin_line": 1164,
+      "end_line": 1184,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testMidString()",
+      "begin_line": 1187,
+      "end_line": 1196,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testRightString()",
+      "begin_line": 1198,
+      "end_line": 1205,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLeftString()",
+      "begin_line": 1207,
+      "end_line": 1214,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testContains_char()",
+      "begin_line": 1217,
+      "end_line": 1224,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testContains_String()",
+      "begin_line": 1226,
+      "end_line": 1234,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testContains_StrMatcher()",
+      "begin_line": 1236,
+      "end_line": 1249,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOf_char()",
+      "begin_line": 1252,
+      "end_line": 1264,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOf_char_int()",
+      "begin_line": 1266,
+      "end_line": 1286,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLastIndexOf_char()",
+      "begin_line": 1288,
+      "end_line": 1300,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLastIndexOf_char_int()",
+      "begin_line": 1302,
+      "end_line": 1320,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOf_String()",
+      "begin_line": 1323,
+      "end_line": 1344,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOf_String_int()",
+      "begin_line": 1346,
+      "end_line": 1381,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLastIndexOf_String()",
+      "begin_line": 1383,
+      "end_line": 1404,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLastIndexOf_String_int()",
+      "begin_line": 1406,
+      "end_line": 1441,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOf_StrMatcher()",
+      "begin_line": 1444,
+      "end_line": 1460,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOf_StrMatcher_int()",
+      "begin_line": 1462,
+      "end_line": 1500,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLastIndexOf_StrMatcher()",
+      "begin_line": 1502,
+      "end_line": 1518,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLastIndexOf_StrMatcher_int()",
+      "begin_line": 1520,
+      "end_line": 1559,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "A_NUMBER_MATCHER"
+      ],
+      "begin_line": 1561,
+      "end_line": 1572,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "isMatch(char[], int, int, int)",
+      "begin_line": 1562,
+      "end_line": 1571,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testAsTokenizer()",
+      "begin_line": 1575,
+      "end_line": 1611,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testAsReader()",
+      "begin_line": 1614,
+      "end_line": 1683,
+      "comment": " -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testAsWriter()",
+      "begin_line": 1686,
+      "end_line": 1718,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testEqualsIgnoreCase()",
+      "begin_line": 1721,
+      "end_line": 1742,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testEquals()",
+      "begin_line": 1745,
+      "end_line": 1768,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testHashCode()",
+      "begin_line": 1771,
+      "end_line": 1784,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testToString()",
+      "begin_line": 1787,
+      "end_line": 1791,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testToStringBuffer()",
+      "begin_line": 1794,
+      "end_line": 1801,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testToStringBuilder()",
+      "begin_line": 1804,
+      "end_line": 1811,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLang294()",
+      "begin_line": 1814,
+      "end_line": 1819,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testIndexOfLang294()",
+      "begin_line": 1821,
+      "end_line": 1826,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLang295()",
+      "begin_line": 1829,
+      "end_line": 1835,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLang412Right()",
+      "begin_line": 1838,
+      "end_line": 1843,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testLang412Left()",
+      "begin_line": 1845,
+      "end_line": 1850,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrBuilderTest.testAsBuilder()",
+      "begin_line": 1852,
+      "end_line": 1856,
+      "comment": ""
+    }
+  ]
+}

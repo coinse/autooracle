@@ -1,0 +1,89 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/tuple/Triple.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "Triple",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.Comparable\u003corg.apache.commons.lang3.tuple.Triple\u003cL, M, R\u003e\u003e",
+        "java.io.Serializable"
+      ],
+      "begin_line": 40,
+      "end_line": 159,
+      "comment": "\n * \u003cp\u003eA triple consisting of three elements.\u003c/p\u003e\n *\n * \u003cp\u003eThis class is an abstract implementation defining the basic API.\n * It refers to the elements as \u0027left\u0027, \u0027middle\u0027 and \u0027right\u0027.\u003c/p\u003e\n *\n * \u003cp\u003eSubclass implementations may be mutable or immutable.\n * However, there is no restriction on the type of the stored objects that may be stored.\n * If mutable objects are stored in the triple, then the triple itself effectively becomes mutable.\u003c/p\u003e\n *\n * @param \u003cL\u003e the left element type\n * @param \u003cM\u003e the middle element type\n * @param \u003cR\u003e the right element type\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 43,
+      "end_line": 43,
+      "comment": " Serialization version "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.of(L, M, R)",
+      "begin_line": 59,
+      "end_line": 61,
+      "comment": "\n     * \u003cp\u003eObtains an immutable triple of from three objects inferring the generic types.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis factory allows the triple to be created using inference to\n     * obtain the generic types.\u003c/p\u003e\n     *\n     * @param \u003cL\u003e the left element type\n     * @param \u003cM\u003e the middle element type\n     * @param \u003cR\u003e the right element type\n     * @param left  the left element, may be null\n     * @param middle the middle element, may be null\n     * @param right  the right element, may be null\n     * @return a triple formed from the three parameters, not null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.getLeft()",
+      "begin_line": 69,
+      "end_line": 69,
+      "comment": "\n     * \u003cp\u003eGets the left element from this triple.\u003c/p\u003e\n     *\n     * @return the left element, may be null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.getMiddle()",
+      "begin_line": 76,
+      "end_line": 76,
+      "comment": "\n     * \u003cp\u003eGets the middle element from this triple.\u003c/p\u003e\n     *\n     * @return the middle element, may be null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.getRight()",
+      "begin_line": 83,
+      "end_line": 83,
+      "comment": "\n     * \u003cp\u003eGets the right element from this triple.\u003c/p\u003e\n     *\n     * @return the right element, may be null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.compareTo(org.apache.commons.lang3.tuple.Triple\u003cL, M, R\u003e)",
+      "begin_line": 94,
+      "end_line": 99,
+      "comment": "\n     * \u003cp\u003eCompares the triple based on the left element, followed by the middle element,\n     * finally the right element.\n     * The types must be {@code Comparable}.\u003c/p\u003e\n     *\n     * @param other  the other triple, not null\n     * @return negative if this is less, zero if equal, positive if greater\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.equals(java.lang.Object)",
+      "begin_line": 107,
+      "end_line": 119,
+      "comment": "\n     * \u003cp\u003eCompares this triple to another based on the three elements.\u003c/p\u003e\n     *\n     * @param obj  the object to compare to, null returns false\n     * @return true if the elements of the triple are equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.hashCode()",
+      "begin_line": 126,
+      "end_line": 131,
+      "comment": "\n     * \u003cp\u003eReturns a suitable hash code.\u003c/p\u003e\n     *\n     * @return the hash code\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.toString()",
+      "begin_line": 138,
+      "end_line": 142,
+      "comment": "\n     * \u003cp\u003eReturns a String representation of this triple using the format {@code ($left,$middle,$right)}.\u003c/p\u003e\n     *\n     * @return a string describing this object, not null\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.tuple.Triple.toString(java.lang.String)",
+      "begin_line": 155,
+      "end_line": 157,
+      "comment": "\n     * \u003cp\u003eFormats the receiver using the given format.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis uses {@link java.util.Formattable} to perform the formatting. Three variables may\n     * be used to embed the left and right elements. Use {@code %1$s} for the left\n     * element, {@code %2$s} for the middle and {@code %3$s} for the right element.\n     * The default format used by {@code toString()} is {@code (%1$s,%2$s,%3$s)}.\u003c/p\u003e\n     *\n     * @param format  the format string, optionally containing {@code %1$s}, {@code %2$s} and {@code %3$s}, not null\n     * @return the formatted string, not null\n     "
+    }
+  ]
+}

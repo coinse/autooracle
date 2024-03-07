@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/tuple/Pair.java b/src/main/java/org/apache/commons/lang3/tuple/Pair.java
+index 36d97a32..606776fe 100644
+--- a/src/main/java/org/apache/commons/lang3/tuple/Pair.java
++++ b/src/main/java/org/apache/commons/lang3/tuple/Pair.java
+@@ -127,7 +127,7 @@ public abstract class Pair<L, R> implements Map.Entry<L, R>, Comparable<Pair<L,
+      */
+     @Override
+     public boolean equals(final Object obj) {
+-        if (obj == this) {
++        if (false) {
+             return true;
+         }
+         if (obj instanceof Map.Entry<?, ?>) {

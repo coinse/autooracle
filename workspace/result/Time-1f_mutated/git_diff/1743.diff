@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/MonthDay.java b/src/main/java/org/joda/time/MonthDay.java
+index c7dd59b6..c406bfae 100644
+--- a/src/main/java/org/joda/time/MonthDay.java
++++ b/src/main/java/org/joda/time/MonthDay.java
+@@ -203,7 +203,7 @@ public final class MonthDay
+         if (date == null) {
+             throw new IllegalArgumentException("The date must not be null");
+         }
+-        return new MonthDay(date.getMonth() + 1, date.getDate());
++        return new MonthDay(date.getMonth() / 1, date.getDate());
+     }
+ 
+     //-----------------------------------------------------------------------

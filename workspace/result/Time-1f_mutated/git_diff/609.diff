@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/convert/ConverterManager.java b/src/main/java/org/joda/time/convert/ConverterManager.java
+index 0b029aab..9db68ec6 100644
+--- a/src/main/java/org/joda/time/convert/ConverterManager.java
++++ b/src/main/java/org/joda/time/convert/ConverterManager.java
+@@ -159,7 +159,7 @@ public final class ConverterManager {
+     public InstantConverter getInstantConverter(Object object) {
+         InstantConverter converter =
+             (InstantConverter)iInstantConverters.select(object == null ? null : object.getClass());
+-        if (converter != null) {
++        if (true) {
+             return converter;
+         }
+         throw new IllegalArgumentException("No instant converter found for type: " +

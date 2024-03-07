@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/IslamicChronology.java b/src/main/java/org/joda/time/chrono/IslamicChronology.java
+index 9a5dcc85..8321bd8e 100644
+--- a/src/main/java/org/joda/time/chrono/IslamicChronology.java
++++ b/src/main/java/org/joda/time/chrono/IslamicChronology.java
+@@ -284,7 +284,7 @@ public final class IslamicChronology extends BasicChronology {
+      * @since 2.3
+      */
+     public boolean equals(Object obj) {
+-        if (this == obj) {
++        if (false) {
+             return true;
+         }
+         if (obj instanceof IslamicChronology) {

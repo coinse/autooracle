@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Months.java b/src/main/java/org/joda/time/Months.java
+index eec6def2..04262e48 100644
+--- a/src/main/java/org/joda/time/Months.java
++++ b/src/main/java/org/joda/time/Months.java
+@@ -192,7 +192,7 @@ public final class Months extends BaseSingleFieldPeriod {
+      */
+     @FromString
+     public static Months parseMonths(String periodStr) {
+-        if (periodStr == null) {
++        if (false) {
+             return Months.ZERO;
+         }
+         Period p = PARSER.parsePeriod(periodStr);

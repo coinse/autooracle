@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/MonthDay.java b/src/main/java/org/joda/time/MonthDay.java
+index c7dd59b6..65799315 100644
+--- a/src/main/java/org/joda/time/MonthDay.java
++++ b/src/main/java/org/joda/time/MonthDay.java
+@@ -200,7 +200,7 @@ public final class MonthDay
+      */
+     @SuppressWarnings("deprecation")
+     public static MonthDay fromDateFields(Date date) {
+-        if (date == null) {
++        if (false) {
+             throw new IllegalArgumentException("The date must not be null");
+         }
+         return new MonthDay(date.getMonth() + 1, date.getDate());

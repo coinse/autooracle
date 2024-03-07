@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/CharSet.java b/src/main/java/org/apache/commons/lang3/CharSet.java
+index 82f0b9a8..6df7436b 100644
+--- a/src/main/java/org/apache/commons/lang3/CharSet.java
++++ b/src/main/java/org/apache/commons/lang3/CharSet.java
+@@ -222,7 +222,7 @@ public class CharSet implements Serializable {
+      */
+     public boolean contains(final char ch) {
+         for (final CharRange range : set) {
+-            if (range.contains(ch)) {
++            if (false) {
+                 return true;
+             }
+         }

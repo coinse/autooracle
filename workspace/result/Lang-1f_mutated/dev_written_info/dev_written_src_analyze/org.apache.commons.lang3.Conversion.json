@@ -1,0 +1,308 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/Conversion.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "Conversion",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 65,
+      "end_line": 1717,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexDigitToInt(char)",
+      "begin_line": 78,
+      "end_line": 86,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a hexadecimal digit into an int using the default (Lsb0) bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * \u00271\u0027 is converted to 1\n     * \u003c/p\u003e\n     * \n     * @param hexDigit the hexadecimal digit to convert\n     * @return an int equals to {@code hexDigit}\n     * @throws IllegalArgumentException if {@code hexDigit} is not a hexadecimal digit\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexDigitMsb0ToInt(char)",
+      "begin_line": 100,
+      "end_line": 145,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a hexadecimal digit into an int using the Msb0 bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * \u00271\u0027 is converted to 8\n     * \u003c/p\u003e\n     * \n     * @param hexDigit the hexadecimal digit to convert\n     * @return an int equals to {@code hexDigit}\n     * @throws IllegalArgumentException if {@code hexDigit} is not a hexadecimal digit\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexDigitToBinary(char)",
+      "begin_line": 160,
+      "end_line": 205,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a hexadecimal digit into binary (represented as boolean array) using the default\n     * (Lsb0) bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * \u00271\u0027 is converted as follow: (1, 0, 0, 0)\n     * \u003c/p\u003e\n     * \n     * @param hexDigit the hexadecimal digit to convert\n     * @return a boolean array with the binary representation of {@code hexDigit}\n     * @throws IllegalArgumentException if {@code hexDigit} is not a hexadecimal digit\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexDigitMsb0ToBinary(char)",
+      "begin_line": 220,
+      "end_line": 265,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a hexadecimal digit into binary (represented as boolean array) using the Msb0\n     * bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * \u00271\u0027 is converted as follow: (0, 0, 0, 1)\n     * \u003c/p\u003e\n     * \n     * @param hexDigit the hexadecimal digit to convert\n     * @return a boolean array with the binary representation of {@code hexDigit}\n     * @throws IllegalArgumentException if {@code hexDigit} is not a hexadecimal digit\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToHexDigit(boolean[])",
+      "begin_line": 281,
+      "end_line": 283,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) to a hexadecimal digit using the default\n     * (Lsb0) bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * (1, 0, 0, 0) is converted as follow: \u00271\u0027\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @return a hexadecimal digit representing the selected bits\n     * @throws IllegalArgumentException if {@code src} is empty\n     * @throws NullPointerException if {@code src} is {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToHexDigit(boolean[], int)",
+      "begin_line": 300,
+      "end_line": 365,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) to a hexadecimal digit using the default\n     * (Lsb0) bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * (1, 0, 0, 0) is converted as follow: \u00271\u0027\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position of the lsb to start the conversion\n     * @return a hexadecimal digit representing the selected bits\n     * @throws IllegalArgumentException if {@code src} is empty\n     * @throws NullPointerException if {@code src} is {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToHexDigitMsb0_4bits(boolean[])",
+      "begin_line": 382,
+      "end_line": 384,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) to a hexadecimal digit using the Msb0 bit\n     * ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * (1, 0, 0, 0) is converted as follow: \u00278\u0027\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @return a hexadecimal digit representing the selected bits\n     * @throws IllegalArgumentException if {@code src} is empty, {@code src.length \u003c 4} or\n     *             {@code src.length \u003e 8}\n     * @throws NullPointerException if {@code src} is {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToHexDigitMsb0_4bits(boolean[], int)",
+      "begin_line": 403,
+      "end_line": 474,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) to a hexadecimal digit using the Msb0 bit\n     * ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * (1, 0, 0, 0) is converted as follow: \u00278\u0027 (1,0,0,1,1,0,1,0) with srcPos \u003d 3 is converted\n     * to \u0027D\u0027\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position of the lsb to start the conversion\n     * @return a hexadecimal digit representing the selected bits\n     * @throws IllegalArgumentException if {@code src} is empty, {@code src.length \u003e 8} or\n     *             {@code src.length - srcPos \u003c 4}\n     * @throws NullPointerException if {@code src} is {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryBeMsb0ToHexDigit(boolean[])",
+      "begin_line": 491,
+      "end_line": 493,
+      "comment": "\n     * \u003cp\u003e\n     * Converts the first 4 bits of a binary (represented as boolean array) in big endian Msb0\n     * bit ordering to a hexadecimal digit.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * (1, 0, 0, 0) is converted as follow: \u00278\u0027 (1,0,0,0,0,0,0,0, 0,0,0,0,0,1,0,0) is converted\n     * to \u00274\u0027\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @return a hexadecimal digit representing the selected bits\n     * @throws IllegalArgumentException if {@code src} is empty\n     * @throws NullPointerException if {@code src} is {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryBeMsb0ToHexDigit(boolean[], int)",
+      "begin_line": 511,
+      "end_line": 582,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a binary (represented as boolean array) in big endian Msb0 bit ordering to a\n     * hexadecimal digit.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * (1, 0, 0, 0) with srcPos \u003d 0 is converted as follow: \u00278\u0027 (1,0,0,0,0,0,0,0,\n     * 0,0,0,1,0,1,0,0) with srcPos \u003d 2 is converted to \u00275\u0027\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position of the lsb to start the conversion\n     * @return a hexadecimal digit representing the selected bits\n     * @throws IllegalArgumentException if {@code src} is empty\n     * @throws NullPointerException if {@code src} is {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intToHexDigit(int)",
+      "begin_line": 602,
+      "end_line": 608,
+      "comment": "\n     * \u003cp\u003e\n     * Converts the 4 lsb of an int to a hexadecimal digit.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * 0 returns \u00270\u0027\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * 1 returns \u00271\u0027\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * 10 returns \u0027A\u0027 and so on...\n     * \u003c/p\u003e\n     * \n     * @param nibble the 4 bits to convert\n     * @return a hexadecimal digit representing the 4 lsb of {@code nibble}\n     * @throws IllegalArgumentException if {@code nibble \u003c 0} or {@code nibble \u003e 15}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intToHexDigitMsb0(int)",
+      "begin_line": 628,
+      "end_line": 665,
+      "comment": "\n     * \u003cp\u003e\n     * Converts the 4 lsb of an int to a hexadecimal digit encoded using the Msb0 bit ordering.\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * 0 returns \u00270\u0027\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * 1 returns \u00278\u0027\n     * \u003c/p\u003e\n     * \u003cp\u003e\n     * 10 returns \u00275\u0027 and so on...\n     * \u003c/p\u003e\n     * \n     * @param nibble the 4 bits to convert\n     * @return a hexadecimal digit representing the 4 lsb of {@code nibble}\n     * @throws IllegalArgumentException if {@code nibble \u003c 0} or {@code nibble \u003e 15}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intArrayToLong(int[], int, long, int, int)",
+      "begin_line": 684,
+      "end_line": 701,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of int into a long using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the int array to convert\n     * @param srcPos the position in {@code src}, in int unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination long\n     * @param dstPos the position of the lsb, in bits, in the result long\n     * @param nInts the number of ints to convert\n     * @return a long containing the selected bits\n     * @throws IllegalArgumentException if {@code (nInts-1)*32+dstPos \u003e\u003d 64}\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nInts \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.shortArrayToLong(short[], int, long, int, int)",
+      "begin_line": 720,
+      "end_line": 738,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of short into a long using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the short array to convert\n     * @param srcPos the position in {@code src}, in short unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination long\n     * @param dstPos the position of the lsb, in bits, in the result long\n     * @param nShorts the number of shorts to convert\n     * @return a long containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code (nShorts-1)*16+dstPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nShorts \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.shortArrayToInt(short[], int, int, int, int)",
+      "begin_line": 757,
+      "end_line": 775,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of short into a int using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the short array to convert\n     * @param srcPos the position in {@code src}, in short unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination int\n     * @param dstPos the position of the lsb, in bits, in the result int\n     * @param nShorts the number of shorts to convert\n     * @return a int containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code (nShorts-1)*16+dstPos \u003e\u003d 32}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nShorts \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.byteArrayToLong(byte[], int, long, int, int)",
+      "begin_line": 794,
+      "end_line": 812,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of byte into a long using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the byte array to convert\n     * @param srcPos the position in {@code src}, in byte unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination long\n     * @param dstPos the position of the lsb, in bits, in the result long\n     * @param nBytes the number of bytes to convert\n     * @return a long containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code (nBytes-1)*8+dstPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBytes \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.byteArrayToInt(byte[], int, int, int, int)",
+      "begin_line": 831,
+      "end_line": 848,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of byte into a int using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the byte array to convert\n     * @param srcPos the position in {@code src}, in byte unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination int\n     * @param dstPos the position of the lsb, in bits, in the result int\n     * @param nBytes the number of bytes to convert\n     * @return a int containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code (nBytes-1)*8+dstPos \u003e\u003d 32}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBytes \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.byteArrayToShort(byte[], int, short, int, int)",
+      "begin_line": 867,
+      "end_line": 885,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of byte into a short using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the byte array to convert\n     * @param srcPos the position in {@code src}, in byte unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination short\n     * @param dstPos the position of the lsb, in bits, in the result short\n     * @param nBytes the number of bytes to convert\n     * @return a short containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code (nBytes-1)*8+dstPos \u003e\u003d 16}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBytes \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexToLong(java.lang.String, int, long, int, int)",
+      "begin_line": 902,
+      "end_line": 919,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of Char into a long using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the hex string to convert\n     * @param srcPos the position in {@code src}, in Char unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination long\n     * @param dstPos the position of the lsb, in bits, in the result long\n     * @param nHex the number of Chars to convert\n     * @return a long containing the selected bits\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+dstPos \u003e\u003d 64}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexToInt(java.lang.String, int, int, int, int)",
+      "begin_line": 936,
+      "end_line": 953,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of Char into a int using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the hex string to convert\n     * @param srcPos the position in {@code src}, in Char unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination int\n     * @param dstPos the position of the lsb, in bits, in the result int\n     * @param nHex the number of Chars to convert\n     * @return a int containing the selected bits\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+dstPos \u003e\u003d 32}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexToShort(java.lang.String, int, short, int, int)",
+      "begin_line": 970,
+      "end_line": 987,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of Char into a short using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the hex string to convert\n     * @param srcPos the position in {@code src}, in Char unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination short\n     * @param dstPos the position of the lsb, in bits, in the result short\n     * @param nHex the number of Chars to convert\n     * @return a short containing the selected bits\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+dstPos \u003e\u003d 16}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.hexToByte(java.lang.String, int, byte, int, int)",
+      "begin_line": 1004,
+      "end_line": 1021,
+      "comment": "\n     * \u003cp\u003e\n     * Converts an array of Char into a byte using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the hex string to convert\n     * @param srcPos the position in {@code src}, in Char unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination byte\n     * @param dstPos the position of the lsb, in bits, in the result byte\n     * @param nHex the number of Chars to convert\n     * @return a byte containing the selected bits\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+dstPos \u003e\u003d 8}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToLong(boolean[], int, long, int, int)",
+      "begin_line": 1040,
+      "end_line": 1058,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) into a long using the default (little\n     * endian, Lsb0) byte and bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position in {@code src}, in boolean unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination long\n     * @param dstPos the position of the lsb, in bits, in the result long\n     * @param nBools the number of booleans to convert\n     * @return a long containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+dstPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToInt(boolean[], int, int, int, int)",
+      "begin_line": 1077,
+      "end_line": 1094,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) into a int using the default (little\n     * endian, Lsb0) byte and bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position in {@code src}, in boolean unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination int\n     * @param dstPos the position of the lsb, in bits, in the result int\n     * @param nBools the number of booleans to convert\n     * @return a int containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+dstPos \u003e\u003d 32}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToShort(boolean[], int, short, int, int)",
+      "begin_line": 1113,
+      "end_line": 1131,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) into a short using the default (little\n     * endian, Lsb0) byte and bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position in {@code src}, in boolean unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination short\n     * @param dstPos the position of the lsb, in bits, in the result short\n     * @param nBools the number of booleans to convert\n     * @return a short containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+dstPos \u003e\u003d 16}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.binaryToByte(boolean[], int, byte, int, int)",
+      "begin_line": 1150,
+      "end_line": 1167,
+      "comment": "\n     * \u003cp\u003e\n     * Converts binary (represented as boolean array) into a byte using the default (little\n     * endian, Lsb0) byte and bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the binary to convert\n     * @param srcPos the position in {@code src}, in boolean unit, from where to start the\n     *            conversion\n     * @param dstInit initial value of the destination byte\n     * @param dstPos the position of the lsb, in bits, in the result byte\n     * @param nBools the number of booleans to convert\n     * @return a byte containing the selected bits\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+dstPos \u003e\u003d 8}\n     * @throws ArrayIndexOutOfBoundsException if {@code srcPos + nBools \u003e src.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.longToIntArray(long, int, int[], int, int)",
+      "begin_line": 1186,
+      "end_line": 1200,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a long into an array of int using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the long to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nInts the number of ints to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null} and {@code nInts \u003e 0}\n     * @throws IllegalArgumentException if {@code (nInts-1)*32+srcPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nInts \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.longToShortArray(long, int, short[], int, int)",
+      "begin_line": 1219,
+      "end_line": 1234,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a long into an array of short using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the long to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nShorts the number of shorts to copy to {@code dst}, must be smaller or equal to\n     *            the width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code (nShorts-1)*16+srcPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nShorts \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intToShortArray(int, int, short[], int, int)",
+      "begin_line": 1253,
+      "end_line": 1268,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a int into an array of short using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the int to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nShorts the number of shorts to copy to {@code dst}, must be smaller or equal to\n     *            the width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code (nShorts-1)*16+srcPos \u003e\u003d 32}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nShorts \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.longToByteArray(long, int, byte[], int, int)",
+      "begin_line": 1287,
+      "end_line": 1302,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a long into an array of byte using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the long to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBytes the number of bytes to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code (nBytes-1)*8+srcPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intToByteArray(int, int, byte[], int, int)",
+      "begin_line": 1321,
+      "end_line": 1335,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a int into an array of byte using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the int to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBytes the number of bytes to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code (nBytes-1)*8+srcPos \u003e\u003d 32}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.shortToByteArray(short, int, byte[], int, int)",
+      "begin_line": 1354,
+      "end_line": 1369,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a short into an array of byte using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the short to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBytes the number of bytes to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code (nBytes-1)*8+srcPos \u003e\u003d 16}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.longToHex(long, int, java.lang.String, int, int)",
+      "begin_line": 1387,
+      "end_line": 1409,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a long into an array of Char using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the long to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dstInit the initial value for the result String\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nHexs the number of Chars to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+srcPos \u003e\u003d 64}\n     * @throws StringIndexOutOfBoundsException if {@code dst.init.length() \u003c dstPos}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intToHex(int, int, java.lang.String, int, int)",
+      "begin_line": 1427,
+      "end_line": 1449,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a int into an array of Char using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the int to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dstInit the initial value for the result String\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nHexs the number of Chars to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+srcPos \u003e\u003d 32}\n     * @throws StringIndexOutOfBoundsException if {@code dst.init.length() \u003c dstPos}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.shortToHex(short, int, java.lang.String, int, int)",
+      "begin_line": 1467,
+      "end_line": 1489,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a short into an array of Char using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the short to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dstInit the initial value for the result String\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nHexs the number of Chars to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+srcPos \u003e\u003d 16}\n     * @throws StringIndexOutOfBoundsException if {@code dst.init.length() \u003c dstPos}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.byteToHex(byte, int, java.lang.String, int, int)",
+      "begin_line": 1507,
+      "end_line": 1529,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a byte into an array of Char using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the byte to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dstInit the initial value for the result String\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nHexs the number of Chars to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws IllegalArgumentException if {@code (nHexs-1)*4+srcPos \u003e\u003d 8}\n     * @throws StringIndexOutOfBoundsException if {@code dst.init.length() \u003c dstPos}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.longToBinary(long, int, boolean[], int, int)",
+      "begin_line": 1548,
+      "end_line": 1563,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a long into an array of boolean using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the long to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBools the number of booleans to copy to {@code dst}, must be smaller or equal to\n     *            the width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+srcPos \u003e\u003d 64}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.intToBinary(int, int, boolean[], int, int)",
+      "begin_line": 1582,
+      "end_line": 1597,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a int into an array of boolean using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the int to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBools the number of booleans to copy to {@code dst}, must be smaller or equal to\n     *            the width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+srcPos \u003e\u003d 32}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.shortToBinary(short, int, boolean[], int, int)",
+      "begin_line": 1616,
+      "end_line": 1632,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a short into an array of boolean using the default (little endian, Lsb0) byte\n     * and bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the short to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBools the number of booleans to copy to {@code dst}, must be smaller or equal to\n     *            the width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+srcPos \u003e\u003d 16}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.byteToBinary(byte, int, boolean[], int, int)",
+      "begin_line": 1651,
+      "end_line": 1665,
+      "comment": "\n     * \u003cp\u003e\n     * Converts a byte into an array of boolean using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the byte to convert\n     * @param srcPos the position in {@code src}, in bits, from where to start the conversion\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBools the number of booleans to copy to {@code dst}, must be smaller or equal to\n     *            the width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code nBools-1+srcPos \u003e\u003d 8}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBools \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.uuidToByteArray(java.util.UUID, byte[], int, int)",
+      "begin_line": 1683,
+      "end_line": 1695,
+      "comment": "\n     * \u003cp\u003e\n     * Converts UUID into an array of byte using the default (little endian, Lsb0) byte and bit\n     * ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the UUID to convert\n     * @param dst the destination array\n     * @param dstPos the position in {@code dst} where to copy the result\n     * @param nBytes the number of bytes to copy to {@code dst}, must be smaller or equal to the\n     *            width of the input (from srcPos to msb)\n     * @return {@code dst}\n     * @throws NullPointerException if {@code dst} is {@code null}\n     * @throws IllegalArgumentException if {@code nBytes \u003e 16}\n     * @throws ArrayIndexOutOfBoundsException if {@code dstPos + nBytes \u003e dst.length}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.Conversion.byteArrayToUuid(byte[], int)",
+      "begin_line": 1710,
+      "end_line": 1716,
+      "comment": "\n     * \u003cp\u003e\n     * Converts bytes from an array into a UUID using the default (little endian, Lsb0) byte and\n     * bit ordering.\n     * \u003c/p\u003e\n     * \n     * @param src the byte array to convert\n     * @param srcPos the position in {@code src} where to copy the result from\n     * @return a UUID\n     * @throws NullPointerException if {@code src} is {@code null}\n     * @throws IllegalArgumentException if array does not contain at least 16 bytes beginning\n     *             with {@code srcPos}\n     "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Duration.java b/src/main/java/org/joda/time/Duration.java
+index 15fe52d0..08942167 100644
+--- a/src/main/java/org/joda/time/Duration.java
++++ b/src/main/java/org/joda/time/Duration.java
+@@ -499,7 +499,7 @@ public final class Duration
+      * @return the new duration instance
+      */
+     public Duration dividedBy(long divisor) {
+-        if (divisor == 1) {
++        if (divisor >= 1) {
+             return this;
+         }
+         return new Duration(FieldUtils.safeDivide(getMillis(), divisor));

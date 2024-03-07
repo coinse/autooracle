@@ -1,0 +1,202 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/CharUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 358,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.CharUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CHARACTER_A"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CHARACTER_B"
+      ],
+      "begin_line": 38,
+      "end_line": 38,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CHAR_COPY"
+      ],
+      "begin_line": 39,
+      "end_line": 39,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testConstructor()",
+      "begin_line": 41,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToCharacterObject_char()",
+      "begin_line": 51,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToCharacterObject_String()",
+      "begin_line": 74,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToChar_Character()",
+      "begin_line": 83,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToChar_Character_char()",
+      "begin_line": 92,
+      "end_line": 97,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToChar_String()",
+      "begin_line": 99,
+      "end_line": 109,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToChar_String_char()",
+      "begin_line": 111,
+      "end_line": 117,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToIntValue_char()",
+      "begin_line": 119,
+      "end_line": 134,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToIntValue_char_int()",
+      "begin_line": 136,
+      "end_line": 141,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToIntValue_Character()",
+      "begin_line": 143,
+      "end_line": 153,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToIntValue_Character_int()",
+      "begin_line": 155,
+      "end_line": 161,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToString_char()",
+      "begin_line": 163,
+      "end_line": 185,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToString_Character()",
+      "begin_line": 187,
+      "end_line": 192,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToUnicodeEscaped_char()",
+      "begin_line": 194,
+      "end_line": 206,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testToUnicodeEscaped_Character()",
+      "begin_line": 208,
+      "end_line": 212,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAscii_char()",
+      "begin_line": 214,
+      "end_line": 230,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiPrintable_char()",
+      "begin_line": 232,
+      "end_line": 248,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiControl_char()",
+      "begin_line": 250,
+      "end_line": 266,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiAlpha_char()",
+      "begin_line": 268,
+      "end_line": 284,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiAlphaUpper_char()",
+      "begin_line": 286,
+      "end_line": 302,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiAlphaLower_char()",
+      "begin_line": 304,
+      "end_line": 320,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiNumeric_char()",
+      "begin_line": 322,
+      "end_line": 338,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharUtilsTest.testIsAsciiAlphanumeric_char()",
+      "begin_line": 340,
+      "end_line": 356,
+      "comment": ""
+    }
+  ]
+}

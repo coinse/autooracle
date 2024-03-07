@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Years.java b/src/main/java/org/joda/time/Years.java
+index e7faa69d..d0ba5daf 100644
+--- a/src/main/java/org/joda/time/Years.java
++++ b/src/main/java/org/joda/time/Years.java
+@@ -327,7 +327,7 @@ public final class Years extends BaseSingleFieldPeriod {
+      */
+     public boolean isGreaterThan(Years other) {
+         if (other == null) {
+-            return getValue() > 0;
++            return getValue() > -1;
+         }
+         return getValue() > other.getValue();
+     }

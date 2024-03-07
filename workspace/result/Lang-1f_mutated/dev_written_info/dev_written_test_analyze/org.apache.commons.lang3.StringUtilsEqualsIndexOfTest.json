@@ -1,0 +1,498 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/StringUtilsEqualsIndexOfTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StringUtilsEqualsIndexOfTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 1011,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.StringUtils} - Substring methods\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BAR"
+      ],
+      "begin_line": 35,
+      "end_line": 35,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CharU20000"
+      ],
+      "begin_line": 40,
+      "end_line": 40,
+      "comment": "\n     * Supplementary character U+20000\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CharU20001"
+      ],
+      "begin_line": 45,
+      "end_line": 45,
+      "comment": "\n     * Supplementary character U+20001\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CharUSuppCharHigh"
+      ],
+      "begin_line": 50,
+      "end_line": 50,
+      "comment": "\n     * Incomplete supplementary character U+20000, high surrogate only.\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CharUSuppCharLow"
+      ],
+      "begin_line": 56,
+      "end_line": 56,
+      "comment": "\n     * Incomplete supplementary character U+20000, low surrogate only.\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO"
+      ],
+      "begin_line": 58,
+      "end_line": 58,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOOBAR"
+      ],
+      "begin_line": 60,
+      "end_line": 60,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOOBAR_SUB_ARRAY"
+      ],
+      "begin_line": 62,
+      "end_line": 62,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContains_Char()",
+      "begin_line": 64,
+      "end_line": 74,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContains_String()",
+      "begin_line": 76,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContains_StringWithBadSupplementaryChars()",
+      "begin_line": 94,
+      "end_line": 104,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContains_StringWithSupplementaryChars()",
+      "begin_line": 109,
+      "end_line": 115,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAny_StringCharArray()",
+      "begin_line": 117,
+      "end_line": 132,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAny_StringCharArrayWithBadSupplementaryChars()",
+      "begin_line": 137,
+      "end_line": 147,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAny_StringCharArrayWithSupplementaryChars()",
+      "begin_line": 152,
+      "end_line": 167,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAny_StringString()",
+      "begin_line": 169,
+      "end_line": 184,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAny_StringWithBadSupplementaryChars()",
+      "begin_line": 189,
+      "end_line": 198,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsAny_StringWithSupplementaryChars()",
+      "begin_line": 203,
+      "end_line": 215,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsIgnoreCase_LocaleIndependence()",
+      "begin_line": 217,
+      "end_line": 250,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsIgnoreCase_StringString()",
+      "begin_line": 252,
+      "end_line": 285,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsNone_CharArray()",
+      "begin_line": 287,
+      "end_line": 311,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsNone_CharArrayWithBadSupplementaryChars()",
+      "begin_line": 316,
+      "end_line": 326,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsNone_CharArrayWithSupplementaryChars()",
+      "begin_line": 331,
+      "end_line": 343,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsNone_String()",
+      "begin_line": 345,
+      "end_line": 368,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsNone_StringWithBadSupplementaryChars()",
+      "begin_line": 373,
+      "end_line": 383,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsNone_StringWithSupplementaryChars()",
+      "begin_line": 388,
+      "end_line": 400,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsOnly_CharArray()",
+      "begin_line": 402,
+      "end_line": 426,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsOnly_String()",
+      "begin_line": 428,
+      "end_line": 451,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testContainsWhitespace()",
+      "begin_line": 453,
+      "end_line": 462,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "CustomCharSequence",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.CharSequence"
+      ],
+      "begin_line": 468,
+      "end_line": 508,
+      "comment": " `seq` may equal the other object."
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "seq"
+      ],
+      "begin_line": 469,
+      "end_line": 469,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.CustomCharSequence(java.lang.CharSequence)",
+      "begin_line": 471,
+      "end_line": 473,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.charAt(int)",
+      "begin_line": 475,
+      "end_line": 478,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.length()",
+      "begin_line": 480,
+      "end_line": 483,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.subSequence(int, int)",
+      "begin_line": 485,
+      "end_line": 488,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.equals(java.lang.Object)",
+      "begin_line": 490,
+      "end_line": 497,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.hashCode()",
+      "begin_line": 499,
+      "end_line": 502,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.CustomCharSequence.toString()",
+      "begin_line": 504,
+      "end_line": 507,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testCustomCharSequence()",
+      "begin_line": 510,
+      "end_line": 515,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testEquals()",
+      "begin_line": 517,
+      "end_line": 532,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testEqualsOnStrings()",
+      "begin_line": 534,
+      "end_line": 545,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testEqualsIgnoreCase()",
+      "begin_line": 547,
+      "end_line": 558,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOf_char()",
+      "begin_line": 561,
+      "end_line": 569,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOf_charInt()",
+      "begin_line": 571,
+      "end_line": 584,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOf_String()",
+      "begin_line": 586,
+      "end_line": 597,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOf_StringInt()",
+      "begin_line": 599,
+      "end_line": 629,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAny_StringCharArray()",
+      "begin_line": 631,
+      "end_line": 646,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAny_StringCharArrayWithSupplementaryChars()",
+      "begin_line": 651,
+      "end_line": 657,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAny_StringString()",
+      "begin_line": 659,
+      "end_line": 674,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAny_StringStringArray()",
+      "begin_line": 676,
+      "end_line": 692,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAny_StringStringWithSupplementaryChars()",
+      "begin_line": 697,
+      "end_line": 703,
+      "comment": "\n     * See http://www.oracle.com/technetwork/articles/javase/supplementary-142654.html\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAnyBut_StringCharArray()",
+      "begin_line": 705,
+      "end_line": 722,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAnyBut_StringCharArrayWithSupplementaryChars()",
+      "begin_line": 724,
+      "end_line": 730,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAnyBut_StringString()",
+      "begin_line": 732,
+      "end_line": 747,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfAnyBut_StringStringWithSupplementaryChars()",
+      "begin_line": 749,
+      "end_line": 755,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfIgnoreCase_String()",
+      "begin_line": 757,
+      "end_line": 770,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testIndexOfIgnoreCase_StringInt()",
+      "begin_line": 772,
+      "end_line": 788,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOf_char()",
+      "begin_line": 790,
+      "end_line": 798,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOf_charInt()",
+      "begin_line": 800,
+      "end_line": 814,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOf_String()",
+      "begin_line": 816,
+      "end_line": 828,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOf_StringInt()",
+      "begin_line": 830,
+      "end_line": 866,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOfAny_StringStringArray()",
+      "begin_line": 868,
+      "end_line": 888,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOfIgnoreCase_String()",
+      "begin_line": 890,
+      "end_line": 906,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastIndexOfIgnoreCase_StringInt()",
+      "begin_line": 908,
+      "end_line": 931,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testLastOrdinalIndexOf()",
+      "begin_line": 933,
+      "end_line": 946,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsEqualsIndexOfTest.testOrdinalIndexOf()",
+      "begin_line": 948,
+      "end_line": 1009,
+      "comment": ""
+    }
+  ]
+}

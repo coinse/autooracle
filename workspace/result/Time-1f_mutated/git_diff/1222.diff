@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDateTime.java b/src/main/java/org/joda/time/LocalDateTime.java
+index 44d2ee9c..7452e0de 100644
+--- a/src/main/java/org/joda/time/LocalDateTime.java
++++ b/src/main/java/org/joda/time/LocalDateTime.java
+@@ -878,7 +878,7 @@ public final class LocalDateTime
+      * @return a copy of this datetime with different millis
+      */
+     LocalDateTime withLocalMillis(long newMillis) {
+-        return (newMillis == getLocalMillis() ? this : new LocalDateTime(newMillis, getChronology()));
++        return (newMillis >= getLocalMillis() ? this : new LocalDateTime(newMillis, getChronology()));
+     }
+ 
+     //-----------------------------------------------------------------------

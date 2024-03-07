@@ -1,0 +1,969 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/StringUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StringUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 46,
+      "end_line": 2328,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.StringUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "WHITESPACE"
+      ],
+      "begin_line": 48,
+      "end_line": 48,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NON_WHITESPACE"
+      ],
+      "begin_line": 49,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "TRIMMABLE"
+      ],
+      "begin_line": 50,
+      "end_line": 50,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NON_TRIMMABLE"
+      ],
+      "begin_line": 51,
+      "end_line": 51,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "ARRAY_LIST"
+      ],
+      "begin_line": 76,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "EMPTY_ARRAY_LIST"
+      ],
+      "begin_line": 77,
+      "end_line": 77,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NULL_ARRAY_LIST"
+      ],
+      "begin_line": 78,
+      "end_line": 78,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NULL_TO_STRING_LIST"
+      ],
+      "begin_line": 79,
+      "end_line": 86,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.Anonymous-15a96f29-2014-41c3-868b-89e6902f9b90.toString()",
+      "begin_line": 81,
+      "end_line": 84,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "MIXED_ARRAY_LIST"
+      ],
+      "begin_line": 87,
+      "end_line": 87,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "MIXED_TYPE_LIST"
+      ],
+      "begin_line": 88,
+      "end_line": 88,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "LONG_PRIM_LIST"
+      ],
+      "begin_line": 89,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "INT_PRIM_LIST"
+      ],
+      "begin_line": 90,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BYTE_PRIM_LIST"
+      ],
+      "begin_line": 91,
+      "end_line": 91,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SHORT_PRIM_LIST"
+      ],
+      "begin_line": 92,
+      "end_line": 92,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "CHAR_PRIM_LIST"
+      ],
+      "begin_line": 93,
+      "end_line": 93,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FLOAT_PRIM_LIST"
+      ],
+      "begin_line": 94,
+      "end_line": 94,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "DOUBLE_PRIM_LIST"
+      ],
+      "begin_line": 95,
+      "end_line": 95,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SEPARATOR"
+      ],
+      "begin_line": 97,
+      "end_line": 97,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SEPARATOR_CHAR"
+      ],
+      "begin_line": 98,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "TEXT_LIST"
+      ],
+      "begin_line": 100,
+      "end_line": 100,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "TEXT_LIST_CHAR"
+      ],
+      "begin_line": 101,
+      "end_line": 101,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "TEXT_LIST_NOSEP"
+      ],
+      "begin_line": 102,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO_UNCAP"
+      ],
+      "begin_line": 104,
+      "end_line": 104,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "FOO_CAP"
+      ],
+      "begin_line": 105,
+      "end_line": 105,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SENTENCE_UNCAP"
+      ],
+      "begin_line": 107,
+      "end_line": 107,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "SENTENCE_CAP"
+      ],
+      "begin_line": 108,
+      "end_line": 108,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testConstructor()",
+      "begin_line": 111,
+      "end_line": 119,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testCaseFunctions()",
+      "begin_line": 122,
+      "end_line": 178,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSwapCase_String()",
+      "begin_line": 180,
+      "end_line": 196,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_Objects()",
+      "begin_line": 199,
+      "end_line": 204,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_Objectarray()",
+      "begin_line": 206,
+      "end_line": 221,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayCharSeparator()",
+      "begin_line": 223,
+      "end_line": 237,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfChars()",
+      "begin_line": 239,
+      "end_line": 244,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfBytes()",
+      "begin_line": 246,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfInts()",
+      "begin_line": 253,
+      "end_line": 258,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfLongs()",
+      "begin_line": 260,
+      "end_line": 265,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfFloats()",
+      "begin_line": 267,
+      "end_line": 272,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfDoubles()",
+      "begin_line": 274,
+      "end_line": 279,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayOfShorts()",
+      "begin_line": 281,
+      "end_line": 286,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_ArrayString()",
+      "begin_line": 288,
+      "end_line": 310,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_IteratorChar()",
+      "begin_line": 312,
+      "end_line": 319,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_IteratorString()",
+      "begin_line": 321,
+      "end_line": 336,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_IterableChar()",
+      "begin_line": 338,
+      "end_line": 345,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testJoin_IterableString()",
+      "begin_line": 347,
+      "end_line": 362,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplit_String()",
+      "begin_line": 364,
+      "end_line": 386,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplit_StringChar()",
+      "begin_line": 388,
+      "end_line": 411,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplit_StringString_StringStringInt()",
+      "begin_line": 413,
+      "end_line": 445,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.innerTestSplit(char, java.lang.String, char)",
+      "begin_line": 447,
+      "end_line": 485,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitByWholeString_StringStringBoolean()",
+      "begin_line": 487,
+      "end_line": 517,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitByWholeString_StringStringBooleanInt()",
+      "begin_line": 519,
+      "end_line": 544,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitByWholeSeparatorPreserveAllTokens_StringStringInt()",
+      "begin_line": 546,
+      "end_line": 591,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitPreserveAllTokens_String()",
+      "begin_line": 593,
+      "end_line": 667,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitPreserveAllTokens_StringChar()",
+      "begin_line": 669,
+      "end_line": 779,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitPreserveAllTokens_StringString_StringStringInt()",
+      "begin_line": 781,
+      "end_line": 909,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.innerTestSplitPreserveAllTokens(char, java.lang.String, char)",
+      "begin_line": 911,
+      "end_line": 954,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitByCharacterType()",
+      "begin_line": 956,
+      "end_line": 981,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testSplitByCharacterTypeCamelCase()",
+      "begin_line": 983,
+      "end_line": 1008,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDeleteWhitespace_String()",
+      "begin_line": 1010,
+      "end_line": 1022,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLang623()",
+      "begin_line": 1024,
+      "end_line": 1028,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplace_StringStringString()",
+      "begin_line": 1030,
+      "end_line": 1050,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplacePattern()",
+      "begin_line": 1052,
+      "end_line": 1055,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemovePattern()",
+      "begin_line": 1057,
+      "end_line": 1060,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplace_StringStringStringInt()",
+      "begin_line": 1062,
+      "end_line": 1086,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplaceOnce_StringStringString()",
+      "begin_line": 1088,
+      "end_line": 1106,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplace_StringStringArrayStringArray()",
+      "begin_line": 1111,
+      "end_line": 1141,
+      "comment": "\n     * Test method for \u0027StringUtils.replaceEach(String, String[], String[])\u0027\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplace_StringStringArrayStringArrayBoolean()",
+      "begin_line": 1146,
+      "end_line": 1167,
+      "comment": "\n     * Test method for \u0027StringUtils.replaceEachRepeatedly(String, String[], String[])\u0027\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplaceChars_StringCharChar()",
+      "begin_line": 1169,
+      "end_line": 1175,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReplaceChars_StringStringString()",
+      "begin_line": 1177,
+      "end_line": 1221,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testOverlay_StringStringIntInt()",
+      "begin_line": 1223,
+      "end_line": 1249,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRepeat_StringInt()",
+      "begin_line": 1251,
+      "end_line": 1262,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRepeat_StringStringInt()",
+      "begin_line": 1264,
+      "end_line": 1276,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testChop()",
+      "begin_line": 1278,
+      "end_line": 1301,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testChomp()",
+      "begin_line": 1303,
+      "end_line": 1360,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRightPad_StringInt()",
+      "begin_line": 1363,
+      "end_line": 1370,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRightPad_StringIntChar()",
+      "begin_line": 1372,
+      "end_line": 1383,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRightPad_StringIntString()",
+      "begin_line": 1385,
+      "end_line": 1397,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLeftPad_StringInt()",
+      "begin_line": 1400,
+      "end_line": 1406,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLeftPad_StringIntChar()",
+      "begin_line": 1408,
+      "end_line": 1419,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLeftPad_StringIntString()",
+      "begin_line": 1421,
+      "end_line": 1433,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLengthString()",
+      "begin_line": 1435,
+      "end_line": 1443,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLengthStringBuffer()",
+      "begin_line": 1445,
+      "end_line": 1452,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLengthStringBuilder()",
+      "begin_line": 1454,
+      "end_line": 1461,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLength_CharBuffer()",
+      "begin_line": 1463,
+      "end_line": 1469,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testCenter_StringInt()",
+      "begin_line": 1472,
+      "end_line": 1485,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testCenter_StringIntChar()",
+      "begin_line": 1487,
+      "end_line": 1501,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testCenter_StringIntString()",
+      "begin_line": 1503,
+      "end_line": 1520,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReverse_String()",
+      "begin_line": 1523,
+      "end_line": 1528,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testReverseDelimited_StringChar()",
+      "begin_line": 1530,
+      "end_line": 1537,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefault_String()",
+      "begin_line": 1540,
+      "end_line": 1545,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefault_StringString()",
+      "begin_line": 1547,
+      "end_line": 1552,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfEmpty_StringString()",
+      "begin_line": 1554,
+      "end_line": 1563,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfBlank_StringString()",
+      "begin_line": 1565,
+      "end_line": 1575,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfEmpty_StringBuilders()",
+      "begin_line": 1577,
+      "end_line": 1585,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfBlank_StringBuilders()",
+      "begin_line": 1587,
+      "end_line": 1596,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfEmpty_StringBuffers()",
+      "begin_line": 1598,
+      "end_line": 1606,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfBlank_StringBuffers()",
+      "begin_line": 1608,
+      "end_line": 1617,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfEmpty_CharBuffers()",
+      "begin_line": 1619,
+      "end_line": 1627,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDefaultIfBlank_CharBuffers()",
+      "begin_line": 1629,
+      "end_line": 1638,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testAbbreviate_StringInt()",
+      "begin_line": 1641,
+      "end_line": 1666,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testAbbreviate_StringIntInt()",
+      "begin_line": 1668,
+      "end_line": 1716,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.assertAbbreviateWithOffset(java.lang.String, int, int)",
+      "begin_line": 1718,
+      "end_line": 1729,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testAbbreviateMiddle()",
+      "begin_line": 1731,
+      "end_line": 1770,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDifference_StringString()",
+      "begin_line": 1773,
+      "end_line": 1784,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDifferenceAt_StringString()",
+      "begin_line": 1786,
+      "end_line": 1798,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testGetLevenshteinDistance_StringString()",
+      "begin_line": 1801,
+      "end_line": 1829,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testGetLevenshteinDistance_StringStringInt()",
+      "begin_line": 1831,
+      "end_line": 1912,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testEMPTY()",
+      "begin_line": 1917,
+      "end_line": 1922,
+      "comment": "\n     * A sanity check for {@link StringUtils#EMPTY}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testIsAllLowerCase()",
+      "begin_line": 1927,
+      "end_line": 1934,
+      "comment": "\n     * Test for {@link StringUtils#isAllLowerCase(CharSequence)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testIsAllUpperCase()",
+      "begin_line": 1939,
+      "end_line": 1946,
+      "comment": "\n     * Test for {@link StringUtils#isAllUpperCase(CharSequence)}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemoveStart()",
+      "begin_line": 1948,
+      "end_line": 1965,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemoveStartIgnoreCase()",
+      "begin_line": 1967,
+      "end_line": 1987,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemoveEnd()",
+      "begin_line": 1989,
+      "end_line": 2007,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemoveEndIgnoreCase()",
+      "begin_line": 2009,
+      "end_line": 2031,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemove_String()",
+      "begin_line": 2033,
+      "end_line": 2060,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testRemove_char()",
+      "begin_line": 2062,
+      "end_line": 2079,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testDifferenceAt_StringArray()",
+      "begin_line": 2081,
+      "end_line": 2100,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testGetCommonPrefix_StringArray()",
+      "begin_line": 2102,
+      "end_line": 2121,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testNormalizeSpace()",
+      "begin_line": 2123,
+      "end_line": 2142,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testLANG666()",
+      "begin_line": 2144,
+      "end_line": 2148,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testStringUtilsCharSequenceContract()",
+      "begin_line": 2154,
+      "end_line": 2176,
+      "comment": " This test enforces that this is done."
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testToString()",
+      "begin_line": 2184,
+      "end_line": 2197,
+      "comment": "\n     * Tests {@link StringUtils#toString(byte[], String)}\n     * \n     * @throws UnsupportedEncodingException\n     * @see StringUtils#toString(byte[], String)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testEscapeSurrogatePairs()",
+      "begin_line": 2199,
+      "end_line": 2209,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testEscapeSurrogatePairsLang858()",
+      "begin_line": 2216,
+      "end_line": 2220,
+      "comment": "\n     * Tests LANG-858.\n     * \n     * @throws Exception\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testUnescapeSurrogatePairs()",
+      "begin_line": 2222,
+      "end_line": 2231,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testAppendIfMissing()",
+      "begin_line": 2236,
+      "end_line": 2255,
+      "comment": "\n     * Tests {@code appendIfMissing}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testAppendIfMissingIgnoreCase()",
+      "begin_line": 2260,
+      "end_line": 2279,
+      "comment": "\n     * Tests {@code appendIfMissingIgnoreCase}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testPrependIfMissing()",
+      "begin_line": 2284,
+      "end_line": 2303,
+      "comment": "\n     * Tests {@code prependIfMissing}.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.StringUtilsTest.testPrependIfMissingIgnoreCase()",
+      "begin_line": 2308,
+      "end_line": 2327,
+      "comment": "\n     * Tests {@code prependIfMissingIgnoreCase}.\n     "
+    }
+  ]
+}

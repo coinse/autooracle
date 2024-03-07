@@ -1,0 +1,170 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/AnnotationUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "AnnotationUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 46,
+      "end_line": 508,
+      "comment": "\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dummy1"
+      ],
+      "begin_line": 47,
+      "end_line": 121,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dummy2"
+      ],
+      "begin_line": 123,
+      "end_line": 197,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dummy3"
+      ],
+      "begin_line": 199,
+      "end_line": 298,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dummy4"
+      ],
+      "begin_line": 300,
+      "end_line": 324,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "field1"
+      ],
+      "begin_line": 384,
+      "end_line": 384,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "field2"
+      ],
+      "begin_line": 385,
+      "end_line": 385,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "field3"
+      ],
+      "begin_line": 386,
+      "end_line": 386,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "field4"
+      ],
+      "begin_line": 387,
+      "end_line": 387,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.setup()",
+      "begin_line": 389,
+      "end_line": 395,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testEquivalence()",
+      "begin_line": 397,
+      "end_line": 401,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testSameInstance()",
+      "begin_line": 403,
+      "end_line": 406,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testNonEquivalentAnnotationsOfSameType()",
+      "begin_line": 408,
+      "end_line": 412,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testAnnotationsOfDifferingTypes()",
+      "begin_line": 414,
+      "end_line": 418,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testOneArgNull()",
+      "begin_line": 420,
+      "end_line": 424,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testBothArgsNull()",
+      "begin_line": 426,
+      "end_line": 429,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testIsValidAnnotationMemberType()",
+      "begin_line": 431,
+      "end_line": 445,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testGeneratedAnnotationEquivalentToRealAnnotation()",
+      "begin_line": 447,
+      "end_line": 484,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.Anonymous-1ae22dfb-c3a6-46bc-b1f2-8e260a3d288d.invoke(java.lang.Object, java.lang.reflect.Method, java.lang.Object[])",
+      "begin_line": 454,
+      "end_line": 466,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testHashCode()",
+      "begin_line": 486,
+      "end_line": 494,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtilsTest.testToString()",
+      "begin_line": 496,
+      "end_line": 506,
+      "comment": ""
+    }
+  ]
+}

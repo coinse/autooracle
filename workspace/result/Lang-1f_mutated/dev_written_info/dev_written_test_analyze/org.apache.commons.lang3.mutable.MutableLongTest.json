@@ -1,0 +1,133 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/mutable/MutableLongTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableLongTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 198,
+      "comment": "\n * JUnit tests.\n * \n * @version $Id$\n * @see MutableLong\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testConstructors()",
+      "begin_line": 31,
+      "end_line": 42,
+      "comment": " ----------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testConstructorNull()",
+      "begin_line": 44,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testGetSet()",
+      "begin_line": 49,
+      "end_line": 66,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testSetNull()",
+      "begin_line": 68,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testEquals()",
+      "begin_line": 74,
+      "end_line": 90,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testHashCode()",
+      "begin_line": 92,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testCompareTo()",
+      "begin_line": 104,
+      "end_line": 111,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testCompareToNull()",
+      "begin_line": 113,
+      "end_line": 117,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testPrimitiveValues()",
+      "begin_line": 119,
+      "end_line": 129,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testToLong()",
+      "begin_line": 131,
+      "end_line": 135,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testIncrement()",
+      "begin_line": 137,
+      "end_line": 144,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testDecrement()",
+      "begin_line": 146,
+      "end_line": 153,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testAddValuePrimitive()",
+      "begin_line": 155,
+      "end_line": 162,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testAddValueObject()",
+      "begin_line": 164,
+      "end_line": 171,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testSubtractValuePrimitive()",
+      "begin_line": 173,
+      "end_line": 180,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testSubtractValueObject()",
+      "begin_line": 182,
+      "end_line": 189,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableLongTest.testToString()",
+      "begin_line": 191,
+      "end_line": 196,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDate.java b/src/main/java/org/joda/time/LocalDate.java
+index 9806eb32..4c925a46 100644
+--- a/src/main/java/org/joda/time/LocalDate.java
++++ b/src/main/java/org/joda/time/LocalDate.java
+@@ -249,7 +249,7 @@ public final class LocalDate
+         }
+         return new LocalDate(
+             date.getYear() + 1900,
+-            date.getMonth() + 1,
++            date.getMonth() % 1,
+             date.getDate()
+         );
+     }

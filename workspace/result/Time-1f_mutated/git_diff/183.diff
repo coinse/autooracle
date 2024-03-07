@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateMidnight.java b/src/main/java/org/joda/time/DateMidnight.java
+index 05e348de..0efd0ffa 100644
+--- a/src/main/java/org/joda/time/DateMidnight.java
++++ b/src/main/java/org/joda/time/DateMidnight.java
+@@ -691,7 +691,7 @@ public final class DateMidnight
+      * @since 1.1
+      */
+     public DateMidnight plusDays(int days) {
+-        if (days == 0) {
++        if (days == -1) {
+             return this;
+         }
+         long instant = getChronology().days().add(getMillis(), days);

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Days.java b/src/main/java/org/joda/time/Days.java
+index 116cc7d1..bda61c18 100644
+--- a/src/main/java/org/joda/time/Days.java
++++ b/src/main/java/org/joda/time/Days.java
+@@ -400,7 +400,7 @@ public final class Days extends BaseSingleFieldPeriod {
+      * @throws ArithmeticException if the result overflows an int
+      */
+     public Days minus(Days days) {
+-        if (days == null) {
++        if (false) {
+             return this;
+         }
+         return minus(days.getValue());

@@ -1,0 +1,116 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/AnnotationUtils.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "AnnotationUtils",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 46,
+      "end_line": 371,
+      "comment": "\n * \u003cp\u003eHelper methods for working with {@link Annotation} instances.\u003c/p\u003e\n *\n * \u003cp\u003eThis class contains various utility methods that make working with\n * annotations simpler.\u003c/p\u003e\n *\n * \u003cp\u003e{@link Annotation} instances are always proxy objects; unfortunately\n * dynamic proxies cannot be depended upon to know how to implement certain\n * methods in the same manner as would be done by \"natural\" {@link Annotation}s.\n * The methods presented in this class can be used to avoid that possibility. It\n * is of course also possible for dynamic proxies to actually delegate their\n * e.g. {@link Annotation#equals(Object)}/{@link Annotation#hashCode()}/\n * {@link Annotation#toString()} implementations to {@link AnnotationUtils}.\u003c/p\u003e\n *\n * \u003cp\u003e#ThreadSafe#\u003c/p\u003e\n *\n * @since 3.0\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "TO_STRING_STYLE"
+      ],
+      "begin_line": 51,
+      "end_line": 98,
+      "comment": "\n     * A style that prints annotations as recommended.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 53,
+      "end_line": 53,
+      "comment": " Serialization version "
+    },
+    {
+      "type": "method",
+      "signature": "getShortClassName(java.lang.Class)",
+      "begin_line": 71,
+      "end_line": 85,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "method",
+      "signature": "appendDetail(StringBuffer, String, Object)",
+      "begin_line": 90,
+      "end_line": 96,
+      "comment": "\n         * {@inheritDoc}\n         "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.AnnotationUtils()",
+      "begin_line": 107,
+      "end_line": 108,
+      "comment": "\n     * \u003cp\u003e{@code AnnotationUtils} instances should NOT be constructed in\n     * standard programming. Instead, the class should be used statically.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis constructor is public to permit tools that require a JavaBean\n     * instance to operate.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.equals(java.lang.annotation.Annotation, java.lang.annotation.Annotation)",
+      "begin_line": 122,
+      "end_line": 153,
+      "comment": "\n     * \u003cp\u003eChecks if two annotations are equal using the criteria for equality\n     * presented in the {@link Annotation#equals(Object)} API docs.\u003c/p\u003e\n     *\n     * @param a1 the first Annotation to compare, {@code null} returns\n     * {@code false} unless both are {@code null}\n     * @param a2 the second Annotation to compare, {@code null} returns\n     * {@code false} unless both are {@code null}\n     * @return {@code true} if the two annotations are {@code equal} or both\n     * {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.hashCode(java.lang.annotation.Annotation)",
+      "begin_line": 167,
+      "end_line": 185,
+      "comment": "\n     * \u003cp\u003eGenerate a hash code for the given annotation using the algorithm\n     * presented in the {@link Annotation#hashCode()} API docs.\u003c/p\u003e\n     *\n     * @param a the Annotation for a hash code calculation is desired, not\n     * {@code null}\n     * @return the calculated hash code\n     * @throws RuntimeException if an {@code Exception} is encountered during\n     * annotation member access\n     * @throws IllegalStateException if an annotation method invocation returns\n     * {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.toString(java.lang.annotation.Annotation)",
+      "begin_line": 195,
+      "end_line": 210,
+      "comment": "\n     * \u003cp\u003eGenerate a string representation of an Annotation, as suggested by\n     * {@link Annotation#toString()}.\u003c/p\u003e\n     *\n     * @param a the annotation of which a string representation is desired\n     * @return the standard string representation of an annotation, not\n     * {@code null}\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.isValidAnnotationMemberType(java.lang.Class\u003c?\u003e)",
+      "begin_line": 223,
+      "end_line": 232,
+      "comment": "\n     * \u003cp\u003eChecks if the specified type is permitted as an annotation member.\u003c/p\u003e\n     *\n     * \u003cp\u003eThe Java language specification only permits certain types to be used\n     * in annotations. These include {@link String}, {@link Class}, primitive\n     * types, {@link Annotation}, {@link Enum}, and single-dimensional arrays of\n     * these types.\u003c/p\u003e\n     *\n     * @param type the type to check, {@code null}\n     * @return {@code true} if the type is a valid type to use in an annotation\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.hashMember(java.lang.String, java.lang.Object)",
+      "begin_line": 242,
+      "end_line": 251,
+      "comment": "\n     * Helper method for generating a hash code for a member of an annotation.\n     *\n     * @param name the name of the member\n     * @param value the value of the member\n     * @return a hash code for this member\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.memberEquals(java.lang.Class\u003c?\u003e, java.lang.Object, java.lang.Object)",
+      "begin_line": 263,
+      "end_line": 277,
+      "comment": "\n     * Helper method for checking whether two objects of the given type are\n     * equal. This method is used to compare the parameters of two annotation\n     * instances.\n     *\n     * @param type the type of the objects to be compared\n     * @param o1 the first object\n     * @param o2 the second object\n     * @return a flag whether these objects are equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.arrayMemberEquals(java.lang.Class\u003c?\u003e, java.lang.Object, java.lang.Object)",
+      "begin_line": 287,
+      "end_line": 316,
+      "comment": "\n     * Helper method for comparing two objects of an array type.\n     *\n     * @param componentType the component type of the array\n     * @param o1 the first object\n     * @param o2 the second object\n     * @return a flag whether these objects are equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.annotationArrayMemberEquals(java.lang.annotation.Annotation[], java.lang.annotation.Annotation[])",
+      "begin_line": 325,
+      "end_line": 335,
+      "comment": "\n     * Helper method for comparing two arrays of annotations.\n     *\n     * @param a1 the first array\n     * @param a2 the second array\n     * @return a flag whether these arrays are equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.AnnotationUtils.arrayMemberHash(java.lang.Class\u003c?\u003e, java.lang.Object)",
+      "begin_line": 344,
+      "end_line": 370,
+      "comment": "\n     * Helper method for generating a hash code for an array.\n     *\n     * @param componentType the component type of the array\n     * @param o the array\n     * @return a hash code for the specified array\n     "
+    }
+  ]
+}

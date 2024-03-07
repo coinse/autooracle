@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/RandomStringUtils.java b/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
+index 75355747..caac0783 100644
+--- a/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
++++ b/src/main/java/org/apache/commons/lang3/RandomStringUtils.java
+@@ -94,7 +94,7 @@ public class RandomStringUtils {
+      * @return the random string
+      */
+     public static String randomAlphabetic(final int count) {
+-        return random(count, true, false);
++        return random(count, true, true);
+     }
+     
+     /**

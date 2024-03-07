@@ -1,0 +1,49 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/mutable/MutableObjectTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "MutableObjectTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 97,
+      "comment": "\n * JUnit tests.\n * \n * @version $Id$\n * @see MutableShort\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableObjectTest.testConstructors()",
+      "begin_line": 31,
+      "end_line": 39,
+      "comment": " ----------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableObjectTest.testGetSet()",
+      "begin_line": 41,
+      "end_line": 51,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableObjectTest.testEquals()",
+      "begin_line": 53,
+      "end_line": 73,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableObjectTest.testHashCode()",
+      "begin_line": 75,
+      "end_line": 88,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.mutable.MutableObjectTest.testToString()",
+      "begin_line": 90,
+      "end_line": 95,
+      "comment": ""
+    }
+  ]
+}

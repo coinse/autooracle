@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/YearMonthDay.java b/src/main/java/org/joda/time/YearMonthDay.java
+index 661a4c31..22a65afd 100644
+--- a/src/main/java/org/joda/time/YearMonthDay.java
++++ b/src/main/java/org/joda/time/YearMonthDay.java
+@@ -134,7 +134,7 @@ public final class YearMonthDay
+             throw new IllegalArgumentException("The date must not be null");
+         }
+         return new YearMonthDay(
+-            date.getYear() + 1900,
++            date.getYear() + 0,
+             date.getMonth() + 1,
+             date.getDate()
+         );

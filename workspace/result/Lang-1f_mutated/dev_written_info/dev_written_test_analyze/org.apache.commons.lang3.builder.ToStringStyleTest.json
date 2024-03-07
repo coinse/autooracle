@@ -1,0 +1,145 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/ToStringStyleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ToStringStyleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 28,
+      "end_line": 138,
+      "comment": "\n * Test case for ToStringStyle.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "class_interface",
+      "name": "ToStringStyleImpl",
+      "is_interface": false,
+      "parent_types": [
+        "ToStringStyle"
+      ],
+      "begin_line": 30,
+      "end_line": 31,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetArrayStart()",
+      "begin_line": 34,
+      "end_line": 39,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetArrayEnd()",
+      "begin_line": 41,
+      "end_line": 46,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetArraySeparator()",
+      "begin_line": 48,
+      "end_line": 53,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetContentStart()",
+      "begin_line": 55,
+      "end_line": 60,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetContentEnd()",
+      "begin_line": 62,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetFieldNameValueSeparator()",
+      "begin_line": 69,
+      "end_line": 74,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetFieldSeparator()",
+      "begin_line": 76,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetNullText()",
+      "begin_line": 83,
+      "end_line": 88,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetSizeStartText()",
+      "begin_line": 90,
+      "end_line": 95,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetSizeEndText()",
+      "begin_line": 97,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetSummaryObjectStartText()",
+      "begin_line": 104,
+      "end_line": 109,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.ToStringStyleTest.testSetSummaryObjectEndText()",
+      "begin_line": 111,
+      "end_line": 116,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "Person",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 122,
+      "end_line": 137,
+      "comment": "\n     * An object used to test {@link ToStringStyle}.\n     * \n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "name"
+      ],
+      "begin_line": 126,
+      "end_line": 126,
+      "comment": "\n         * Test String field.\n         "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "age"
+      ],
+      "begin_line": 131,
+      "end_line": 131,
+      "comment": "\n         * Test integer field.\n         "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "smoker"
+      ],
+      "begin_line": 136,
+      "end_line": 136,
+      "comment": "\n         * Test boolean field.\n         "
+    }
+  ]
+}

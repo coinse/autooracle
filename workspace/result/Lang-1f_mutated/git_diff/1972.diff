@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Range.java b/src/main/java/org/apache/commons/lang3/Range.java
+index 7a865589..3b426002 100644
+--- a/src/main/java/org/apache/commons/lang3/Range.java
++++ b/src/main/java/org/apache/commons/lang3/Range.java
+@@ -405,7 +405,7 @@ public final class Range<T> implements Serializable {
+      */
+     @Override
+     public boolean equals(final Object obj) {
+-        if (obj == this) {
++        if (false) {
+             return true;
+         } else if (obj == null || obj.getClass() != getClass()) {
+             return false;

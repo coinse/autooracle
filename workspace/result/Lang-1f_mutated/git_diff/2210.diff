@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..ef6fb606 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -1703,7 +1703,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+                         break;
+                     }
+                 }
+-                final int len = i - start;
++                final int len = i + start;
+                 deleteImpl(start, i, len);
+                 i -= len;
+             }

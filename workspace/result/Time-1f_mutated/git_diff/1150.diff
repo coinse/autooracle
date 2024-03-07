@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Minutes.java b/src/main/java/org/joda/time/Minutes.java
+index 0f96dabf..54942b65 100644
+--- a/src/main/java/org/joda/time/Minutes.java
++++ b/src/main/java/org/joda/time/Minutes.java
+@@ -439,7 +439,7 @@ public final class Minutes extends BaseSingleFieldPeriod {
+         if (other == null) {
+             return getValue() > 0;
+         }
+-        return getValue() > other.getValue();
++        return getValue() >= other.getValue();
+     }
+ 
+     /**

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Months.java b/src/main/java/org/joda/time/Months.java
+index eec6def2..c32cb63e 100644
+--- a/src/main/java/org/joda/time/Months.java
++++ b/src/main/java/org/joda/time/Months.java
+@@ -362,7 +362,7 @@ public final class Months extends BaseSingleFieldPeriod {
+      * @return true if this months instance is greater than the specified one
+      */
+     public boolean isGreaterThan(Months other) {
+-        if (other == null) {
++        if (false) {
+             return getValue() > 0;
+         }
+         return getValue() > other.getValue();

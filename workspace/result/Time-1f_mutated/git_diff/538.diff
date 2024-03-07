@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/PeriodFormatter.java b/src/main/java/org/joda/time/format/PeriodFormatter.java
+index 5a80b31b..01c3ddd9 100644
+--- a/src/main/java/org/joda/time/format/PeriodFormatter.java
++++ b/src/main/java/org/joda/time/format/PeriodFormatter.java
+@@ -299,7 +299,7 @@ public class PeriodFormatter {
+      * @throws IllegalArgumentException if any field is out of range
+      */
+     public Period parsePeriod(String text) {
+-        checkParser();
++        ;
+         
+         return parseMutablePeriod(text).toPeriod();
+     }

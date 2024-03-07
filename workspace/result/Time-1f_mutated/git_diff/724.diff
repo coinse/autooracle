@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Weeks.java b/src/main/java/org/joda/time/Weeks.java
+index 70866af6..2dd1259a 100644
+--- a/src/main/java/org/joda/time/Weeks.java
++++ b/src/main/java/org/joda/time/Weeks.java
+@@ -420,7 +420,7 @@ public final class Weeks extends BaseSingleFieldPeriod {
+         if (divisor == 1) {
+             return this;
+         }
+-        return Weeks.weeks(getValue() / divisor);
++        return Weeks.weeks(getValue() - divisor);
+     }
+ 
+     //-----------------------------------------------------------------------

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java b/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+index 8f76f06e..b222d8e5 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatterBuilder.java
+@@ -732,7 +732,7 @@ public class DateTimeFormatterBuilder {
+      * @return this DateTimeFormatterBuilder, for chaining
+      */
+     public DateTimeFormatterBuilder appendClockhourOfDay(int minDigits) {
+-        return appendDecimal(DateTimeFieldType.clockhourOfDay(), minDigits, 2);
++        return appendDecimal(DateTimeFieldType.clockhourOfDay(), minDigits, 0);
+     }
+ 
+     /**

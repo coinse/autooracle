@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java b/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
+index 7430b1cb..44623d0d 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
+@@ -488,7 +488,7 @@ public class StrTokenizer implements ListIterator<String>, Cloneable {
+      * @return this, to enable chaining
+      */
+     public StrTokenizer reset(final char[] input) {
+-        reset();
++        ;
+         this.chars = ArrayUtils.clone(input);
+         return this;
+     }

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Weeks.java b/src/main/java/org/joda/time/Weeks.java
+index 70866af6..919c05ca 100644
+--- a/src/main/java/org/joda/time/Weeks.java
++++ b/src/main/java/org/joda/time/Weeks.java
+@@ -179,7 +179,7 @@ public final class Weeks extends BaseSingleFieldPeriod {
+      */
+     @FromString
+     public static Weeks parseWeeks(String periodStr) {
+-        if (periodStr == null) {
++        if (false) {
+             return Weeks.ZERO;
+         }
+         Period p = PARSER.parsePeriod(periodStr);

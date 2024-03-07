@@ -1,0 +1,130 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/StrMatcherTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StrMatcherTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 31,
+      "end_line": 217,
+      "comment": "\n * Unit tests for {@link org.apache.commons.lang3.text.StrMatcher}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BUFFER1"
+      ],
+      "begin_line": 33,
+      "end_line": 33,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "BUFFER2"
+      ],
+      "begin_line": 35,
+      "end_line": 35,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testCommaMatcher()",
+      "begin_line": 39,
+      "end_line": 46,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testTabMatcher()",
+      "begin_line": 49,
+      "end_line": 56,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testSpaceMatcher()",
+      "begin_line": 59,
+      "end_line": 66,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testSplitMatcher()",
+      "begin_line": 69,
+      "end_line": 82,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testTrimMatcher()",
+      "begin_line": 85,
+      "end_line": 98,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testSingleQuoteMatcher()",
+      "begin_line": 101,
+      "end_line": 108,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testDoubleQuoteMatcher()",
+      "begin_line": 111,
+      "end_line": 117,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testQuoteMatcher()",
+      "begin_line": 120,
+      "end_line": 127,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testNoneMatcher()",
+      "begin_line": 130,
+      "end_line": 147,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testCharMatcher_char()",
+      "begin_line": 150,
+      "end_line": 159,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testCharSetMatcher_String()",
+      "begin_line": 162,
+      "end_line": 174,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testCharSetMatcher_charArray()",
+      "begin_line": 177,
+      "end_line": 189,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testStringMatcher_String()",
+      "begin_line": 192,
+      "end_line": 203,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrMatcherTest.testMatcherIndices()",
+      "begin_line": 206,
+      "end_line": 215,
+      "comment": "-----------------------------------------------------------------------"
+    }
+  ]
+}

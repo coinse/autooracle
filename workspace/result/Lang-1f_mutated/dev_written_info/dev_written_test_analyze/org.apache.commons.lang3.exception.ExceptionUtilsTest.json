@@ -1,0 +1,374 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/exception/ExceptionUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ExceptionUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 52,
+      "end_line": 532,
+      "comment": "\n * Tests {@link org.apache.commons.lang3.exception.ExceptionUtils}.\n * \n * \u003ch3\u003eNotes\u003c/h3\u003e\n * \u003cp\u003e\n * Make sure this exception code does not depend on Java 1.4 nested exceptions. SVN revision 38990 does not compile with\n * Java 1.3.1.\n * \u003c/p\u003e\n * \u003cul\u003e\n * \u003cli\u003eCompiled with Sun Java 1.3.1_15\u003c/li\u003e\n * \u003cli\u003eTested with Sun Java 1.3.1_15\u003c/li\u003e\n * \u003cli\u003eTested with Sun Java 1.4.2_12\u003c/li\u003e\n * \u003cli\u003eTested with Sun Java 1.5.0_08\u003c/li\u003e\n * \u003cli\u003eAll of the above on Windows XP SP2 + patches.\u003c/li\u003e\n * \u003c/ul\u003e\n * \u003cp\u003e\n * Gary Gregory; August 16, 2006.\n * \u003c/p\u003e\n * \n * @since 1.0\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "nested"
+      ],
+      "begin_line": 54,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "withCause"
+      ],
+      "begin_line": 55,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "withoutCause"
+      ],
+      "begin_line": 56,
+      "end_line": 56,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "jdkNoCause"
+      ],
+      "begin_line": 57,
+      "end_line": 57,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cyclicCause"
+      ],
+      "begin_line": 58,
+      "end_line": 58,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.setUp()",
+      "begin_line": 61,
+      "end_line": 71,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.tearDown()",
+      "begin_line": 74,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.createExceptionWithoutCause()",
+      "begin_line": 84,
+      "end_line": 90,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.createExceptionWithCause()",
+      "begin_line": 92,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testConstructor()",
+      "begin_line": 106,
+      "end_line": 114,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetCause_Throwable()",
+      "begin_line": 117,
+      "end_line": 128,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetCause_ThrowableArray()",
+      "begin_line": 130,
+      "end_line": 148,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetRootCause_Throwable()",
+      "begin_line": 150,
+      "end_line": 158,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableCount_Throwable()",
+      "begin_line": 161,
+      "end_line": 169,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowables_Throwable_null()",
+      "begin_line": 172,
+      "end_line": 175,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowables_Throwable_withoutCause()",
+      "begin_line": 177,
+      "end_line": 182,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowables_Throwable_nested()",
+      "begin_line": 184,
+      "end_line": 190,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowables_Throwable_withCause()",
+      "begin_line": 192,
+      "end_line": 199,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowables_Throwable_jdkNoCause()",
+      "begin_line": 201,
+      "end_line": 206,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowables_Throwable_recursiveCause()",
+      "begin_line": 208,
+      "end_line": 215,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableList_Throwable_null()",
+      "begin_line": 218,
+      "end_line": 222,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableList_Throwable_withoutCause()",
+      "begin_line": 224,
+      "end_line": 229,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableList_Throwable_nested()",
+      "begin_line": 231,
+      "end_line": 237,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableList_Throwable_withCause()",
+      "begin_line": 239,
+      "end_line": 246,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableList_Throwable_jdkNoCause()",
+      "begin_line": 248,
+      "end_line": 253,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetThrowableList_Throwable_recursiveCause()",
+      "begin_line": 255,
+      "end_line": 262,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testIndexOf_ThrowableClass()",
+      "begin_line": 265,
+      "end_line": 286,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testIndexOf_ThrowableClassInt()",
+      "begin_line": 288,
+      "end_line": 314,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testIndexOfType_ThrowableClass()",
+      "begin_line": 317,
+      "end_line": 338,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testIndexOfType_ThrowableClassInt()",
+      "begin_line": 340,
+      "end_line": 366,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testPrintRootCauseStackTrace_Throwable()",
+      "begin_line": 369,
+      "end_line": 374,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testPrintRootCauseStackTrace_ThrowableStream()",
+      "begin_line": 376,
+      "end_line": 400,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testPrintRootCauseStackTrace_ThrowableWriter()",
+      "begin_line": 402,
+      "end_line": 426,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testGetRootCauseStackTrace_Throwable()",
+      "begin_line": 429,
+      "end_line": 453,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.testRemoveCommonFrames_ListList()",
+      "begin_line": 455,
+      "end_line": 458,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.test_getMessage_Throwable()",
+      "begin_line": 460,
+      "end_line": 470,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.test_getRootCauseMessage_Throwable()",
+      "begin_line": 472,
+      "end_line": 482,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ExceptionWithCause",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.Exception"
+      ],
+      "begin_line": 490,
+      "end_line": 511,
+      "comment": "\n     * Provides a method with a well known chained/nested exception\n     * name which matches the full signature (e.g. has a return value\n     * of \u003ccode\u003eThrowable\u003c/code\u003e.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cause"
+      ],
+      "begin_line": 491,
+      "end_line": 491,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.ExceptionWithCause.ExceptionWithCause(java.lang.String, java.lang.Throwable)",
+      "begin_line": 493,
+      "end_line": 496,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.ExceptionWithCause.ExceptionWithCause(java.lang.Throwable)",
+      "begin_line": 498,
+      "end_line": 501,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.ExceptionWithCause.getCause()",
+      "begin_line": 503,
+      "end_line": 506,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.ExceptionWithCause.setCause(java.lang.Throwable)",
+      "begin_line": 508,
+      "end_line": 510,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ExceptionWithoutCause",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.Exception"
+      ],
+      "begin_line": 518,
+      "end_line": 522,
+      "comment": "\n     * Provides a method with a well known chained/nested exception\n     * name which does not match the full signature (e.g. lacks a\n     * return value of \u003ccode\u003eThrowable\u003c/code\u003e.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.ExceptionWithoutCause.getTargetException()",
+      "begin_line": 519,
+      "end_line": 521,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "NestableException",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.Exception"
+      ],
+      "begin_line": 526,
+      "end_line": 530,
+      "comment": " prior to a rewrite of this test class. "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.NestableException.NestableException()",
+      "begin_line": 527,
+      "end_line": 528,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.exception.ExceptionUtilsTest.NestableException.NestableException(java.lang.Throwable)",
+      "begin_line": 529,
+      "end_line": 529,
+      "comment": ""
+    }
+  ]
+}

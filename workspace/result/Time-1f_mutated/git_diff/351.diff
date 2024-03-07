@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Duration.java b/src/main/java/org/joda/time/Duration.java
+index 15fe52d0..7a1bfc8c 100644
+--- a/src/main/java/org/joda/time/Duration.java
++++ b/src/main/java/org/joda/time/Duration.java
+@@ -370,7 +370,7 @@ public final class Duration
+      * @return the new duration instance
+      */
+     public Duration withMillis(long duration) {
+-        if (duration == getMillis()) {
++        if (duration >= getMillis()) {
+             return this;
+         }
+         return new Duration(duration);

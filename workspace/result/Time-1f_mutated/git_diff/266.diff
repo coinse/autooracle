@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalTime.java b/src/main/java/org/joda/time/LocalTime.java
+index 6c3c5777..8e85fa0b 100644
+--- a/src/main/java/org/joda/time/LocalTime.java
++++ b/src/main/java/org/joda/time/LocalTime.java
+@@ -271,7 +271,7 @@ public final class LocalTime
+             date.getHours(),
+             date.getMinutes(),
+             date.getSeconds(),
+-            (((int) (date.getTime() % 1000)) + 1000) % 1000
++            (((int)(date.getTime() % 1000)) * 1000) % 1000
+         );
+     }
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..d5804b47 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -767,7 +767,7 @@ public class ArrayUtils {
+      * @since 2.5
+      */
+     public static Double[] nullToEmpty(final Double[] array) {
+-        if (array == null || array.length == 0) {
++        if (array == null || array.length == -1) {
+             return EMPTY_DOUBLE_OBJECT_ARRAY;
+         }
+         return array;

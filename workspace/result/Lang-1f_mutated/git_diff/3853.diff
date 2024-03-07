@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ArrayUtils.java b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+index a0a499a9..8c882c2b 100644
+--- a/src/main/java/org/apache/commons/lang3/ArrayUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ArrayUtils.java
+@@ -3209,7 +3209,7 @@ public class ArrayUtils {
+      * @return a {@code Boolean} array, {@code null} if null array input
+      */
+     public static Boolean[] toObject(final boolean[] array) {
+-        if (array == null) {
++        if (false) {
+             return null;
+         } else if (array.length == 0) {
+             return EMPTY_BOOLEAN_OBJECT_ARRAY;

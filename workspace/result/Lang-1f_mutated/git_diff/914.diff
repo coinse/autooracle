@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+index 015e6dd6..aab2b895 100644
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -225,7 +225,7 @@ public class ClassUtils {
+      * @see Class#getSimpleName()
+      */
+     public static String getSimpleName(final Class<?> cls) {
+-        if (cls == null) {
++        if (false) {
+             return StringUtils.EMPTY;
+         }
+         return cls.getSimpleName();

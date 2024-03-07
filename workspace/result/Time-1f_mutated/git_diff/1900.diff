@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractInstant.java b/src/main/java/org/joda/time/base/AbstractInstant.java
+index 4f010f2a..611f16fb 100644
+--- a/src/main/java/org/joda/time/base/AbstractInstant.java
++++ b/src/main/java/org/joda/time/base/AbstractInstant.java
+@@ -264,7 +264,7 @@ public abstract class AbstractInstant implements ReadableInstant {
+         }
+         ReadableInstant otherInstant = (ReadableInstant) readableInstant;
+         return
+-            getMillis() == otherInstant.getMillis() &&
++            getMillis() >= otherInstant.getMillis() &&
+             FieldUtils.equals(getChronology(), otherInstant.getChronology());
+     }
+ 

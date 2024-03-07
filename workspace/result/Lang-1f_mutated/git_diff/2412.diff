@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..524d67ec 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -2673,7 +2673,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+         if (this == other) {
+             return true;
+         }
+-        if (this.size != other.size) {
++        if (true) {
+             return false;
+         }
+         final char thisBuf[] = this.buffer;

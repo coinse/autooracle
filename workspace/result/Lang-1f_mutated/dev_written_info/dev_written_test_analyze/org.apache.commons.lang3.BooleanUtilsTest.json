@@ -1,0 +1,511 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/BooleanUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "BooleanUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 984,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.BooleanUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testConstructor()",
+      "begin_line": 38,
+      "end_line": 46,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_negate_Boolean()",
+      "begin_line": 49,
+      "end_line": 54,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_isTrue_Boolean()",
+      "begin_line": 57,
+      "end_line": 62,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_isNotTrue_Boolean()",
+      "begin_line": 64,
+      "end_line": 69,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_isFalse_Boolean()",
+      "begin_line": 72,
+      "end_line": 77,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_isNotFalse_Boolean()",
+      "begin_line": 79,
+      "end_line": 84,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_Boolean()",
+      "begin_line": 87,
+      "end_line": 92,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanDefaultIfNull_Boolean_boolean()",
+      "begin_line": 94,
+      "end_line": 102,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_int()",
+      "begin_line": 106,
+      "end_line": 111,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_int()",
+      "begin_line": 113,
+      "end_line": 118,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_Integer()",
+      "begin_line": 120,
+      "end_line": 126,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_int_int_int()",
+      "begin_line": 129,
+      "end_line": 133,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_int_int_int_noMatch()",
+      "begin_line": 135,
+      "end_line": 138,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_Integer_Integer_Integer()",
+      "begin_line": 140,
+      "end_line": 150,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_Integer_Integer_Integer_nullValue()",
+      "begin_line": 152,
+      "end_line": 155,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_Integer_Integer_Integer_noMatch()",
+      "begin_line": 157,
+      "end_line": 160,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_int_int_int()",
+      "begin_line": 163,
+      "end_line": 168,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_int_int_int_noMatch()",
+      "begin_line": 170,
+      "end_line": 173,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_Integer_Integer_Integer_Integer()",
+      "begin_line": 175,
+      "end_line": 188,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_Integer_Integer_Integer_Integer_nullValue()",
+      "begin_line": 190,
+      "end_line": 193,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_Integer_Integer_Integer_Integer_noMatch()",
+      "begin_line": 195,
+      "end_line": 198,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toInteger_boolean()",
+      "begin_line": 201,
+      "end_line": 205,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toIntegerObject_boolean()",
+      "begin_line": 207,
+      "end_line": 211,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toIntegerObject_Boolean()",
+      "begin_line": 213,
+      "end_line": 218,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toInteger_boolean_int_int()",
+      "begin_line": 221,
+      "end_line": 225,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toInteger_Boolean_int_int_int()",
+      "begin_line": 227,
+      "end_line": 232,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toIntegerObject_boolean_Integer_Integer()",
+      "begin_line": 234,
+      "end_line": 240,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toIntegerObject_Boolean_Integer_Integer_Integer()",
+      "begin_line": 242,
+      "end_line": 251,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_String()",
+      "begin_line": 255,
+      "end_line": 287,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_String_String_String_String()",
+      "begin_line": 289,
+      "end_line": 298,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_String_String_String_String_nullValue()",
+      "begin_line": 300,
+      "end_line": 303,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBooleanObject_String_String_String_String_noMatch()",
+      "begin_line": 305,
+      "end_line": 308,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_String()",
+      "begin_line": 311,
+      "end_line": 356,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_String_String_String()",
+      "begin_line": 358,
+      "end_line": 369,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_String_String_String_nullValue()",
+      "begin_line": 371,
+      "end_line": 374,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toBoolean_String_String_String_noMatch()",
+      "begin_line": 376,
+      "end_line": 379,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toStringTrueFalse_Boolean()",
+      "begin_line": 382,
+      "end_line": 387,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toStringOnOff_Boolean()",
+      "begin_line": 389,
+      "end_line": 394,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toStringYesNo_Boolean()",
+      "begin_line": 396,
+      "end_line": 401,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toString_Boolean_String_String_String()",
+      "begin_line": 403,
+      "end_line": 408,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toStringTrueFalse_boolean()",
+      "begin_line": 411,
+      "end_line": 415,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toStringOnOff_boolean()",
+      "begin_line": 417,
+      "end_line": 421,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toStringYesNo_boolean()",
+      "begin_line": 423,
+      "end_line": 427,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.test_toString_boolean_String_String_String()",
+      "begin_line": 429,
+      "end_line": 433,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_primitive_nullInput()",
+      "begin_line": 437,
+      "end_line": 440,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_primitive_emptyInput()",
+      "begin_line": 442,
+      "end_line": 445,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_primitive_validInput_2items()",
+      "begin_line": 447,
+      "end_line": 464,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_primitive_validInput_3items()",
+      "begin_line": 466,
+      "end_line": 499,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_object_nullInput()",
+      "begin_line": 501,
+      "end_line": 504,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_object_emptyInput()",
+      "begin_line": 506,
+      "end_line": 509,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_object_nullElementInput()",
+      "begin_line": 511,
+      "end_line": 514,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_object_validInput_2items()",
+      "begin_line": 516,
+      "end_line": 541,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testXor_object_validInput_3items()",
+      "begin_line": 543,
+      "end_line": 616,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_primitive_nullInput()",
+      "begin_line": 620,
+      "end_line": 623,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_primitive_emptyInput()",
+      "begin_line": 625,
+      "end_line": 628,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_primitive_validInput_2items()",
+      "begin_line": 630,
+      "end_line": 647,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_primitive_validInput_3items()",
+      "begin_line": 649,
+      "end_line": 682,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_object_nullInput()",
+      "begin_line": 684,
+      "end_line": 687,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_object_emptyInput()",
+      "begin_line": 689,
+      "end_line": 692,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_object_nullElementInput()",
+      "begin_line": 694,
+      "end_line": 697,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_object_validInput_2items()",
+      "begin_line": 699,
+      "end_line": 724,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testAnd_object_validInput_3items()",
+      "begin_line": 726,
+      "end_line": 799,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_primitive_nullInput()",
+      "begin_line": 803,
+      "end_line": 806,
+      "comment": "  -----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_primitive_emptyInput()",
+      "begin_line": 808,
+      "end_line": 811,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_primitive_validInput_2items()",
+      "begin_line": 813,
+      "end_line": 830,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_primitive_validInput_3items()",
+      "begin_line": 832,
+      "end_line": 866,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_object_nullInput()",
+      "begin_line": 867,
+      "end_line": 870,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_object_emptyInput()",
+      "begin_line": 872,
+      "end_line": 875,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_object_nullElementInput()",
+      "begin_line": 877,
+      "end_line": 880,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_object_validInput_2items()",
+      "begin_line": 882,
+      "end_line": 907,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.BooleanUtilsTest.testOr_object_validInput_3items()",
+      "begin_line": 909,
+      "end_line": 982,
+      "comment": ""
+    }
+  ]
+}

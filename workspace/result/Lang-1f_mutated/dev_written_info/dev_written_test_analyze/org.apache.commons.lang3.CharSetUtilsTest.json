@@ -1,0 +1,91 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/CharSetUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharSetUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 254,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.CharSetUtils}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testConstructor()",
+      "begin_line": 37,
+      "end_line": 45,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testSqueeze_StringString()",
+      "begin_line": 48,
+      "end_line": 63,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testSqueeze_StringStringarray()",
+      "begin_line": 65,
+      "end_line": 86,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testContainsAny_StringString()",
+      "begin_line": 89,
+      "end_line": 102,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testContainsAny_StringStringarray()",
+      "begin_line": 104,
+      "end_line": 126,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testCount_StringString()",
+      "begin_line": 129,
+      "end_line": 142,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testCount_StringStringarray()",
+      "begin_line": 144,
+      "end_line": 166,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testKeep_StringString()",
+      "begin_line": 169,
+      "end_line": 184,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testKeep_StringStringarray()",
+      "begin_line": 186,
+      "end_line": 209,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testDelete_StringString()",
+      "begin_line": 212,
+      "end_line": 226,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharSetUtilsTest.testDelete_StringStringarray()",
+      "begin_line": 228,
+      "end_line": 252,
+      "comment": ""
+    }
+  ]
+}

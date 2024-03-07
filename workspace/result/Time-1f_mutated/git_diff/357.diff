@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Duration.java b/src/main/java/org/joda/time/Duration.java
+index 15fe52d0..50e0d94e 100644
+--- a/src/main/java/org/joda/time/Duration.java
++++ b/src/main/java/org/joda/time/Duration.java
+@@ -482,7 +482,7 @@ public final class Duration
+      * @return the new duration instance
+      */
+     public Duration multipliedBy(long multiplicand) {
+-        if (multiplicand == 1) {
++        if (multiplicand == 0) {
+             return this;
+         }
+         return new Duration(FieldUtils.safeMultiply(getMillis(), multiplicand));

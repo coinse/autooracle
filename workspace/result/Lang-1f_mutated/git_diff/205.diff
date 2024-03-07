@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java b/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
+index 7430b1cb..93528268 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrTokenizer.java
+@@ -213,7 +213,7 @@ public class StrTokenizer implements ListIterator<String>, Cloneable {
+      */
+     public static StrTokenizer getTSVInstance(final String input) {
+         final StrTokenizer tok = getTSVClone();
+-        tok.reset(input);
++        ;
+         return tok;
+     }
+ 

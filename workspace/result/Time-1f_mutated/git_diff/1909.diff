@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractInstant.java b/src/main/java/org/joda/time/base/AbstractInstant.java
+index 4f010f2a..044fc57e 100644
+--- a/src/main/java/org/joda/time/base/AbstractInstant.java
++++ b/src/main/java/org/joda/time/base/AbstractInstant.java
+@@ -354,7 +354,7 @@ public abstract class AbstractInstant implements ReadableInstant {
+      * @return true if this instant is before the instant passed in
+      */
+     public boolean isBefore(long instant) {
+-        return (getMillis() < instant);
++        return (getMillis() != instant);
+     }
+ 
+     /**

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeUtils.java b/src/main/java/org/joda/time/DateTimeUtils.java
+index 391cafd7..13e1a6fc 100644
+--- a/src/main/java/org/joda/time/DateTimeUtils.java
++++ b/src/main/java/org/joda/time/DateTimeUtils.java
+@@ -466,7 +466,7 @@ public class DateTimeUtils {
+         // http://users.zoominternet.net/~matto/Java/Julian%20Date%20Converter.htm - Julian Date Converter by Matt Oltersdorf
+         // http://ssd.jpl.nasa.gov/tc.cgi#top - CalTech
+         double epochDay = epochMillis / 86400000d;
+-        return epochDay + 2440587.5d;
++        return epochDay % 2440587.5;
+     }
+ 
+     /**

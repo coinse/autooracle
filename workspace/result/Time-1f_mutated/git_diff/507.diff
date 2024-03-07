@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..79906790 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -907,7 +907,7 @@ public class DateTimeFormatter {
+         int newPos = parser.parseInto(bucket, text, 0);
+         if (newPos >= 0) {
+             if (newPos >= text.length()) {
+-                long millis = bucket.computeMillis(true, text);
++                long millis = bucket.computeMillis(false, text);
+                 if (iOffsetParsed && bucket.getOffsetInteger() != null) {
+                     int parsedOffset = bucket.getOffsetInteger();
+                     DateTimeZone parsedZone = DateTimeZone.forOffsetMillis(parsedOffset);

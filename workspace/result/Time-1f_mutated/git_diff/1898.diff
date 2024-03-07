@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractInstant.java b/src/main/java/org/joda/time/base/AbstractInstant.java
+index 4f010f2a..024d0ba5 100644
+--- a/src/main/java/org/joda/time/base/AbstractInstant.java
++++ b/src/main/java/org/joda/time/base/AbstractInstant.java
+@@ -260,7 +260,7 @@ public abstract class AbstractInstant implements ReadableInstant {
+             return true;
+         }
+         if (readableInstant instanceof ReadableInstant == false) {
+-            return false;
++            return true;
+         }
+         ReadableInstant otherInstant = (ReadableInstant) readableInstant;
+         return

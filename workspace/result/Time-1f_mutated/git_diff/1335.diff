@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/chrono/BuddhistChronology.java b/src/main/java/org/joda/time/chrono/BuddhistChronology.java
+index fc6a1ec4..7c310c0c 100644
+--- a/src/main/java/org/joda/time/chrono/BuddhistChronology.java
++++ b/src/main/java/org/joda/time/chrono/BuddhistChronology.java
+@@ -178,7 +178,7 @@ public final class BuddhistChronology extends AssembledChronology {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (obj instanceof BuddhistChronology) {
+             BuddhistChronology chrono = (BuddhistChronology) obj;

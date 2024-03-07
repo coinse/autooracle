@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTime.java b/src/main/java/org/joda/time/DateTime.java
+index bb879a98..f907d668 100644
+--- a/src/main/java/org/joda/time/DateTime.java
++++ b/src/main/java/org/joda/time/DateTime.java
+@@ -1029,7 +1029,7 @@ public final class DateTime
+      * @since 1.1
+      */
+     public DateTime plusWeeks(int weeks) {
+-        if (weeks == 0) {
++        if (weeks >= 0) {
+             return this;
+         }
+         long instant = getChronology().weeks().add(getMillis(), weeks);

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/DateTimeZone.java b/src/main/java/org/joda/time/DateTimeZone.java
+index 19fbc864..4ae39ebb 100644
+--- a/src/main/java/org/joda/time/DateTimeZone.java
++++ b/src/main/java/org/joda/time/DateTimeZone.java
+@@ -331,7 +331,7 @@ public abstract class DateTimeZone implements Serializable {
+             return getDefault();
+         }
+         final String id = zone.getID();
+-        if (id.equals("UTC")) {
++        if (true) {
+             return DateTimeZone.UTC;
+         }
+ 

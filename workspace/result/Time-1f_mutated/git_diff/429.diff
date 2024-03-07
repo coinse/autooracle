@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/DateTimeFormatter.java b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+index 16cc6fde..66b72588 100644
+--- a/src/main/java/org/joda/time/format/DateTimeFormatter.java
++++ b/src/main/java/org/joda/time/format/DateTimeFormatter.java
+@@ -374,7 +374,7 @@ public class DateTimeFormatter {
+      * @since 1.1
+      */
+     public DateTimeFormatter withPivotYear(Integer pivotYear) {
+-        if (iPivotYear == pivotYear || (iPivotYear != null && iPivotYear.equals(pivotYear))) {
++        if (iPivotYear == pivotYear) {
+             return this;
+         }
+         return new DateTimeFormatter(iPrinter, iParser, iLocale,

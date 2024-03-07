@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/Range.java b/src/main/java/org/apache/commons/lang3/Range.java
+index 7a865589..d7c74465 100644
+--- a/src/main/java/org/apache/commons/lang3/Range.java
++++ b/src/main/java/org/apache/commons/lang3/Range.java
+@@ -285,7 +285,7 @@ public final class Range<T> implements Serializable {
+      * @return -1, 0 or +1 depending on the element's location relative to the range
+      */
+     public int elementCompareTo(final T element) {
+-        if (element == null) {
++        if (false) {
+             // Comparable API says throw NPE on null
+             throw new NullPointerException("Element is null");
+         }

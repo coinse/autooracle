@@ -1,0 +1,529 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/reflect/TypeUtilsTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "//raw types, where used, are used purposely\nTypeUtilsTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 44,
+      "end_line": 688,
+      "comment": "\n * Test TypeUtils\n * @version $Id$\n "
+    },
+    {
+      "type": "class_interface",
+      "name": "This",
+      "is_interface": true,
+      "parent_types": [],
+      "begin_line": 48,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "That",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.This\u003cK, V\u003e"
+      ],
+      "begin_line": 51,
+      "end_line": 52,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "And",
+      "is_interface": true,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.This\u003cjava.lang.Number, java.lang.Number\u003e"
+      ],
+      "begin_line": 54,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "The",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.That\u003cjava.lang.Number, java.lang.Number\u003e",
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.And\u003cjava.lang.String, java.lang.String\u003e"
+      ],
+      "begin_line": 57,
+      "end_line": 58,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "Other",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.This\u003cjava.lang.String, T\u003e"
+      ],
+      "begin_line": 60,
+      "end_line": 61,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "Thing",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.Other\u003cB\u003e"
+      ],
+      "begin_line": 63,
+      "end_line": 64,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "Tester",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.TypeUtilsTest.This\u003cjava.lang.String, B\u003e"
+      ],
+      "begin_line": 66,
+      "end_line": 67,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dis"
+      ],
+      "begin_line": 69,
+      "end_line": 69,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dat"
+      ],
+      "begin_line": 71,
+      "end_line": 71,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "da"
+      ],
+      "begin_line": 73,
+      "end_line": 73,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "uhder"
+      ],
+      "begin_line": 75,
+      "end_line": 75,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "ding"
+      ],
+      "begin_line": 77,
+      "end_line": 77,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "tester"
+      ],
+      "begin_line": 79,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "tester2"
+      ],
+      "begin_line": 81,
+      "end_line": 81,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dat2"
+      ],
+      "begin_line": 83,
+      "end_line": 83,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dat3"
+      ],
+      "begin_line": 85,
+      "end_line": 85,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "intWildcardComparable"
+      ],
+      "begin_line": 87,
+      "end_line": 87,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "stringComparable"
+      ],
+      "begin_line": 89,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "uriComparable"
+      ],
+      "begin_line": 91,
+      "end_line": 91,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "intComparable"
+      ],
+      "begin_line": 93,
+      "end_line": 93,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "longComparable"
+      ],
+      "begin_line": 95,
+      "end_line": 95,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "uri"
+      ],
+      "begin_line": 97,
+      "end_line": 97,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.dummyMethod(java.util.List, java.util.List\u003cjava.lang.Object\u003e, java.util.List\u003c?\u003e, java.util.List\u003c? super java.lang.Object\u003e, java.util.List\u003cjava.lang.String\u003e, java.util.List\u003c? extends java.lang.String\u003e, java.util.List\u003c? super java.lang.String\u003e, java.util.List[], java.util.List\u003cjava.lang.Object\u003e[], java.util.List\u003c?\u003e[], java.util.List\u003c? super java.lang.Object\u003e[], java.util.List\u003cjava.lang.String\u003e[], java.util.List\u003c? extends java.lang.String\u003e[], java.util.List\u003c? super java.lang.String\u003e[])",
+      "begin_line": 99,
+      "end_line": 104,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testIsAssignable()",
+      "begin_line": 106,
+      "end_line": 442,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.delegateBooleanAssertion(java.lang.reflect.Type[], int, int, boolean)",
+      "begin_line": 444,
+      "end_line": 458,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testIsInstance()",
+      "begin_line": 460,
+      "end_line": 469,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testGetTypeArguments()",
+      "begin_line": 471,
+      "end_line": 518,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testTypesSatisfyVariables()",
+      "begin_line": 520,
+      "end_line": 533,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testDetermineTypeVariableAssignments()",
+      "begin_line": 535,
+      "end_line": 546,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testGetRawType()",
+      "begin_line": 548,
+      "end_line": 572,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testIsArrayTypeClasses()",
+      "begin_line": 574,
+      "end_line": 597,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testIsArrayGenericTypes()",
+      "begin_line": 599,
+      "end_line": 621,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testGetPrimitiveArrayComponentType()",
+      "begin_line": 623,
+      "end_line": 642,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testGetArrayComponentType()",
+      "begin_line": 644,
+      "end_line": 666,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.testLang820()",
+      "begin_line": 668,
+      "end_line": 673,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "iterable"
+      ],
+      "begin_line": 675,
+      "end_line": 675,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.stub()",
+      "begin_line": 677,
+      "end_line": 679,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.stub2()",
+      "begin_line": 681,
+      "end_line": 683,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.reflect.TypeUtilsTest.stub3()",
+      "begin_line": 685,
+      "end_line": 687,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "AAClass",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 690,
+      "end_line": 694,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "BBClass",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 692,
+      "end_line": 693,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "AAAClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AAClass\u003cjava.lang.String\u003e"
+      ],
+      "begin_line": 696,
+      "end_line": 699,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "BBBClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AAClass.BBClass\u003cjava.lang.String\u003e"
+      ],
+      "begin_line": 697,
+      "end_line": 698,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "//raw types, where used, are used purposely\nAClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AAClass.BBClass\u003cjava.lang.Number\u003e"
+      ],
+      "begin_line": 701,
+      "end_line": 741,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.reflect.AClass.AClass(org.apache.commons.lang3.reflect.AAClass\u003cjava.lang.String\u003e)",
+      "begin_line": 705,
+      "end_line": 707,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "BClass",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 709,
+      "end_line": 710,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "CClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AClass.BClass"
+      ],
+      "begin_line": 712,
+      "end_line": 713,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "DClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AClass.CClass\u003cT\u003e"
+      ],
+      "begin_line": 715,
+      "end_line": 716,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "EClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AClass.DClass"
+      ],
+      "begin_line": 718,
+      "end_line": 719,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "FClass",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.reflect.AClass.EClass\u003cjava.lang.String\u003e"
+      ],
+      "begin_line": 721,
+      "end_line": 722,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "GClass",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 724,
+      "end_line": 725,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "bClass"
+      ],
+      "begin_line": 727,
+      "end_line": 727,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "cClass"
+      ],
+      "begin_line": 729,
+      "end_line": 729,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dClass"
+      ],
+      "begin_line": 731,
+      "end_line": 731,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "eClass"
+      ],
+      "begin_line": 733,
+      "end_line": 733,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "fClass"
+      ],
+      "begin_line": 735,
+      "end_line": 735,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "gClass"
+      ],
+      "begin_line": 737,
+      "end_line": 737,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "AInterface",
+      "is_interface": true,
+      "parent_types": [],
+      "begin_line": 739,
+      "end_line": 740,
+      "comment": ""
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractDuration.java b/src/main/java/org/joda/time/base/AbstractDuration.java
+index 4d7aeffb..55fb7df3 100644
+--- a/src/main/java/org/joda/time/base/AbstractDuration.java
++++ b/src/main/java/org/joda/time/base/AbstractDuration.java
+@@ -154,7 +154,7 @@ public abstract class AbstractDuration implements ReadableDuration {
+         if (this == duration) {
+             return true;
+         }
+-        if (duration instanceof ReadableDuration == false) {
++        if (duration instanceof ReadableDuration) {
+             return false;
+         }
+         ReadableDuration other = (ReadableDuration) duration;

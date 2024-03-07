@@ -1,0 +1,295 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/ObjectUtils.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "ObjectUtils",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 46,
+      "end_line": 923,
+      "comment": "@Immutable"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "NULL"
+      ],
+      "begin_line": 63,
+      "end_line": 63,
+      "comment": "\n     * \u003cp\u003eSingleton used as a {@code null} placeholder where\n     * {@code null} has another meaning.\u003c/p\u003e\n     *\n     * \u003cp\u003eFor example, in a {@code HashMap} the\n     * {@link java.util.HashMap#get(java.lang.Object)} method returns\n     * {@code null} if the {@code Map} contains {@code null} or if there\n     * is no matching key. The {@code Null} placeholder can be used to\n     * distinguish between these two cases.\u003c/p\u003e\n     *\n     * \u003cp\u003eAnother example is {@code Hashtable}, where {@code null}\n     * cannot be stored.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis instance is Serializable.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.ObjectUtils.ObjectUtils()",
+      "begin_line": 73,
+      "end_line": 75,
+      "comment": "\n     * \u003cp\u003e{@code ObjectUtils} instances should NOT be constructed in\n     * standard programming. Instead, the static methods on the class should\n     * be used, such as {@code ObjectUtils.defaultIfNull(\"a\",\"b\");}.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis constructor is public to permit tools that require a JavaBean\n     * instance to operate.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.defaultIfNull(T, T)",
+      "begin_line": 95,
+      "end_line": 97,
+      "comment": "\n     * \u003cp\u003eReturns a default value if the object passed is {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.defaultIfNull(null, null)      \u003d null\n     * ObjectUtils.defaultIfNull(null, \"\")        \u003d \"\"\n     * ObjectUtils.defaultIfNull(null, \"zz\")      \u003d \"zz\"\n     * ObjectUtils.defaultIfNull(\"abc\", *)        \u003d \"abc\"\n     * ObjectUtils.defaultIfNull(Boolean.TRUE, *) \u003d Boolean.TRUE\n     * \u003c/pre\u003e\n     *\n     * @param \u003cT\u003e the type of the object\n     * @param object  the {@code Object} to test, may be {@code null}\n     * @param defaultValue  the default value to return, may be {@code null}\n     * @return {@code object} if it is not {@code null}, defaultValue otherwise\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.firstNonNull(T...)",
+      "begin_line": 121,
+      "end_line": 130,
+      "comment": "\n     * \u003cp\u003eReturns the first value in the array which is not {@code null}.\n     * If all the values are {@code null} or the array is {@code null}\n     * or empty then {@code null} is returned.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.firstNonNull(null, null)      \u003d null\n     * ObjectUtils.firstNonNull(null, \"\")        \u003d \"\"\n     * ObjectUtils.firstNonNull(null, null, \"\")  \u003d \"\"\n     * ObjectUtils.firstNonNull(null, \"zz\")      \u003d \"zz\"\n     * ObjectUtils.firstNonNull(\"abc\", *)        \u003d \"abc\"\n     * ObjectUtils.firstNonNull(null, \"xyz\", *)  \u003d \"xyz\"\n     * ObjectUtils.firstNonNull(Boolean.TRUE, *) \u003d Boolean.TRUE\n     * ObjectUtils.firstNonNull()                \u003d null\n     * \u003c/pre\u003e\n     *\n     * @param \u003cT\u003e the component type of the array\n     * @param values  the values to test, may be {@code null} or empty\n     * @return the first value from {@code values} which is not {@code null},\n     *  or {@code null} if there are no non-null values\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.equals(java.lang.Object, java.lang.Object)",
+      "begin_line": 153,
+      "end_line": 161,
+      "comment": "\n     * \u003cp\u003eCompares two objects for equality, where either one or both\n     * objects may be {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.equals(null, null)                  \u003d true\n     * ObjectUtils.equals(null, \"\")                    \u003d false\n     * ObjectUtils.equals(\"\", null)                    \u003d false\n     * ObjectUtils.equals(\"\", \"\")                      \u003d true\n     * ObjectUtils.equals(Boolean.TRUE, null)          \u003d false\n     * ObjectUtils.equals(Boolean.TRUE, \"true\")        \u003d false\n     * ObjectUtils.equals(Boolean.TRUE, Boolean.TRUE)  \u003d true\n     * ObjectUtils.equals(Boolean.TRUE, Boolean.FALSE) \u003d false\n     * \u003c/pre\u003e\n     *\n     * @param object1  the first object, may be {@code null}\n     * @param object2  the second object, may be {@code null}\n     * @return {@code true} if the values of both objects are the same\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.notEqual(java.lang.Object, java.lang.Object)",
+      "begin_line": 182,
+      "end_line": 184,
+      "comment": "\n     * \u003cp\u003eCompares two objects for inequality, where either one or both\n     * objects may be {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.notEqual(null, null)                  \u003d false\n     * ObjectUtils.notEqual(null, \"\")                    \u003d true\n     * ObjectUtils.notEqual(\"\", null)                    \u003d true\n     * ObjectUtils.notEqual(\"\", \"\")                      \u003d false\n     * ObjectUtils.notEqual(Boolean.TRUE, null)          \u003d true\n     * ObjectUtils.notEqual(Boolean.TRUE, \"true\")        \u003d true\n     * ObjectUtils.notEqual(Boolean.TRUE, Boolean.TRUE)  \u003d false\n     * ObjectUtils.notEqual(Boolean.TRUE, Boolean.FALSE) \u003d true\n     * \u003c/pre\u003e\n     *\n     * @param object1  the first object, may be {@code null}\n     * @param object2  the second object, may be {@code null}\n     * @return {@code false} if the values of both objects are the same\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.hashCode(java.lang.Object)",
+      "begin_line": 199,
+      "end_line": 202,
+      "comment": "\n     * \u003cp\u003eGets the hash code of an object returning zero when the\n     * object is {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.hashCode(null)   \u003d 0\n     * ObjectUtils.hashCode(obj)    \u003d obj.hashCode()\n     * \u003c/pre\u003e\n     *\n     * @param obj  the object to obtain the hash code of, may be {@code null}\n     * @return the hash code of the object, or zero if null\n     * @since 2.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.hashCodeMulti(java.lang.Object...)",
+      "begin_line": 224,
+      "end_line": 232,
+      "comment": "\n     * \u003cp\u003eGets the hash code for multiple objects.\u003c/p\u003e\n     * \n     * \u003cp\u003eThis allows a hash code to be rapidly calculated for a number of objects.\n     * The hash code for a single object is the \u003cem\u003enot\u003c/em\u003e same as {@link #hashCode(Object)}.\n     * The hash code for multiple objects is the same as that calculated by an\n     * {@code ArrayList} containing the specified objects.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.hashCodeMulti()                 \u003d 1\n     * ObjectUtils.hashCodeMulti((Object[]) null)  \u003d 1\n     * ObjectUtils.hashCodeMulti(a)                \u003d 31 + a.hashCode()\n     * ObjectUtils.hashCodeMulti(a,b)              \u003d (31 + a.hashCode()) * 31 + b.hashCode()\n     * ObjectUtils.hashCodeMulti(a,b,c)            \u003d ((31 + a.hashCode()) * 31 + b.hashCode()) * 31 + c.hashCode()\n     * \u003c/pre\u003e\n     *\n     * @param objects  the objects to obtain the hash code of, may be {@code null}\n     * @return the hash code of the objects, or zero if null\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.identityToString(java.lang.Object)",
+      "begin_line": 252,
+      "end_line": 259,
+      "comment": "\n     * \u003cp\u003eGets the toString that would be produced by {@code Object}\n     * if a class did not override toString itself. {@code null}\n     * will return {@code null}.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.identityToString(null)         \u003d null\n     * ObjectUtils.identityToString(\"\")           \u003d \"java.lang.String@1e23\"\n     * ObjectUtils.identityToString(Boolean.TRUE) \u003d \"java.lang.Boolean@7fa\"\n     * \u003c/pre\u003e\n     *\n     * @param object  the object to create a toString for, may be\n     *  {@code null}\n     * @return the default toString text, or {@code null} if\n     *  {@code null} passed in\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.identityToString(java.lang.Appendable, java.lang.Object)",
+      "begin_line": 277,
+      "end_line": 284,
+      "comment": "\n     * \u003cp\u003eAppends the toString that would be produced by {@code Object}\n     * if a class did not override toString itself. {@code null}\n     * will throw a NullPointerException for either of the two parameters. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.identityToString(appendable, \"\")            \u003d appendable.append(\"java.lang.String@1e23\"\n     * ObjectUtils.identityToString(appendable, Boolean.TRUE)  \u003d appendable.append(\"java.lang.Boolean@7fa\"\n     * ObjectUtils.identityToString(appendable, Boolean.TRUE)  \u003d appendable.append(\"java.lang.Boolean@7fa\")\n     * \u003c/pre\u003e\n     *\n     * @param appendable  the appendable to append to\n     * @param object  the object to create a toString for\n     * @throws IOException \n     * @since 3.2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "identityToString(StrBuilder, Object)",
+      "begin_line": 301,
+      "end_line": 308,
+      "comment": "\n     * \u003cp\u003eAppends the toString that would be produced by {@code Object}\n     * if a class did not override toString itself. {@code null}\n     * will throw a NullPointerException for either of the two parameters. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.identityToString(builder, \"\")            \u003d builder.append(\"java.lang.String@1e23\"\n     * ObjectUtils.identityToString(builder, Boolean.TRUE)  \u003d builder.append(\"java.lang.Boolean@7fa\"\n     * ObjectUtils.identityToString(builder, Boolean.TRUE)  \u003d builder.append(\"java.lang.Boolean@7fa\")\n     * \u003c/pre\u003e\n     *\n     * @param builder  the builder to append to\n     * @param object  the object to create a toString for\n     * @since 3.2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.identityToString(java.lang.StringBuffer, java.lang.Object)",
+      "begin_line": 325,
+      "end_line": 332,
+      "comment": "\n     * \u003cp\u003eAppends the toString that would be produced by {@code Object}\n     * if a class did not override toString itself. {@code null}\n     * will throw a NullPointerException for either of the two parameters. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.identityToString(buf, \"\")            \u003d buf.append(\"java.lang.String@1e23\"\n     * ObjectUtils.identityToString(buf, Boolean.TRUE)  \u003d buf.append(\"java.lang.Boolean@7fa\"\n     * ObjectUtils.identityToString(buf, Boolean.TRUE)  \u003d buf.append(\"java.lang.Boolean@7fa\")\n     * \u003c/pre\u003e\n     *\n     * @param buffer  the buffer to append to\n     * @param object  the object to create a toString for\n     * @since 2.4\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.identityToString(java.lang.StringBuilder, java.lang.Object)",
+      "begin_line": 349,
+      "end_line": 356,
+      "comment": "\n     * \u003cp\u003eAppends the toString that would be produced by {@code Object}\n     * if a class did not override toString itself. {@code null}\n     * will throw a NullPointerException for either of the two parameters. \u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.identityToString(builder, \"\")            \u003d builder.append(\"java.lang.String@1e23\"\n     * ObjectUtils.identityToString(builder, Boolean.TRUE)  \u003d builder.append(\"java.lang.Boolean@7fa\"\n     * ObjectUtils.identityToString(builder, Boolean.TRUE)  \u003d builder.append(\"java.lang.Boolean@7fa\")\n     * \u003c/pre\u003e\n     *\n     * @param builder  the builder to append to\n     * @param object  the object to create a toString for\n     * @since 3.2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.toString(java.lang.Object)",
+      "begin_line": 377,
+      "end_line": 379,
+      "comment": "\n     * \u003cp\u003eGets the {@code toString} of an {@code Object} returning\n     * an empty string (\"\") if {@code null} input.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.toString(null)         \u003d \"\"\n     * ObjectUtils.toString(\"\")           \u003d \"\"\n     * ObjectUtils.toString(\"bat\")        \u003d \"bat\"\n     * ObjectUtils.toString(Boolean.TRUE) \u003d \"true\"\n     * \u003c/pre\u003e\n     *\n     * @see StringUtils#defaultString(String)\n     * @see String#valueOf(Object)\n     * @param obj  the Object to {@code toString}, may be null\n     * @return the passed in Object\u0027s toString, or {@code \"\"} if {@code null} input\n     * @since 2.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.toString(java.lang.Object, java.lang.String)",
+      "begin_line": 400,
+      "end_line": 402,
+      "comment": "\n     * \u003cp\u003eGets the {@code toString} of an {@code Object} returning\n     * a specified text if {@code null} input.\u003c/p\u003e\n     *\n     * \u003cpre\u003e\n     * ObjectUtils.toString(null, null)           \u003d null\n     * ObjectUtils.toString(null, \"null\")         \u003d \"null\"\n     * ObjectUtils.toString(\"\", \"null\")           \u003d \"\"\n     * ObjectUtils.toString(\"bat\", \"null\")        \u003d \"bat\"\n     * ObjectUtils.toString(Boolean.TRUE, \"null\") \u003d \"true\"\n     * \u003c/pre\u003e\n     *\n     * @see StringUtils#defaultString(String,String)\n     * @see String#valueOf(Object)\n     * @param obj  the Object to {@code toString}, may be null\n     * @param nullStr  the String to return if {@code null} input, may be null\n     * @return the passed in Object\u0027s toString, or {@code nullStr} if {@code null} input\n     * @since 2.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.min(T...)",
+      "begin_line": 419,
+      "end_line": 429,
+      "comment": "\n     * \u003cp\u003eNull safe comparison of Comparables.\u003c/p\u003e\n     *\n     * @param \u003cT\u003e type of the values processed by this method\n     * @param values the set of comparable values, may be null\n     * @return\n     *  \u003cul\u003e\n     *   \u003cli\u003eIf any objects are non-null and unequal, the lesser object.\n     *   \u003cli\u003eIf all objects are non-null and equal, the first.\n     *   \u003cli\u003eIf any of the comparables are null, the lesser of the non-null objects.\n     *   \u003cli\u003eIf all the comparables are null, null is returned.\n     *  \u003c/ul\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.max(T...)",
+      "begin_line": 444,
+      "end_line": 454,
+      "comment": "\n     * \u003cp\u003eNull safe comparison of Comparables.\u003c/p\u003e\n     *\n     * @param \u003cT\u003e type of the values processed by this method\n     * @param values the set of comparable values, may be null\n     * @return\n     *  \u003cul\u003e\n     *   \u003cli\u003eIf any objects are non-null and unequal, the greater object.\n     *   \u003cli\u003eIf all objects are non-null and equal, the first.\n     *   \u003cli\u003eIf any of the comparables are null, the greater of the non-null objects.\n     *   \u003cli\u003eIf all the comparables are null, null is returned.\n     *  \u003c/ul\u003e\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.compare(T, T)",
+      "begin_line": 466,
+      "end_line": 468,
+      "comment": "\n     * \u003cp\u003eNull safe comparison of Comparables.\n     * {@code null} is assumed to be less than a non-{@code null} value.\u003c/p\u003e\n     *\n     * @param \u003cT\u003e type of the values processed by this method\n     * @param c1  the first comparable, may be null\n     * @param c2  the second comparable, may be null\n     * @return a negative value if c1 \u003c c2, zero if c1 \u003d c2\n     *  and a positive value if c1 \u003e c2\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.compare(T, T, boolean)",
+      "begin_line": 483,
+      "end_line": 492,
+      "comment": "\n     * \u003cp\u003eNull safe comparison of Comparables.\u003c/p\u003e\n     *\n     * @param \u003cT\u003e type of the values processed by this method\n     * @param c1  the first comparable, may be null\n     * @param c2  the second comparable, may be null\n     * @param nullGreater if true {@code null} is considered greater\n     *  than a non-{@code null} value or if false {@code null} is\n     *  considered less than a Non-{@code null} value\n     * @return a negative value if c1 \u003c c2, zero if c1 \u003d c2\n     *  and a positive value if c1 \u003e c2\n     * @see java.util.Comparator#compare(Object, Object)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.median(T...)",
+      "begin_line": 504,
+      "end_line": 513,
+      "comment": "\n     * Find the \"best guess\" middle value among comparables. If there is an even\n     * number of total values, the lower of the two middle values will be returned.\n     * @param \u003cT\u003e type of values processed by this method\n     * @param items to compare\n     * @return T at middle position\n     * @throws NullPointerException if items is {@code null}\n     * @throws IllegalArgumentException if items is empty or contains {@code null} values\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.median(java.util.Comparator\u003cT\u003e, T...)",
+      "begin_line": 526,
+      "end_line": 536,
+      "comment": "\n     * Find the \"best guess\" middle value among comparables. If there is an even\n     * number of total values, the lower of the two middle values will be returned.\n     * @param \u003cT\u003e type of values processed by this method\n     * @param comparator to use for comparisons\n     * @param items to compare\n     * @return T at middle position\n     * @throws NullPointerException if items or comparator is {@code null}\n     * @throws IllegalArgumentException if items is empty or contains {@code null} values\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.mode(T...)",
+      "begin_line": 548,
+      "end_line": 573,
+      "comment": "\n     * Find the most frequently occurring item.\n     * \n     * @param \u003cT\u003e type of values processed by this method\n     * @param items to check\n     * @return most populous T, {@code null} if non-unique or no items supplied\n     * @since 3.0.1\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.clone(T)",
+      "begin_line": 586,
+      "end_line": 622,
+      "comment": "\n     * \u003cp\u003eClone an object.\u003c/p\u003e\n     *\n     * @param \u003cT\u003e the type of the object\n     * @param obj  the object to clone, null returns null\n     * @return the clone if the object implements {@link Cloneable} otherwise {@code null}\n     * @throws CloneFailedException if the object is cloneable and the clone operation fails\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.cloneIfPossible(T)",
+      "begin_line": 640,
+      "end_line": 643,
+      "comment": "\n     * \u003cp\u003eClone an object if possible.\u003c/p\u003e\n     *\n     * \u003cp\u003eThis method is similar to {@link #clone(Object)}, but will return the provided\n     * instance as the return value instead of {@code null} if the instance\n     * is not cloneable. This is more convenient if the caller uses different\n     * implementations (e.g. of a service) and some of the implementations do not allow concurrent\n     * processing or have state. In such cases the implementation can simply provide a proper\n     * clone implementation and the caller\u0027s code does not have to change.\u003c/p\u003e\n     *\n     * @param \u003cT\u003e the type of the object\n     * @param obj  the object to clone, null returns null\n     * @return the clone if the object implements {@link Cloneable} otherwise the object itself\n     * @throws CloneFailedException if the object is cloneable and the clone operation fails\n     * @since 3.0\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "Null",
+      "is_interface": false,
+      "parent_types": [
+        "java.io.Serializable"
+      ],
+      "begin_line": 660,
+      "end_line": 683,
+      "comment": "\n     * \u003cp\u003eClass used as a null placeholder where {@code null}\n     * has another meaning.\u003c/p\u003e\n     *\n     * \u003cp\u003eFor example, in a {@code HashMap} the\n     * {@link java.util.HashMap#get(java.lang.Object)} method returns\n     * {@code null} if the {@code Map} contains {@code null} or if there is\n     * no matching key. The {@code Null} placeholder can be used to distinguish\n     * between these two cases.\u003c/p\u003e\n     *\n     * \u003cp\u003eAnother example is {@code Hashtable}, where {@code null}\n     * cannot be stored.\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 666,
+      "end_line": 666,
+      "comment": "\n         * Required for serialization support. Declare serialization compatibility with Commons Lang 1.0\n         *\n         * @see java.io.Serializable\n         "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.ObjectUtils.Null.Null()",
+      "begin_line": 671,
+      "end_line": 673,
+      "comment": "\n         * Restricted constructor - singleton.\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.Null.readResolve()",
+      "begin_line": 680,
+      "end_line": 682,
+      "comment": "\n         * \u003cp\u003eEnsure singleton.\u003c/p\u003e\n         *\n         * @return the singleton value\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(boolean)",
+      "begin_line": 723,
+      "end_line": 723,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static boolean MAGIC_FLAG \u003d ObjectUtils.CONST(true);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the boolean value to return\n     * @return the boolean v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(byte)",
+      "begin_line": 741,
+      "end_line": 741,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static byte MAGIC_BYTE \u003d ObjectUtils.CONST((byte) 127);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the byte value to return\n     * @return the byte v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST_BYTE(int)",
+      "begin_line": 762,
+      "end_line": 767,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static byte MAGIC_BYTE \u003d ObjectUtils.CONST_BYTE(127);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the byte literal (as an int) value to return\n     * @throws IllegalArgumentException if the value passed to v\n     *         is larger than a byte, that is, smaller than -128 or\n     *         larger than 127.\n     * @return the byte v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(char)",
+      "begin_line": 785,
+      "end_line": 785,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static char MAGIC_CHAR \u003d ObjectUtils.CONST(\u0027a\u0027);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the char value to return\n     * @return the char v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(short)",
+      "begin_line": 803,
+      "end_line": 803,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static short MAGIC_SHORT \u003d ObjectUtils.CONST((short) 123);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the short value to return\n     * @return the short v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST_SHORT(int)",
+      "begin_line": 824,
+      "end_line": 829,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static short MAGIC_SHORT \u003d ObjectUtils.CONST_SHORT(127);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the short literal (as an int) value to return\n     * @throws IllegalArgumentException if the value passed to v\n     *         is larger than a short, that is, smaller than -32768 or\n     *         larger than 32767.\n     * @return the byte v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(int)",
+      "begin_line": 848,
+      "end_line": 848,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static int MAGIC_INT \u003d ObjectUtils.CONST(123);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the int value to return\n     * @return the int v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(long)",
+      "begin_line": 866,
+      "end_line": 866,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static long MAGIC_LONG \u003d ObjectUtils.CONST(123L);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the long value to return\n     * @return the long v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(float)",
+      "begin_line": 884,
+      "end_line": 884,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static float MAGIC_FLOAT \u003d ObjectUtils.CONST(1.0f);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the float value to return\n     * @return the float v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(double)",
+      "begin_line": 902,
+      "end_line": 902,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static double MAGIC_DOUBLE \u003d ObjectUtils.CONST(1.0);\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param v the double value to return\n     * @return the double v, unchanged\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.ObjectUtils.CONST(T)",
+      "begin_line": 921,
+      "end_line": 921,
+      "comment": "\n     * This method returns the provided value unchanged.\n     * This can prevent javac from inlining a constant\n     * field, e.g.,\n     *\n     * \u003cpre\u003e\n     *     public final static String MAGIC_STRING \u003d ObjectUtils.CONST(\"abc\");\n     * \u003c/pre\u003e\n     *\n     * This way any jars that refer to this field do not\n     * have to recompile themselves if the field\u0027s value\n     * changes at some future date.\n     *\n     * @param \u003cT\u003e the Object type \n     * @param v the genericized Object value to return (typically a String).\n     * @return the genericized Object v, unchanged (typically a String).\n     "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/BooleanUtils.java b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+index 4bbeb625..bee3881a 100644
+--- a/src/main/java/org/apache/commons/lang3/BooleanUtils.java
++++ b/src/main/java/org/apache/commons/lang3/BooleanUtils.java
+@@ -617,7 +617,7 @@ public class BooleanUtils {
+                 final char ch3 = str.charAt(3);
+                 final char ch4 = str.charAt(4);
+                 if ((ch0 == 'f' || ch0 == 'F') &&
+-                    (ch1 == 'a' || ch1 == 'A') &&
++                    (ch1 >= 'a' || ch1 == 'A') &&
+                     (ch2 == 'l' || ch2 == 'L') &&
+                     (ch3 == 's' || ch3 == 'S') &&
+                     (ch4 == 'e' || ch4 == 'E') ) {

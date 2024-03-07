@@ -1,0 +1,111 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/StandardToStringStyleTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StandardToStringStyleTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 146,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.builder.ToStringStyle}.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "base"
+      ],
+      "begin_line": 36,
+      "end_line": 36,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "baseStr"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "STYLE"
+      ],
+      "begin_line": 39,
+      "end_line": 39,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.setUp()",
+      "begin_line": 54,
+      "end_line": 57,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.tearDown()",
+      "begin_line": 59,
+      "end_line": 62,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testBlank()",
+      "begin_line": 66,
+      "end_line": 69,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testAppendSuper()",
+      "begin_line": 71,
+      "end_line": 79,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testObject()",
+      "begin_line": 81,
+      "end_line": 97,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testPerson()",
+      "begin_line": 99,
+      "end_line": 107,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testLong()",
+      "begin_line": 109,
+      "end_line": 114,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testObjectArray()",
+      "begin_line": 116,
+      "end_line": 124,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testLongArray()",
+      "begin_line": 126,
+      "end_line": 134,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.StandardToStringStyleTest.testLongArrayArray()",
+      "begin_line": 136,
+      "end_line": 144,
+      "comment": ""
+    }
+  ]
+}

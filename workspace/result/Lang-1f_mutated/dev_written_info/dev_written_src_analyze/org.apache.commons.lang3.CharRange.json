@@ -1,0 +1,233 @@
+{
+  "filepath": "/tmp/Lang-1f/src/main/java/org/apache/commons/lang3/CharRange.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "CharRange",
+      "is_interface": false,
+      "parent_types": [
+        "java.lang.Iterable\u003cjava.lang.Character\u003e",
+        "java.io.Serializable"
+      ],
+      "begin_line": 34,
+      "end_line": 360,
+      "comment": " to depend on Range."
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "serialVersionUID"
+      ],
+      "begin_line": 41,
+      "end_line": 41,
+      "comment": "\n     * Required for serialization support. Lang version 2.0. \n     * \n     * @see java.io.Serializable\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "start"
+      ],
+      "begin_line": 44,
+      "end_line": 44,
+      "comment": " The first character, inclusive, in the range. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "end"
+      ],
+      "begin_line": 46,
+      "end_line": 46,
+      "comment": " The last character, inclusive, in the range. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "negated"
+      ],
+      "begin_line": 48,
+      "end_line": 48,
+      "comment": " True if the range is everything except the characters specified. "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "iToString"
+      ],
+      "begin_line": 51,
+      "end_line": 51,
+      "comment": " Cached toString. "
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.CharRange.CharRange(char, char, boolean)",
+      "begin_line": 67,
+      "end_line": 78,
+      "comment": "\n     * \u003cp\u003eConstructs a {@code CharRange} over a set of characters,\n     * optionally negating the range.\u003c/p\u003e\n     *\n     * \u003cp\u003eA negated range includes everything except that defined by the\n     * start and end characters.\u003c/p\u003e\n     * \n     * \u003cp\u003eIf start and end are in the wrong order, they are reversed.\n     * Thus {@code a-e} is the same as {@code e-a}.\u003c/p\u003e\n     *\n     * @param start  first character, inclusive, in this range\n     * @param end  last character, inclusive, in this range\n     * @param negated  true to express everything except the range\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.is(char)",
+      "begin_line": 88,
+      "end_line": 90,
+      "comment": "\n     * \u003cp\u003eConstructs a {@code CharRange} over a single character.\u003c/p\u003e\n     *\n     * @param ch  only character in this range\n     * @return the new CharRange object\n     * @see CharRange#CharRange(char, char, boolean)\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.isNot(char)",
+      "begin_line": 100,
+      "end_line": 102,
+      "comment": "\n     * \u003cp\u003eConstructs a negated {@code CharRange} over a single character.\u003c/p\u003e\n     *\n     * @param ch  only character in this range\n     * @return the new CharRange object\n     * @see CharRange#CharRange(char, char, boolean)\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.isIn(char, char)",
+      "begin_line": 113,
+      "end_line": 115,
+      "comment": "\n     * \u003cp\u003eConstructs a {@code CharRange} over a set of characters.\u003c/p\u003e\n     *\n     * @param start  first character, inclusive, in this range\n     * @param end  last character, inclusive, in this range\n     * @return the new CharRange object\n     * @see CharRange#CharRange(char, char, boolean)\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.isNotIn(char, char)",
+      "begin_line": 126,
+      "end_line": 128,
+      "comment": "\n     * \u003cp\u003eConstructs a negated {@code CharRange} over a set of characters.\u003c/p\u003e\n     *\n     * @param start  first character, inclusive, in this range\n     * @param end  last character, inclusive, in this range\n     * @return the new CharRange object\n     * @see CharRange#CharRange(char, char, boolean)\n     * @since 2.5\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.getStart()",
+      "begin_line": 137,
+      "end_line": 139,
+      "comment": "\n     * \u003cp\u003eGets the start character for this character range.\u003c/p\u003e\n     * \n     * @return the start char (inclusive)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.getEnd()",
+      "begin_line": 146,
+      "end_line": 148,
+      "comment": "\n     * \u003cp\u003eGets the end character for this character range.\u003c/p\u003e\n     * \n     * @return the end char (inclusive)\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.isNegated()",
+      "begin_line": 158,
+      "end_line": 160,
+      "comment": "\n     * \u003cp\u003eIs this {@code CharRange} negated.\u003c/p\u003e\n     * \n     * \u003cp\u003eA negated range includes everything except that defined by the\n     * start and end characters.\u003c/p\u003e\n     *\n     * @return {@code true} if negated\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.contains(char)",
+      "begin_line": 170,
+      "end_line": 172,
+      "comment": "\n     * \u003cp\u003eIs the character specified contained in this range.\u003c/p\u003e\n     *\n     * @param ch  the character to check\n     * @return {@code true} if this range contains the input character\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.contains(org.apache.commons.lang3.CharRange)",
+      "begin_line": 182,
+      "end_line": 196,
+      "comment": "\n     * \u003cp\u003eAre all the characters of the passed in range contained in\n     * this range.\u003c/p\u003e\n     *\n     * @param range  the range to check against\n     * @return {@code true} if this range entirely contains the input range\n     * @throws IllegalArgumentException if {@code null} input\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.equals(java.lang.Object)",
+      "begin_line": 207,
+      "end_line": 217,
+      "comment": "\n     * \u003cp\u003eCompares two CharRange objects, returning true if they represent\n     * exactly the same range of characters defined in the same way.\u003c/p\u003e\n     * \n     * @param obj  the object to compare to\n     * @return true if equal\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.hashCode()",
+      "begin_line": 224,
+      "end_line": 227,
+      "comment": "\n     * \u003cp\u003eGets a hashCode compatible with the equals method.\u003c/p\u003e\n     * \n     * @return a suitable hashCode\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.toString()",
+      "begin_line": 234,
+      "end_line": 249,
+      "comment": "\n     * \u003cp\u003eGets a string representation of the character range.\u003c/p\u003e\n     * \n     * @return string representation of this range\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.iterator()",
+      "begin_line": 260,
+      "end_line": 263,
+      "comment": "\n     * \u003cp\u003eReturns an iterator which can be used to walk through the characters described by this range.\u003c/p\u003e\n     *\n     * \u003cp\u003e#NotThreadSafe# the iterator is not thread-safe\u003c/p\u003e\n     * @return an iterator to the chars represented by this range\n     * @since 2.5\n     "
+    },
+    {
+      "type": "class_interface",
+      "name": "CharacterIterator",
+      "is_interface": false,
+      "parent_types": [
+        "java.util.Iterator\u003cjava.lang.Character\u003e"
+      ],
+      "begin_line": 269,
+      "end_line": 359,
+      "comment": "\n     * Character {@link Iterator}.\n     * \u003cp\u003e#NotThreadSafe#\u003c/p\u003e\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "current"
+      ],
+      "begin_line": 271,
+      "end_line": 271,
+      "comment": " The current character "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "range"
+      ],
+      "begin_line": 273,
+      "end_line": 273,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "hasNext"
+      ],
+      "begin_line": 274,
+      "end_line": 274,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.CharRange.CharacterIterator.CharacterIterator(org.apache.commons.lang3.CharRange)",
+      "begin_line": 281,
+      "end_line": 299,
+      "comment": "\n         * Construct a new iterator for the character range.\n         *\n         * @param r The character range\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.CharacterIterator.prepareNext()",
+      "begin_line": 304,
+      "end_line": 322,
+      "comment": "\n         * Prepare the next character in the range.\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.CharacterIterator.hasNext()",
+      "begin_line": 329,
+      "end_line": 332,
+      "comment": "\n         * Has the iterator not reached the end character yet?\n         *\n         * @return {@code true} if the iterator has yet to reach the character date\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.CharacterIterator.next()",
+      "begin_line": 339,
+      "end_line": 347,
+      "comment": "\n         * Return the next character in the iteration\n         *\n         * @return {@code Character} for the next character\n         "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.CharRange.CharacterIterator.remove()",
+      "begin_line": 355,
+      "end_line": 358,
+      "comment": "\n         * Always throws UnsupportedOperationException.\n         *\n         * @throws UnsupportedOperationException\n         * @see java.util.Iterator#remove()\n         "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+index b662ffd3..fc22be89 100644
+--- a/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
++++ b/src/main/java/org/apache/commons/lang3/text/StrBuilder.java
+@@ -171,7 +171,7 @@ public class StrBuilder implements CharSequence, Appendable, Serializable, Build
+      */
+     public StrBuilder setNullText(String nullText) {
+         if (nullText != null && nullText.isEmpty()) {
+-            nullText = null;
++            ;
+         }
+         this.nullText = nullText;
+         return this;

@@ -1,0 +1,317 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/text/StrSubstitutorTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "StrSubstitutorTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 35,
+      "end_line": 624,
+      "comment": "\n * Test class for StrSubstitutor.\n *\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "values"
+      ],
+      "begin_line": 37,
+      "end_line": 37,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.setUp()",
+      "begin_line": 39,
+      "end_line": 44,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.tearDown()",
+      "begin_line": 46,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceSimple()",
+      "begin_line": 55,
+      "end_line": 58,
+      "comment": "\n     * Tests simple key replace.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceSolo()",
+      "begin_line": 63,
+      "end_line": 66,
+      "comment": "\n     * Tests simple key replace.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceNoVariables()",
+      "begin_line": 71,
+      "end_line": 74,
+      "comment": "\n     * Tests replace with no variables.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceNull()",
+      "begin_line": 79,
+      "end_line": 82,
+      "comment": "\n     * Tests replace with null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceEmpty()",
+      "begin_line": 87,
+      "end_line": 90,
+      "comment": "\n     * Tests replace with null.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceChangedMap()",
+      "begin_line": 95,
+      "end_line": 100,
+      "comment": "\n     * Tests key replace changing map after initialization (not recommended).\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceUnknownKey()",
+      "begin_line": 105,
+      "end_line": 108,
+      "comment": "\n     * Tests unknown key replace.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceAdjacentAtStart()",
+      "begin_line": 113,
+      "end_line": 119,
+      "comment": "\n     * Tests adjacent keys.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceAdjacentAtEnd()",
+      "begin_line": 124,
+      "end_line": 130,
+      "comment": "\n     * Tests adjacent keys.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceRecursive()",
+      "begin_line": 135,
+      "end_line": 146,
+      "comment": "\n     * Tests simple recursive replace.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceEscaping()",
+      "begin_line": 151,
+      "end_line": 154,
+      "comment": "\n     * Tests escaping.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceSoloEscaping()",
+      "begin_line": 159,
+      "end_line": 162,
+      "comment": "\n     * Tests escaping.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceComplexEscaping()",
+      "begin_line": 167,
+      "end_line": 170,
+      "comment": "\n     * Tests complex escaping.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceNoPrefixNoSuffix()",
+      "begin_line": 175,
+      "end_line": 178,
+      "comment": "\n     * Tests when no prefix or suffix.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceIncompletePrefix()",
+      "begin_line": 183,
+      "end_line": 186,
+      "comment": "\n     * Tests when no incomplete prefix.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplacePrefixNoSuffix()",
+      "begin_line": 191,
+      "end_line": 194,
+      "comment": "\n     * Tests when prefix but no suffix.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceNoPrefixSuffix()",
+      "begin_line": 199,
+      "end_line": 202,
+      "comment": "\n     * Tests when suffix but no prefix.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceEmptyKeys()",
+      "begin_line": 207,
+      "end_line": 210,
+      "comment": "\n     * Tests when no variable name.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceToIdentical()",
+      "begin_line": 215,
+      "end_line": 220,
+      "comment": "\n     * Tests replace creates output same as input.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testCyclicReplacement()",
+      "begin_line": 226,
+      "end_line": 244,
+      "comment": "\n     * Tests a cyclic replace operation.\n     * The cycle should be detected and cause an exception to be thrown.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceWeirdPattens()",
+      "begin_line": 249,
+      "end_line": 268,
+      "comment": "\n     * Tests interpolation with weird boundary patterns.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplacePartialString_noReplace()",
+      "begin_line": 273,
+      "end_line": 277,
+      "comment": "\n     * Tests simple key replace.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceInVariable()",
+      "begin_line": 282,
+      "end_line": 298,
+      "comment": "\n     * Tests whether a variable can be replaced in a variable name.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceInVariableDisabled()",
+      "begin_line": 303,
+      "end_line": 313,
+      "comment": "\n     * Tests whether substitution in variable names is disabled per default.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testReplaceInVariableRecursive()",
+      "begin_line": 318,
+      "end_line": 331,
+      "comment": "\n     * Tests complex and recursive substitution in variable names.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testResolveVariable()",
+      "begin_line": 337,
+      "end_line": 354,
+      "comment": "\n     * Tests protected.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "resolveVariable(String, StrBuilder, int, int)",
+      "begin_line": 343,
+      "end_line": 350,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testConstructorNoArgs()",
+      "begin_line": 360,
+      "end_line": 364,
+      "comment": "\n     * Tests constructor.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testConstructorMapPrefixSuffix()",
+      "begin_line": 369,
+      "end_line": 375,
+      "comment": "\n     * Tests constructor.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testConstructorMapFull()",
+      "begin_line": 380,
+      "end_line": 386,
+      "comment": "\n     * Tests constructor.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testGetSetEscape()",
+      "begin_line": 392,
+      "end_line": 398,
+      "comment": "\n     * Tests get set.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testGetSetPrefix()",
+      "begin_line": 403,
+      "end_line": 430,
+      "comment": "\n     * Tests get set.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testGetSetSuffix()",
+      "begin_line": 435,
+      "end_line": 462,
+      "comment": "\n     * Tests get set.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testStaticReplace()",
+      "begin_line": 468,
+      "end_line": 473,
+      "comment": "\n     * Tests static.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testStaticReplacePrefixSuffix()",
+      "begin_line": 478,
+      "end_line": 483,
+      "comment": "\n     * Tests static.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testStaticReplaceSystemProperties()",
+      "begin_line": 488,
+      "end_line": 499,
+      "comment": "\n     * Tests interpolation with system properties.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testSubstituteDefaultProperties()",
+      "begin_line": 504,
+      "end_line": 513,
+      "comment": "\n     * Test the replace of a properties object\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.testSamePrefixAndSuffix()",
+      "begin_line": 515,
+      "end_line": 523,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.doTestReplace(java.lang.String, java.lang.String, boolean)",
+      "begin_line": 526,
+      "end_line": 597,
+      "comment": "-----------------------------------------------------------------------"
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.text.StrSubstitutorTest.doTestNoReplace(java.lang.String)",
+      "begin_line": 599,
+      "end_line": 622,
+      "comment": ""
+    }
+  ]
+}

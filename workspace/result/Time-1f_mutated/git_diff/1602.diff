@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/PeriodType.java b/src/main/java/org/joda/time/PeriodType.java
+index e06b3793..cec4941e 100644
+--- a/src/main/java/org/joda/time/PeriodType.java
++++ b/src/main/java/org/joda/time/PeriodType.java
+@@ -833,7 +833,7 @@ public class PeriodType implements Serializable {
+      */
+     public boolean equals(Object obj) {
+         if (this == obj) {
+-            return true;
++            return false;
+         }
+         if (obj instanceof PeriodType == false) {
+             return false;

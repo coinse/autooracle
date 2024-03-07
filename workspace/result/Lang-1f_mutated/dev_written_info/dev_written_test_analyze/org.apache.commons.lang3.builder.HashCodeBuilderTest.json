@@ -1,0 +1,511 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/builder/HashCodeBuilderTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "HashCodeBuilderTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 29,
+      "end_line": 558,
+      "comment": "\n * Unit tests {@link org.apache.commons.lang3.builder.HashCodeBuilder}.\n * \n * @version $Id$\n "
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionTestCycleA",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 34,
+      "end_line": 41,
+      "comment": "\n     * A reflection test fixture.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "b"
+      ],
+      "begin_line": 35,
+      "end_line": 35,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.ReflectionTestCycleA.hashCode()",
+      "begin_line": 37,
+      "end_line": 40,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "ReflectionTestCycleB",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 46,
+      "end_line": 53,
+      "comment": "\n     * A reflection test fixture.\n     "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "a"
+      ],
+      "begin_line": 47,
+      "end_line": 47,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.ReflectionTestCycleB.hashCode()",
+      "begin_line": 49,
+      "end_line": 52,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testConstructorEx1()",
+      "begin_line": 57,
+      "end_line": 60,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testConstructorEx2()",
+      "begin_line": 62,
+      "end_line": 65,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestObject",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 67,
+      "end_line": 98,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "a"
+      ],
+      "begin_line": 68,
+      "end_line": 68,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObject.TestObject(int)",
+      "begin_line": 70,
+      "end_line": 72,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObject.equals(java.lang.Object)",
+      "begin_line": 74,
+      "end_line": 84,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObject.hashCode()",
+      "begin_line": 86,
+      "end_line": 89,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObject.setA(int)",
+      "begin_line": 91,
+      "end_line": 93,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObject.getA()",
+      "begin_line": 95,
+      "end_line": 97,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestSubObject",
+      "is_interface": false,
+      "parent_types": [
+        "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObject"
+      ],
+      "begin_line": 100,
+      "end_line": 133,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "b"
+      ],
+      "begin_line": 101,
+      "end_line": 101,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "t"
+      ],
+      "begin_line": 103,
+      "end_line": 104,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestSubObject.TestSubObject()",
+      "begin_line": 106,
+      "end_line": 108,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestSubObject.TestSubObject(int, int, int)",
+      "begin_line": 110,
+      "end_line": 114,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestSubObject.equals(java.lang.Object)",
+      "begin_line": 116,
+      "end_line": 126,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestSubObject.hashCode()",
+      "begin_line": 128,
+      "end_line": 131,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHashCode()",
+      "begin_line": 135,
+      "end_line": 139,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHierarchyHashCode()",
+      "begin_line": 141,
+      "end_line": 149,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHierarchyHashCodeEx1()",
+      "begin_line": 151,
+      "end_line": 154,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHierarchyHashCodeEx2()",
+      "begin_line": 156,
+      "end_line": 159,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHashCodeEx1()",
+      "begin_line": 161,
+      "end_line": 164,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHashCodeEx2()",
+      "begin_line": 166,
+      "end_line": 169,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHashCodeEx3()",
+      "begin_line": 171,
+      "end_line": 174,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testSuper()",
+      "begin_line": 176,
+      "end_line": 181,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testObject()",
+      "begin_line": 183,
+      "end_line": 189,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testObjectBuild()",
+      "begin_line": 191,
+      "end_line": 197,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testLong()",
+      "begin_line": 199,
+      "end_line": 205,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testInt()",
+      "begin_line": 207,
+      "end_line": 212,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testShort()",
+      "begin_line": 214,
+      "end_line": 218,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testChar()",
+      "begin_line": 220,
+      "end_line": 224,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testByte()",
+      "begin_line": 226,
+      "end_line": 230,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testDouble()",
+      "begin_line": 232,
+      "end_line": 239,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testFloat()",
+      "begin_line": 241,
+      "end_line": 248,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testBoolean()",
+      "begin_line": 250,
+      "end_line": 254,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testObjectArray()",
+      "begin_line": 256,
+      "end_line": 266,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testObjectArrayAsObject()",
+      "begin_line": 268,
+      "end_line": 277,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testLongArray()",
+      "begin_line": 279,
+      "end_line": 290,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testLongArrayAsObject()",
+      "begin_line": 292,
+      "end_line": 302,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testIntArray()",
+      "begin_line": 304,
+      "end_line": 313,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testIntArrayAsObject()",
+      "begin_line": 315,
+      "end_line": 323,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testShortArray()",
+      "begin_line": 325,
+      "end_line": 334,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testShortArrayAsObject()",
+      "begin_line": 336,
+      "end_line": 344,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testCharArray()",
+      "begin_line": 346,
+      "end_line": 355,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testCharArrayAsObject()",
+      "begin_line": 357,
+      "end_line": 365,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testByteArray()",
+      "begin_line": 367,
+      "end_line": 376,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testByteArrayAsObject()",
+      "begin_line": 378,
+      "end_line": 386,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testDoubleArray()",
+      "begin_line": 388,
+      "end_line": 401,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testDoubleArrayAsObject()",
+      "begin_line": 403,
+      "end_line": 415,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testFloatArray()",
+      "begin_line": 417,
+      "end_line": 428,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testFloatArrayAsObject()",
+      "begin_line": 430,
+      "end_line": 440,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testBooleanArray()",
+      "begin_line": 442,
+      "end_line": 451,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testBooleanArrayAsObject()",
+      "begin_line": 453,
+      "end_line": 461,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testBooleanMultiArray()",
+      "begin_line": 463,
+      "end_line": 477,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionHashCodeExcludeFields()",
+      "begin_line": 479,
+      "end_line": 496,
+      "comment": ""
+    },
+    {
+      "type": "class_interface",
+      "name": "TestObjectWithMultipleFields",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 498,
+      "end_line": 513,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "one"
+      ],
+      "begin_line": 499,
+      "end_line": 500,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "two"
+      ],
+      "begin_line": 502,
+      "end_line": 503,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "three"
+      ],
+      "begin_line": 505,
+      "end_line": 506,
+      "comment": ""
+    },
+    {
+      "type": "constructor",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.TestObjectWithMultipleFields.TestObjectWithMultipleFields(int, int, int)",
+      "begin_line": 508,
+      "end_line": 512,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testReflectionObjectCycle()",
+      "begin_line": 518,
+      "end_line": 546,
+      "comment": "\n     * Test Objects pointing to each other.\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.builder.HashCodeBuilderTest.testToHashCodeEqualsHashCode()",
+      "begin_line": 551,
+      "end_line": 556,
+      "comment": "\n     * Ensures LANG-520 remains true\n     "
+    }
+  ]
+}

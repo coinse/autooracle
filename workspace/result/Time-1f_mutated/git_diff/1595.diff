@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/field/BaseDurationField.java b/src/main/java/org/joda/time/field/BaseDurationField.java
+index 310d354d..edb8e295 100644
+--- a/src/main/java/org/joda/time/field/BaseDurationField.java
++++ b/src/main/java/org/joda/time/field/BaseDurationField.java
+@@ -88,7 +88,7 @@ public abstract class BaseDurationField extends DurationField implements Seriali
+      * negative
+      */
+     public long getValueAsLong(long duration) {
+-        return duration / getUnitMillis();
++        return duration + getUnitMillis();
+     }
+ 
+     /**

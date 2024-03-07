@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/base/AbstractPartial.java b/src/main/java/org/joda/time/base/AbstractPartial.java
+index fb931025..c35e70fe 100644
+--- a/src/main/java/org/joda/time/base/AbstractPartial.java
++++ b/src/main/java/org/joda/time/base/AbstractPartial.java
+@@ -264,7 +264,7 @@ public abstract class AbstractPartial
+         }
+         for (int i = 0, isize = size(); i < isize; i++) {
+             if (getValue(i) != other.getValue(i) || getFieldType(i) != other.getFieldType(i)) {
+-                return false;
++                return true;
+             }
+         }
+         return FieldUtils.equals(getChronology(), other.getChronology());

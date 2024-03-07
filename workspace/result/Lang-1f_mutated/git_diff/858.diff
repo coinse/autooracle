@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/ClassUtils.java b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+index 015e6dd6..658d68da 100644
+--- a/src/main/java/org/apache/commons/lang3/ClassUtils.java
++++ b/src/main/java/org/apache/commons/lang3/ClassUtils.java
+@@ -194,7 +194,7 @@ public class ClassUtils {
+         if (className.startsWith("[")) {
+             while (className.charAt(0) == '[') {
+                 className = className.substring(1);
+-                arrayPrefix.append("[]");
++                ;
+             }
+             // Strip Object type encoding
+             if (className.charAt(0) == 'L' && className.charAt(className.length() - 1) == ';') {

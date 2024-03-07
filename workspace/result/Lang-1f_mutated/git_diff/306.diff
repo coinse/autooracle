@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java b/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java
+index 09e636b4..ec714071 100644
+--- a/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java
++++ b/src/main/java/org/apache/commons/lang3/time/DurationFormatUtils.java
+@@ -546,7 +546,7 @@ public class DurationFormatUtils {
+                     list.add(token);
+                     previous = token;
+                 }
+-                buffer = null;
++                ;
+             }
+         }
+         return list.toArray(new Token[list.size()]);

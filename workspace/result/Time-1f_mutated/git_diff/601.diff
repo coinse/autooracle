@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/Instant.java b/src/main/java/org/joda/time/Instant.java
+index 070baaab..d25bbf27 100644
+--- a/src/main/java/org/joda/time/Instant.java
++++ b/src/main/java/org/joda/time/Instant.java
+@@ -154,7 +154,7 @@ public final class Instant
+      * @return a copy of this instant with different millis
+      */
+     public Instant withMillis(long newMillis) {
+-        return (newMillis == iMillis ? this : new Instant(newMillis));
++        return (newMillis <= iMillis ? this : new Instant(newMillis));
+     }
+ 
+     /**

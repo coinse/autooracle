@@ -1,0 +1,290 @@
+{
+  "filepath": "/tmp/Lang-1f/src/test/java/org/apache/commons/lang3/time/DateUtilsRoundingTest.java",
+  "nodes": [
+    {
+      "type": "class_interface",
+      "name": "DateUtilsRoundingTest",
+      "is_interface": false,
+      "parent_types": [],
+      "begin_line": 41,
+      "end_line": 727,
+      "comment": "\n * These Unit-tests will check all possible extremes when using some rounding-methods of DateUtils.\n * The extremes are tested at the switch-point in milliseconds\n * \n * According to the implementation SEMI_MONTH will either round/truncate to the 1st or 16th\n * When rounding Calendar.MONTH it depends on the number of days within that month.\n * A month with 28 days will be rounded up from the 15th\n * A month with 29 or 30 days will be rounded up from the 16th\n * A month with 31 days will be rounded up from the 17th\n * \n * @since 3.0\n * @version $Id$\n "
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "dateTimeParser"
+      ],
+      "begin_line": 43,
+      "end_line": 43,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "januaryOneDate"
+      ],
+      "begin_line": 45,
+      "end_line": 45,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "targetYearDate"
+      ],
+      "begin_line": 46,
+      "end_line": 46,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "targetDateDate",
+        "targetDayOfMonthDate",
+        "targetAmDate",
+        "targetPmDate"
+      ],
+      "begin_line": 48,
+      "end_line": 48,
+      "comment": "No targetMonths, these must be tested for every type of month(28-31 days)"
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "targetHourOfDayDate",
+        "targetHourDate"
+      ],
+      "begin_line": 49,
+      "end_line": 49,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "targetMinuteDate"
+      ],
+      "begin_line": 50,
+      "end_line": 50,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "targetSecondDate"
+      ],
+      "begin_line": 51,
+      "end_line": 51,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "targetMilliSecondDate"
+      ],
+      "begin_line": 52,
+      "end_line": 52,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "januaryOneCalendar"
+      ],
+      "begin_line": 54,
+      "end_line": 54,
+      "comment": ""
+    },
+    {
+      "type": "field",
+      "varNames": [
+        "fdf"
+      ],
+      "begin_line": 55,
+      "end_line": 55,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.setUp()",
+      "begin_line": 58,
+      "end_line": 76,
+      "comment": ""
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundYear()",
+      "begin_line": 84,
+      "end_line": 91,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.Year\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundMonth()",
+      "begin_line": 101,
+      "end_line": 135,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.MONTH\n     * Includes rounding months with 28, 29, 30 and 31 days\n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundSemiMonth()",
+      "begin_line": 145,
+      "end_line": 203,
+      "comment": "\n     * Tests DateUtils.round()-method with DateUtils.SEMI_MONTH\n     * Includes rounding months with 28, 29, 30 and 31 days, each with first and second half \n     * Includes rounding to January 1\n     *      \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundDate()",
+      "begin_line": 213,
+      "end_line": 228,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.DATE\n     * Includes rounding the extremes of one day \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundDayOfMonth()",
+      "begin_line": 238,
+      "end_line": 253,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.DAY_OF_MONTH\n     * Includes rounding the extremes of one day \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundAmPm()",
+      "begin_line": 263,
+      "end_line": 285,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.AM_PM\n     * Includes rounding the extremes of both AM and PM of one day \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundHourOfDay()",
+      "begin_line": 295,
+      "end_line": 310,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.HOUR_OF_DAY\n     * Includes rounding the extremes of one hour \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundHour()",
+      "begin_line": 320,
+      "end_line": 335,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.HOUR\n     * Includes rounding the extremes of one hour \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundMinute()",
+      "begin_line": 345,
+      "end_line": 360,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.MINUTE\n     * Includes rounding the extremes of one minute \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundSecond()",
+      "begin_line": 370,
+      "end_line": 385,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.SECOND\n     * Includes rounding the extremes of one second \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testRoundMilliSecond()",
+      "begin_line": 395,
+      "end_line": 408,
+      "comment": "\n     * Tests DateUtils.round()-method with Calendar.MILLISECOND\n     * Includes rounding the extremes of one second \n     * Includes rounding to January 1\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateYear()",
+      "begin_line": 416,
+      "end_line": 421,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.YEAR\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateMonth()",
+      "begin_line": 429,
+      "end_line": 435,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.MONTH\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateSemiMonth()",
+      "begin_line": 444,
+      "end_line": 489,
+      "comment": "\n     * Test DateUtils.truncate()-method with DateUtils.SEMI_MONTH\n     * Includes truncating months with 28, 29, 30 and 31 days, each with first and second half\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateDate()",
+      "begin_line": 497,
+      "end_line": 502,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.DATE\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateDayOfMonth()",
+      "begin_line": 510,
+      "end_line": 515,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.DAY_OF_MONTH\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateAmPm()",
+      "begin_line": 524,
+      "end_line": 535,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.AM_PM\n     * Includes truncating the extremes of both AM and PM of one day \n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateHour()",
+      "begin_line": 543,
+      "end_line": 548,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.HOUR\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateHourOfDay()",
+      "begin_line": 556,
+      "end_line": 561,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.HOUR_OF_DAY\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateMinute()",
+      "begin_line": 569,
+      "end_line": 574,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.MINUTE\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateSecond()",
+      "begin_line": 582,
+      "end_line": 587,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.SECOND\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.testTruncateMilliSecond()",
+      "begin_line": 595,
+      "end_line": 599,
+      "comment": "\n     * Test DateUtils.truncate()-method with Calendar.SECOND\n     * \n     * @throws Exception\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.baseRoundTest(java.util.Date, java.util.Date, java.util.Date, int)",
+      "begin_line": 613,
+      "end_line": 648,
+      "comment": "\n     * When using this basetest all extremes are tested.\u003cbr\u003e \n     * It will test the Date, Calendar and Object-implementation\u003cbr\u003e\n     * lastRoundDownDate should round down to roundedDownDate\u003cbr\u003e\n     * lastRoundDownDate + 1 millisecond should round up to roundedUpDate\n     * \n     * @param roundedUpDate the next rounded date after \u003cstrong\u003eroundedDownDate\u003c/strong\u003e when using \u003cstrong\u003ecalendarField\u003c/strong\u003e\n     * @param roundedDownDate the result if \u003cstrong\u003elastRoundDownDate\u003c/strong\u003e was rounded with \u003cstrong\u003ecalendarField\u003c/strong\u003e\n     * @param lastRoundDownDate rounding this value with \u003cstrong\u003ecalendarField\u003c/strong\u003e will result in \u003cstrong\u003eroundedDownDate\u003c/strong\u003e\n     * @param calendarField\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.baseTruncateTest(java.util.Date, java.util.Date, int)",
+      "begin_line": 661,
+      "end_line": 690,
+      "comment": "\n     * When using this basetest all extremes are tested.\u003cbr\u003e \n     * It will test the Date, Calendar and Object-implementation\u003cbr\u003e\n     * lastTruncateDate should round down to truncatedDate\u003cbr\u003e\n     * lastTruncateDate + 1 millisecond should never round down to truncatedDate\n     * \n     * @param truncatedDate expected Date when \u003cstrong\u003elastTruncateDate\u003c/strong\u003e is truncated with \u003cstrong\u003ecalendarField\u003c/strong\u003e\n     * @param lastTruncateDate the last possible Date which will truncate to \u003cstrong\u003etruncatedDate\u003c/strong\u003e with \u003cstrong\u003ecalendarField\u003c/strong\u003e\n     * @param calendarField a Calendar.field value\n     * @since 3.0\n     "
+    },
+    {
+      "type": "method",
+      "signature": "org.apache.commons.lang3.time.DateUtilsRoundingTest.roundToJanuaryFirst(java.util.Date, java.util.Date, int)",
+      "begin_line": 702,
+      "end_line": 726,
+      "comment": "\n     * \n     * Any January 1 could be considered as the ultimate extreme.\n     * Instead of comparing the results if the input has a difference of 1 millisecond we check the output to be exactly January first. \n     * \n     * @param minDate\n     * @param maxDate\n     * @param calendarField\n     * @since 3.0\n     "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/LocalDate.java b/src/main/java/org/joda/time/LocalDate.java
+index 9806eb32..d1594eaa 100644
+--- a/src/main/java/org/joda/time/LocalDate.java
++++ b/src/main/java/org/joda/time/LocalDate.java
+@@ -1038,7 +1038,7 @@ public final class LocalDate
+      * @return a copy of this date with different millis
+      */
+     LocalDate withLocalMillis(long newMillis) {
+-        newMillis = iChronology.dayOfMonth().roundFloor(newMillis);
++        ;
+         return (newMillis == getLocalMillis() ? this : new LocalDate(newMillis, getChronology()));
+     }
+ 

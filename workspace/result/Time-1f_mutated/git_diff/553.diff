@@ -1,0 +1,13 @@
+diff --git a/src/main/java/org/joda/time/format/PeriodFormatter.java b/src/main/java/org/joda/time/format/PeriodFormatter.java
+index 5a80b31b..02ac84f8 100644
+--- a/src/main/java/org/joda/time/format/PeriodFormatter.java
++++ b/src/main/java/org/joda/time/format/PeriodFormatter.java
+@@ -321,7 +321,7 @@ public class PeriodFormatter {
+                 return period;
+             }
+         } else {
+-            newPos = ~newPos;
++            newPos = -newPos;
+         }
+         throw new IllegalArgumentException(FormatUtils.createErrorMessage(text, newPos));
+     }
