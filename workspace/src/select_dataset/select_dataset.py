@@ -82,11 +82,7 @@ if __name__ == "__main__":
     print(f_total, p_total)         
     print(f_selected, p_selected)
 
-<<<<<<< HEAD
-with open(f'{project}_tests.pkl','wb') as f:
-=======
 with open(f'{project}_tests_part3.pkl','wb') as f:
->>>>>>> afa92c2ed51ea2f96d0784f9f5dd5fb40136a092
     pickle.dump(dataset, f)
 
 
