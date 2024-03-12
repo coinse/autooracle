@@ -90,5 +90,5 @@ if __name__ == "__main__":
                 target_diffs.extend(select_random_diffs_per_line_number(diff_dir,infos))
     
     print(len(target_diffs))
-    with open(f'{project}_mutants.pkl','wb') as f:
+    with open(f'{project}_mutants_tmp.pkl','wb') as f:
         pickle.dump(target_diffs, f)
