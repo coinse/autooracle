@@ -26,7 +26,7 @@ if __name__ == "__main__":
     example = args.example
     test_id = "newTS_300"
     
-    with open(f'../select_dataset/{project}.pkl','rb') as fw:
+    with open(f'../select_dataset/{project}_tests.pkl','rb') as fw:
         target = pickle.load(fw)
 
     for idx, (fail_list, pass_list)  in target.items():

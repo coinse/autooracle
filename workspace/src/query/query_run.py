@@ -25,10 +25,9 @@ if __name__ == "__main__":
     example = '0'
     test_id = "newTS_300"
     
-    with open(f'../select_dataset/{project}_tests.pkl','rb') as fw:
+    with open(f'../select_dataset/{project}_tests_part2.pkl','rb') as fw:
         target = pickle.load(fw)
-
-    for idx, (fail_list, pass_list)  in tqdm(list(target.items())):
+    for idx, (fail_list, pass_list)  in list(target.items())[0:100]:
         for fail_no in fail_list:
             exec_query_sh(idx, fail_no)
         for pass_no in pass_list:
