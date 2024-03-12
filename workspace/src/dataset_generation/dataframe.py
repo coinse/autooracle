@@ -80,6 +80,12 @@ def make_dev_tests_df():
         dev_test_class_path = os.path.join(dev_test_src_dir_abspaths, dev_test_relpath)
         dev_test_parse_output = env.dev_written_test_analyze + f"{dev_test_class}.json"
         
+        if not os.path.exists(dev_test_class_path):
+            if '$' in dev_test_class_path:
+                dev_test_class_path = dev_test_class_path[:dev_test_class_path.find('$')] + '.java'
+            else:
+                continue
+
         with open(dev_test_class_path,'r+') as f:
             src = f.read()
             new_src = src.replace("package org.apache.commons.lang.enum;","//package org.apache.commons.lang.enum;")
@@ -132,10 +138,10 @@ if __name__ == "__main__":
 
     evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df_new.pkl')
    
-    if not os.path.exists(evo_tests_df_path):
-        evo_tests_df = make_evo_tests_df()
-        with open(evo_tests_df_path,'wb') as f:
-            pickle.dump(evo_tests_df,f)
+    #if not os.path.exists(evo_tests_df_path):
+    evo_tests_df = make_evo_tests_df()
+    with open(evo_tests_df_path,'wb') as f:
+        pickle.dump(evo_tests_df,f)
    
     dev_tests_df_path = env.dev_tests_df_path
     

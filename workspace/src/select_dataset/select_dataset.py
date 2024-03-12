@@ -43,9 +43,9 @@ if __name__ == "__main__":
     with open(file_path, 'rb') as file:
         diffs = pickle.load(file)
     target = [diff.split('_')[0] for diff in diffs]
-    print(target[0:2364])
+    print(target[3129:])
     f_total, p_total = 0, 0
-    for i in tqdm(target[0:2364]):
+    for i in tqdm(target[2363:3130]):
         env = EvoD4jEnv(project, version, str(i), test_id)
         failing_log_path = os.path.join(env.evosuite_test_dir, "failing_tests_on_fixed")
         if not os.path.exists(failing_log_path):
@@ -82,8 +82,7 @@ if __name__ == "__main__":
     print(f_total, p_total)         
     print(f_selected, p_selected)
 
-print(dataset)
-with open(f'{project}_tests_part1.pkl','wb') as f:
+with open(f'{project}_tests_part3.pkl','wb') as f:
     pickle.dump(dataset, f)
 
 

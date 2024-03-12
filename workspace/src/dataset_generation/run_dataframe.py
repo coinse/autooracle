@@ -11,5 +11,5 @@ with open(file_path, 'rb') as file:
     diffs = pickle.load(file)
 target = [diff.split('_')[0] for diff in diffs]
 
-for i in tqdm(target[:3129]): 
+for i in tqdm(target[2363:3130]): 
     subprocess.run(["python", "dataframe.py", param0, param1, "-idx", i, "-i", param2])
