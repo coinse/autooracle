@@ -138,10 +138,10 @@ if __name__ == "__main__":
 
     evo_tests_df_path = os.path.join(env.evosuite_test_dir,'evo_tests_df_new.pkl')
    
-    if not os.path.exists(evo_tests_df_path):
-        evo_tests_df = make_evo_tests_df()
-        with open(evo_tests_df_path,'wb') as f:
-            pickle.dump(evo_tests_df,f)
+    #if not os.path.exists(evo_tests_df_path):
+    evo_tests_df = make_evo_tests_df()
+    with open(evo_tests_df_path,'wb') as f:
+        pickle.dump(evo_tests_df,f)
    
     dev_tests_df_path = env.dev_tests_df_path
     
