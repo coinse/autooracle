@@ -47,7 +47,8 @@ python ../utils/save_relevant_metadata.py $DIFF_DIR/${IDX}_info $METADATA_DIR
 [ -d "$MUTAED_TMP_DIR" ] && rm -rf $MUTAED_TMP_DIR
 defects4j checkout -p $PROJECT -v ${VERSION}f -w $MUTAED_TMP_DIR
 cd $MUTAED_TMP_DIR
-git apply $DIFF_DIR/${IDX}.diff
+echo ${IDX}
+git apply $DIFF_DIR/${IDX}.diff --ignore-space-change --ignore-whitespace
 defects4j compile
 
 

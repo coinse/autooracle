@@ -5,6 +5,8 @@ import os
 import argparse
 import pickle
 from utils.env import EvoD4jEnv
+from tqdm import tqdm
+
 
 def get_failing_test_list(fail_log_path):
     failing_test_list = []
@@ -27,33 +29,39 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
-    parser.add_argument('--start_idx', '-start', type=int, default=0)
-    parser.add_argument('--end_idx', '-end', type=int, default=1)
     args = parser.parse_args()
 
     project = args.project
     version = args.version
     test_id = "newTS_300"
-    start_index = args.start_idx
-    end_index = args.end_idx
+
     # Key: index -> int, value: [failing list, passing list]
     dataset={}
     total = 0
-    for i in range(start_index, end_index + 1):
+
+    file_path = f"/root/workspace/src/select_dataset/{project}_mutants.pkl"
+    with open(file_path, 'rb') as file:
+        diffs = pickle.load(file)
+    target = [diff.split('_')[0] for diff in diffs]
+    print(target[0:2364])
+    f_total, p_total = 0, 0
+    for i in tqdm(target[0:2364]):
         env = EvoD4jEnv(project, version, str(i), test_id)
         failing_log_path = os.path.join(env.evosuite_test_dir, "failing_tests_on_fixed")
         if not os.path.exists(failing_log_path):
-            continue
-        failing_test_list = get_failing_test_list(failing_log_path)
-        if len(failing_test_list) == 0 :
-            continue
+            failing_test_list = []
+        else:
+            failing_test_list = []
+            failing_test_list.extend(get_failing_test_list(failing_log_path))
         
-        ## Hard coded 
         prompt_path = os.path.join(env.evosuite_prompt_dir, 'prompt8/example0')
-       
+        if not os.listdir(env.evosuite_prompt_dir):
+            continue
         all_test_in_prompt_dir = set(map(lambda x: x.split('_')[1], os.listdir(prompt_path)))
         failing_tests_in_prompt_dir = set(filter(lambda x: x in all_test_in_prompt_dir, failing_test_list))
         passing_tests_in_prompt_dir = all_test_in_prompt_dir.difference(failing_tests_in_prompt_dir)
+        f_total += len(failing_tests_in_prompt_dir) 
+        p_total += len(passing_tests_in_prompt_dir)
 
         difference_in_numbers = len(passing_tests_in_prompt_dir) - len(failing_tests_in_prompt_dir)
         if difference_in_numbers > 0 :
@@ -66,7 +74,16 @@ if __name__ == "__main__":
         if len(failing_tests_in_prompt_dir) > 0 and len(passing_tests_in_prompt_dir) > 0 :
             dataset[i] = [list(failing_tests_in_prompt_dir), list(passing_tests_in_prompt_dir)]  
 
-with open(f'{project}.pkl','wb') as f:
+    f_selected = 0
+    p_selected = 0
+    for idx, (f_test_no, p_test_no) in dataset.items():
+        f_selected += len(f_test_no)
+        p_selected += len(p_test_no)
+    print(f_total, p_total)         
+    print(f_selected, p_selected)
+
+print(dataset)
+with open(f'{project}_tests_part1.pkl','wb') as f:
     pickle.dump(dataset, f)
 
 
