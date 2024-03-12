@@ -1,8 +1,9 @@
+
 import os 
 import argparse
 import subprocess
 import pickle
-
+from tqdm import tqdm
 
 def exec_query_sh(idx, test_no):
     directory = '/root/workspace/src/query'
@@ -16,20 +17,18 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('project', type=str)
     parser.add_argument('version', type=str)
-    parser.add_argument('--prompt_no', '-pr', type=int, default=1)
-    parser.add_argument('--example', '-ex', type=int, default=1)
     args = parser.parse_args()
 
     project = args.project
     version = args.version
-    prompt_no = args.prompt_no
-    example = args.example
+    prompt_no = '8'
+    example = '0'
     test_id = "newTS_300"
     
-    with open(f'../select_dataset/{project}.pkl','rb') as fw:
+    with open(f'../select_dataset/{project}_tests.pkl','rb') as fw:
         target = pickle.load(fw)
 
-    for idx, (fail_list, pass_list)  in target.items():
+    for idx, (fail_list, pass_list)  in tqdm(list(target.items())):
         for fail_no in fail_list:
             exec_query_sh(idx, fail_no)
         for pass_no in pass_list:
