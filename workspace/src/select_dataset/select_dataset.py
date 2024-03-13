@@ -43,9 +43,9 @@ if __name__ == "__main__":
     with open(file_path, 'rb') as file:
         diffs = pickle.load(file)
     target = [diff.split('_')[0] for diff in diffs]
-    print(target[3129:])
+
     f_total, p_total = 0, 0
-    for i in tqdm(target[2363:3130]):
+    for i in tqdm(target):
         env = EvoD4jEnv(project, version, str(i), test_id)
         failing_log_path = os.path.join(env.evosuite_test_dir, "failing_tests_on_fixed")
         if not os.path.exists(failing_log_path):
@@ -57,7 +57,8 @@ if __name__ == "__main__":
         prompt_path = os.path.join(env.evosuite_prompt_dir, 'prompt8/example0')
         if not os.listdir(env.evosuite_prompt_dir):
             continue
-        all_test_in_prompt_dir = set(map(lambda x: x.split('_')[1], os.listdir(prompt_path)))
+        all_test_in_prompt_dir = list(filter(lambda x: x.split('_')[2] != 'try', os.listdir(prompt_path)))
+        all_test_in_prompt_dir = set(map(lambda x: x.split('_')[1], all_test_in_prompt_dir))
         failing_tests_in_prompt_dir = set(filter(lambda x: x in all_test_in_prompt_dir, failing_test_list))
         passing_tests_in_prompt_dir = all_test_in_prompt_dir.difference(failing_tests_in_prompt_dir)
         f_total += len(failing_tests_in_prompt_dir) 
@@ -74,6 +75,7 @@ if __name__ == "__main__":
         if len(failing_tests_in_prompt_dir) > 0 and len(passing_tests_in_prompt_dir) > 0 :
             dataset[i] = [list(failing_tests_in_prompt_dir), list(passing_tests_in_prompt_dir)]  
 
+
     f_selected = 0
     p_selected = 0
     for idx, (f_test_no, p_test_no) in dataset.items():
@@ -82,12 +84,5 @@ if __name__ == "__main__":
     print(f_total, p_total)         
     print(f_selected, p_selected)
 
-with open(f'{project}_tests_part3.pkl','wb') as f:
+with open(f'{project}_tests.pkl','wb') as f:
     pickle.dump(dataset, f)
-
-
-
-
-
-
-
