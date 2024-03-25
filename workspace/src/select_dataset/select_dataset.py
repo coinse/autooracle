@@ -43,7 +43,7 @@ if __name__ == "__main__":
     with open(file_path, 'rb') as file:
         diffs = pickle.load(file)
     target = [diff.split('_')[0] for diff in diffs]
-
+    target = list(range(0,343))
     f_total, p_total = 0, 0
     for i in tqdm(target):
         env = EvoD4jEnv(project, version, str(i), test_id)
