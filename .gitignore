@@ -5,4 +5,4 @@ __pycache__/
 workspace/result
 .env
 .vscode
-workspace/src/analyze/analyze.ipynb
+*.DS_Store
