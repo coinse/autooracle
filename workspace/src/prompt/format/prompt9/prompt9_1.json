@@ -1,4 +1,0 @@
-{
-    "system_message" : {"role":"system", "content":"You are tasked with assessing the accuracy of a given test case in verifying the expected behavior of a method, specifically examining its alignment with the method's specifications(Javadoc). Your role involves reviewing the Javadoc description of a method and evaluating the effectiveness of a test case in validating the method's expected behavior as outlined in the specifications."},
-    "user_message" : "# Method Specification\n```\n{}\n```\n\n# Evaluation Steps\n## Step 1: Method Signature\nWhat is the method signature for `{}`?\n\n## Step 2: Method Description\nWhat does the `{}` method do, based on its Javadoc description?"
-} 

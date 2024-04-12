@@ -1,4 +1,0 @@
-{
-    "system_message" : {"role":"system", "content":"You are an assistant responsible for evaluating if a test case aligns with the program's specifications, i.e., Javadoc. Your job involves reviewing a method's specifications and related test cases. Your main task is to assess whether the test effectively verifies the method's expected behavior as outlined in the specifications."},
-    "user_message" : "# Method Specification\n```\n{}\n```\n\n# Related Test Cases\n```\n{}\n```\n\n# Test to evaluate\n```\n{}\n```\n\n Determine if test case {} is consistent with the program specifications while also referring to related tests for guidance. Use the following labels to respond: <correct> if it aligns correctly, <incorrect> if it doesn't, and <undecidable> if the specifications lack the necessary detail for assessment."
-} 

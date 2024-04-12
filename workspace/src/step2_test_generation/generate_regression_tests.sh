@@ -97,10 +97,8 @@ fi
 cd $cwd
 python split_tests.py --evo_dir $EVOSUITE_TEST
 
-#dev_test_relpath
 [ ! -f "$DEV_WRITTEN_INFO/dir.src.tests" ] && defects4j export -p dir.src.tests -o $DEV_WRITTEN_INFO/dir.src.tests -w $FIXED_TMP_DIR
 
-# # extract developer written test classes
 [ ! -f "$DEV_WRITTEN_INFO/tests.all" ] && defects4j export -p tests.all -o $DEV_WRITTEN_INFO/tests.all -w $FIXED_TMP_DIR
 
 
